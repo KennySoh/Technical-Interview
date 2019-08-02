@@ -18,58 +18,9 @@
 2. Mongodb
 
 
-
-
-
-
-
-
-
-
-
-
-test
-testtest
-test
-test
-vvv
-v
-testtestv
-v
-v
-v
-v
-v
-v
-v
-v
-v
-v
-v
-v
-v
-v
-v
-v
-
-v
-v
-vv
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[create an anchor](# Overview for Technical-Interviews)
+## OOPs Concepts
+4 Pillars  
+1. Encapsulation
+   The grouping of related Property and Methods into objects. 
+   (Advantage over sphagetti code / 
+   ![images](https://github.com/KennySoh/Technical-Interview/blob/master/encapsulations.PNG)
