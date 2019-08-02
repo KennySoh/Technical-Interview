@@ -15,9 +15,9 @@
 2. Mongodb
 
 
-## OOPs Concepts
+# OOPs Concepts
 4 Pillars  
-### Encapsulation
+## Encapsulation
    The grouping of related Property and Methods into objects. 
    ![images](https://github.com/KennySoh/Technical-Interview/blob/master/encapsulations.PNG)
      
@@ -40,17 +40,17 @@ function getWage(baseSalary,overTime,rate){
 }
 
 ```
-### Abstraction
+## Abstraction
 Hiding functions & variables as private, Exposing only certain functions & variables as public.  
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/encapsulations.PNG)  
 Advantages.
 1. Simpler Interface
 2. Reduce impact of changes (eg. public changes affecting private codes)  
-### Inheritance 
+## Inheritance 
 One class acquires the properties( methods & fields of another)  
 Advantages.  
 1.  Prevent repeated codes for similar methods & field across multiple classes (eg. Health <- inheirted- EnemyHealth & PlayerHealth)
-### Poly mopherism 
+## Poly mopherism 
 Many Forms. Can have diffrent types of inputs(Dog,Cat,Cow) but similar method call ( playSound()) generates different output
 
 //getSound method declaration 
@@ -63,7 +63,7 @@ soundGenerate.getSound(Dog dog), Dog->Woof
   
 References  
 1. Java Notes https://www.youtube.com/watch?v=pTB0EiLXUC8&t=387s
-## SOLID Concepts
+# SOLID Concepts
 S.O.L.I.D. STANDS FOR: 
 S — Single responsibility principle  
 O — Open closed principle  
@@ -72,7 +72,7 @@ I — Interface segregation principle
 D — Dependency Inversion principle  
 
 
-### S- Single Responsibility Principle  
+## S- Single Responsibility Principle  
 A class should have one, and only one, reason to change. 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/encapsulations.PNG)
 
