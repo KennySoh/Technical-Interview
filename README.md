@@ -57,9 +57,12 @@ Many Forms. Can have diffrent types of inputs(Dog,Cat,Cow) but similar method ca
 Dog.getSound Method, Dog-> Woof  
 Cat.getSound Method, Cat-> Meow  
 Cow.getSound Method, Cow-> Moo  
-// only write this once.
+// only write this once.  
 soundGenerate.getSound(Dog dog), Dog->Woof
-
-
+  
+  
+References  
+1. Java Notes https://www.youtube.com/watch?v=pTB0EiLXUC8&t=387s
+## SOLID Concepts
 
 
