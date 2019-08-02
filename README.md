@@ -64,5 +64,24 @@ soundGenerate.getSound(Dog dog), Dog->Woof
 References  
 1. Java Notes https://www.youtube.com/watch?v=pTB0EiLXUC8&t=387s
 ## SOLID Concepts
+S.O.L.I.D. STANDS FOR: 
+S — Single responsibility principle  
+O — Open closed principle  
+L — Liskov substitution principle  
+I — Interface segregation principle  
+D — Dependency Inversion principle  
 
+
+### S- Single Responsibility Principle  
+A class should have one, and only one, reason to change. 
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/encapsulations.PNG)
+
+// Current Design
+3 Differemt Organisation, calls 3 Seperatable Methods ( Non-compartmentalised , any changes might affect other codes) 
+  
+
+
+References  
+1. Uncle Bob Solid Principles https://www.youtube.com/watch?v=pTB0EiLXUC8&t=387s
+Useful quotes: 
 
