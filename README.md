@@ -42,8 +42,8 @@ function getWage(baseSalary,overTime,rate){
 ```
 ### Abstraction
 Hiding functions & variables as private, Exposing only certain functions & variables as public.  
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/encapsulations.PNG)
-Advantages.  
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/encapsulations.PNG)  
+Advantages.
 1. Simpler Interface
 2. Reduce impact of changes (eg. public changes affecting private codes)  
 ### Inheritance 
@@ -51,4 +51,15 @@ One class acquires the properties( methods & fields of another)
 Advantages.  
 1.  Prevent repeated codes for similar methods & field across multiple classes (eg. Health <- inheirted- EnemyHealth & PlayerHealth)
 ### Poly mopherism 
+Many Forms. Can have diffrent types of inputs(Dog,Cat,Cow) but similar method call ( playSound()) generates different output
+
+//getSound method declaration 
+Dog.getSound Method, Dog-> Woof  
+Cat.getSound Method, Cat-> Meow  
+Cow.getSound Method, Cow-> Moo  
+// only write this once.
+soundGenerate.getSound(Dog dog), Dog->Woof
+
+
+
 
