@@ -140,9 +140,73 @@ class Person {
 The Open Closed Principle (OCP) is the SOLID principle which states that the software entities (classes or methods) should be open for extension but closed for modification.  
   
 Basically, we should strive to write a code which doesn’t require modification every time a customer changes its request. Providing such a solution where we can extend the behavior of a class (with that additional customer’s request) and not modify that class, should be our goal most of the time.
+  
+An Example - calculating area    
+Caculating without extensions ( A ton of if, else)
+```javascript
+public double Area(object[] shapes)
+{
+    double area = 0;
+    foreach (var shape in shapes)
+    {
+        if (shape is Rectangle)
+        {
+            Rectangle rectangle = (Rectangle) shape;
+            area += rectangle.Width*rectangle.Height;
+        }
+        else
+        {
+            Circle circle = (Circle)shape;
+            area += circle.Radius * circle.Radius * Math.PI;
+        }
+    }
 
+    return area;
+}
+```
+Instead we should have a shape interface (with get Area() method) that Rectangle/Circle Class extends from.  
+Shape Interface
+```javascript
+public abstract class Shape
+{No 
+    public abstract double Area();
+}
+```
+Rect/Circle Class Extends  
+```javascript
+public class Rectangle : Shape
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+    public override double Area()
+    {
+        return Width*Height;
+    }
+}
+```
+No more switch statement 
+```javascript
+public class Circle : Shape
+{
+    public double Radius { get; set; }
+    public override double Area()
+    {
+        return Radius*Radius*Math.PI;
+    }
+}
+public double Area(Shape[] shapes)
+{
+    double area = 0;
+    foreach (var shape in shapes)
+    {
+        area += shape.Area();
+    }
 
+    return area;
+}
+```
 References  
 1. Uncle Bob Solid Principles https://www.youtube.com/watch?v=pTB0EiLXUC8&t=387s
+2. Examle for Open closed Principle http://joelabrahamsson.com/a-simple-example-of-the-openclosed-principle/
 Useful quotes: 
 
