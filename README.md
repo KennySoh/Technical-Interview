@@ -165,14 +165,14 @@ public double Area(object[] shapes)
 }
 ```
 Instead we should have a shape interface (with get Area() method) that Rectangle/Circle Class extends from.  
-Shape Interface
+1. Shape Interface
 ```javascript
 public abstract class Shape
 {No 
     public abstract double Area();
 }
 ```
-Rect/Circle Class Extends  
+2. Rect/Circle Class Extends  
 ```javascript
 public class Rectangle : Shape
 {
@@ -184,7 +184,7 @@ public class Rectangle : Shape
     }
 }
 ```
-No more switch statement 
+3. No more switch statement 
 ```javascript
 public class Circle : Shape
 {
