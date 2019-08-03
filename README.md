@@ -21,7 +21,7 @@
 4 Pillars  ( Encapsulation, Abstraction, Inheritance, Polymopherism )
 ## Encapsulation
    The grouping of related Property and Methods into objects. 
-   ![images](https://github.com/KennySoh/Technical-Interview/blob/master/encapsulations.PNG)
+   ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/encapsulations.PNG)
      
    "The best functions are those with no parameters!" Uncle Bob (Advantage over sphagetti code/ allows you to have lesser parameters)
 
@@ -44,7 +44,7 @@ function getWage(baseSalary,overTime,rate){
 ```
 ## Abstraction
 Hiding functions & variables as private, Exposing only certain functions & variables as public.  
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/encapsulations.PNG)  
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/abstraction.PNG)  
 Advantages.
 1. Simpler Interface
 2. Reduce impact of changes (eg. public changes affecting private codes)  
