@@ -227,10 +227,10 @@ This solves the problem at a stroke. Any common operations desired for both a Ci
 ISP splits interfaces that are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them. Such shrunken interfaces are also called role interfaces.
 
 Example: A big interface
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/abstraction.PNG) 
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Solid_1.PNG) 
 
-ISP principle, Split into smaller roles. 
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/abstraction.PNG) 
+ISP principle, Split into smaller roles.  
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Solid_2.PNG) 
   
 **Conclusion**  
 1. Favouring Composition of Inheritance  
