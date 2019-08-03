@@ -209,10 +209,19 @@ public double Area(Shape[] shapes)
 Ability to replace any instance of a parent class with an instance of one if its child classes without negative side effects. 
 
 **Layman Explanation (Parent: Rectangle, Child: Square).** More famously known as the [ Circle-ellipse problem ](https://en.wikipedia.org/wiki/Circle-ellipse_problem)  
+  
 In mathematics, a Square is a Rectangle. Indeed it is a specialization of a rectangle. The "is a" makes you want to model this with inheritance. However if in code you made Square derive from Rectangle, then a Square should be usable anywhere you expect a Rectangle. This makes for some strange behavior.  
+  
 **(Replacing Parent:Rectangle with Child:Square, breaks code violates L Principle)**
 Imagine you had SetWidth and SetHeight methods on your Rectangle base class; this seems perfectly logical. However if your Rectangle reference pointed to a Square, then SetWidth and SetHeight doesn't make sense because setting one would change the other to match it. In this case Square fails the Liskov Substitution Test with Rectangle and the abstraction of having Square inherit from Rectangle is a bad one.
-
+  
+ **The solution** 
+**Model your classes based on behaviours not on properties; model your data based on properties and not on behaviours.** If it behaves like a duck, it's certainly a bird. If a Square doesnt behaves like a Rectangle, then dont inherit! (Although in real-life square is rect)
+  
+"Objects of subtypes should behave like those of supertypes if used via supertype methods." From Prof Barbara Liskov's lecture
+  
+**Dropping inheritance**  
+This solves the problem at a stroke. Any common operations desired for both a Circle and Ellipse can be abstracted out to a common interface that each class implements
 
 References  
 1. Uncle Bob Solid Principles https://www.youtube.com/watch?v=pTB0EiLXUC8&t=387s
