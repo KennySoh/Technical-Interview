@@ -205,8 +205,17 @@ public double Area(Shape[] shapes)
     return area;
 }
 ```
+## L — Liskov substitution principle
+Ability to replace any instance of a parent class with an instance of one if its child classes without negative side effects. 
+
+**Layman Explanation (Parent: Rectangle, Child: Square).** More famously known as the [ Circle-ellipse problem ](https://en.wikipedia.org/wiki/Circle-ellipse_problem)  
+In mathematics, a Square is a Rectangle. Indeed it is a specialization of a rectangle. The "is a" makes you want to model this with inheritance. However if in code you made Square derive from Rectangle, then a Square should be usable anywhere you expect a Rectangle. This makes for some strange behavior.  
+**(Replacing Parent:Rectangle with Child:Square, breaks code violates L Principle)**
+Imagine you had SetWidth and SetHeight methods on your Rectangle base class; this seems perfectly logical. However if your Rectangle reference pointed to a Square, then SetWidth and SetHeight doesn't make sense because setting one would change the other to match it. In this case Square fails the Liskov Substitution Test with Rectangle and the abstraction of having Square inherit from Rectangle is a bad one.
+
+
 References  
 1. Uncle Bob Solid Principles https://www.youtube.com/watch?v=pTB0EiLXUC8&t=387s
 2. Examle for Open closed Principle http://joelabrahamsson.com/a-simple-example-of-the-openclosed-principle/
-Useful quotes: 
+3. Exaample for Liskov Sub Principle https://www.youtube.com/watch?v=Mmy1EUKC_iE
 
