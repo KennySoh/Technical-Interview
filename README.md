@@ -223,6 +223,8 @@ Imagine you had SetWidth and SetHeight methods on your Rectangle base class; thi
 **Dropping inheritance**  
 This solves the problem at a stroke. Any common operations desired for both a Circle and Ellipse can be abstracted out to a common interface that each class implements
 
+## I — Interface segregation principle  
+ISP splits interfaces that are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them. Such shrunken interfaces are also called role interfaces.
 References  
 1. Uncle Bob Solid Principles https://www.youtube.com/watch?v=pTB0EiLXUC8&t=387s
 2. Examle for Open closed Principle http://joelabrahamsson.com/a-simple-example-of-the-openclosed-principle/
