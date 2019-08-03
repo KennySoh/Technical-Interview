@@ -6,10 +6,10 @@
 4. SQL Queries
 5. Non-SQL Queries
 6. DataStructures 
-7. Algorithms 
+7. Algorithms  
 **Web Concepts**
 1. HTML, CSS
-2. JS
+2. JS  
 **Framework Specific** 
 1. React, Angular
 2. Mongodb
