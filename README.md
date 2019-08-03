@@ -76,8 +76,8 @@ D — Dependency Inversion principle
 A class should have one, and only one, reason to change. 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/encapsulations.PNG)
 
-// Current Design
-3 Differemt Organisation, calls 3 Seperatable Methods ( Non-compartmentalised , any changes might affect other codes) 
+// Current Functions Have Responsibility to 3 diff organisation (CEO,CFO,CTO) 
+3 Different Organisation, calls 3 Seperatable Methods ( Non-compartmentalised , any changes might affect other codes) 
   
 
 
