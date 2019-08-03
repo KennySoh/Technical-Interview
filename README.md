@@ -16,7 +16,7 @@
 
 
 # OOPs Concepts
-4 Pillars  
+4 Pillars  ( Encapsulation, Abstraction, Inheritance, Polymopherism )
 ## Encapsulation
    The grouping of related Property and Methods into objects. 
    ![images](https://github.com/KennySoh/Technical-Interview/blob/master/encapsulations.PNG)
