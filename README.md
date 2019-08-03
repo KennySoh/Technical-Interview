@@ -75,7 +75,7 @@ D — Dependency Inversion principle
 ## S- Single Responsibility Principle  
 Every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class.   
   
-The following example is a TypeScript class that defines a Person, this class should not include email validation because that is not related with a person behaviour: (Avoid classes that have resposibility for multiple objects) 
+The following example is a TypeScript class that defines a Person, this class should not include email validation because that is not related with a person behaviour: (**"Dont put function that change for different reasons in the same class"** Uncle Bob) 
 ```typescript
 class Person {
     public name : string;
@@ -100,9 +100,40 @@ class Person {
     }
 }
 ```
-3 Different Organisation, calls 3 Seperatable Methods ( Non-compartmentalised , any changes might affect other codes) 
-"Dont put function that change for different reasons in the same class"
-  
+
+We can improve the class above by removing the responsibility of email validation from the Person class and creating a new Email class that will have that responsibility:
+```typescript
+class Email {
+    public email : string;
+    constructor(email : string){
+        if(this.validateEmail(email)) {
+          this.email = email;
+        }
+        else {
+            throw new Error("Invalid email!");
+        }        
+    }
+    validateEmail(email : string) {
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        return re.test(email);
+    }
+}
+
+class Person {
+    public name : string;
+    public surname : string;
+    public email : Email;
+    constructor(name : string, surname : string, email : Email){
+        this.email = email;
+        this.name = name;
+        this.surname = surname;
+    }
+    greet() {
+        alert("Hi!");
+    }
+}
+```
+## O — Open closed principle     
 
 
 References  
