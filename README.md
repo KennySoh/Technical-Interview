@@ -225,8 +225,24 @@ This solves the problem at a stroke. Any common operations desired for both a Ci
 
 ## I — Interface segregation principle  
 ISP splits interfaces that are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them. Such shrunken interfaces are also called role interfaces.
+
+Example: A big interface
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/abstraction.PNG) 
+
+ISP principle, Split into smaller roles. 
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/abstraction.PNG) 
+  
+**Conclusion**  
+1. Favouring Composition of Inheritance  
+2. Favouring Decopling over Coupling  
+Similar to Microservices.  
+
+**Correct abstraction is the key to Interface Segregation Principle** 
+So ISP is a poor guidance when designing software, but an excellent indicator of whether it’s healthy or not. Don’t think about ISP when designing your software. Think about whether your abstractions are reusable and composable, and whether your objects are encapsulated and cohesive.
+
 References  
 1. Uncle Bob Solid Principles https://www.youtube.com/watch?v=pTB0EiLXUC8&t=387s
 2. Examle for Open closed Principle http://joelabrahamsson.com/a-simple-example-of-the-openclosed-principle/
-3. Exaample for Liskov Sub Principle https://www.youtube.com/watch?v=Mmy1EUKC_iE
+3. Example for Liskov Sub Principle https://www.youtube.com/watch?v=Mmy1EUKC_iE
+4. Example for Isp https://www.youtube.com/watch?v=xahwVmf8itI
 
