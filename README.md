@@ -73,11 +73,35 @@ D — Dependency Inversion principle
 
 
 ## S- Single Responsibility Principle  
-A class should have one, and only one, reason to change. 
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/encapsulations.PNG)
-
-// Current Functions Have Responsibility to 3 diff organisation (CEO,CFO,CTO) 
+Every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class.   
+  
+The following example is a TypeScript class that defines a Person, this class should not include email validation because that is not related with a person behaviour: (Avoid classes that have resposibility for multiple objects) 
+```typescript
+class Person {
+    public name : string;
+    public surname : string;
+    public email : string;
+    constructor(name : string, surname : string, email : string){
+        this.surname = surname;
+        this.name = name;
+        if(this.validateEmail(email)) {
+          this.email = email;
+        }
+        else {
+            throw new Error("Invalid email!");
+        }
+    }
+    validateEmail(email : string) {
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        return re.test(email);
+    }
+    greet() {
+        alert("Hi!");
+    }
+}
+```
 3 Different Organisation, calls 3 Seperatable Methods ( Non-compartmentalised , any changes might affect other codes) 
+"Dont put function that change for different reasons in the same class"
   
 
 
