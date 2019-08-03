@@ -134,6 +134,10 @@ class Person {
 }
 ```
 ## O — Open closed principle     
+"Modules should be open for extension but closed for modification"-Bertrand Meyer  
+The Open Closed Principle (OCP) is the SOLID principle which states that the software entities (classes or methods) should be open for extension but closed for modification.  
+  
+Basically, we should strive to write a code which doesn’t require modification every time a customer changes its request. Providing such a solution where we can extend the behavior of a class (with that additional customer’s request) and not modify that class, should be our goal most of the time.
 
 
 References  
