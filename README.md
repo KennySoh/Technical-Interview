@@ -292,16 +292,6 @@ This includes changes to the structure of the table like creation of table, alte
   
 All DDL commands are **auto-committed.** That means it saves all the changes permanently in the database.
 
-
-Tables
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-
 | Commands       | Description  |
 | ------------- |:-------------:|
 | CREATE      | to create new table or database |
