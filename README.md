@@ -550,3 +550,54 @@ Not all binary trees are binary search trees
 #### Graph Traversal 
 - Depth first search: searching all its children before sibilings 
 - Breadth first search: search all irs sibilings before going to children 
+
+## Algorithm 
+
+# Web 
+## HTML 
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+   
+ <a href="../html-link.htm"><img src="flower.jpg" width="82" height="86" title="White flower" alt="Flower"></a>
+
+</body>
+</html>
+```
+
+## CSS 
+3 Main ways to add css  
+  
+Using the inline style attribute on an element
+```css
+<div>
+    <p style="color: maroon;"></p>
+</div>
+```
+  
+Using a <style> block in the <head> section of your HTML
+```css
+<head>
+    <title>CSS Refresher</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+```
+ Loading an external CSS file using the <link> tag  
+```css
+<head>
+    <title>CSS Refresher</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+```
