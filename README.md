@@ -230,7 +230,7 @@ Example: A big interface
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Solid_i1.PNG) 
 
 ISP principle, Split into smaller roles.  
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Solid_i2.PNG) 
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Solid_i2.PNG)
   
 **Conclusion**  
 1. Favouring Composition of Inheritance  
@@ -239,6 +239,9 @@ Similar to Microservices.
 
 **Correct abstraction is the key to Interface Segregation Principle** 
 So ISP is a poor guidance when designing software, but an excellent indicator of whether it’s healthy or not. Don’t think about ISP when designing your software. Think about whether your abstractions are reusable and composable, and whether your objects are encapsulated and cohesive.
+
+## D — Dependency Inversion principle  
+The Dependency Inversion Principle (DIP) states that high level modules should not depend on low level modules; both should depend on abstractions. Abstractions should not depend on details.  Details should depend upon abstractions. 
 
 References  
 1. Uncle Bob Solid Principles https://www.youtube.com/watch?v=pTB0EiLXUC8&t=387s
