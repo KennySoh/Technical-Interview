@@ -303,7 +303,8 @@ All DDL commands are **auto-committed.** That means it saves all the changes per
 ## DML (Data Manipulation Language)
 DML commands are used for manipulating the data stored in the table and not the table itself.  
   
-DML commands are not auto-committed. It means changes are not permanent to database, they can be rolled back.  
+DML commands are not auto-committed. It means changes are not permanent to database, they can be rolled back. 
+
 | Commands       | Description  |
 | ------------- |:-------------:|
 | INSERT     | to insert a new row |
@@ -313,6 +314,7 @@ DML commands are not auto-committed. It means changes are not permanent to datab
 
 ## TCL (Transaction Control Language)
 These commands are to keep a check on other commands and their affect on the database. These commands can annul changes made by other commands by rolling the data back to its original state. It can also make any temporary change permanent.  
+
 | Commands       | Description  |
 | ------------- |:-------------:|
 | COMMIT    | to permanently save |
@@ -321,6 +323,7 @@ These commands are to keep a check on other commands and their affect on the dat
   
 ## DCL (Data Control Language)
 Data control language are the commands to grant and take back authority from any database user.  
+
 | Commands       | Description  |
 | ------------- |:-------------:|
 | GRANT   | grant permission of right |
@@ -328,6 +331,7 @@ Data control language are the commands to grant and take back authority from any
   
 ## DQL (Data Query Language)
 Data query language is used to fetch data from tables based on conditions that we can easily apply.  
+
 | Commands       | Description  |
 | ------------- |:-------------:|
 | SELECT   | retrieve records from one or mroe table |
