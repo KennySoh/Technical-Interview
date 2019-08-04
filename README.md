@@ -489,4 +489,64 @@ class Node{
    }
 ```
 ## Stacks and Queues 
+Stack -> First in Last Out  
+Queues -> First in First Out  
+  
+**Implementing a Stack**
+```java
+Class Stack {
+   Node top;
+   Node pop(){
+      if(top!=null){
+         Object item - top.data;
+         top= top.next;
+         return item;
+      }
+      return null;
+   }
+   void push(Object item){
+      Node t = new Node(item);
+      t.next = top;
+      top = t;
+   }
+}
+```
+  
+**Implementing a Queue**
+```java
+Class Queue{
+   Node first,last;
+   void enqueue(Object item){
+      if(!first){
+         back= new Node(item);
+         first=back;
+      } else{
+      back.next=new Node(item);
+      back = back.next;
+      }
+   }
+   Node dequeue(Node n){
+      if(front!=null){
+         Object item =front.data;
+         front = front.next; 
+         return item; 
+      }
+      return null; 
+   }
+}
+```
+### Trees and Graphs
+1. Implement a tree/ find a node/ delete a node/ other well- known algorithm  
+2. Implement a modification of a known algorithm  
+  
+Not all binary trees are binary search trees
 
+#### Binary Trees
+- In-order: Traverse left, current node the right  
+- Pre-Order: Traverse cureent node, then left , then right  
+- Post-order: Traverse left node, then right node then current node  
+- Insert Node  
+  
+#### Graph Traversal 
+- Depth first search: searching all its children before sibilings 
+- Breadth first search: search all irs sibilings before going to children 
