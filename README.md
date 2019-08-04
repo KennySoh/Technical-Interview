@@ -408,7 +408,7 @@ References
  
  AWS DynamoDB
  
- # DataStructures | Algorithm | Concepts - Overview
+ # Overview - DataStructures | Algorithm | Concepts 
  
  |DataStructures |Algorithm   | Concepts|
 |:-------------:|:-------------:|:-------------:|
@@ -419,6 +419,19 @@ References
 | Queues             | Quick Sort            |Recursion                 |
 | Vectors/ ArrayList | Tree Insert           |BIG-O Time                |
 | Hash Tables        |                       |                          |
+
+## DataStructures
+### HashTables (Dictionary)
+Hashtables maps key, value pairs.
+```java
+   Map<String, Integer> table = new Hashtable<>(); 
+   table.put("Pen", 10); 
+   table.put("Book", 500); 
+   table.put("Clothes", 400); 
+   table.put("Mobile", 5000); 
+```
+
+
 
 
 
