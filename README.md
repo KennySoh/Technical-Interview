@@ -395,9 +395,15 @@ DELETE FROM pets WHERE _id=<id_pets_interested in>
 - One-Many
 - Many-Many  
 
+References  
+1. SQL Documentation https://www.studytonight.com/dbms/introduction-to-sql.php
+
 # Non-SQL Quries 
  NoSQL database are primarily called as non-relational or distributed database.  
  NoSQL databases are document based, key-value pairs, graph databases or wide-column stores.
  
  AWS DynamoDB
+ 
+ # DataStructures
+ 
  
