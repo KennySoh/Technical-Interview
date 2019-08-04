@@ -245,12 +245,13 @@ The Dependency Inversion Principle (DIP) states:
    A. High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g. interfaces).  
    B. Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.  
    
- Traditional Layers Pattern
+ **Traditional Layers Pattern**  
  ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Solid_d1.PNG)
+ Highly Coupled.  
  
- Dependency inversion Pattern
+ **Dependency inversion Pattern**
  ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Solid_d2.PNG)
- 
+Introduction of inheritance/implementation of abstract classes or interfaces. 
 
 References  
 1. Uncle Bob Solid Principles https://www.youtube.com/watch?v=pTB0EiLXUC8&t=387s
