@@ -434,6 +434,13 @@ Hashtables maps key, value pairs.
    streetno = {"1":"Sachine Tendulkar", "2":"Dravid", "3":"Sehwag", "4":"Laxman","5":"Kohli"}
 ```
 
+```js
+var myHash = {}; // New object
+myHash['one'] = [1,10,5];
+myHash['two'] = [2];
+myHash['three'] = [3, 30, 300];
+```
+
 
 
  
