@@ -248,9 +248,9 @@ The Dependency Inversion Principle (DIP) states:
  **Traditional Layers Pattern**  
  ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Solid_d1.PNG)
  Highly Coupled.  
- 
- **Dependency inversion Pattern**
- ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Solid_d2.PNG)
+   
+ **Dependency inversion Pattern**   
+ ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Solid_d2.PNG)  
 Introduction of inheritance/implementation of abstract classes or interfaces. 
 
 References  
