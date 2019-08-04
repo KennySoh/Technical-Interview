@@ -246,7 +246,7 @@ The Dependency Inversion Principle (DIP) states:
    B. Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.  
    
  **Traditional Layers Pattern**  
- ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Solid_d1.PNG)
+ ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Solid_d1.PNG)  
  Highly Coupled.  
    
  **Dependency inversion Pattern**   
@@ -258,5 +258,28 @@ References
 2. Examle for Open closed Principle http://joelabrahamsson.com/a-simple-example-of-the-openclosed-principle/
 3. Example for Liskov Sub Principle https://www.youtube.com/watch?v=Mmy1EUKC_iE
 4. Example for Isp https://www.youtube.com/watch?v=xahwVmf8itI
+  
+# Stateless vs Stateful
+ **Stateless applications** don’t “store” data vs **stateful applications** require backing storage. 
+ 
+# SQL Queries
+  
+**CRUS (create read update delete)**
 
+- A databse can be located in many places:
+   - within ur android
+   - on a remote webserver
+   - spread throughout many remote servers"in the cloud")
 
+DataBase Software
+Oracle, Microsoft SQL Server Acess, PostgreSQL, MySQL, SQLite
+
+SELECT name
+FROM countries
+WHERE population > 200000;
+
+ERM diagram
+- Entity
+- Relationship
+
+Schema, constraints 
