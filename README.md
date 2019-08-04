@@ -412,7 +412,14 @@ References
  
  |DataStructures |Algorithm   | Concepts|
 |:-------------:|:-------------:|:-------------:|
-| GRANT   | grant permission of right |:------------:|
+| Linked List        | Breadth First Search  |Bit Manipulation|
+| Binary Trees       | Depth First Search    |Singleton Design Patterns |
+| Tries              | Binary Search         |Factory Design Patterns   |
+| Stacks             | Merge Sort            |Memory (Stack vs Heap)    |
+| Queues             | Quick Sort            |Recursion                 |
+| Vectors/ ArrayList | Tree Insert           |BIG-O Time                |
+| Hash Tables        |                       |                          |
+
 
 
  
