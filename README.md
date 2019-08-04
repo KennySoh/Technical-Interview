@@ -430,8 +430,9 @@ Hashtables maps key, value pairs.
    table.put("Clothes", 400); 
    table.put("Mobile", 5000); 
 ```
-
-
+```python 
+   streetno = {"1":"Sachine Tendulkar", "2":"Dravid", "3":"Sehwag", "4":"Laxman","5":"Kohli"}
+```
 
 
 
