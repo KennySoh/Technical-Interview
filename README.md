@@ -262,9 +262,15 @@ References
 # Stateless vs Stateful
  **Stateless applications** don’t “store” data vs **stateful applications** require backing storage. 
  
+ 
 # SQL Queries
-  
-**CRUS (create read update delete)**
+SQL databases are primarily called as Relational Databases (RDBMS). SQL databases are table based databases   
+SQL databases have predefined schema.
+
+ERM diagram
+- Entity
+- Relationship
+## **CRUD (create read update delete)**
 
 - A databse can be located in many places:
    - within ur android
@@ -278,8 +284,120 @@ SELECT name
 FROM countries
 WHERE population > 200000;
 
-ERM diagram
-- Entity
-- Relationship
-
 Schema, constraints 
+  
+# OFFICIAL SQL SITE
+## DDL (Data Definition Language)
+This includes changes to the structure of the table like creation of table, altering table, deleting a table etc.  
+  
+All DDL commands are **auto-committed.** That means it saves all the changes permanently in the database.
+
+| Commands       | Description  |
+| ------------- |:-------------:|
+| CREATE      | to create new table or database |
+| ALTER     | for alteration      |
+| TRUNCATE | delete data rom table     |
+| DROP | to drop a table     |
+| rename | to rename a table     |
+
+## DML (Data Manipulation Language)
+DML commands are used for manipulating the data stored in the table and not the table itself.  
+  
+DML commands are not auto-committed. It means changes are not permanent to database, they can be rolled back.  
+| Commands       | Description  |
+| ------------- |:-------------:|
+| INSERT     | to insert a new row |
+| UPDATE    | to update existing row      |
+| DELETE | to delete a row     |
+| MERGE | merging two rows or two tables     |
+
+## TCL (Transaction Control Language)
+These commands are to keep a check on other commands and their affect on the database. These commands can annul changes made by other commands by rolling the data back to its original state. It can also make any temporary change permanent.  
+| Commands       | Description  |
+| ------------- |:-------------:|
+| COMMIT    | to permanently save |
+| ROLLBACK   | to undo change     |
+| SAVEPOINT | to save temporarily     |
+  
+## DCL (Data Control Language)
+Data control language are the commands to grant and take back authority from any database user.  
+| Commands       | Description  |
+| ------------- |:-------------:|
+| GRANT   | grant permission of right |
+| REVOKE  | take back permission     |
+  
+## DQL (Data Query Language)
+Data query language is used to fetch data from tables based on conditions that we can easily apply.  
+| Commands       | Description  |
+| ------------- |:-------------:|
+| SELECT   | retrieve records from one or mroe table |
+
+## My SQL data type (there is more)
+1. Number type
+   a. Int
+   b. Float
+   c. Double
+2. Text type
+   a. Varchar
+   b. Text
+   c. Char
+3. Data type
+   a. Date
+   b. Time
+   c. DateTime
+
+## DDL (Creating or Deleting Table/ Database etc)
+### Creating Table
+Create table table-name(columnName1 datatype, coloumnName2 datatype...);
+Eg: create table customer(CustID int(4). CustName varchar(10), CustEmail varchar(15));
+
+### Adding new coloumn
+Alter table tableName
+   Add column columnName datatype;
+Eg. Alter table Customer
+            add column CustDOB date; 
+
+## Data Manipulation Language (CRUD)
+### Create
+Insert a pet into data base 
+INSERT INTO <table_name> (<columns_name_1>,<columns_name_2>,..) 
+               VALUES (<value_1>,<value_2>,...);
+
+INSERT INTO pets (_id,name, breed, gender, weight) 
+               VALUES (1,"Tommy","Pomeranian",1,4);
+
+### READ
+SELECT * FROM pets WHERE _id ==1;
+1 | "Tommy" | " Pomeranian" | 1 | 4 
+
+SELECT * FROM pets WHERE weight>=18;
+SELECT name, weight FROM pets WHERE gender == 1 ORDER BY weight DESC;
+
+### UPDATE
+UPDATE pets SET weight = 20 WHERE _id == 2;
+
+### DELETE 
+DELETE FROM <table_name> ;
+DELETE FROM pets;
+
+DELETE FROM pets WHERE _id=<id_pets_interested in> 
+
+## Integrity Constraint 
+1. Primary Key 
+2. Foreign Key
+3. Unique Key
+4. Default
+5. Not Null
+6. Check
+
+## Relationships
+- One-One 
+- One-Many
+- Many-Many  
+
+# Non-SQL Quries 
+ NoSQL database are primarily called as non-relational or distributed database.  
+ NoSQL databases are document based, key-value pairs, graph databases or wide-column stores.
+ 
+ AWS DynamoDB
+ 
