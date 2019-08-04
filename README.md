@@ -411,8 +411,8 @@ References
  # DataStructures | Algorithm | Concepts - Overview
  
  |DataStructures |Algorithm   | Concepts|
-| ------------- |:-------------:|:-------------:|
-| GRANT   | grant permission of right |------------:|
+|:-------------:|:-------------:|:-------------:|
+| GRANT   | grant permission of right |:------------:|
 
 
  
