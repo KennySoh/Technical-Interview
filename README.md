@@ -421,8 +421,10 @@ References
 | Hash Tables        |                       |                          |
 
 ## DataStructures
-### HashTables (Dictionary)
+### Arrays & Strings
+#### HashTables (Dictionary)
 Hashtables maps key, value pairs.
+
 ```java
    Map<String, Integer> table = new Hashtable<>(); 
    table.put("Pen", 10); 
@@ -430,18 +432,61 @@ Hashtables maps key, value pairs.
    table.put("Clothes", 400); 
    table.put("Mobile", 5000); 
 ```
+
 ```python 
    streetno = {"1":"Sachine Tendulkar", "2":"Dravid", "3":"Sehwag", "4":"Laxman","5":"Kohli"}
 ```
 
 ```js
-var myHash = {}; // New object
-myHash['one'] = [1,10,5];
-myHash['two'] = [2];
-myHash['three'] = [3, 30, 300];
+   var myHash = {}; // New object
+   myHash['one'] = [1,10,5];
+   myHash['two'] = [2];
+   myHash['three'] = [3, 30, 300];
+```
+#### ArrayList (Dynamically Resizing Array):
+An array that resizes itself as needed while providing O(1) access. 
+```java
+   List<String> animals = new ArrayList<>();
+   animals.add("Lion");
+   animals.add("Tiger");
+   animals.add("Cat");
+   animals.add("Dog");
 ```
 
+### Linked List
 
+**Creating a Linked List**
+Understand the difference between a singly linked list vs doubly linked list. 
+```java
+class Node{
+   Node next=null; 
+   int data;   
+   public Node(int d){
+      data=d;
+   }
+   void appendToTail(int d){
+      Node end = new Node(d);
+      Node n = this;
+      while(n.next !=null){ n = n.next;}
+      n.next=end;
+   }
+}
+```
+**Deleting a Node from a Singly Linked List**
+```java
+   Node deleteNode(Node head, int d){
+      Node n=head;
+      if (n.data==d){
+         return head.next; 
+      }
+      while (n.next!=null){
+         if(n.next.data==d){
+            n.next=n.next.next;
+            return head; 
+         }
+         n=n.next
+      }
+   }
+```
+## Stacks and Queues 
 
- 
- 
