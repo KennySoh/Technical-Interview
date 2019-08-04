@@ -402,7 +402,7 @@ DELETE FROM pets WHERE _id=<id_pets_interested in>
 References  
 1. SQL Documentation https://www.studytonight.com/dbms/introduction-to-sql.php
 
-# Non-SQL Quries 
+# Non-SQL Queries 
  NoSQL database are primarily called as non-relational or distributed database.  
  NoSQL databases are document based, key-value pairs, graph databases or wide-column stores.
  
