@@ -337,18 +337,18 @@ Data query language is used to fetch data from tables based on conditions that w
 | SELECT   | retrieve records from one or mroe table |
 
 ## My SQL data type (there is more)
-1. Number type
-   a. Int
-   b. Float
-   c. Double
-2. Text type
-   a. Varchar
-   b. Text
-   c. Char
-3. Data type
-   a. Date
-   b. Time
-   c. DateTime
+1. Number type  
+   a. Int  
+   b. Float  
+   c. Double  
+2. Text type  
+   a. Varchar  
+   b. Text  
+   c. Char  
+3. Data type  
+   a. Date  
+   b. Time  
+   c. DateTime  
 
 ## DDL (Creating or Deleting Table/ Database etc)
 ### Creating Table
