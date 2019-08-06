@@ -55,6 +55,7 @@ x[1]=3 #immutable cant be changed
 ```  
   
 **Dictioanries: aka hashtables and maps**  
+(Mutable Type)
 ```python
 # Declaring dictioanry
 exDict={‘Jack’:[15,’blonde’],’Bob’:[22,’brown’]}
