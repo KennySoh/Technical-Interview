@@ -70,3 +70,46 @@ print(mydict["mouse"]) # ans =6+12=18
 dict1.keys()
 ```
 
+## Recursion
+Base case (terminating), Recursion
+
+```python
+# Complete the jumpingOnClouds function below.
+def jumpingOnClouds(c):
+    # inputs:  (list) c
+    # outputs: (int) minNumJump
+    # Recursion: 2 case 
+    #   1) Jump 2 and succed  
+    #   2) Jump 2 and fail / Jump 1 (reduce c_list)
+    # Terminating case
+    #   1) if there 1 jump left
+    #   2) if there 2 jump left 
+    
+    jumps=0;
+    jumpsLeft=len(c);
+    #Termintating
+    if(jumpsLeft==3 or jumpsLeft==2):
+        #end
+        jumps=1
+        print("end jump")
+        print(jumps)
+        return jumps
+        #add to jump and return
+    else:
+        #Recursion
+        if(c[2]==0):
+            #jump2 Success
+            print("jump2")
+            jumps=1
+            jumps =jumpingOnClouds(c[2:len(c)])+jumps
+            print(jumps)
+            return jumps
+        else:
+            #jump1 
+            print("jump1")
+            jumps=1
+            jumps =jumpingOnClouds(c[1:len(c)])+jumps
+            print(jumps)
+            return jumps
+
+```
