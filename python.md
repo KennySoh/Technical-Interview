@@ -16,6 +16,11 @@ print(x[0]) #prints "ham"
 if a==[]: 
   print “list is empty”
   
+# Iterating through list
+list = [1, 3, 5, 7, 9] 
+for i in list: 
+    print(i)
+  
 ##deep copying for deep arrays
 list1=list2                       #list1 points to same reference as list2
 list1=list2[:]                    #list1 points to a copy of list2, changes in list2 does not affect list1
