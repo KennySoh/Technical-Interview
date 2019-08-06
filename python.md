@@ -1,15 +1,29 @@
 # Python 3  
+"weakly typed" language    
+  
 **Variable type**
 Int=3, Float=3.0, String=”Words” (‘w’, “w”, “””w”””, ‘’’w’’’)
 
-**List**
+**List** (Mutable Type -> References point to same place)  
 ```python
 # Declaring a new list , list can have a mixture of variables
 x=[“ham”,4.22,5] 
 
 # Accessing list
 print(x[0]) #prints "ham"
-#
+
+# Checking if list is empty
+if a==[]: 
+  print “list is empty”
+  
+##deep copying for deep arrays
+list1=list2                       #list1 points to same reference as list2
+list1=list2[:]                    #list1 points to a copy of list2, changes in list2 does not affect list1
+from copy import deepcopy       # or import copy
+list2=deepcopy(list1)         	#works for deep list
+
+
+
 ```
 Starting : **x=[“ham”,4.22,5]**  
 
@@ -28,3 +42,6 @@ Starting : **x=[“ham”,4.22,5]**
 | x= [“c”]+x                    | #adding a list in front                         |                 |
 | x*2                           | #repeat 2 times                                 | [“ham”,4.22,5,“ham”,4.22,5]   |
 | list.index(“ham”)             | #returns the index of first found variable      |                          |
+| list.sort()                   |#arrange from lowest to highest                  | [1, 2, 3, 4]| 
+
+**Tuple**
