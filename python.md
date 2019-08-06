@@ -44,4 +44,28 @@ Starting : **x=[“ham”,4.22,5]**
 | list.index(“ham”)             | #returns the index of first found variable      |                          |
 | list.sort()                   |#arrange from lowest to highest                  | [1, 2, 3, 4]| 
 
-**Tuple**
+**Tuple** (Similar to List, use less memory and not adjustable)   
+(Immutable Type ->  So their id(), the spot they point to in memory, changes.)  
+```python
+x=(“ham”,4.22,5)
+x[1] #calling a tuple same as list
+
+#Error
+x[1]=3 #immutable cant be changed
+```  
+  
+**Dictioanries: aka hashtables and maps*  
+```python
+# Declaring dictioanry
+exDict={‘Jack’:[15,’blonde’],’Bob’:[22,’brown’]}
+print(exDict[“Jack”][1])
+
+#Accessing and adding new key,value
+mydict = {"cat":12, "dog":6, "elephant":23}
+mydict["mouse"] = mydict["cat"] + mydict["dog"]
+print(mydict["mouse"]) # ans =6+12=18
+
+#getting a list of keys()
+dict1.keys()
+```
+
