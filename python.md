@@ -12,6 +12,7 @@ print(b[2:5])
 
 
 
+
 **List** (Mutable Type -> References point to same place)  
 ```python
 # Declaring a new list , list can have a mixture of variables
