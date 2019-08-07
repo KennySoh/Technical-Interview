@@ -1,8 +1,16 @@
 # Python 3  
 "weakly typed" language    
   
-**Variable type**
+# Variable type
 Int=3, Float=3.0, String=”Words” (‘w’, “w”, “””w”””, ‘’’w’’’)
+
+### Accesing String 
+```python
+b = "Hello, World!"
+print(b[2:5])
+# llo
+
+
 
 **List** (Mutable Type -> References point to same place)  
 ```python
