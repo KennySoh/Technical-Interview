@@ -20,6 +20,10 @@ if a==[]:
 list = [1, 3, 5, 7, 9] 
 for i in list: 
     print(i)
+    
+for i in range(6):
+    print(i)
+ #Print 0,1,2,3,4,5
   
 ##deep copying for deep arrays
 list1=list2                       #list1 points to same reference as list2
