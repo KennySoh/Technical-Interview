@@ -422,6 +422,7 @@ References
 
 ## DataStructures
 ### Arrays & Strings
+Array are abstract data strucuture. Need to be together in memory. Linked list are pointers
 #### HashTables (Dictionary)
 Hashtables maps key, value pairs.
 
