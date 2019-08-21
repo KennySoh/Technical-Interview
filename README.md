@@ -535,13 +535,18 @@ Class Queue{
    }
 }
 ```
-### Trees and Graphs
+### Trees and Graphs ( Hierarchy Data)
 1. Implement a tree/ find a node/ delete a node/ other well- known algorithm  
 2. Implement a modification of a known algorithm  
   
-Not all binary trees are binary search trees
-
-#### Binary Trees
+Not all binary trees are binary search trees  
+  
+Concepts:
+Root, Children, Parent, Sibiling, Leaf(Nodes with no child) 
+Depth and Height ( Node 3 has a depth of 1 an height 0, Node2 has a depth of 1, height of 1)  
+   
+#### Binary Trees  
+Nodes can only have at most 2 child.  
 - In-order: Traverse left, current node the right  
 - Pre-Order: Traverse cureent node, then left , then right  
 - Post-order: Traverse left node, then right node then current node  
