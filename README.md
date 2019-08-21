@@ -546,7 +546,27 @@ Not all binary trees are binary search trees
 - Pre-Order: Traverse cureent node, then left , then right  
 - Post-order: Traverse left node, then right node then current node  
 - Insert Node  
+      tree  
+      ----  
+       1    <-- root  
+     /   \  
+    2     3    
+   /   
+  4  
+
+```java
+class Node 
+{ 
+    int key; 
+    Node left, right; 
   
+    public Node(int item) 
+    { 
+        key = item; 
+        left = right = null; 
+    } 
+} 
+```
 #### Graph Traversal 
 - Depth first search: searching all its children before sibilings 
 - Breadth first search: search all irs sibilings before going to children 
