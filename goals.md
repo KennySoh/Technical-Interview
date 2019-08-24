@@ -28,3 +28,7 @@ Fitness Targets:
 - [ ] Javascript
 - [ ] Html5
 - [ ] Css3
+- [ ] Algorithms/ Data Structure
+- [ ] Object Oriented Programming
+- [ ] Python
+- [ ] Java
