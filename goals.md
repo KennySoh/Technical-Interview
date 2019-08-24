@@ -19,11 +19,11 @@ Technical skills
 - React
 - Saas 
 
-I'm also doing Fitness Targets:
-# [Date Normally Goes Here]
+Fitness Targets:
+20 push ups/ 20 situps / 20 burpees
+sunday 1.6km 
 
-### This Week's Focus: N/A
-
+# 24 Aug 2019
 ### Things I'll do This Week:
 
 I haven't done this in a while, since I've moved to my bullet journal in September. However, you can look through the archive for ideas :) It's helped me for about 3 years!
