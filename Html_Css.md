@@ -55,5 +55,14 @@ Think of everything as boxes
   <li></li>
 </ul>
 ```
-  
+# CSS
+```css
+.main-nav{
+  width: 100%;
+}
 ```
+Each {} is a css rule.  
+Each rule begins with a selector (eg. main-nav)  
+width are known as css properties
+
+
