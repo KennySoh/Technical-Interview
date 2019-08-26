@@ -36,7 +36,8 @@ Think of everything as boxes
 <a href="#top">Anchor text, clickable</a>
 
 <!--Image Link-->
-<a href="#top">
+<!--(target="_blank") sends to new tab-->
+<a href="http://twitter.com/treehouse" target="_blank">
   <img src=images/portland.jpg alt="Drawing of Kenny" class="profile-image"> 
   </img> 
 </a>
