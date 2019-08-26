@@ -42,4 +42,18 @@ Think of everything as boxes
   </img> 
 </a>
 ```
+## Ordered & Unordered List 
+```html
+<ol>
+  <li></li>
+  <li></li>
+</ol>
 
+
+<ul>
+  <li></li>
+  <li></li>
+</ul>
+```
+  
+```
