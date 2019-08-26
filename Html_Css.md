@@ -25,7 +25,20 @@ Think of everything as boxes
 ## Image Tag
 ```html
 <!-- Html Tags <img>,  Attributes (src, alt, class)-->
-<img src=ïmages/portland.jpg alt="Drawing of Kenny" class="profile-image">  
+<img src=images/portland.jpg alt="Drawing of Kenny" class="profile-image">  
 ```
+## Paragraph Tag
+```html
+<p>This is a paragraph.</p>
+```
+## Link Tag
+```html
+<a href="#top">Anchor text, clickable</a>
 
+<!--Image Link-->
+<a href="#top">
+  <img src=images/portland.jpg alt="Drawing of Kenny" class="profile-image"> 
+  </img> 
+</a>
+```
 
