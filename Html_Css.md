@@ -23,8 +23,9 @@ Think of everything as boxes
 ```
 
 ## Image Tag
-Html Tag <img 
-Html Attributes <img src=ïmages/portland.jpg alt="Drawing of Kenny" class="profile-image">  
-
+```html
+# Html Tags <img>,  Attributes (src, alt, class)
+<img src=ïmages/portland.jpg alt="Drawing of Kenny" class="profile-image">  
+```
 
 
