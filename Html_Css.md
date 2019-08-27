@@ -61,8 +61,7 @@ section tags to better structure different major section
 article tags to seperate items in major sections  
 nav tags markups for major links groups.   
 aside for stuff that appears in the page like side bar
-
-## One Main Tag, Can have Multiple Header and Multiple Footer Tag
+div tag only when article or aside tag is not appropiate
 ```html
 <!--Used to structure content in body-->
 <section>
@@ -95,6 +94,8 @@ aside for stuff that appears in the page like side bar
 <aside>
 </aside>
 ```
+
+## One Main Tag, Can have Multiple Header and Multiple Footer Tag
 Example of splitting body
 ```html
 <!DOCTYPE html>
