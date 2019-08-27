@@ -57,8 +57,18 @@ Think of everything as boxes
 ```
 # CSS
 ```css
+
+/* Stying by element, class , id */
+h3 {
+  color:red;
+}
 .main-nav{
   width: 100%;
+}
+
+#id{
+  color: maroon;
+  letter-spacing:2px;
 }
 ```
 Each {} is a css rule.  
