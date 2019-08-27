@@ -139,7 +139,8 @@ Example of splitting body
   </footer>
 </blockquote>
 ```
-Take note you can use multiple footer and header 
+Take note you can use multiple footer and header. Eg. Each article has a header/ footer
+But you only can have one main tag.
 # CSS
 ```css
 
