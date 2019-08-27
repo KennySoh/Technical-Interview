@@ -57,7 +57,7 @@ Think of everything as boxes
 ```
 
 ## Adding section tags, article, nav, aside
-section tags to better structure different major section  
+*section* tags to better structure different major section, each section should follow with <h1-9> tag to describe what the section is about  
 article tags to seperate items in major sections  
 nav tags markups for major links groups.   
 aside for stuff that appears in the page like side bar
