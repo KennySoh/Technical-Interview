@@ -112,15 +112,17 @@ Example of splitting body
       <h1>My Web Design &amp; Development Portfolio!</h1> 
       <p>A site featuring my latest work.</p>
     </header>
-    <section>
-      <h2>Welcome</h2> 
-      <p>Fusce semper id ipsum sed scelerisque. Etiam nec elementum massa. Pellentesque tristique ex ac ipsum hendrerit, eget feugiat ante faucibus.</p>
-      <ul>
-        <li><a href="#">Recent project #1</a></li>
-        <li><a href="#">Recent project #2</a></li>
-        <li><a href="#">Recent project #3</a></li>     
-      </ul>
-    </section>
+    </main>
+      <section>
+        <h2>Welcome</h2> 
+        <p>Fusce semper id ipsum sed scelerisque. Etiam nec elementum massa. Pellentesque tristique ex ac ipsum hendrerit, eget feugiat ante faucibus.</p>
+        <ul>
+          <li><a href="#">Recent project #1</a></li>
+          <li><a href="#">Recent project #2</a></li>
+          <li><a href="#">Recent project #3</a></li>     
+        </ul>
+      </section>
+    </main>
     <footer>
       <p>&copy; 2017 My Portfolio</p>
       <p>Follow me on <a href="#">Twitter</a>, <a href="#">Instagram</a> and <a href="#">Dribbble</a></p>
