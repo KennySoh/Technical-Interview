@@ -130,6 +130,12 @@ Example of splitting body
   </body>
 </html>
 ```
+## Block Quote Tag
+```html
+<blockquote>
+  Some quote
+</blockquote>
+```
 # CSS
 ```css
 
