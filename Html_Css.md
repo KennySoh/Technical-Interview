@@ -133,9 +133,13 @@ Example of splitting body
 ## Block Quote Tag
 ```html
 <blockquote>
-  Some quote <cite><a href="somesource.html"> Mark Zuckerberg</a></cite>
+  Some quote 
+  <footer>
+    <cite><a href="somesource.html"> Mark Zuckerberg</a></cite>
+  </footer>
 </blockquote>
 ```
+Take note you can use multiple footer and header 
 # CSS
 ```css
 
