@@ -133,7 +133,7 @@ Example of splitting body
 ## Block Quote Tag
 ```html
 <blockquote>
-  Some quote
+  Some quote <cite><a href="somesource.html"> Mark Zuckerberg</a></cite>
 </blockquote>
 ```
 # CSS
