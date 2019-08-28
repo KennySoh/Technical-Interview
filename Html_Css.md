@@ -21,7 +21,26 @@ Think of everything as boxes
   </body>
 </html>
 ```
-
+## Basic Web Page
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kenny's Resume</title> 
+    <link rel="stylesheet" href="resume.css">
+  </head>
+  <body>
+    <img src="http://placeimg.com/200/200/any" alt="kenny webdeveloper">
+    <h1>Treasure Porth, Web Developer</h1>
+    <h2>Summary of Qualification</h2>
+    <ul>
+      <li>Experience as freelance developer</li>
+      <li>Experience with Html,Css and Javascript</li>
+      <li>Bachelor of Science, Economics</li>
+    </ul>
+  </body>
+</html>
+```
 ## Image Tag
 ```html
 <!-- Html Tags <img>,  Attributes (src, alt, class)-->
@@ -30,8 +49,8 @@ Think of everything as boxes
 Adding Caption to image: Use **figure** & **figcaption**
 ```html
 <figure>
-  <img>
-  <figcaption>
+  <img src="moon.jpg">
+  <figcaption>Explanation of moon</figcaption>
 </figure>
 ```
 ## Paragraph Tag
@@ -152,6 +171,22 @@ Example of splitting body
 ```
 Take note you can use multiple footer and header. Eg. Each article has a header/ footer
 But you only can have one main tag.
+
+## Creating breaks in content 
+```html
+<br> <!--Line Break: Similar to Enter Key in words-->
+<hr> <!--Horizontal line: Normally to seperate different sections/topics-->
+
+<strong></strong> <!--Bold the word: Emphasize importance-->
+<em></em> <!--Italize-->
+<small></small> <!--For Copyrights or shortruns of tags-->
+This is <span>a sentence</span> <!--For Inline Elements you like to style with css-->
+<div>This is a sentence</div><!--For Block Level Elements you like to style with css-->
+```
+
+## File Path
+
+
 # CSS
 ```css
 
@@ -178,26 +213,4 @@ Each rule begins with a selector (eg. main-nav)
 margin outside, padding inside  
   
 reference: css-tricks.com  
-
-## Basic Web Page
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Kenny's Resume</title> 
-    <link rel="stylesheet" href="resume.css">
-  </head>
-  <body>
-    <img src="http://placeimg.com/200/200/any" alt="kenny webdeveloper">
-    <h1>Treasure Porth, Web Developer</h1>
-    <h2>Summary of Qualification</h2>
-    <ul>
-      <li>Experience as freelance developer</li>
-      <li>Experience with Html,Css and Javascript</li>
-      <li>Bachelor of Science, Economics</li>
-    </ul>
-  </body>
-</html>
-```
-
 
