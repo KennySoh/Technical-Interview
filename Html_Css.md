@@ -27,6 +27,13 @@ Think of everything as boxes
 <!-- Html Tags <img>,  Attributes (src, alt, class)-->
 <img src=images/portland.jpg alt="Drawing of Kenny" class="profile-image">  
 ```
+Adding Caption to image: Use **figure** & **figcaption**
+```html
+<figure>
+  <img>
+  <figcaption>
+</figure>
+```
 ## Paragraph Tag
 ```html
 <p>This is a paragraph.</p>
