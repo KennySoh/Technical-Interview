@@ -184,8 +184,39 @@ This is <span>a sentence</span> <!--For Inline Elements you like to style with c
 <div>This is a sentence</div><!--For Block Level Elements you like to style with css-->
 ```
 
-## File Path
+## Linking to Sections of a Web Page
+back to top link & in page links  
+```html
+<a href="#about"> </a>
+<a href="aticle.html#contact-us"></a>  
+  
+<section id="about"></section>
+<section id="contact-us"></section>
+```
+## File Paths
+```html
+<a href="../css/aticle.html#contact-us"></a> <!-- relative path: navigating from current directory-->
+<a href="/article.html"> <!--"/" root relative path-->
+<a href="https://github/article.html"> <!--"/" absolute relative path-->
+```
 
+## Email link with email automatically filled
+```html
+<!-- This opens the default email app and auto fills email and subject. %20 = "space"-->
+Email<a href="mailto:cool@gmail.com?subject=Hi%20There!">cool@gmail.com</a>
+```
+
+## HTML Entities & Reserved Charaters 
+use Html Entities (&Entity;) to display reserved characters. 
+
+```html
+&lt; "<" 
+&gt; ">"
+&amp; "&"
+&copy; "Copyright symbol"
+&nbsp; "spacebar"
+```
+ref: https://dev.w3.org/html5/html-author/charref
 
 # CSS
 ```css
