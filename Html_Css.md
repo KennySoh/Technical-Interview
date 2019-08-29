@@ -245,3 +245,6 @@ margin outside, padding inside
   
 reference: css-tricks.com  
 
+# HTML & CSS Validators
+html validator: https://validator.w3.org/nu/#textarea  
+css validator: https://jigsaw.w3.org/css-validator/validator  
