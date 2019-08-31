@@ -247,8 +247,46 @@ reference: css-tricks.com
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 https://webplatform.github.io/docs/css/properties/padding-top/
 
-## 
-
+## Inline Style & Internal Style & External Style Sheets
+Ideally not, does not seperate html and css.. overides all other styles
+```html
+<!--Inline Style-->
+<body style="background-color: orange;">
+```
+Useful only for smaller sites, not ideal as css remains in html. 
+```html
+<!--Internal Style-->
+<head>
+  <style>
+    p{
+      font-size:20px;
+      font-weight:bold;
+    }
+```
+Most Ideal, Using external stylesheet. Stylesheet is cache by the browser, so only have to download once. 
+```html
+<head>
+  <link rel="stylesheet" href="css/style.css">
+```
+```css
+body{
+  text-align:center;
+}
+h1{
+  font-size:72px;
+  color:white;
+}
+```
+via Import from html
+```html
+<head>
+  <style>
+    @import "css/import-styles.css"
+```
+via Import from css
+```css
+@import "css/import-styles.css"
+```
 # HTML & CSS Validators
 html validator: https://validator.w3.org/nu/#textarea  
 css validator: https://jigsaw.w3.org/css-validator/validator  
