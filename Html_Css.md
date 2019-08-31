@@ -247,7 +247,7 @@ reference: css-tricks.com
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 https://webplatform.github.io/docs/css/properties/padding-top/
 
-## Inline Style & Internal Style & External Style Sheets
+## Inline Style & Internal Style & External Style Sheets & Import
 Ideally not, does not seperate html and css.. overides all other styles
 ```html
 <!--Inline Style-->
