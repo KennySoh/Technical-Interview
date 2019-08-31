@@ -244,6 +244,10 @@ Each rule begins with a selector (eg. main-nav)
 margin outside, padding inside  
   
 reference: css-tricks.com  
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+https://webplatform.github.io/docs/css/properties/padding-top/
+
+## 
 
 # HTML & CSS Validators
 html validator: https://validator.w3.org/nu/#textarea  
