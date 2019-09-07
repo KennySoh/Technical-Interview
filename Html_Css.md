@@ -310,7 +310,35 @@ a:focus{/*on tab*/}
 Comments
 /*Type Selector*/
 /*Class selector*/
-/*this makes our header orange*/
+/* This makes our header orange */
+```
+
+## Common Datatypes
+```css
+color: datatypes (orange,tomato,blue);
+font-size:
+images
+gradient
+```
+datatypes references: https://developer.mozilla.org/en-US/docs/tag/CSS%20Data%20Type
+
+### Length
+Relative vs Absolute
+```css
+Absolute
+width:260px; (Now, It represents cm instead of actual pixels, since many screens have different pixel-density)
+
+Relative
+width:50%;
+font-size:150%;
+
+1em relative to parent's font-size, default 16px;
+width:1em; /*pixel to em: (X px/ 16px) */
+Take note: Compounding multiple parent sizes. 
+
+1rem relative only to root element html element of 16px. 
+
+
 ```
 # HTML & CSS Validators
 html validator: https://validator.w3.org/nu/#textarea  
