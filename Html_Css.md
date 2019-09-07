@@ -287,6 +287,31 @@ via Import from css
 ```css
 @import "css/import-styles.css"
 ```
+
+## Descendant Selectors & Pseduo-Classes
+```css
+/* Span inside Header*/
+header span{
+}
+
+/* Pseduo-Class*/
+
+a:link{ /* Only for links with href*/
+  color:orange;
+}
+div:visited{}
+p:hover{}
+a:active{/*mouse pressed*/}
+a:focus{/*on tab*/}
+}
+```
+## Comments
+```css
+Comments
+/*Type Selector*/
+/*Class selector*/
+/*this makes our header orange*/
+```
 # HTML & CSS Validators
 html validator: https://validator.w3.org/nu/#textarea  
 css validator: https://jigsaw.w3.org/css-validator/validator  
