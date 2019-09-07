@@ -324,7 +324,7 @@ datatypes references: https://developer.mozilla.org/en-US/docs/tag/CSS%20Data%20
 
 ### Length
 Relative vs Absolute
-```css
+```
 Absolute
 width:260px; (Now, It represents cm instead of actual pixels, since many screens have different pixel-density)
 
