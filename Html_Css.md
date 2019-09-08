@@ -352,8 +352,12 @@ text-align: center, right, left;
 text-transform: uppercase, lowercase, capitalize;
 text-decoration: none, underline;
 font-weight: normal,bold,lighter,bolder, 100(Take note, numeric value:100-900);
-font-family: Helvatica, Arial, sans-serif; ( Take note: web safe fonts declared at the end as backup)
+font-family: "Helvatica nue", Arial, sans-serif; ( Take note: web safe fonts declared at the end as backup)
+line-height: 1.5;(Vertical spacing between lines)
+
+font: normal 1em/1.5 Helvatice; (font-weight, text-size, line-height, font family)
 ```
+web save font: https://www.cssfontstack.com/
 # HTML & CSS Validators
 html validator: https://validator.w3.org/nu/#textarea  
 css validator: https://jigsaw.w3.org/css-validator/validator  
