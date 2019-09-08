@@ -337,8 +337,22 @@ width:1em; /*pixel to em: (X px/ 16px) */
 Take note: Compounding multiple parent sizes. 
 
 1rem relative only to root element html element of 16px. 
+```
+### Color
+```
+orange
+#ffaa00
+rgb(255,255,255) - white
+rgba(255,199,73,.4)
+```
 
-
+### Text Styles
+```
+text-align: center, right, left;
+text-transform: uppercase, lowercase, capitalize;
+text-decoration: none, underline;
+font-weight: normal,bold,lighter,bolder, 100(Take note, numeric value:100-900);
+font-family
 ```
 # HTML & CSS Validators
 html validator: https://validator.w3.org/nu/#textarea  
