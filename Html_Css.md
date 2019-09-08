@@ -358,6 +358,31 @@ line-height: 1.5;(Vertical spacing between lines)
 font: normal 1em/1.5 Helvatice; (font-weight, text-size, line-height, font family)
 ```
 web save font: https://www.cssfontstack.com/
+
+### CSS Box Model
+Block vs Inline  
+Margin>Border>Padding>Content  
+```css
+/*Padding*/
+padding-top:100px;
+padding-right:100px;
+padding-bottom:100px;
+padding-left:100px;
+
+padding: 100px 120px 200px 120px;(Top Right Btm Left)
+
+/*Border*/
+border-width: 10px;
+border-style: solid dotted; (Top&Btm Sides)
+border-color: red #ffa949 blue green; (Top Right Btm Left)
+border-bottom-style: dotted; (Overwrites)
+
+border:2px dotted tomato;
+
+/*Margins*/
+margin:105px;
+margin:auto; (equal margin left and right)
+```
 # HTML & CSS Validators
 html validator: https://validator.w3.org/nu/#textarea  
 css validator: https://jigsaw.w3.org/css-validator/validator  
