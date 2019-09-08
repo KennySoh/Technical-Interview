@@ -352,7 +352,7 @@ text-align: center, right, left;
 text-transform: uppercase, lowercase, capitalize;
 text-decoration: none, underline;
 font-weight: normal,bold,lighter,bolder, 100(Take note, numeric value:100-900);
-font-family
+font-family: Helvatica, Arial, sans-serif; ( Take note: web safe fonts declared at the end as backup)
 ```
 # HTML & CSS Validators
 html validator: https://validator.w3.org/nu/#textarea  
