@@ -382,6 +382,9 @@ border:2px dotted tomato;
 /*Margins*/
 margin:105px;
 margin:auto; (equal margin left and right)
+
+/* Dispaly*/
+dispaly: none, block, inline, inline-block;
 ```
 # HTML & CSS Validators
 html validator: https://validator.w3.org/nu/#textarea  
