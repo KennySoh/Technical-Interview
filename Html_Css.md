@@ -434,9 +434,61 @@ ol{
 ```
 
 #### Text Shadows
-```css
+```
 text-shadow:5px 8px 0 #222; (right btm blur color)
 box-shadow:15px 15px 10px -5px rgba(0,0,0,.8);(right btm blur spread color)
+box-shadow:inset 15px 15px 10px -5px rgba(0,0,0,.8); (inner shadow)
+```
+
+#### Border Radius
+```
+border-top-left-radius:50px;
+border-top-right-radius:50px;
+border-bottom-left-radius:50px;
+border-bottom-right-radius:50px;
+
+border-radius: 50px 10px 50px 10px; 
+border-radius:50% (Circle) 
+```
+
+#### Gradients
+```
+background-image:linear-gradient(0deg, #ffa949, firebrick); default: Top->Btm (to top)
+background-image:radial-gradient(circle,#ffa949,firebrick);
+background-image:radial-gradient(circle at top right,#ffa949,firebrick);
+background-image:radial-gradient(circle at top right,#ffa949 0%,firebrick 50%,dodgerblue 100%);
+```
+
+Transparent Gradients and Multiple Background
+```
+background: linear-gradient(#ffa949, transparent 90%),
+            linear-gradient(0deg,#fff,transparent),
+            #ffa949 url('../img/mountains.jpg') no-repeat center;
+```
+
+#### Importing Web Fonts with @font-face
+@font-face{
+  font-family:'Abolition Regular'; (Whatever you want)
+    src: url('../fonts/abolition-regular-webfont.eot'); (IE)
+    src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'), (Older IE)
+       url('../fonts/abolition-regular-webfont.woff') format('woff'), (Mozilla, all browsers)
+       url('../fonts/abolition-regular-webfont.ttf') format('truetype'); (Safari, Android, IOS)
+  
+}
+
+#### Media Query Basic (For different screen sizes)
+```css
+@media (max-width:960px){ (Viewport at or below:960px)
+}
+@media all(max-width:480px){ (Viewport at or below:480px, all is default)
+}
+@media( min-width:481px) and (max-width:700px){
+}
+```
+
+```css
+@media(max-width:1024px){.secondary-content{width:90%;}}
+@media(max-width:768px){.secondary-content{width:100%;padding:20px;border:none;}}
 ```
 # HTML & CSS Validators
 background-color:#ff4add;
