@@ -490,6 +490,10 @@ background: linear-gradient(#ffa949, transparent 90%),
 @media(max-width:1024px){.secondary-content{width:90%;}}
 @media(max-width:768px){.secondary-content{width:100%;padding:20px;border:none;}}
 ```
+Ensuring Iphones can have media queries
+```html
+<meta name="viewport" content="width=device-width">
+```
 # HTML & CSS Validators
 background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
