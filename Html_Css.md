@@ -383,9 +383,56 @@ border:2px dotted tomato;
 margin:105px;
 margin:auto; (equal margin left and right)
 
-/* Dispaly*/
+/* Display*/
 dispaly: none, block, inline, inline-block;
 ```
+### CSS Basics
+
+#### Width and Height
+```
+width:100px;(only for content)
+
+box-sizing:border-box ( can be used in universal selector) 
+width:75%px (for content and padding and borders)
+max-width:100px(Limits to 100px)
+```
+#### Backgrounds: Color and Images
+```
+background-image:url('img/mountains.jpg');
+background-size:40%, cover;
+background-repeat:repeat-x, repeat-y,no-repeat;
+background-color:#ff4add;
+background-position:center top,20% 50%;
+
+background:#ff4ad url('img/image.jpg');
+```
+#### Floats
+```
+float:right;
+float:left;
+
+if a block element contains floated children, its height will collapse.
+
+1st method
+overflow:auto;
+
+2nd better method (Clear Fix)
+.group:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+```
+#### Lists
+```css
+ul{
+  list-style-type:square;
+}
+ol{
+  list-style-type:decimal-leading-zero;
+}
+```
 # HTML & CSS Validators
+background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
 css validator: https://jigsaw.w3.org/css-validator/validator  
