@@ -432,6 +432,12 @@ ol{
   list-style-type:decimal-leading-zero;
 }
 ```
+
+#### Text Shadows
+```css
+text-shadow:5px 8px 0 #222; (right btm blur color)
+box-shadow:15px 15px 10px -5px rgba(0,0,0,.8);(right btm blur spread color)
+```
 # HTML & CSS Validators
 background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
