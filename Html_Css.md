@@ -494,6 +494,21 @@ Ensuring Iphones can have media queries
 ```html
 <meta name="viewport" content="width=device-width">
 ```
+
+#### Cascade :Importance  
+1 User Agent styles, 2 User styles , 3 Author styles (Our Css is here)  
+#### Cascade:Specificity and Source Order  
+#id> .class  
+inline> external style sheet  
+Source order.. Last one takes effect  
+#### Inheritance
+css elements are inherited by parents
+```
+color:initial; (The parent's parent's value 
+```
+#### Learning Tips and Tools
+
+
 # HTML & CSS Validators
 background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
