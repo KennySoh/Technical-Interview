@@ -506,8 +506,21 @@ css elements are inherited by parents
 ```
 color:initial; (The parent's parent's value 
 ```
-#### Learning Tips and Tools
+## CSS Layout
+Normalise.css, Ensure all browsers are similar. (Overriding individuals user agent style sheet)  
+https://necolas.github.io/normalize.css/8.0.1/normalize.css  
+  
+### Using Wrappers
+A wrapper is commonly used to center a layout on the page. The wrapper keeps a layout from looking too wide or too narrow depending on the devie or viewport width. 
+```
+1st method: Using exiting wrappers
+<body>
+body{width:70%;margin:0 auto;} // Width prevents from going too wide, margin centers the wrapper
 
+2nd method: Using div element
+<div class="wrapper">
+.wrapper{width:70%;margin:0 auto;}
+```
 
 # HTML & CSS Validators
 background-color:#ff4add;
