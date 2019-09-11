@@ -521,9 +521,15 @@ body{width:70%;margin:0 auto;} // Width prevents from going too wide, margin cen
 <div class="wrapper">
 .wrapper{width:70%;margin:0 auto;}
 ```
-
+### Full-wdith headers
+```
+<header> <footer>         {width:100%}
+<div class="container">   {width:70%;margin:0 auto;}
+```
 ### Vertical Margin Collapse but not Horizontal Margin
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/VerticalMargin.png)
+
+
 # HTML & CSS Validators
 background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
