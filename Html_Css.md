@@ -523,7 +523,7 @@ body{width:70%;margin:0 auto;} // Width prevents from going too wide, margin cen
 ```
 
 ### Vertical Margin Collapse but not Horizontal Margin
-![images](https://github.com/KennySoh/Technical-Interview/oop/VerticalMargin.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/VerticalMargin.png)
 # HTML & CSS Validators
 background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
