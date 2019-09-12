@@ -529,7 +529,33 @@ body{width:70%;margin:0 auto;} // Width prevents from going too wide, margin cen
 ### Vertical Margin Collapse but not Horizontal Margin
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/VerticalMargin.png)
 
+### Creating a Mobile First Layout
+Basic styles are served to mobile devices by default and then gradually adjusted for wider screens. 
+```
+/*Smaller than 769px will use the rest of the css*/
+.container{padding:1em;}
 
+/*Media Queries*/
+@media (min-width:769px){
+  .container{width:70%;margin:0 auto;max-width:1000px;}
+}
+```
+### Creating a Sticky Footer
+a footer that sticks to the btm of the page
+```
+<div class=wrap>     wrap everthing except footer
+<footer>
+
+.wrap{min-height:calc(100vh-89px);}          set it to 100% of view port minus height of footer(inspect tool)
+```
+### Positioning Elements Side by Side with inline Display.
+```
+display:inline;       (Browser will not apply width or height/ Top or Btm settings )
+display:inline-block; (Can apply width or height/ Top or Btm settings )
+
+Making inline,links hover the whole box
+.main-nav a{display:block;padding:15px 10px;} (make them as wide as parent element)
+```
 # HTML & CSS Validators
 background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
