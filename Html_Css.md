@@ -556,6 +556,11 @@ display:inline-block; (Can apply width or height/ Top or Btm settings )
 Making inline,links hover the whole box
 .main-nav a{display:block;padding:15px 10px;} (make them as wide as parent element)
 ```
+### How Float Works
+Typically, Contents (Inline and Block) are disaplayed in the Normal Document Flow (HTML Markup).  
+Float gets taken out of Normal Document flow and shifted to left and right side of the documents.  
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/NormalDocumentFlow.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Float.png)
 # HTML & CSS Validators
 background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
