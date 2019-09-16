@@ -627,7 +627,7 @@ Creating space need to add margins on the floated item. Adding on text that surr
    
    
  ```html
-  <!-- Featured image (normal flow)-->
+  <!-- Featured image (Absolute Positioning)-->
   <figure>
     <img class=ïcon-location" src"img/location.svg" alt="Location">
     <img class="feat-img" src="img/treats.svg" alt="Drinks and eats">
