@@ -559,8 +559,49 @@ Making inline,links hover the whole box
 ### How Float Works
 Typically, Contents (Inline and Block) are disaplayed in the Normal Document Flow (HTML Markup).  
 Float gets taken out of Normal Document flow and shifted to left and right side of the documents.  
+  
+Normal Document Flow
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/NormalDocumentFlow.png)
+  
+Float
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Float.png)
+
+#### Wrap Text Around Images. 
+```
+.img{
+  float:right;
+}
+
+Text flows around image, Image is taken out of normal document flow. 
+Technically a block element: Accepts width/height and top/btm values. 
+But behaves like a inline element, because doesnt exist on a line on its own. 
+
+Creating space need to add margins on the floated item. Adding on text that surrounds the image will not work because paragraph is in normal document flow and floated item is not. 
+.img{
+  float:right;
+  maring:10px;
+}
+```
+#### Creating a Horizontal Navigation with Float
+```
+.name{
+  float:left;
+}
+
+.main-nav{
+  float:right;
+}
+.main-nav li{
+  float:left;
+}
+
+// Block-level containing height collapses
+1) Give a fixed height
+2) Setting overflow: auto or hidden; (contents will be hide)
+3) .clearfix::after{ content:"";display:table;clear:both;}
+```
+
+
 # HTML & CSS Validators
 background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
