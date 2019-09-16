@@ -656,7 +656,7 @@ Creating space need to add margins on the floated item. Adding on text that surr
  ```
   ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/AbsolutePosition2.png) 
   
-### Fixed Positioning
+### Css Layout:Fixed Positioning
 ```css
   .main-header{
     position:fixed;
@@ -668,7 +668,19 @@ Creating space need to add margins on the floated item. Adding on text that surr
 ```
 
   ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FixedPosition.png) 
-  
+ 
+### Z-index
+Stacking order of Overlapping Absolute or Fixed position elements.
+```css
+/* Higher z-index is on top. main-header will be on top*/
+.main-header{
+  z-index:1000;
+}
+.icon-location{
+  z-index:1;
+}
+```
+ 
 # HTML & CSS Validators
 background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
