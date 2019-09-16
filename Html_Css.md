@@ -601,7 +601,60 @@ Creating space need to add margins on the floated item. Adding on text that surr
 3) .clearfix::after{ content:"";display:table;clear:both;}
 ```
 
-
+### Css Layout: Absolute Positioning
+ ```
+ /* Taken out of normal document flow */
+ position:absolute;
+ top:0; (6em, 6% in relation to viewport)
+ left:0;
+ 
+ .main-header{
+  position:relative; (all absolute position are now relative to class: .main-header)
+}
+ ```
+ #### Creating an image Caption with Absolute Positioning
+ ```html
+<!-- Featured image (normal flow)-->
+<figure>
+  <img class="feat-img" src="img/treats.svg" alt="Drinks and eats">
+  <figcaption>
+    <h4>Featured Drinks &amp; Eats!</h4>
+    Croissant macaroon pie brownie cookie marshmallow liquorice gingerbread caramels toffee
+  </figcaption>
+</figure>
+ ```
+ ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/AbsolutePosition1.png)  
+   
+   
+ ```html
+  <!-- Featured image (normal flow)-->
+  <figure>
+    <img class=ïcon-location" src"img/location.svg" alt="Location">
+    <img class="feat-img" src="img/treats.svg" alt="Drinks and eats">
+  <figcaption>
+    <h4>Featured Drinks &amp; Eats!</h4>
+    Croissant macaroon pie brownie cookie marshmallow liquorice gingerbread caramels toffee
+  </figcaption>
+</figure>
+ ```
+ ```css
+ figure{
+  position:relative
+ }
+ figcaption{
+    position:absolute;
+    btm:0;
+    width:100%; 
+ }
+ .icon-location{
+    width:35px;
+    position:absolute;
+    top:-15px;
+    right:-15px;
+ }
+ 
+ ```
+  ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/AbsolutePosition2.png)  
 # HTML & CSS Validators
 background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
