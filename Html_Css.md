@@ -654,7 +654,21 @@ Creating space need to add margins on the floated item. Adding on text that surr
  }
  
  ```
-  ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/AbsolutePosition2.png)  
+  ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/AbsolutePosition2.png) 
+  
+### Fixed Positioning
+```css
+  .main-header{
+    position:fixed;
+    background:#fff;
+    box-shadow: 0 1px 4px rbga(0,0,0,.4);
+    width:100%;
+    top:0;
+  }
+```
+
+  ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FixedPosition.png) 
+  
 # HTML & CSS Validators
 background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
