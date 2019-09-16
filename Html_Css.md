@@ -613,6 +613,8 @@ Creating space need to add margins on the floated item. Adding on text that surr
 }
  ```
  #### Creating an image Caption with Absolute Positioning
+ Absolute Elements will always be relative to the first parent. 
+ 
  ```html
 <!-- Featured image (normal flow)-->
 <figure>
