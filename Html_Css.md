@@ -715,3 +715,35 @@ Static Table without a database
   </tr>
 </table>
 ```
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/HTMLTable1.png) 
+```html
+//thead helps styling and good for to tell search engine
+// tbody and tfoot
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Job Role</th>
+    </tr>
+   </thead>
+   <tfoot>
+     <tr>
+       <td colspan="3">Data is updated every 15min</td>
+     </tr>
+   </tfoot>
+   <tbody>
+    <tr>
+      <th scope="row">Kenny</th>
+      <td>ks.kennysoh@gmail.com</td>
+      <td>Web Developer</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Thomas</th>
+      <td>thomas@gmail.com</td>
+      <td>Developer</td>
+    </tr>
+  </tbody>
+</table>
+```
