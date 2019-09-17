@@ -218,6 +218,7 @@ use Html Entities (&Entity;) to display reserved characters.
 ```
 ref: https://dev.w3.org/html5/html-author/charref
 
+
 # CSS
 ```css
 
@@ -687,3 +688,30 @@ Stacking order of Overlapping Absolute or Fixed position elements.
 background-color:#ff4add;
 html validator: https://validator.w3.org/nu/#textarea  
 css validator: https://jigsaw.w3.org/css-validator/validator  
+
+# HTML Forms
+## HTML Tables
+Static Table without a database
+```html
+// th tells web crawlers its headers.
+//scope="col" or "row", tells web crawler th is related to row or col items. 
+<table>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Job Role</th>
+  </tr>
+  
+  <tr>
+    <th scope="row">Kenny</th>
+    <td>ks.kennysoh@gmail.com</td>
+    <td>Web Developer</td>
+  </tr>
+  
+    <tr>
+    <th scope="row">Thomas</th>
+    <td>thomas@gmail.com</td>
+    <td>Developer</td>
+  </tr>
+</table>
+```
