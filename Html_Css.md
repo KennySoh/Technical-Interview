@@ -4,7 +4,7 @@ Think of everything as boxes
   
 ```html
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <!-- MetaTags for seo/ Css stylesheets-->
     <meta charset="utf-8">
@@ -719,7 +719,9 @@ Static Table without a database
 ```html
 //thead helps styling and good for to tell search engine
 // tbody and tfoot
+//caption
 <table>
+  <caption>Employee Information</caption>
   <thead>
     <tr>
       <th scope="col">Name</th>
