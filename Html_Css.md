@@ -1050,3 +1050,4 @@ Flexbox is a remarkable layout feature, that better than float and disaply:inlin
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox3.png)
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox4.png)
+### Controlling the Direction of Flex Items
