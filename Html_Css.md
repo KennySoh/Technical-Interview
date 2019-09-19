@@ -1024,6 +1024,7 @@ input[type="checkbox"]:checked + label{ //onced a check box is checked, adjacent
 # CSS Flexbox
 Flexbox is a remarkable layout feature, that better than float and disaply:inline. 
 ## Flexbox Basics and Terminology
-- Flex Container  
-- Flex Item
+### Flex Container & Flex Item
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox1.png)
+### Main Axis & Cross Axis
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox2.png)
