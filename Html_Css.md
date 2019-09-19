@@ -891,8 +891,11 @@ For maintability if possible try not to repeat code, apply class to multiple ele
 <input class="btn default inln">
 ```
 ## Child, Adjacent, and General Sibling Combinators
+> , + , -
 ```css
 /*Combinators*/
+
+//Child
 form>a{ //direct child
 }
 //Adjacent(Immediately following) Siblings
@@ -902,5 +905,14 @@ div + p { //selects all <p> elements that are placed immediately after <div> ele
 //General Siblings
 div ~ p { //selects all <p> elements that are siblings of <div> elements: 
   background-color: yellow;
+}
+```
+## :first-child and :last-child
+```css
+li:first-child{
+  color:white;
+}
+li:last-child{
+  border:none;
 }
 ```
