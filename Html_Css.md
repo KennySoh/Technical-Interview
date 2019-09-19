@@ -749,3 +749,35 @@ Static Table without a database
   </tbody>
 </table>
 ```
+## HTML Forms
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/HTMLForm1.png) 
+```html
+//1) action is the link for the method to post/get to
+//2) input type->text,email,password | id->css,js,associate label with form control | name->serverside understanding
+//3) Textarea
+//4) Submit Button
+//5) Label for="name" links with input id="name" | When click directs to input="name"
+//6) Fieldset and legends
+//
+
+<form action="index.html" method="POST">
+  <h1>Sign Up</h1>
+  <fieldset>
+    <legend><span class="number">1</span> Your basic info</legend>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name"> 
+
+    <label for="email">email:</label>
+    <input type="email" id="email" name="user_email"> 
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="user_password"> 
+  </fieldset>
+  <fieldset>
+    <legend><span class="number">2</span> Your profile</legend>
+    <label for="bio">Biography:</label>
+    <textarea id="bio" name="user_bio"></textarea>
+  </fieldset>
+  <button type="submit">Sign Up</button>
+</form>
+```
