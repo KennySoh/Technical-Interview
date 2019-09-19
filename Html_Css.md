@@ -920,3 +920,28 @@ div ~ p { //selects all <p> elements that are siblings of <div> elements:
 }
 
 ```
+## :only-child and :empty
+```
+<li>Item2<span>&check;</span></li>
+<li></li>
+<li>Item6<span>&check;</span></li>
+
+:only-child{ //targets elemnts which are the only child. 
+}
+:empty{//making sure theres no empty html tags/ or when something returns empty.
+}
+```
+## Substring Matching Attribute Selectors- "Begin With" and "Ends With"
+Begins With ^
+Ends With $
+```css
+a[href^="http://"]{
+  color: #52bab3;
+  text-decoration:none;
+  background-repeat:no-repeat;
+  background-size:18px 18px;
+  padding-left:25px;
+}
+a[href$=".pdf"]{background-image:url('../icn-pictures.svg';}
+```
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/SubstringMatching1.png) 
