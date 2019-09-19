@@ -811,3 +811,42 @@ Static Table without a database
 </form>
 ```
 https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms
+
+# CSS Selectors
+## Attribute Selector: Class , For, Name
+```css
+// .form-contact and #container are more efficient
+[class]{
+  color:red
+}
+[class="form-contact"]{
+  color:red
+}
+form[class="form-contact"]{
+  color:red
+}
+div[id="container"]{
+  max-width:1800px;
+}
+
+//Attribute selector are handy when trying to select non-class or id attributes. (Example forms)
+input[type="text"]{
+  background:red;
+}
+input[placeholder]{
+  background:red;
+}
+
+//Styling buttons
+input[type="button"],
+input[type="reset"],
+input[type="submit"]{
+  cursor:pointer;
+}
+
+a[target="_blank"]{
+  color:#39add1;
+  text-decoration:none;
+  border-bottom:1px dotted;
+}
+```
