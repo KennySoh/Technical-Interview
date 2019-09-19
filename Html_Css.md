@@ -944,6 +944,52 @@ li:nth-child(-n+3){//select item3 ,item2,item1}
 div:nth-child(4){//targets only the 4th child, so if 4th child is a h1,fails}
 div:nth-of-type(4){//targets the 4th div}
 ```
+
+## :root & target
+```css
+:root{ //why not just use html{} because markup can be svg and xml, 
+       //root pseduoclass might be different from html{}
+}
+
+// When <a href=#somewhereonpage> is clicked, its targeted
+// http://yourwebsite.com/#somewhereonpage
+:target{ 
+  background:#384047;
+}
+#col-c:target{background:red}
+```
+## :not() - The Negation Pseudo-Class
+```css
+div:not(#col-a){ //target all div but not the #col-a}
+div:not([type="submit"]){//target all div but not type=submit}
+```
+
+## Pseudo-Elements-::first-line , ::first-letter and ::before , ::after
+```css
+.intro:first-line{ //the first line }
+.intro:first-letter{ //the first letter }
+
+.jpg::before{
+   content:"JPG - "; //insert "JPG -" before .jpg
+   content: url(../img/icn-zip.svg); //insert images before .jpg
+}
+.jpg::after{
+   content:"JPG - "; //insert "JPG -" after .jpg
+   content: url(../img/icn-zip.svg); //insert images after .jpg
+}
+
+h1::before,
+h1::after{
+  content:"";
+  display:inline-block;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  background:coral;
+  margin:0 10px;
+}
+
+```
 ## Substring Matching Attribute Selectors- "Begin With","Ends With", "Contains"
 Begins With ^
 Ends With $
