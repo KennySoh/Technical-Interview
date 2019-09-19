@@ -988,7 +988,13 @@ h1::after{
   background:coral;
   margin:0 10px;
 }
-
+```
+## The atr() CSS Function
+Displays the attribute value.
+```css
+.d-loads a::after{
+  content:attr(title);
+}
 ```
 ## Substring Matching Attribute Selectors- "Begin With","Ends With", "Contains"
 Begins With ^
