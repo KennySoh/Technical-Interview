@@ -931,9 +931,10 @@ div ~ p { //selects all <p> elements that are siblings of <div> elements:
 :empty{//making sure theres no empty html tags/ or when something returns empty.
 }
 ```
-## Substring Matching Attribute Selectors- "Begin With" and "Ends With"
+## Substring Matching Attribute Selectors- "Begin With","Ends With", "Contains"
 Begins With ^
 Ends With $
+Contains *
 ```css
 a[href^="http://"]{
   color: #52bab3;
@@ -943,5 +944,6 @@ a[href^="http://"]{
   padding-left:25px;
 }
 a[href$=".pdf"]{background-image:url('../icn-pictures.svg';}
+img[src*="thumbnails"]{}
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/SubstringMatching1.png) 
