@@ -890,3 +890,17 @@ For maintability if possible try not to repeat code, apply class to multiple ele
 <img class="br avatar rounded">
 <input class="btn default inln">
 ```
+## Child, Adjacent, and General Sibling Combinators
+```css
+/*Combinators*/
+form>a{ //direct child
+}
+//Adjacent(Immediately following) Siblings
+div + p { //selects all <p> elements that are placed immediately after <div> elements:
+  background-color: yellow;
+}
+//General Siblings
+div ~ p { //selects all <p> elements that are siblings of <div> elements: 
+  background-color: yellow;
+}
+```
