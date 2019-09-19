@@ -850,3 +850,43 @@ a[target="_blank"]{
   border-bottom:1px dotted;
 }
 ```
+## DRY: Dont Repeat Yourself
+For maintability if possible try not to repeat code, apply class to multiple elements. 
+```css
+/* DRY Classes*/
+//Can be applied to anything that wants to be rounded
+.br{
+  border-radius:.5em;
+}
+.avatar{
+  display:block;
+  margin:0 auto 2em;
+}
+.rounded{
+  border-radius: 50%;
+}
+
+//applied to any form btns
+.btn{
+  cursor:pointer;
+  font-size:.85em;
+  font-weight:400;
+  color:#fff;
+  padding-left:20px;
+  padding-right:20px;
+  text-transform:uppercase;
+}
+.default{background-color:#52bab3;}
+.error{background-color:#ff784f;}
+
+@media(min-width:769px){
+  .inln{
+    width:auto;
+    display:inline-block;
+  }
+}
+```
+```html
+<img class="br avatar rounded">
+<input class="btn default inln">
+```
