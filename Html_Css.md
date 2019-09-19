@@ -445,10 +445,10 @@ box-shadow:inset 15px 15px 10px -5px rgba(0,0,0,.8); (inner shadow)
 ```
 border-top-left-radius:50px;
 border-top-right-radius:50px;
-border-bottom-left-radius:50px;
 border-bottom-right-radius:50px;
+border-bottom-left-radius:50px;
 
-border-radius: 50px 10px 50px 10px; 
+border-radius: 50px 10px 10px 50px; 
 border-radius:50% (Circle) 
 ```
 
