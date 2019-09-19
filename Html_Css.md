@@ -931,6 +931,19 @@ div ~ p { //selects all <p> elements that are siblings of <div> elements:
 :empty{//making sure theres no empty html tags/ or when something returns empty.
 }
 ```
+
+## :nth-child & nth-of-type
+```
+li:nth-child(even){}
+li:nth-child(odd){}
+li:nth-child(1){//target the first element}
+li:nth-child(an+b){}
+li:nth-child(2n+3){//select item3 , then item5, item7 ....}
+li:nth-child(-n+3){//select item3 ,item2,item1}
+
+div:nth-child(4){//targets only the 4th child, so if 4th child is a h1,fails}
+div:nth-of-type(4){//targets the 4th div}
+```
 ## Substring Matching Attribute Selectors- "Begin With","Ends With", "Contains"
 Begins With ^
 Ends With $
@@ -943,7 +956,16 @@ a[href^="http://"]{
   background-size:18px 18px;
   padding-left:25px;
 }
-a[href$=".pdf"]{background-image:url('../icn-pictures.svg';}
+a[href$=".pdf"]{background-image:url('../icn-pictures.svg'};
 img[src*="thumbnails"]{}
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/SubstringMatching1.png) 
+
+## Element States Pseudo-Classes
+```css
+:disabled{ // disabled form elements, with a light grey background
+}
+input[type="checkbox"]:checked + label{ //onced a check box is checked, adjacent label is bold;
+  font-weight:900;
+}
+```
