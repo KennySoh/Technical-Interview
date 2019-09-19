@@ -1028,3 +1028,25 @@ Flexbox is a remarkable layout feature, that better than float and disaply:inlin
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox1.png)
 ### Main Axis & Cross Axis
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox2.png)
+### Creating a Flex Container
+```html
+<div class="container">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
+```css
+// Flex Items stretch to fill the Flex container height. Cross axis start to end
+ .container{
+  display:flex;
+  height:300x;
+}
+
+ .container{
+  display:inline-flex;
+  height:300x;
+}
+```
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox3.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox4.png)
