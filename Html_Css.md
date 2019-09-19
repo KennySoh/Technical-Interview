@@ -909,10 +909,14 @@ div ~ p { //selects all <p> elements that are siblings of <div> elements:
 ```
 ## :first-child and :last-child
 ```css
-li:first-child{
-  color:white;
-}
-li:last-child{
+.main-nav li:first-child{
   border:none;
+  border-radius:5px 0 0 5px;
 }
+
+.main-nav li:last-child{
+  border:none;
+  border-radius:0px 5px 5px 0px;
+}
+
 ```
