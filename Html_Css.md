@@ -757,7 +757,7 @@ Static Table without a database
 //3) Textarea
 //4) Submit Button
 //5) Label for="name" links with input id="name" | When click directs to input="name"
-//6) Fieldset and legends
+//6) Fieldset and legends | Organize form control into logical groupings
 //
 
 <form action="index.html" method="POST">
@@ -781,3 +781,33 @@ Static Table without a database
   <button type="submit">Sign Up</button>
 </form>
 ```
+### HTML Forms: Select Menus & Radio Buttons & Check Boxes
+```html
+//7) Select Menu: Drop down list to select options
+<form action="index.html" method="POST">
+  <h1>Sign Up</h1>
+  <fieldset>
+    <label for="job">Job role:</label>
+    <select id="job" name="user_job">
+      <optgroup label="Web">
+        <option value="frontend_developer">Front-End Developer</option>
+        <option value="php_developer">PHP Developer</option>
+      </optgroup>
+    </select>
+  </fieldset>
+  
+//8) Radio Buttons (Can put <br> after each input)
+  <label>Age:</label>
+  <input type="radio"  id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label> 
+  <input type="radio"  id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or Over</label>
+  
+//9) Checkboxes
+    <label>Age:</label>
+  <input type="checkbox"  id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label> 
+  <input type="checkbox"  id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or Over</label>
+  
+  
+  <button type="submit">Sign Up</button>
+</form>
+```
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms
