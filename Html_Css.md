@@ -1185,3 +1185,15 @@ flex item to fill up the container.
 }
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox7.png)
+
+### Creating a sticky footer with FlexBox.
+```css
+body{
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+.row{
+  flex-grow:1;
+}
+```
