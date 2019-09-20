@@ -1051,7 +1051,7 @@ Flexbox is a remarkable layout feature, that better than float and disaply:inlin
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox3.png)
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox4.png)
 
-### Controlling the Direction of Flex Items & Wrapping Flex Items & justify-content(space between items)
+### Controlling the Direction of Flex Items & Wrapping Flex Items & justify-content(space between items, main axis)
 Only apply to flex container.
 ```css
 .container{
@@ -1075,5 +1075,34 @@ Only apply to flex container.
 .item-6{
   order:-1; (default is 0, this makes item6 displayed first)
   order:1; ( this make item6 displayed last)
+}
+```
+### Growing Flex Items
+flex item to fill up the container.  
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox5.png)
+```css
+.item{
+  flex-grow:1; default->0 
+}
+```
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox6.png)
+```css
+.item3{
+  flex-grow:3;
+}
+```
+### Smarter Layouts with flex-basis and flex
+.item{
+  flex-grow:1; default->0 
+  flex-basis:200px; (min-width of 200px, next line if smaller)
+  
+  flex: 1; (flex-grow, flex-basis, flex-shrink) - shorthand property,automatically sets the rest to 0;
+}
+
+### Aligning Flex Items on the Cross Axis
+```
+.container{
+  display:flex;
+  align-items:stretch; <-default (flex-start,flex-end,center)
 }
 ```
