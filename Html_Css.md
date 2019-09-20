@@ -1092,12 +1092,14 @@ flex item to fill up the container.
 }
 ```
 ### Smarter Layouts with flex-basis and flex
+```
 .item{
   flex-grow:1; default->0 
   flex-basis:200px; (min-width of 200px, next line if smaller)
   
   flex: 1; (flex-grow, flex-basis, flex-shrink) - shorthand property,automatically sets the rest to 0;
 }
+```
 
 ### Aligning Flex Items on the Cross Axis
 ```
@@ -1135,3 +1137,51 @@ flex item to fill up the container.
   margin:auto;
 }
 ```
+## Flexbox Examples
+1) Building a Navigation Bar with Flex Box (.main-header,.main-nav)  
+2) Creating a 2 col layout (.row, .col,.primary)  
+3) Creating a 3 col layout (.row, .col,.primary)
+```css
+@media(min-width:769px){
+  .main-header,.main-nav,.row{
+    display:flex;
+  }
+  
+  .main-header{
+    flex-direction:column;
+    align-item:center;
+  }
+  .col{
+    flex:1; //2col  
+    flex:1 50%; //2col but 3col in 1025px
+  }
+  .row{
+    flex-wrap:wrap;//2col but 3col in 1025px
+  }
+}
+@media(min-width:1025px){
+  .main-header{
+    flex-direction:row;
+    justify-content:space-between;
+  }
+  .primary{
+    flex:2;//2col
+    flex:1.4;//3col in 1025px
+  }
+  .col{
+  flex-basis:0;//3col in 1025px
+  }
+}
+```
+### Aligning "Learn More" btn to btm of col
+```css
+.col{
+  display:flex;
+  flex-direction:column;
+}
+.button{
+  margin-top:auto;
+  align-self:flex-end;
+}
+```
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox7.png)
