@@ -1050,4 +1050,30 @@ Flexbox is a remarkable layout feature, that better than float and disaply:inlin
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox3.png)
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/FlexBox4.png)
-### Controlling the Direction of Flex Items
+
+### Controlling the Direction of Flex Items & Wrapping Flex Items & justify-content(space between items)
+Only apply to flex container.
+```css
+.container{
+  display:flex;
+  flex-direction: row; <- default(row-reverse, column, column-reverse)
+  flex-wrap: wrap; //Wrapping Flex Item, Goes to next line. 
+  
+  //Fills the space after margin and padding is accounted.
+  justify-content: flex-end; (center, space-between, space-around.)
+  }
+  
+.item1{
+  margin-right:auto; ( Makes item1 flush to the left and items flush to the right. aong with justofy content)
+}
+```
+### Changing the order of flex items
+```css
+.container{
+  display:flex;
+ }
+.item-6{
+  order:-1; (default is 0, this makes item6 displayed first)
+  order:1; ( this make item6 displayed last)
+}
+```
