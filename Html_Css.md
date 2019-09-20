@@ -1106,3 +1106,32 @@ flex item to fill up the container.
   align-items:stretch; <-default (flex-start,flex-end,center)
 }
 ```
+### Vertical and Horizontal Centering
+```css
+//1st way
+.container{
+  displat:flex;
+  min-height:50vh;
+  
+  justify-content:center;
+  align-items:center;
+}
+
+//2nd way
+.container{
+  displat:flex;
+  min-height:50vh;  
+  justify-content:center;
+}
+.item{
+  align-self:center;
+}
+
+//3rd way
+.container{
+  displat:flex;
+  min-height:50vh;
+  
+  margin:auto;
+}
+```
