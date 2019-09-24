@@ -1197,3 +1197,33 @@ body{
   flex-grow:1;
 }
 ```
+# CSS Transitions and Transforms
+## Creating Your First Transition with transition-duration
+Transitioning CSS properties  
+***
+1) List the properties to transition
+2) Define how long the transition should tkae
+3) Set an optional delay and change in speed
+***
+```
+Transitioning a property (state change)
+1. Start value
+2. End value
+
+.photo-container{
+  background:lightblue;
+  transition-duration: 1s; //takes a second to fade to blue or back to red. default to all properties. 
+
+  //Transitioning Specific Properties with transition-property
+  transition-property: background; (Defauly is all not ideal, overhead to check)
+}
+.photo-container:hover{
+  background:red;
+}
+.photo-container:active{
+  background:darkred;
+}
+```
+## Animatable CSS properties
+If a CSS property, has an identifiable halfway point, it can accept a transition.
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
