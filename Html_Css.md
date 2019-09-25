@@ -1260,7 +1260,7 @@ img:hover{
 }
 ```
 ### Making a Slide Transition
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Transition1.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Translation1.png)
 ```
 .slide .photo-overlay,
 .slide img{
