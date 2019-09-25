@@ -1286,3 +1286,28 @@ The transition starts slow , then rapidly accelerates towards the end of its dur
   
 https://codepen.io/Guilh/full/ZQxoOX/  
 www.cubic-bezier.com  
+
+## 3D Transform
+```
+//Activate 3d Space with perspective
+.content{
+  perspective:700px;
+  perspective-origin:100% 50%;
+}
+.photo{
+  transition: transform 1s cubic-bezier(.55,-.62,.27,1.2);
+  transform-style:preserve-3d;
+}
+.photo:hover{
+  transform:rotateY(-180deg)
+}
+.side-a,.sideb{
+  backface-visibility:hidden;
+}
+.side-b{
+  transform:rotateY(180deg);
+  
+  transform:rotateZ(90deg);// Same as rotate(90deg)
+  transform:rotate(0,1,1,90deg);
+}
+```
