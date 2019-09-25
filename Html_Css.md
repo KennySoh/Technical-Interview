@@ -1418,3 +1418,21 @@ sass --watch input.scss:output.css //Sass watches for changes input.scss to auto
 Command Line
 sass --watch scss:css
 ```
+## Sass Variables
+```scss
+$white:#fff;
+
+$color-primary:#278da4;
+$color-secondary:#b13c69;
+$color-accent:#eeea72;
+$color-shade:#eee;
+
+$color-text:#343434;
+$color-bg:#3acce2;
+$color-bg-light:#009fe1;
+$font-stack-primary:'Raleway',san-seriff;
+
+body{
+color:$color-primary;
+}
+```
