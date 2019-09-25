@@ -1212,10 +1212,18 @@ Transitioning a property (state change)
 
 .photo-container{
   background:lightblue;
-  transition-duration: 1s; //takes a second to fade to blue or back to red. default to all properties. 
+  transition-duration: 1s,0.4s; //takes a second to fade to blue or back to red. default to all properties. 
 
   //Transitioning Specific Properties with transition-property
-  transition-property: background; (Defauly is all not ideal, overhead to check)
+  transition-property: background, color; (Defauly is all not ideal, overhead to check)
+  
+  //Control a Transition's Start Time with transition-delay
+  transition-delay:2000ms;
+  
+  //Change a Transition's Speed with Timing Funcitons
+  transition-timing-funciton:ease; ( linear, ease-in, ease-out, ease-in-out)
+
+  
 }
 .photo-container:hover{
   background:red;
@@ -1227,3 +1235,17 @@ Transitioning a property (state change)
 ## Animatable CSS properties
 If a CSS property, has an identifiable halfway point, it can accept a transition.
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
+
+## The Transition Challenge Solution
+```css
+.photo-overlay{
+  opacity:0;
+  transition-duration: 0.5s; 
+  transition-property:opacity
+}
+
+.photo-overlay:hover{
+  opacity:1;
+}
+```
+
