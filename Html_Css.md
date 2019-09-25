@@ -1238,16 +1238,41 @@ Transitioning a property (state change)
 If a CSS property, has an identifiable halfway point, it can accept a transition.
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
 
-## The Transition Challenge Solution
-```css
-.photo-overlay{
-  opacity:0;
-  transition-duration: 0.5s; 
-  transition-property:opacity
+## Transformation
+```
+2d Transform
+img{
+  transition:transform 0.5s;
 }
-
-.photo-overlay:hover{
-  opacity:1;
+img:hover{
+  transform:rotate(-5deg);
+  
+  //Other transformation
+  transformation:skewX(10deg) 
+  transformation:skewY(10deg)
+  transformaiton:scale(1.1) //(x,y) :(2,1.5)
+  
+  transform-origin:50% 50%; // default transforms relative to center. 0 0 :topleft, bottom right;
+  
+  //Moving Content with translate()
+  transform: translateX(150px);
+  transform: translate(50%, 50px);
 }
 ```
-
+### Making a Slide Transition
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Transition1.png)
+```
+.slide .photo-overlay,
+.slide img{
+  transition: transorm .6s ease-out;
+}
+.slide .photo-overlay{
+  transform: translateX(-100%);
+}
+.slide:hober .photo-overlay{
+  transform: translateX(0);
+}
+.slide:hover img{
+  transform: translateX(100%);
+}
+```
