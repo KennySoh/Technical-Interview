@@ -1311,3 +1311,68 @@ www.cubic-bezier.com
   transform:rotate(0,1,1,90deg);
 }
 ```
+### 3d Cube
+```html
+<div class="cube-container">
+  <div class="photo-cube">
+
+    <img class="front"src="img/photos/1.jpg" alt="">
+    <div class="back photo-desc">
+      <h3>Earth from Space</h3>
+      <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      <a href="#" class="button">download</a>
+    </div>
+    <img class="left" src="img/photos/2.jpg" alt="">
+    <img class="right" src="img/photos/3.jpg" alt="">
+
+  </div>
+</div>	
+```
+```css
+/* ================================= 
+  Photo 3D Transforms & Transitions
+==================================== */
+
+.cube-container {
+	box-shadow: 0 18px 40px 5px rgba(0,0,0,.4);
+  perspective:800px;
+}
+
+.photo-cube{
+  transition:transform 2s ease-in-out;
+  width:220px;
+  height:220px;
+  transform-style:preserve-3d;
+}
+
+.photo-cube{
+  transform:rotateY(-270deg);
+}
+
+.front,
+.back,
+.left,
+.right{
+  width:100%;
+  height:100%;
+  display:block;
+  position:absolute;
+}
+
+.front{
+  transform: translateZ(110px); /* +ve Move towards viewer*/
+}
+
+.back{
+  transform: translateZ(-110px) rotateY(270deg); /* +ve Move towards viewer*/
+  transform-origin:center left;
+}
+
+.left{
+  transform:rotateY(-270deg) translateX(110px);
+  transform-origin:top right;
+}
+.right{
+  transform:translateZ(-110px) rotateY(180deg);
+}
+```
