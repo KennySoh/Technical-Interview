@@ -1436,3 +1436,15 @@ body{
 color:$color-primary;
 }
 ```
+### Nested Selector
+```scss
+.main-nav{
+	margin-top:1em;
+	li{
+		display:none;
+	}
+	a{
+		display:none;
+	}
+}
+```
