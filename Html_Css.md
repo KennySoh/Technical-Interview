@@ -1279,3 +1279,10 @@ img:hover{
   transform: translateX(100%);
 }
 ```
+## Custom Timing Functions with cubic-bezier()
+Making bouncy effects  
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/Translation2.png)  
+The transition starts slow , then rapidly accelerates towards the end of its duration.
+  
+https://codepen.io/Guilh/full/ZQxoOX/  
+www.cubic-bezier.com  
