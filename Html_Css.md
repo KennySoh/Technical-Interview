@@ -1382,3 +1382,13 @@ transform: rotateY(-270deg) translate3d(100px,-50px,50px);
 transform:rotateY(-270deg) translateX(110px);
 transform:rotateY(-270deg) translate3d(110px,0,0);
 ```
+
+# Sass
+Sass is a stylesheet language that extends the capabilities of CSS. It makes your job easier by adding advanced functionality and time-saving features to your CSS workflow.   
+  
+Needs Sass ->CSS preprocessor-> Css  
+***
+- Store values in bariables you can regerence anywhere in your stylesheet
+- Compose reusable blocks of styles you can shate with other rule sets
+- Split your styles into partials to make your stylesheets modular and easier to maintain
+***
