@@ -1257,6 +1257,9 @@ img:hover{
   //Moving Content with translate()
   transform: translateX(150px);
   transform: translate(50%, 50px);
+  
+  //Combining Transforms
+  transform: rotate(-5deg) scale(1.1) translateY(-20px);
 }
 ```
 ### Making a Slide Transition
