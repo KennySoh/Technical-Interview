@@ -1376,3 +1376,9 @@ www.cubic-bezier.com
   transform:translateZ(-110px) rotateY(180deg);
 }
 ```
+### Translate3d
+```css
+transform: rotateY(-270deg) translate3d(100px,-50px,50px);
+transform:rotateY(-270deg) translateX(110px);
+transform:rotateY(-270deg) translate3d(110px,0,0);
+```
