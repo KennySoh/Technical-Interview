@@ -1223,7 +1223,9 @@ Transitioning a property (state change)
   //Change a Transition's Speed with Timing Funcitons
   transition-timing-funciton:ease; ( linear, ease-in, ease-out, ease-in-out)
 
-  
+  //transition Shorthand
+  transition: opactity .3s ease-out .2s, background .4s linear .3s; //properties,duration,timing, delay
+  transition:all .5s;
 }
 .photo-container:hover{
   background:red;
