@@ -1392,3 +1392,29 @@ Needs Sass ->CSS preprocessor-> Css
 - Compose reusable blocks of styles you can shate with other rule sets
 - Split your styles into partials to make your stylesheets modular and easier to maintain
 ***
+
+## Installing Sass
+https://blog.teamtreehouse.com/install-sass-macos-homebrew  
+https://blog.teamtreehouse.com/install-sass-windows-chocolatey  
+
+Sass Supports 2 Syntaxes
+***
+- Sass:"Indented syntax" -original syntax //input.sass
+- SCSS:" Sassy CSS"- latest generation of Sass //input.scss (Normally use this)
+***
+
+## Compiling Sass to CSS
+```
+Command Line
+sass input.scss output.css
+sass --watch input.scss:output.css //Sass watches for changes input.scss to automatically update output.css
+```
+## Compile a Directory of Sass Files
+-scss  
+--styles.scss  
+-css  
+--style.css  
+```
+Command Line
+sass --watch scss:css
+```
