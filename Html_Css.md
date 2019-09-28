@@ -1501,7 +1501,7 @@ $max-width:1000px;
 		content:'';
 		display:block;
 		width:100%;
-		content; //allows additional css to be decalred later
+		@content; //allows additional css to be decalred later
 	}
 }
 
