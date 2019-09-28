@@ -1459,3 +1459,53 @@ p{
 	}
 }
 ```
+### Introducing Mixins
+Allows you to Break down to modular chunks.  
+***  
+1. Create a mixin with the @mixin directive
+2. Include a mixin inside other rules, using @include
+3. @mixin rules need ot appear above the rules including them
+***
+
+```scss
+@mixin skewed{
+	//for repeated codes
+	content:'';
+	display:block;
+	width:100%;
+}
+
+footer{
+	&::after{
+		@include skewed; // needs to be after @mixin decalration
+	}
+}
+
+
+
+// Other examples
+$max-width:1000px;
+
+@mixin center{
+	width:90%;
+	max-width:$max-width;
+	margin-left:auto;
+	margin-right:auto;
+}
+```
+### Pass content Blocks to Mixins
+```
+@mixin skewed{
+	&::after{ //can include pseduo elements
+		content:'';
+		display:block;
+		width:100%;
+		content; //allows additional css to be decalred later
+	}
+}
+
+@include skewed{ //additional css decalred here
+	background-color:$white;
+	bottom:-25px;
+}
+```
