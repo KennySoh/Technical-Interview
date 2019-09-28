@@ -1510,3 +1510,21 @@ $max-width:1000px;
 	bottom:-25px;
 }
 ```
+### Extend the Properties of Selectors
+```
+// Using Sass we can 
+.btn{color:red;} //default
+.btn-callout{@extend .btn}
+
+//Results
+.btn, .btn-callout{color:red}
+```
+
+### Extend Placeholder Selectors (best practice)
+```
+%btn{color:red;}
+.btn-callout{@extends %btn;}
+
+//Results, %btn only appears on .btn-callout;
+.btn-callout {color:red;} 
+```
