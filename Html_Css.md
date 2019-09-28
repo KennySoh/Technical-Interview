@@ -1567,4 +1567,15 @@ Good partial split
 	'layout/card',
 	'layout/footer';
 ```
+### Nesting Media Queries
+Sass lets you nest media queries directly inside the initial rules you're modifying. This keeps media queries local to the original selector, and makes writing and maintaining them easy.
+```scss
+$break-xs:300px;
+.main-content{
+	@media(max-width:$break-xs){
+		color:red;
+	}
+}
+
+```
 
