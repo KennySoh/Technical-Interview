@@ -1454,4 +1454,8 @@ color:$color-primary;
 	&-callout{ //target class btn-callout
 	}
 }
+p{
+	.intro &{ //targets .intro p (reverses order)
+	}
+}
 ```
