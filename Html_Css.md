@@ -1523,7 +1523,7 @@ $max-width:1000px;
 ### Extend Placeholder Selectors (best practice)
 ```
 %btn{color:red;}
-.btn-callout{@extends %btn;}
+.btn-callout{@extend %btn;}
 
 //Results, %btn only appears on .btn-callout;
 .btn-callout {color:red;} 
