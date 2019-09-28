@@ -1496,6 +1496,7 @@ $max-width:1000px;
 ### Pass content Blocks to Mixins
 ```
 @mixin skewed{
+	color:red;
 	&::after{ //can include pseduo elements
 		content:'';
 		display:block;
