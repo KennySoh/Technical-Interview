@@ -1541,10 +1541,12 @@ $max-width:1000px;
 ### Seperate Your Stylesheet inot Partials
 Allows you to split css into different files. prevent a long css file.  
 Instead of having mutiple css style links => alot of http request calls, sass allows your to seperate css files and compile it into one big css file. Maintable and no extra http calls. 
-
+  
+Transfer //variables into partials/_variables
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/SCSS1.png)
 ```
 // Partial imports
-@import 'partials/variables';
+@import 'partials/variables',
+	'partials/mixins';
 ```
 
