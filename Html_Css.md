@@ -1528,3 +1528,11 @@ $max-width:1000px;
 //Results, %btn only appears on .btn-callout;
 .btn-callout {color:red;} 
 ```
+### Sass Comments
+```
+/*================
+ Major Sections (multi line)
+===================*/
+
+//Smaller Sections (Single line)
+```
