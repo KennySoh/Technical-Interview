@@ -1446,5 +1446,12 @@ color:$color-primary;
 	a{
 		display:none;
 	}
+	&:hover{
+	}
+}
+
+.btn{
+	&-callout{ //target class btn-callout
+	}
 }
 ```
