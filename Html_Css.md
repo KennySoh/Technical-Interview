@@ -1403,7 +1403,7 @@ Sass Supports 2 Syntaxes
 - SCSS:" Sassy CSS"- latest generation of Sass //input.scss (Normally use this)
 ***
 
-## Compiling Sass to CSS
+## Watch sss -Compiling Sass to CSS
 ```
 Command Line
 sass input.scss output.css
@@ -1576,6 +1576,25 @@ $break-xs:300px;
 		color:red;
 	}
 }
-
 ```
+### Color Functions
+```
+$base:#3accec2;
+$base-dark:darken($base,25%);
+$base-light:lighten($base,25%);
+$base-complement: complement($base); //(Opposite color for high contrast)
+```
+### Custom Functions
+```
+@function divide($var-a, $var-b){
+	@return($var-a/$var-b);
+}
 
+.test{
+	line-height:divide(32px/16px);//returns 2
+}
+
+@function px-to-pc($target,$context:$max-width){  //$context:$max-width (gives default value : $max-wdith)
+	@return ($target/$context)*100%;
+}
+```
