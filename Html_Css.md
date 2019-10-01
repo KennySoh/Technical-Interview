@@ -1589,12 +1589,23 @@ $base-complement: complement($base); //(Opposite color for high contrast)
 @function divide($var-a, $var-b){
 	@return($var-a/$var-b);
 }
-
 .test{
 	line-height:divide(32px/16px);//returns 2
 }
 
+
 @function px-to-pc($target,$context:$max-width){  //$context:$max-width (gives default value : $max-wdith)
 	@return ($target/$context)*100%;
 }
+
+
+@function per-line($items){
+	$g-pct: px-to-pc($gutte)*2;
+	$g-total:$items*g-pct;
+	@return (100%/$items)-$g-total;
+}
+@media (min-width:$break-s){
+	flex:1 per-line(2);
+}
+
 ```
