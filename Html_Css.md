@@ -1510,6 +1510,7 @@ $max-width:1000px;
 	bottom:-25px;
 }
 ```
+
 ### Extend the Properties of Selectors
 ```
 // Using Sass we can 
@@ -1608,4 +1609,17 @@ $base-complement: complement($base); //(Opposite color for high contrast)
 	flex:1 per-line(2);
 }
 
+```
+### Creating powerful mixins Functions
+```
+@mixin center($w){
+	width:$w;
+}
+
+@mixin roundy($dim,$brdr:null){
+	width:$dim;
+	border:$brdr;
+}
+@include roundy(50%, 145px solid){
+}
 ```
