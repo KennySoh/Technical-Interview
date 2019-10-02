@@ -1637,7 +1637,27 @@ body{
 //media queries
 @mixin mq($break){
 	@if $break=='xs'{
-		@media(max-width:$break-xs);
+		@media(max-width:$break-xs){
+			@content;
+		}
+	}
+	
+	@if $break=='sm'{
+		@media(max-width:$break-sm){
+			@content;
+		}
+	}
+	
+	@if $break=='med'{
+		@media(max-width:$break-m){
+			@content;
+		}
+	}
+	
+	@if $break=='large'{
+		@media(max-width:$break-l){
+			@content;
+		}
 	}
 }
 ```
