@@ -1625,3 +1625,19 @@ $base-complement: complement($base); //(Opposite color for high contrast)
 }
 @include roundy($dim: 50%){}
 ```
+
+### Add Conditional Logic to Stylesheet
+```
+body{
+	@if(1>90){
+		backgrpund-color:green;
+	}
+}
+
+//media queries
+@mixin mq($break){
+	@if $break=='xs'{
+		@media(max-width:$break-xs);
+	}
+}
+```
