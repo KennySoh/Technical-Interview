@@ -1642,19 +1642,19 @@ body{
 		}
 	}
 	
-	@if $break=='sm'{
+	@else if $break=='sm'{
 		@media(max-width:$break-sm){
 			@content;
 		}
 	}
 	
-	@if $break=='med'{
+	@else if $break=='med'{
 		@media(max-width:$break-m){
 			@content;
 		}
 	}
 	
-	@if $break=='large'{
+	@else if $break=='large'{
 		@media(max-width:$break-l){
 			@content;
 		}
