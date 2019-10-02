@@ -1661,3 +1661,10 @@ body{
 	}
 }
 ```
+### Storing Values in Maps
+```
+$breakpoints:(
+	'xs':
+
+);
+```
