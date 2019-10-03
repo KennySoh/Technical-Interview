@@ -1669,4 +1669,49 @@ $breakpoints:(
 	'med;:768px,
 	'lg':992px,
 );
+//Using Directly
+@media(max-width:map-get($breakpoints,'xs'));
+
+//Storing into variable first
+@mixin mq($break){
+	$value:map-get($breakpoints,$break);
+	$sm:map-get($breakpoints,'sm');
+}
+```
+### Loops with @for
+```
+@for $i from 1 through 10{	
+	.box-#{$i}{
+		background-color:adjust-hue(tomato,$i*20);
+	}
+}
+
+@for $i from 1 to 10{} //Stop at 9
+```
+
+### Loop Through Lists with @each
+```
+$teachers:('andre,'alena','joel','danielle','nick'); //list
+
+@each $teacher in $teachers{
+	.teacher-#{$teacher}{
+		background-image:url('img/#{$teacher}.jpg');
+	}
+}
+```
+### Loop Through Data in a Map with @each
+```
+//Theme Colors
+$themes:(
+	'ent':#79939,
+	'arch':#4434,
+	'edu':#24545,
+	'sim':#23443,
+);
+
+@each $theme, $color in $themes{
+	.icn-#{$theme}{
+		color:$color;
+	}
+}
 ```
