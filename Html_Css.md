@@ -1727,3 +1727,14 @@ $value:map-get($breakpoints,"foo");
 
 
 ```
+### Debugging Sass with Sourcemaps
+```
+Source maps is in style.css.map file.
+
+To enable Source maps
+- in inspect tools 
+- click (top right)... -> Settings
+- Preferences-> Enable css sourcemaps
+
+now u can go direct from inspect to styles.css
+```
