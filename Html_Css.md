@@ -1664,7 +1664,9 @@ body{
 ### Storing Values in Maps
 ```
 $breakpoints:(
-	'xs':
-
+	'xs':575px,
+	'sm':600px,
+	'med;:768px,
+	'lg':992px,
 );
 ```
