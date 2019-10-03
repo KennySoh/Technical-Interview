@@ -1715,3 +1715,15 @@ $themes:(
 	}
 }
 ```
+
+### Handling Errors with @error and @warn, @debug
+```
+$value:map-get($breakpoints,"foo");
+
+@if $value==null{
+	@error "#{$break} is not a valid breakpoint name."; //Stops it from running
+	@warn "#{$break} is not a valid breakpoint name."; //Just informs of code deprecations
+}
+
+
+```
