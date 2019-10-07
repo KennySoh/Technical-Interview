@@ -1740,6 +1740,7 @@ now u can go direct from inspect to styles.css
 ```
 
 # Javascript
+## History
 ***
 - Es6/ Es2015 is the industry standard by the committee tc39.  
 - Vanilla, Plain or Pure Javascript refers to use of javascript without any frameworks or libraries. 
@@ -1766,3 +1767,20 @@ When starting a new JavaScript project, developers usually set up a build system
 - Compilers ( Babel , to understand different flavour of js, typescrit vs coffee script)
 - Task runners (Gulp, npm)
 ***
+
+### Javascript developer's workflow
+***
+- Simple just code and refresh browser
+- More advanced use build system such as React, Vue, Angular.
+- Detecting and debugging
+***
+
+## Javascript Coding
+### Importing js in HTML
+```html
+<script src="phaser.js"></script>
+<script>
+alert("HI");
+document.write("<h1> Welcome to Javascript Basics</h1>");
+</script>
+```
