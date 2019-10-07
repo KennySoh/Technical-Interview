@@ -1738,3 +1738,31 @@ To enable Source maps
 
 now u can go direct from inspect to styles.css
 ```
+
+# Javascript
+***
+- Es6/ Es2015 is the industry standard by the committee tc39.  
+- Vanilla, Plain or Pure Javascript refers to use of javascript without any frameworks or libraries. 
+- Type Checkers such as "TypeScript" or "Flow"
+- Coffee Script or Dart. 
+***
+
+### Landscape of Javascript
+***
+- Dyanmic Programming Language, A language that execute at run-time. 
+- Web broswers have an Interpretor or a Java Script Engines. 
+- JIT just in time complier. 
+***
+
+### Text Editors & Tools
+Linters and Formatters. Linters read and spot possible errors. Formatter ensure consistent style.  
+Some tools are (ESLint & Prettir).
+
+### Javascript Build Tools
+When starting a new JavaScript project, developers usually set up a build system using tools that help manage all of the moving parts of the project, and just about everything needed to build and run their application.
+***
+- Package managers (npm, Yarn.)
+- Module bundlers (webpack, rollup.js, browserify)
+- Compilers ( Babel , to understand different flavour of js, typescrit vs coffee script)
+- Task runners (Gulp, npm)
+***
