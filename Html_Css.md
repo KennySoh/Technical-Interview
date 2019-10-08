@@ -1848,9 +1848,10 @@ var correctGuess=false;
 ### Introducing Functions
 Javascript is known as funcitonal programming language
 ```
-var alertRandom=function(){
-	var randomNumber=Math.floor(Math.random()*6)+1;
+function alertRandom(upper,eat){
+	var randomNumber=Math.floor(Math.random()*upper)+1;
+	var test=1+eat;
 	alert(randomNumber);
 };
-alertRandom();
+alertRandom(1,1);
 ```
