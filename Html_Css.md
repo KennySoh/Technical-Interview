@@ -1869,4 +1869,8 @@ isNaN('nine') // Not a Number? True
 
 ```
 ## Loops, Arrays, Objects
-###
+### Loops
+```
+while(){
+}
+```
