@@ -1855,3 +1855,18 @@ function alertRandom(upper,eat){
 };
 alertRandom(1,1);
 ```
+### Testing
+```
+function getRandomNumber(lower,upper){
+	if(isNaN(lower)||isNaN(upper)){
+		throw new Error('error message');
+	}
+	return Math.floor(Math.random()*(upper-lower+1)+lower;
+}
+
+console.log(getRandomNumber('nine',24); //does not work
+isNaN('nine') // Not a Number? True
+
+```
+## Loops, Arrays, Objects
+###
