@@ -1786,3 +1786,33 @@ document.write("<h1> Welcome to Javascript Basics</h1>");
 ```
 ### The Javascript console 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js1.png)
+
+### Variable
+```
+var message="Hello"; //Possible var names ( price$, home_alone, pricePerUnit )
+```
+  
+var include different type of values.  
+Values : Strings, Number  
+
+\ to escape.  
+Eg: 'She\'s Mine'  
+  
+### Capturing Vistor Input
+```
+var vistorName= prompt('what is your name?'); //return user input
+```
+### Object-> Property & Methods
+```
+vistorName.length // var is an object, length is a property
+vistorName.toLowerCase() // toLowerCase() is a Method.
+```
+### Numbers
+int, float , scientific notation  
+5,3.14,9e-6 (0.000009)
+### Converting Number <-> String
+```
+parseInt(someString);
+parseFloat('1.8 grams of salt');// returns 1.8
+parseInt(' Year 2008') //returns NaN ,Not a Number
+```
