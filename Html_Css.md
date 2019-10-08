@@ -1827,8 +1827,30 @@ Math.random()//return 0 to not including 1
 ### Conditional Statement
 ```
 if (answer==='Ruby'){}
+else if{}
 else{}
+
+if( answer>1 && 22<age || 3<1){}
 ```
 ### Comparison Operators
+Normal vs Strict
+if(3=='3') //true
+if(3==='3')//false
+if(''==0)//true
+
+if('alaphabet'<'big')//ture
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js2.png)
 
+### Boolean Value
+```
+var correctGuess=false;
+```
+### Introducing Functions
+Javascript is known as funcitonal programming language
+```
+var alertRandom=function(){
+	var randomNumber=Math.floor(Math.random()*6)+1;
+	alert(randomNumber);
+};
+alertRandom();
+```
