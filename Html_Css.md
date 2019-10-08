@@ -1784,3 +1784,5 @@ alert("HI");
 document.write("<h1> Welcome to Javascript Basics</h1>");
 </script>
 ```
+### The Javascript console 
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js1.png)
