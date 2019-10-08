@@ -1813,6 +1813,22 @@ int, float , scientific notation
 ### Converting Number <-> String
 ```
 parseInt(someString);
-parseFloat('1.8 grams of salt');// returns 1.8
+parseFloat('1.8 grams of salt');// returns 1.8 , can extract if starts with number
 parseInt(' Year 2008') //returns NaN ,Not a Number
 ```
+### Math Object, Random Number 
+```
+Math.round(2.2);//returns 2
+Math.round(4.9)//returns 5
+Math.floor(4.9)// round down
+Math.random()//return 0 to not including 1
+```
+
+### Conditional Statement
+```
+if (answer==='Ruby'){}
+else{}
+```
+### Comparison Operators
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js2.png)
+
