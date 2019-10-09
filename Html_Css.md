@@ -1882,9 +1882,28 @@ for(var i=1;i<=10;i+=1){
 	document.write(i);
 }
 ```
-### The Refractor Challenge, Dont Repeat Yourself. 
-***
-- Use loops
-- Function
-***
+### Arrays
+```
+var myShopping=[
+	'milk',
+	'shopping'
+];
+var assorted=['s',1,true];
 
+assorted[0]; //accessing array
+assorted.push(7,8,9); //push to end of array
+assorted.unshift(0,1); //add to begining of array
+
+assorted.pop(); //remove last item
+assorted.shift(); //remove first item
+
+var daysInWeek=['Monday','Tuesday','Wednesday'];
+var daysString=daysInWeek.join(', '); // Returns in comma seperated string
+
+var currentStudents=['jack'];
+var newStudents=['jordan'];
+var allStudents=currentStudents.concat(newStudents);//concat arrays
+
+var currentStudents.indexOf('jack'); // returns -1 if not in array, Useful for search buttons
+
+```
