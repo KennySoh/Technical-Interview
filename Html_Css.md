@@ -1906,4 +1906,11 @@ var allStudents=currentStudents.concat(newStudents);//concat arrays
 
 var currentStudents.indexOf('jack'); // returns -1 if not in array, Useful for search buttons
 
+//2d arrays
+var grades=[
+	[80,90,100,95],
+	[75,95,85]
+];
 ```
+
+### Objects
