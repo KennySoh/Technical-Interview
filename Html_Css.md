@@ -1928,4 +1928,16 @@ student['name'];
 for(var propName in student){ //looping through and providing property names
 	console.log(student[propName]); //does not work .propName
 }
+
+//Array of Object
+var questions=[
+	{
+		qns:"How are you"?;
+		ans:"good";
+	},
+	{
+		qns:"What your name"?;
+		ans:"Kenny";
+	}
+]
 ```
