@@ -1872,5 +1872,13 @@ isNaN('nine') // Not a Number? True
 ### Loops
 ```
 while(){
+	break;
+}
+
+do{ //always runs the first time.
+}while()
+
+for(var i=1;i<=10;i+=1){
+	document.write(i);
 }
 ```
