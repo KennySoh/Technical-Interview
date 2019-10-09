@@ -1914,3 +1914,10 @@ var grades=[
 ```
 
 ### Objects
+Objects have properties & methods
+```
+var student={
+	name:"Dave";
+	grades:[80,85,90,95];
+};
+```
