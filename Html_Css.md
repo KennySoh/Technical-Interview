@@ -1920,4 +1920,12 @@ var student={
 	name:"Dave";
 	grades:[80,85,90,95];
 };
+
+//accessing properties
+student.name;
+student['name'];
+
+for(var propName in student){ //looping through and providing property names
+	console.log(student[propName]); //does not work .propName
+}
 ```
