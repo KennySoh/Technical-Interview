@@ -1970,11 +1970,11 @@ print(message);
 ```
 const pi=3.14159;// (constant) only declare once. 
 const doesnt affect array or objects from changing but prevents it from being reassign
-```
-let is good in for loops.  Localises the code block scope. 
-```
+
 let description="ahhah"; // for variables that u want to reassign
 ```
+  
+let is good in for loops.  Localises the code block scope.  Var is no longer recommended. 
 Keep outputing "Button 10 Pressed", Output global scope i
 ```
 const buttons= document.getElementsByTagName("button");
@@ -1994,4 +1994,8 @@ for(let i=0;i<buttons.length;i++){
 		alert("Button" + i + "Pressed");
 	});
 }
+```
+## jQuery, javascript library
+For Dom Programming easier. 
+```
 ```
