@@ -2054,9 +2054,13 @@ https://jquery.com/
 	<script src="app.js"></script> // insert ur js file after 
 </body>
 ```
-### Unobtrusive Javascript
+### Unobtrusive Javascript Principles
 ***
 - Seperation of concerns (HTML, CSS, JS -Modularized)
 - Cross browser consistency ( jQuery)
 - Progressive Enhancement (Works when js is blocked, Firewall,Plugin, Network issues js not loaded, Older Broswers)
 ***
+Ensure when js is disabled site still works, Example. Google Search by voice triggered by js.... so when js is turned off it does not appear. 
+### Adding New Elements to the DOM
+```
+```
