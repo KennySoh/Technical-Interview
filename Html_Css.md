@@ -1966,3 +1966,32 @@ for (var i=0; i<students.length;i+=1){
 print(message);
 ```
 
+### ES2015 introduced, var-> Const & Let
+```
+const pi=3.14159;// (constant) only declare once. 
+const doesnt affect array or objects from changing but prevents it from being reassign
+```
+let is good in for loops.  Localises the code block scope. 
+```
+let description="ahhah"; // for variables that u want to reassign
+```
+Keep outputing "Button 10 Pressed", Output global scope i
+```
+const buttons= document.getElementsByTagName("button");
+for(var i=0;i<buttons.length;i++){
+	const button = buttons[i];
+	button.addEventListener("click",function(){
+		alert("Button" + i + "Pressed");
+	});
+}
+```
+Let, localised output of i. "Button 1 -10 pressed"
+```
+const buttons= document.getElementsByTagName("button");
+for(let i=0;i<buttons.length;i++){
+	const button = buttons[i];
+	button.addEventListener("click",function(){
+		alert("Button" + i + "Pressed");
+	});
+}
+```
