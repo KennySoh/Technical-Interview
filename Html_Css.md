@@ -2040,7 +2040,7 @@ $('#element').text("James"); //set text
 $('#element').html(); //getter, get html contents in element
 $('#element').html("<h2> Hello</h2>"); //setter, set html content in elements
 ```  
---- Event listener---  
+--- Event listener, val() for form input forms---  
 ```
 $("#preview-button").click(function(){
 	const title=$('#blogTitleInput').val();
