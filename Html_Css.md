@@ -2046,6 +2046,10 @@ $("#preview-button").click(function(){
 	const title=$('#blogTitleInput').val();
 	const content=$('#blogContentInput').val();
 });
+
+.mouseover()
+.keypress()
+.focus()
 ```
 ### Adding jQuery to a Project
 https://jquery.com/
@@ -2068,4 +2072,28 @@ const $button=$('<button> Reveal Spoiler </button>'); // use $ before variable c
 
 $('.spoiler').append($button);//Append to web page, add as last element within the selected parent element
 $('.spoiler').prepend($button);// Append as first element
+```
+### Using on() for Event Handling
+adding multiple event listener and not repeating codes.
+```
+$('#element').on('click keypress',function(){
+	//do stuff when the element is clicked OR when a key is pressed
+	
+});
+```
+### Using Events with Dynamically Added Elements
+When project gets too large, alot people editing code... you might add event handling before appending a element like button. To prevent the error use Event Delegation. 
+Event Delegation Listen to events on parent element instead of element...
+```
+<p class="spoiler">
+	<span>Darth Vader is Luke Skywalker's Father! Noooooooooooo!</span>
+</p>
+
+$('.spoiler').on('click','button',function(){ 
+	//Adds the event handler onto the parent element. So you can dynamically add elements no matter the ordering
+}
+
+//Append Button. Commonly placed first..
+const $button=$('<button> Reveal Spoiler </button>');
+$('.spoiler').append($button);
 ```
