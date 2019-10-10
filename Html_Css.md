@@ -2019,8 +2019,9 @@ $('.box').click(function(){
 ```
 ### Animating Elements with jQuery
 ---Visibility Methods---  
-hide()
-show()
+hide()  
+show()  
+  
 fadeIn()  
 fadeOut()  
 slideDown()  
@@ -2030,4 +2031,13 @@ delay()
 $('#flashMessage').hide().fadeIn(1000);
 $('#flashMessage').delay(3000);
 $('#flashMessage').slideUp();
+```  
+---Changing Content inside Elements---  
 ```
+$('#element').text();//get text
+$('#element').text("James"); //set text
+
+$('#element').html(); //getter, get html contents in element
+$('#element').html("<h2> Hello</h2>"); //setter, set html content in elements
+```  
+--- 
