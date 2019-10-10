@@ -2110,4 +2110,4 @@ element.on('click',function(event){
 	
 })
 ```
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js2.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js3.png)
