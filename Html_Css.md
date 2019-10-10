@@ -1998,4 +1998,36 @@ for(let i=0;i<buttons.length;i++){
 ## jQuery, javascript library
 For Dom Programming easier. 
 ```
+//javascript
+const box=document.querySelector('.box');
+box.style.display='none';
+
+//jqurey
+jQuery('.box').hide();// longer form
+$('.box').hide(); //shortest form
+$('.box').show();
+
+//javascript
+box.addEventListner('click;,function(){
+	alert('You clicked me!');
+});
+
+//jquery
+$('.box').click(function(){
+	alert('You clicked me!');
+});
+```
+### Animating Elements with jQuery
+---Visibility Methods---  
+hide()
+show()
+fadeIn()  
+fadeOut()  
+slideDown()  
+slideOut()  
+delay()  
+```
+$('#flashMessage').hide().fadeIn(1000);
+$('#flashMessage').delay(3000);
+$('#flashMessage').slideUp();
 ```
