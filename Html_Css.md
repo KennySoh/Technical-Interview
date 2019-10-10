@@ -2065,6 +2065,7 @@ Ensure when js is disabled site still works, Example. Google Search by voice tri
 ```
 //Create the "Reveal Spoiler" Button
 const $button=$('<button> Reveal Spoiler </button>'); // use $ before variable convention, for jquery variables.
-//Append to web page, add as last element within the selected parent element
-$('.spoiler').append($button);
+
+$('.spoiler').append($button);//Append to web page, add as last element within the selected parent element
+$('.spoiler').prepend($button);// Append as first element
 ```
