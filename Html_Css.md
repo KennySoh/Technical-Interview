@@ -2101,7 +2101,13 @@ const $button=$('<button> Reveal Spoiler </button>');
 $('.spoiler').append($button);
 ```
 ### The Event Object
+Event Object contains a bunch of event that just occured.
 ```
-
-element.on
+//Event object declared
+element.on('click',function(event){
+	//do something with event on click
+	console.log(event);
+	
+})
 ```
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js2.png)
