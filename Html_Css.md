@@ -2082,13 +2082,16 @@ $('#element').on('click keypress',function(){
 });
 ```
 ### Using Events with Dynamically Added Elements
-When project gets too large, alot people editing code... you might add event handling before appending a element like button. To prevent the error use Event Delegation. 
+When project gets too large, alot people editing code... you might add event handling before appending a element like button. To prevent the error use Event Delegation.   
+  
 Event Delegation Listen to events on parent element instead of element...
 ```
+//------HTMl--------------
 <p class="spoiler">
 	<span>Darth Vader is Luke Skywalker's Father! Noooooooooooo!</span>
 </p>
 
+//------Javascript---------
 $('.spoiler').on('click','button',function(){ 
 	//Adds the event handler onto the parent element. So you can dynamically add elements no matter the ordering
 }
@@ -2096,4 +2099,9 @@ $('.spoiler').on('click','button',function(){
 //Append Button. Commonly placed first..
 const $button=$('<button> Reveal Spoiler </button>');
 $('.spoiler').append($button);
+```
+### The Event Object
+```
+
+element.on
 ```
