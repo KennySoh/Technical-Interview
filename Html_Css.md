@@ -2047,5 +2047,10 @@ $("#preview-button").click(function(){
 	const content=$('#blogContentInput').val();
 });
 ```
-
-
+### Adding jQuery to a Project
+https://jquery.com/
+```
+	<script src="js/jquery-3.2..min.js"></script> //placed here so all contents are in dom first
+	<script src="app.js"></script> // insert ur js file after 
+</body>
+```
