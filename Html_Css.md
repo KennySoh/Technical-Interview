@@ -2108,6 +2108,8 @@ element.on('click',function(event){
 	//do something with event on click
 	console.log(event);
 	
+	$(event.target).hide(); // hide the specific button clicked
+	
 })
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js3.png)
