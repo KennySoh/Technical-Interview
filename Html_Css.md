@@ -2054,3 +2054,9 @@ https://jquery.com/
 	<script src="app.js"></script> // insert ur js file after 
 </body>
 ```
+### Unobtrusive Javascript
+***
+- Seperation of concerns (HTML, CSS, JS -Modularized)
+- Cross browser consistency ( jQuery)
+- Progressive Enhancement (Works when js is blocked, Firewall,Plugin, Network issues js not loaded, Older Broswers)
+***
