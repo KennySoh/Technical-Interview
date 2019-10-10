@@ -1930,14 +1930,9 @@ for(var propName in student){ //looping through and providing property names
 }
 
 //Array of Object
-var questions=[
-	{
-		qns:"How are you"?;
-		ans:"good";
-	},
-	{
-		qns:"What your name"?;
-		ans:"Kenny";
-	}
-]
+var objects = [
+	{question: "How", answer: 12}, 
+	{question: "When", answer: 6},
+	{question: "Where", answer: 14}
+];
 ```
