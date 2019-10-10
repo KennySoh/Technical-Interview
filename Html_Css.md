@@ -2063,4 +2063,8 @@ https://jquery.com/
 Ensure when js is disabled site still works, Example. Google Search by voice triggered by js.... so when js is turned off it does not appear. 
 ### Adding New Elements to the DOM
 ```
+//Create the "Reveal Spoiler" Button
+const $button=$('<button> Reveal Spoiler </button>'); // use $ before variable convention, for jquery variables.
+//Append to web page, add as last element within the selected parent element
+$('.spoiler').append($button);
 ```
