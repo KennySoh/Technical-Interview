@@ -1917,8 +1917,8 @@ var grades=[
 Objects have properties & methods
 ```
 var student={
-	name:"Dave";
-	grades:[80,85,90,95];
+	name:"Dave",
+	grades:[80,85,90,95]
 };
 
 //accessing properties
@@ -1935,4 +1935,15 @@ var objects = [
 	{question: "When", answer: 6},
 	{question: "Where", answer: 14}
 ];
+```
+### JSON (JavaScript Object Notation) & AJAX
+Data format used to transmit data
+```
+{
+	name:"Kenny"
+	points:{
+		total:14639,
+		name:hahah
+		}
+}
 ```
