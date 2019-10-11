@@ -2104,7 +2104,7 @@ $('.spoiler').append($button);
 Event Object contains a bunch of event that just occured.
 ```
 //Event object declared
-element.on('click',function(event){
+$('#element').on('click',function(event){
 	//do something with event on click
 	console.log(event);
 	
@@ -2113,3 +2113,9 @@ element.on('click',function(event){
 })
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js3.png)
+### Traversal 
+```js
+$('li').eq(0); //return 1st list item
+$('li').eq(1).prev().css({color:'green'});
+$('li').eq(0).next();
+```
