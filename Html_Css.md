@@ -2119,7 +2119,7 @@ $('li').eq(0); //return 1st list item
 $('li').eq(1).prev().css({color:'green'});
 $('li').eq(0).next();
 ```
-### jQuery-Specific Selectors & attr()
+### jQuery-Specific Selectors 
 ***
 - CSS Selector
 	- h1, p ,a
@@ -2136,7 +2136,20 @@ $odd.hide();
 
 const $secureLinks=$('a[href^="https://"]');
 const $pdfs=$('a[href$=".pdf"]');
-
+```
+### jQuery dynamically changing attributes with attr()
+```
 $('#my-iamge').attr("alt");//Getter
 $('#my-image').attr("alt","Sunset in Barcelona")//Setter
+```
+### jQuery changing element styles and classes
+```
+$element.css("backgroundColor")//Getter
+$element.css("backgroundColor","green")//Setter
+
+$('.my-element').addClass("className")
+$('.my-element').removeClass("className")
+$('.my-element').toggleClass("className")
+
+
 ```
