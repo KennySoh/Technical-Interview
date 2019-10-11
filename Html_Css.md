@@ -2119,3 +2119,17 @@ $('li').eq(0); //return 1st list item
 $('li').eq(1).prev().css({color:'green'});
 $('li').eq(0).next();
 ```
+### jQuery-Specific Selectors
+***
+- CSS Selector
+	- h1, p ,a
+	- #footer,.profile-image
+	- :first,:last
+- jQuery Specific Selectors
+	- :radio, :checkbox, :password
+	- :odd, :even
+	- :visible, :hidden
+***
+```
+const odd;
+```
