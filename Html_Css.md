@@ -2119,7 +2119,7 @@ $('li').eq(0); //return 1st list item
 $('li').eq(1).prev().css({color:'green'});
 $('li').eq(0).next();
 ```
-### jQuery-Specific Selectors
+### jQuery-Specific Selectors & attr()
 ***
 - CSS Selector
 	- h1, p ,a
@@ -2131,5 +2131,12 @@ $('li').eq(0).next();
 	- :visible, :hidden
 ***
 ```
-const odd;
+const $odd=$('a:odd'); // select odd elements ,$odd for jQuery Variables
+$odd.hide();
+
+const $secureLinks=$('a[href^="https://"]');
+const $pdfs=$('a[href$=".pdf"]');
+
+$('#my-iamge').attr("alt");//Getter
+$('#my-image').attr("alt","Sunset in Barcelona")//Setter
 ```
