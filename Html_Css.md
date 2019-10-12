@@ -2058,6 +2058,13 @@ https://jquery.com/
 	<script src="app.js"></script> // insert ur js file after 
 </body>
 ```
+
+The second method is to use CDN (external host), More efficient and users dont have to redownload jQUery if previosuly downloaded.  
+http://code.jquery.com/  Select minified version(all uncessary character have been removed),faster for computer
+```
+copy the scipt tag ...
+```
+
 ### Unobtrusive Javascript Principles
 ***
 - Seperation of concerns (HTML, CSS, JS -Modularized)
