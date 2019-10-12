@@ -2151,5 +2151,19 @@ $('.my-element').addClass("className")
 $('.my-element').removeClass("className")
 $('.my-element').toggleClass("className")
 
-
+```
+### Stopping Browser's Default Behaviour, event.preventDefault()
+```
+$pdfs.on('click',function(event){
+	//check if checkbox has been checked
+	//if zero checkboxes are checked
+	/*-----$(':checked')// returns array of checked elements on page-------*/
+	if($(':checked').length===0){
+		//prevent download of document	
+		event.preventDefault();
+		//alert the user
+		aalert("PLease check the box to allow PDF downloads.');
+	}
+	//else allow the download
+});
 ```
