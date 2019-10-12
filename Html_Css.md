@@ -2167,3 +2167,13 @@ $pdfs.on('click',function(event){
 	//else allow the download
 });
 ```
+### jQuery each method, loop through a jQuery collection
+```
+$('a').each(function(index,element){ //loop through a jQuery collection
+	console.log(index,$(element).atrr('href'));
+});
+
+$('a').each(function(this){ //loop through a jQuery collection
+	console.log($(this).atrr('href')); //this refers the current item in the collection
+});
+```
