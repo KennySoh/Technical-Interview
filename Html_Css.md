@@ -2207,10 +2207,30 @@ Consist of:
 - Javascript File (Compulsory)
 - Images
 ***
-  
+
+### Downloading & File restructing for easier use
 Animsition(jQuery plugin), allows transition effect when toggling pages, Fade left/right.
 ***
 1. Download Github zip(src is what author used to code the plugin, dist is what u use)
 2. rename dist -> Animsition(Name of plugin), send css and js into Animsition folder
 3. Ensure u keep plugin in one file. Easier to maintain 
+***
+
+### Adding jQuery Plugin to a Webpage
+***
+1. Attach CSS files 
+```
+<link rel="stylesheet" href="js/animation/animsition.min.css"> //placed above, so u can overwrite with ur own main.css
+<link rel="stylesheet" href="css/main.css"> 
+```
+2. Attach jQuery
+3. Attach the plugin Javascript file
+```
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/animsition/jquery.animsition.min.js"></script>
+```
+4. Structure ur HTML
+5. Add your own Javascript 
+6. Select an element on the apge using jQuery
+7. call the plugin function
 ***
