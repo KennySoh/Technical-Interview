@@ -2173,7 +2173,7 @@ $('a').each(function(index,element){ //loop through a jQuery collection
 	console.log(index,$(element).atrr('href'));
 });
 
-$('a').each(function(this){ //loop through a jQuery collection
+$('a').each(function(){ //loop through a jQuery collection, using this
 	console.log($(this).atrr('href')); //this refers the current item in the collection
 });
 ```
