@@ -2210,7 +2210,7 @@ Consist of:
   
 Animsition(jQuery plugin), allows transition effect when toggling pages, Fade left/right.
 ***
-1 Download Github zip(src is what author used to code the plugin, dist is what u use)
-2 rename dist -> Animsition(Name of plugin), send css and js into Animsition folder
-3 Ensure u keep plugin in one file. Easier to maintain 
+1. Download Github zip(src is what author used to code the plugin, dist is what u use)
+2. rename dist -> Animsition(Name of plugin), send css and js into Animsition folder
+3. Ensure u keep plugin in one file. Easier to maintain 
 ***
