@@ -2184,3 +2184,33 @@ $('a').each(function(){ //loop through a jQuery collection, using this
 	console.log($(this).atrr('href')); //this refers the current item in the collection
 });
 ```
+## jQuery Plugin
+jQuery Librarys
+jCacluators, jQuery Adaptive Model, jQuery ListNav, lightbox, video
+  
+-Finding Plugins   
+https://www.sitepoint.com/jquery-popular-plugins-list/    
+https://www.unheap.com/  
+***   
+- A good plugin
+	- Does what u need
+	- Good documentation
+		- How call, Html Setup, Options Avalible
+	- Is it still actively supported. (Github Commits)
+	- Responsive Friendly
+	- Mobile Friendly
+***
+### Plugin Files
+Consist of:
+***
+- A CSS File
+- Javascript File (Compulsory)
+- Images
+***
+  
+Animsition(jQuery plugin), allows transition effect when toggling pages, Fade left/right.
+***
+1 Download Github zip(src is what author used to code the plugin, dist is what u use)
+2 rename dist -> Animsition(Name of plugin), send css and js into Animsition folder
+3 Ensure u keep plugin in one file. Easier to maintain 
+***
