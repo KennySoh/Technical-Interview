@@ -2235,4 +2235,18 @@ Animsition(jQuery plugin), allows transition effect when toggling pages, Fade le
 7. call the plugin function
 ***
 ### Sticky js plugin
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js1.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js4.png)
+### Plugin Events
+Event<->Response  	// clicked<->Img popups
+```
+$(.header).sticky();
+
+$(".header").on('sticky-start',function(){ // 'sticky-start is event when nav menu starts to stick
+	$(.description).html('We build <strong> great<strong> apps.
+});
+
+
+$(".header").on('sticky-end',function(){ // 'sticky-end is event when nav menu starts to stick
+	$(.description).html('We build great apps.
+});
+```
