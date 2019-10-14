@@ -2234,3 +2234,5 @@ Animsition(jQuery plugin), allows transition effect when toggling pages, Fade le
 6. Select an element on the apge using jQuery
 7. call the plugin function
 ***
+### Sticky js plugin
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js1.png)
