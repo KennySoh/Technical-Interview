@@ -2223,11 +2223,13 @@ Animsition(jQuery plugin), allows transition effect when toggling pages, Fade le
 <link rel="stylesheet" href="js/animation/animsition.min.css"> //placed above, so u can overwrite with ur own main.css
 <link rel="stylesheet" href="css/main.css"> 
 ```
-2. Attach jQuery
-3. Attach the plugin Javascript file
+2. Attach jQuery 
+3. Attach the plugin Javascript file 
 ```
-<script src="js/jquery-1.11.2.min.js"></script>
-<script src="js/animsition/jquery.animsition.min.js"></script>
+//it's best to place all your script references at the end of the page, just before </body>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/animsition/jquery.animsition.min.js"></script>
+</body>
 ```
 4. Structure ur HTML
 5. Add your own Javascript 
