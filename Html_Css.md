@@ -2265,3 +2265,9 @@ $('.slides').slick({
 
 change slick-theme.css to personalise.
 ```
+### The Carousel Challenge
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow1.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow2.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow3.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow4.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow5.png)
