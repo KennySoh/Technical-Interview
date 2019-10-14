@@ -2234,7 +2234,7 @@ Animsition(jQuery plugin), allows transition effect when toggling pages, Fade le
 6. Select an element on the apge using jQuery
 7. call the plugin function
 ***
-### Sticky js plugin
+## Sticky js plugin
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/js4.png)
 ### Plugin Events
 Event<->Response  	// clicked<->Img popups
@@ -2249,4 +2249,17 @@ $(".header").on('sticky-start',function(){ // 'sticky-start is event when nav me
 $(".header").on('sticky-end',function(){ // 'sticky-end is event when nav menu starts to stick
 	$(.description).html('We build great apps.
 });
+```
+## Carousel- similar to a slideshow
+slick - https://kenwheeler.github.io/slick/
+```
+$('.slides').slick({
+	fade:true,
+	autoplay:true,
+	autoplaySpeed: 2000,
+	arrows:false,
+	dots:true
+});
+
+change slick-theme.css to personalise.
 ```
