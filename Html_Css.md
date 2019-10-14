@@ -2266,8 +2266,17 @@ $('.slides').slick({
 change slick-theme.css to personalise.
 ```
 ### The Carousel Challenge
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow1.png)
+***
+1. Adding Slick CSS files
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow2.png)
+2. Attach jQuery and the Slick Plugin files
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow3.png)
+3. Add a div to hold the slides
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow4.png)
+4. Add the 'slides'
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow5.png)
+5. Add the programming to call the plugin
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow6.png)
+6. Lastly , customize css on main.css so future theme updates dont conflict
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow7.png)
+***
