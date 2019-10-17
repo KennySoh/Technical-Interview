@@ -2309,7 +2309,7 @@ const sayName=x=>{ x*x;} // Only one arguement, only one line
 3. Listening for user actions
 ***
 
-### Thinking Globally
+### Thinking Globally, global scope- window object
 There is a gloabl object known as "window"
 ```js
 ----------JS console--------------
@@ -2320,7 +2320,8 @@ alert('I made the browser message me') //similar to window.alert("I made...")
 location.href // similar to window.location.href
 window.dom
 
-//DOM is document object Model
+//DOM is document object Model,is a representation of the document that JavaScript uses to navigate and make changes to a webpage.
+
 document.getElementById('myHeading').style.color='purple'
 document.getElementById('myHeading').style.backgroundColor='yellow'
 ```
@@ -2328,4 +2329,10 @@ document.getElementById('myHeading').style.backgroundColor='yellow'
 The DOM is a representation of a webpage that JavaScript can use
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/jsdom2.png)
 
-
+### Listening / Responding to Event
+```js
+const myHeading=document.getElementById('myHeading');
+myHeading.addEventListner('click',()=>{
+	myHeading.style.color='red';
+});
+```
