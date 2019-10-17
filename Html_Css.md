@@ -2278,3 +2278,21 @@ change slick-theme.css to personalise.
 5. Lastly , customize css on main.css so future theme updates dont conflict
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/slideshow6.png)
 ***
+
+# Arrow Syntax
+```
+//Function declaration
+function sayName(){
+	return null;
+}
+
+//Function Expression 
+const sayName=function(){
+	return null;
+}
+
+//Function Arrow Expression
+const sayName=()=>{
+	return null;
+}
+```
