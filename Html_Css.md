@@ -2341,4 +2341,12 @@ myButton[0].addEventListner('click',()=>{
 });
 ```
 ### Using CSS Queries to Select Page Elements
+```
+document.querySelectorAll('li') //Return HTML Collection of all 'li'
+document.querySelector('li') //Return first HTML element 'li'
+document.querySelector('#id')
+document.querySelectorAll('.class')
 
+document.querySelector('[title=label]') // return element with title='label'
+document.querySelector('li:nth-child(even)') 
+```
