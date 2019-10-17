@@ -2292,7 +2292,12 @@ const sayName=function(){
 }
 
 //Function Arrow Expression
-const sayName=()=>{
-	return null;
+const sayName=(x,y)=>{
+	return x+y;
 }
+
+//More consise arrow 
+const sayName=x=>{ x*x;} // Only one arguement, only one line 
 ```
+# JavaScript and the DOM
+
