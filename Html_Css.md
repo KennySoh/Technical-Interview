@@ -2350,3 +2350,23 @@ document.querySelectorAll('.class')
 document.querySelector('[title=label]') // return element with title='label'
 document.querySelector('li:nth-child(even)') 
 ```
+### Broswer Support and Documentation
+Mdn Document Page :https://developer.mozilla.org/en-US/docs/Web/API/Document  
+https://caniuse.com/  
+
+### Getting and Setting Text with textContent and innerHTML
+```
+let myHeading=document.querySelector('h1');
+myHeading.textContent // returns "The header value"
+myHeading.textContent="This is a new heading";
+
+let ul=document.querSelector('ul');
+ul.innerHTML="<li> first</li>" //can change html
+```
+
+### Changing Element Attributes
+```
+input.type
+input.className
+input.type="checkbox"
+```
