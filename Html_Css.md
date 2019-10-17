@@ -2302,6 +2302,7 @@ const sayName=x=>{ x*x;} // Only one arguement, only one line
 # JavaScript and the DOM
 
 ### Interactive pages with JavaScript
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/jsdom1.png)
 ***
 1. Selecting elements on the page
 2. Manipulating elements
@@ -2319,8 +2320,12 @@ alert('I made the browser message me') //similar to window.alert("I made...")
 location.href // similar to window.location.href
 window.dom
 
-//DOM is document object
+//DOM is document object Model
 document.getElementById('myHeading').style.color='purple'
 document.getElementById('myHeading').style.backgroundColor='yellow'
 ```
+### DOM , tree like sturcture
+The DOM is a representation of a webpage that JavaScript can use
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/jsdom2.png)
+
 
