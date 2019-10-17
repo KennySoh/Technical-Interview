@@ -2301,7 +2301,7 @@ const sayName=x=>{ x*x;} // Only one arguement, only one line
 ```
 # JavaScript and the DOM
 
-### Interactive pages with JavaScript
+## Interactive pages with JavaScript
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/jsdom1.png)
 ***
 1. Selecting elements on the page
@@ -2309,7 +2309,7 @@ const sayName=x=>{ x*x;} // Only one arguement, only one line
 3. Listening for user actions
 ***
 
-### Thinking Globally, global scope- window object
+## Thinking Globally, global scope- window object
 There is a gloabl object known as "window"
 ```js
 ----------JS console--------------
@@ -2325,14 +2325,20 @@ window.dom
 document.getElementById('myHeading').style.color='purple'
 document.getElementById('myHeading').style.backgroundColor='yellow'
 ```
-### DOM , tree like sturcture
+## DOM , tree like sturcture
 The DOM is a representation of a webpage that JavaScript can use
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/jsdom2.png)
 
-### Listening / Responding to Event
+## Listening / Responding to Event, Simple Example
+### Selecting Elements, using document.getElement
 ```js
 const myHeading=document.getElementById('myHeading');
-myHeading.addEventListner('click',()=>{
-	myHeading.style.color='red';
+const myButton = document.getElementsByTagName('button'); //return a collection/array of elements
+const myTextInput= document.getElementsByClassName('myTextInput');
+
+myButton[0].addEventListner('click',()=>{
+	myHeading.style.color=myTextInput[0].value;
 });
 ```
+### Using CSS Queries to Select Page Elements
+
