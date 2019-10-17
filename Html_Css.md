@@ -2301,3 +2301,26 @@ const sayName=x=>{ x*x;} // Only one arguement, only one line
 ```
 # JavaScript and the DOM
 
+### Interactive pages with JavaScript
+***
+1. Selecting elements on the page
+2. Manipulating elements
+3. Listening for user actions
+***
+
+### Thinking Globally
+There is a gloabl object known as "window"
+```js
+----------JS console--------------
+window // Print on console to see
+
+//window variables
+alert('I made the browser message me') //similar to window.alert("I made...")
+location.href // similar to window.location.href
+window.dom
+
+//DOM is document object
+document.getElementById('myHeading').style.color='purple'
+document.getElementById('myHeading').style.backgroundColor='yellow'
+```
+
