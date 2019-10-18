@@ -2370,3 +2370,43 @@ input.type
 input.className
 input.type="checkbox"
 ```
+
+### Styling Elements
+```
+Element.style.prop
+
+p-description=document.querySelector('p.description');
+p-description.style.color // returns "darkblue";
+p-description.style.backgrounColor= 'lightblue';
+
+//Toggle display
+toggleList.addEventListner('click',()=>{
+	if(listDiv.style.display=='none'){
+		listDiv.style.display='block';
+	}else{
+		listDiv.style.display='none';
+	}
+});
+```
+### Creating New DOM Elements
+Added Element will not appear on the DOM 
+```
+const addItemInput=document.querySelector('input.addItemInput');
+
+addItemButton.addEventListner('click',()=>{
+	let li=document.createElement('li');
+	li.textContent=addItemInput.value;
+}
+```
+### Appending Nodes, appendChild()
+In the last video, you saw how to create elements, but they won't appear on the page until you add them to the DOM. In this video, you'll select an existing node, then learn to append, or add, a new node as a child.
+```
+<ul>
+	<li></li>
+</ul>
+
+let ul=document.getElementsByTagName('ul')[0]; //1) Select parent element
+let li=document.createElement('li');
+li.textContent= addItemInput.value;
+ul.appendChild(li);
+```
