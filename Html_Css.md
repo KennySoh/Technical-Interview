@@ -2471,6 +2471,7 @@ target.addEventListener(type, listener[, options]);
 target.addEventListener(type, listener[, useCapture]);
 target.addEventListener(type, listener[, useCapture, wantsUntrusted  ]); // Gecko/Mozilla only
 ```
+List Hover change to UpperCase  
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/jsdomevent1.png)
 ```
 for(let i=0;i<listItems.length;i+=i){
