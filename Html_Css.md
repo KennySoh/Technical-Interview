@@ -2410,3 +2410,9 @@ let li=document.createElement('li');
 li.textContent= addItemInput.value;
 ul.appendChild(li);
 ```
+### Removing Nodes, removeChild()
+```
+let ul=document.getElementsByTagName('ul')[0]; //1) Select parent element
+let li=document.querySelector('li:last-child');
+ul.removeChild(li);
+```
