@@ -2456,3 +2456,18 @@ exec(function say(something){ //this become an statement->experesssion
 },'Hi There');
 
 ```
+### Delaying Execution with setTimeout()
+```
+window.setTimeout((something)=>{ //(something) is a callback function when other events takeplace.
+	console.log(something);
+}, 3000, 'Greetings, everyone!');
+```
+### Listening for Events with addEventListener()
+https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener  
+  
+Syntax
+```
+target.addEventListener(type, listener[, options]);
+target.addEventListener(type, listener[, useCapture]);
+target.addEventListener(type, listener[, useCapture, wantsUntrusted  ]); // Gecko/Mozilla only
+```
