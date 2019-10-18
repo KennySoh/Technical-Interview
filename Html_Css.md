@@ -2471,3 +2471,14 @@ target.addEventListener(type, listener[, options]);
 target.addEventListener(type, listener[, useCapture]);
 target.addEventListener(type, listener[, useCapture, wantsUntrusted  ]); // Gecko/Mozilla only
 ```
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/jsdomevent1.png)
+```
+for(let i=0;i<listItems.length;i+=i){
+	listItems.addEventListener('mouseover',()=>{
+		lsitItems.textContent=listItems.textContent.toUpperCase();
+	});
+	listItems.addEventListener('mouseout',()=>{
+		lsitItems.textContent=listItems.textContent.toLowerCase();
+	});
+}
+```
