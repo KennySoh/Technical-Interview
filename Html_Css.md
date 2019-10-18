@@ -2416,3 +2416,43 @@ let ul=document.getElementsByTagName('ul')[0]; //1) Select parent element
 let li=document.querySelector('li:last-child');
 ul.removeChild(li);
 ```
+## Events
+### What is an Event
+Any time you interact with a webpage, you generate all kinds of events. An event is something you do on the web page, like moving your mouse around, scrolling, or clicking a link. Browsers "listen" for events and, with JavaScript, we can do something in response to an event.
+***
+- Mouse Events
+	- click
+	- dblclick
+	- mousedown
+	- mousemove
+	- mouseover
+	- mouseout
+- Keyboard
+	- keydown
+	- keyup
+	- keypress
+- load (Load event trigger once all html,css, js has been loaded to the page)
+***
+### Functions as Parameters
+```
+function say(something){
+	console.log(something);
+}
+
+// We declare a function as a parameter/input
+function exec(func, arg){
+	func(arg);
+}
+
+exec(say,'Hi There');
+
+// Can also transform into
+function exec(func, arg){
+	func(arg);
+}
+
+exec(function say(something){ //this become an statement->experesssion
+	console.log(something);
+},'Hi There');
+
+```
