@@ -2486,4 +2486,5 @@ for(let i=0;i<listItems.length;i+=i){
 ### Event Bubbling and Delegation
 An event received by an element doesn't stop with that one element. That event moves to other elements like the parent, and other ancestors of the element. This is called "event bubbling".
 
+If any child is clicked, callback function is triggered
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/jsdomevent2.png)
