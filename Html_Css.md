@@ -2446,7 +2446,7 @@ function exec(func, arg){
 
 exec(say,'Hi There');
 
-// Can also transform into
+// ------Can also transform into----------
 function exec(func, arg){
 	func(arg);
 }
