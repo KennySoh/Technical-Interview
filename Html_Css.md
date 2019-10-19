@@ -2488,3 +2488,14 @@ An event received by an element doesn't stop with that one element. That event m
 
 If any child is clicked, callback function is triggered
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/jsdomevent2.png)
+
+### The Event Object
+```
+//When event handler is called, it receives an event object to know which children called it
+document.addEventListener('click',(event)=>{
+	// event is an object with info & methods
+	if(event.target.tagName=="li"){
+		console.log(event.target); //returns child being clicked.
+	}
+});
+```
