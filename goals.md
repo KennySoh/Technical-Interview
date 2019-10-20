@@ -34,9 +34,13 @@ Fitness Targets:
 - 20 push ups/ 20 situps / 20 burpees  
 - sunday 1.6km 
 
-# 24 Aug 2019
-### Things I'll do This Week:
-
+# 20 Oct 2019
+### DeadLines:
+- [ ] Team Tree House
+  - [ ] Unit 6 , Teusday ( Finished Videos)
+  - [ ] Unit 6 , Wednesday ( Finished Project)
+- [ ] Ecommerce
+  - [ ] Photo , Videos ( This weekend)
 ### Things I'll Do in the Future:
 
 - [ ] Udacity Course.
