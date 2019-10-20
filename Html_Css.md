@@ -2499,3 +2499,7 @@ document.addEventListener('click',(event)=>{
 	}
 });
 ```
+## Traverse Up the DOM, parentNode
+```
+li=event.target.parentNode;
+```
