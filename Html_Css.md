@@ -2533,3 +2533,8 @@ listDiv.addEventListener('click',(event)=>{
 });
 
 ```
+### nextElementSibling
+```
+let nextLi=li.nextElementSibling;// returns next sibling
+ul.insertBefore(nextLi,li);
+```
