@@ -2499,7 +2499,14 @@ document.addEventListener('click',(event)=>{
 	}
 });
 ```
-## Traverse Up the DOM, parentNode
+## Element Traversal
+### Traverse Up the DOM, parentNode
 ```
-li=event.target.parentNode;
+listDiv.addEventListener('click',(event)=>{
+	if(event.target.tagName=='BUTTON'){
+		let li=event.target.parentNode;
+		let ul=li.parentNode;
+		ul.removeChild(li);
+	}
+});
 ```
