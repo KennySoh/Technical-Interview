@@ -2561,3 +2561,9 @@ lastListItem=ul.lastElementChild;
 	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs3.png)
 	2. Can also add conditional line breakpoint so callback function only pause when a certain class is triggering it. 
 	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs4.png)
+
+4. Debugging Functions
+	1. Step into function 
+	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs5.png)
+	2. Call Stack, Scope keep tracks of nested function calls
+	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs6.png)
