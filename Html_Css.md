@@ -2547,3 +2547,12 @@ ul.children; // return list of children
 firstListItem=ul.firstElementChild;
 lastListItem=ul.lastElementChild;
 ```
+## Debugging Javascript 
+*** 
+1. console.log()
+2. Breaking on Events and Basic Stepping
+	1. Go to Sources Tab in inspect element
+	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs1.png)
+	2. Breakpoints on Event , so we go to the callback function of an event( eg. click event)
+	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs2.png)
+	3. Step over each line , with the step button. 
