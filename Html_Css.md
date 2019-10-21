@@ -2538,3 +2538,12 @@ listDiv.addEventListener('click',(event)=>{
 let nextLi=li.nextElementSibling;// returns next sibling
 ul.insertBefore(nextLi,li);
 ```
+### Getting All Children of a Node with children
+```
+ul.children; // return list of children
+```
+### firstElementChild & lastElementChild
+```
+firstListItem=ul.firstElementChild;
+lastListItem=ul.lastElementChild;
+```
