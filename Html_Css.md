@@ -2474,7 +2474,7 @@ target.addEventListener(type, listener[, useCapture, wantsUntrusted  ]); // Geck
 List Hover change to UpperCase  
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/jsdomevent1.png)
 ```
-for(let i=0;i<listItems.length;i+=i){
+for(let i=0;i<listItems.length;i+=1){
 	listItems.addEventListener('mouseover',()=>{
 		lsitItems.textContent=listItems.textContent.toUpperCase();
 	});
@@ -2556,3 +2556,8 @@ lastListItem=ul.lastElementChild;
 	2. Breakpoints on Event , so we go to the callback function of an event( eg. click event)
 	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs2.png)
 	3. Step over each line , with the step button. 
+3. Basic and Conditional Line Breakpoints
+	1. Adding a line breakpoint, just click on the line, it will pause here
+	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs3.png)
+	2. Can also add conditional line breakpoint so callback function only pause when a certain class is triggering it. 
+	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs4.png)
