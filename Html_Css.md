@@ -2511,7 +2511,8 @@ listDiv.addEventListener('click',(event)=>{
 });
 ```
 ### previousElementSibling and insertBefore
-Commonly avoid previousSibling. 
+previousSibling vs previousElementSibling. previousElementSibling always return DOM elements.   
+Avoid previousSibling.
 ```
 listDiv.addEventListener('click',(event)=>{
 	if(event.target.tagName=='BUTTON'){
