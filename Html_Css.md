@@ -2510,3 +2510,25 @@ listDiv.addEventListener('click',(event)=>{
 	}
 });
 ```
+### previousElementSibling and insertBefore
+Commonly avoid previousSibling. 
+```
+listDiv.addEventListener('click',(event)=>{
+	if(event.target.tagName=='BUTTON'){
+		if(event.target.className=='remove'){
+			let li=event.target.parentNode;
+			let ul=li.parentNode;
+			ul.removeChild(li);
+		}
+		if(event.target.className=='up'){
+			let li=event.target.parentNode;
+			let prevLi=li.previousElementSibling;
+			let ul=li.parentNode;
+			if(prevLi){ //prevLi == null if its the first node..
+				ul.insertBefore(li,prevLi);
+			}
+		}
+	}
+});
+
+```
