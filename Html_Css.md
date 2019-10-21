@@ -2579,3 +2579,55 @@ lastListItem=ul.lastElementChild;
 	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs9.png)
 	2. Watch Expression, keep track of selected variables
 	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs10.png)
+
+## Conditional Terminology
+### Switch Statement
+```
+switch(day){
+	case 0:
+		console.log('Sunday');
+		break;
+	case 1:
+		console.log('Monday');
+		break;
+	default:
+		console.log('Wrong day');
+		break;
+	
+}
+```
+### Ternary Operator
+```
+<boolean> ? <expression if true> : <expression if false>
+
+//Normal if else
+if(isTrue){
+	console.log('yes');
+}else{
+	console.log('no');
+}
+
+//Ternary Operator
+isTrue? console.log('yes'):console.log('no');
+
+var yesOrNo = isTrue ? 'yes':'no';
+```
+
+### Short Circuit Evaluation
+Stopping code execution as soon as possible  
+Truthy https://developer.mozilla.org/en-US/docs/Glossary/Truthy  
+```
+console.log(3===3 && 'cow' && 'chicken') // logs 'chicken', take note: 3===3, 'cow' returns truthfy
+console.log(3===3 && false && 'chicken') // logs false
+3===3 && false && console.log('chicken')// equivalent to if (3==3&&false){ console.log('chicken')}
+console.log(3===4||false || 0);
+```
+Commonly used generic If Else & Switch, But useful when
+```
+function isAdult(age){
+	return age && age>=18;
+}
+```
+
+## Dom Scripting By Example
+### 
