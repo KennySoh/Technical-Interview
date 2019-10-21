@@ -2574,3 +2574,6 @@ lastListItem=ul.lastElementChild;
 	2. Moving down the stack calls.
 	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs8.png)
 	  We find local scope: li is undefined but block scope: is defined. li exist in local scope and cannot use the outer scope. 
+6. Breaking on DOM Changes and Watch Expressions
+	1. Attribute Modification , Node Removal, Subtree Modification
+	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs9.png)
