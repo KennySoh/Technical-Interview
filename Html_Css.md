@@ -2567,3 +2567,10 @@ lastListItem=ul.lastElementChild;
 	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs5.png)
 	2. Call Stack, Scope keep tracks of nested function calls
 	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs6.png)
+
+5. Debugging Exception Errors
+	1. Pause on exceptions, to see the state just before error is thrown
+	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs7.png)
+	2. Moving down the stack calls.
+	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs8.png)
+	  We find local scope: li is undefined but block scope: is defined. li exist in local scope and cannot use the outer scope. 
