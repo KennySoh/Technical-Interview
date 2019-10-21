@@ -2577,3 +2577,5 @@ lastListItem=ul.lastElementChild;
 6. Breaking on DOM Changes and Watch Expressions
 	1. Attribute Modification , Node Removal, Subtree Modification
 	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs9.png)
+	2. Watch Expression, keep track of selected variables
+	![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/debuggingjs10.png)
