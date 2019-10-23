@@ -2657,3 +2657,10 @@ ul.addEventListener('click',(e)=>{
 	}
 });
 ```
+### DOMContentLoaded Event
+```
+//Wrapping js with DOMContentLoaded so it runs only after Dom is loaded
+document.addEventListener('DOMContentLoaded',()=>{
+	//js goes here
+});
+```
