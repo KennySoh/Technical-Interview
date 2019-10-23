@@ -2664,3 +2664,18 @@ document.addEventListener('DOMContentLoaded',()=>{
 	//js goes here
 });
 ```
+### Refactor 2: Readable Branching Logic
+```
+const nameActions={
+	remove:()=>{
+		ul.removeChild(li);
+	},
+	edit:()=>{
+	},
+	save:()=>{
+	}
+};
+
+const action=button.textContent;
+nameActions[actions]();
+```
