@@ -2679,3 +2679,29 @@ const nameActions={
 const action=button.textContent;
 nameActions[actions]();
 ```
+## Template Literals
+### Basic and Multiple Line Strings
+```
+const templateLiteral= `<p>Template literal</p>`;
+
+const templateLiteralMultiLine=`
+	<ul> 
+		<li>Potato</li>
+		<li>Onion</li>
+	</ul>
+	`;
+	
+document.querySelector('.vegetables').innerHTML=vegetableList;
+
+```
+### Interpolation
+```
+// using this syntax ${ variable} 
+function like(thing){
+	return 'I like '+ thing;
+}
+
+function love(thing){
+	return `I love ${thing}`;
+}
+```
