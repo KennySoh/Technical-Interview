@@ -2705,3 +2705,23 @@ function love(thing){
 	return `I love ${thing}`;
 }
 ```
+# Vector Graphics
+### SVG 
+An SVG is a series of interconnected points called vectors. These points and lines form shapes that are automatically projected into the pixel grid of a computer screen. The end result is a graphic that has infinite resolution, regardless of how the image is resized. 
+### Creating an SVG
+Using adobe illustrator
+
+SVG optimiser https://github.com/svg/svgo
+```
+//Ways to include svg
+<img src="img/star.svg" alt="Star Logo">
+
+<div class="graphic-with-text>
+	<p> This text will go on top of the graphic.</p>
+</div>
+.graphic-with-text{
+	color:#FFF;
+	background:transparent url('../img/star.svg') center center no-repeat;
+	height:200px;
+}
+```
