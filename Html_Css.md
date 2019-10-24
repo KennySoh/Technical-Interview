@@ -2714,8 +2714,10 @@ Using adobe illustrator
 SVG optimiser https://github.com/svg/svgo
 ```
 //Ways to include svg
+-----------1st way----------------
 <img src="img/star.svg" alt="Star Logo">
 
+-----------2nd way----------------
 <div class="graphic-with-text>
 	<p> This text will go on top of the graphic.</p>
 </div>
