@@ -12,7 +12,7 @@ Developing and seeing the adoption of ur own created softwares products.
 - the joy that comes when people enjoy or become addicted using your products  
   
 # End-goals   
-Tech-entrepreneur (possibly healthcare)  
+Tech-entrepreneur (possibly ecommerce/ healthcare)  
   
 ## Brick by brick  
 "You don't set out to build a wall. You don't say 'I'm going to build the biggest, baddest, greatest wall that's ever been built.' You don't start there. You say, 'I'm going to lay this brick as perfectly as a brick can be laid. You do that every single day. And soon you have a wall."  
@@ -27,23 +27,22 @@ Front end actionable goals
 
 ## Overarching Goals for 2019:
 1) Aceing Technical Interviews
-2) Health 3kg loss per month
-3) Front end development portfolio 
+2) Front end development portfolio 
 
-Fitness Targets:  
-- 20 push ups/ 20 situps / 20 burpees  
-- sunday 1.6km 
-
-# 20 Oct 2019
+# 27 Oct 2019
 ### DeadLines:
 - [ ] Team Tree House
-  - [ ] Unit 6 , Teusday ( Finished Videos)
-  - [ ] Unit 6 , Wednesday ( Finished Project)
+  - [ ] Unit 7 , Tues-Wed( Finished Videos)
+  - [ ] Unit 7 , Thurs-Fri ( Finished Project)
 - [ ] Ecommerce
-  - [ ] Photo , Videos ( This weekend)
+  - [ ] CSV Files
+- [ ] Job Application
+  - [ ] Apply 10 jobs (Monday)
+  - [ ] Hackerrank Js (Monday)
+  
 ### Things I'll Do in the Future:
 
-- [ ] Udacity Course.
+- [ ] Team Tree House documentation
 - [ ] Encoding on Github/ Revision on Anki notes
 - [ ] One Kind App, git documentation
 - [ ] Cheat Code, git documentation
