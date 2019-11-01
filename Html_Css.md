@@ -2830,3 +2830,13 @@ transform-orgin: 200px 50px; // have to set in pixel
 	<circle class="gear-bg" cx="200" cy="50"> //look at cx cy values
 </svg>
 ```
+## Creating an SVG Animation Sequence
+***
+5 steps
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/svg-animate1.png)
+1. scaling of outer circle
+2. scaling of inner circle
+3. scaling of inline stroke
+4. rotating and scaling the star
+5. pusling effect in the star circle through scaling. 
+***
