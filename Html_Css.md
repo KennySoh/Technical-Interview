@@ -2924,3 +2924,31 @@ SVG Styles
 	animation-delay:1.8s;
 }
 ```
+### Creating an Animated Line Drawing
+Using stroke-dasharray & stroke-dashoffset to create line animation
+```
+@keyframes offset{
+	100%{
+		stroke-dashoffset:0;
+	}
+}
+@keyframes fill-it{
+	100%{
+		fill:#6fbc6d;
+	}
+}
+
+<svg>
+	<path class="logo" fill="transparent">
+</svg>
+	
+.logo{
+	stroke:#6fbc6d;
+	stroke-width:2;
+	stroke-dasharray:810; //making dash lines ( try to find that len of the logo is 810px)
+	stroke-dashoffset:810; // makes dash off set (adjust offset)
+	
+	animation:offset 5s linear forwards; //forwards, stops at keyframe 100%;
+	animation:offset 5s linear forwards, fill-it .8s 5s forwards;
+}
+```
