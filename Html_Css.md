@@ -2840,3 +2840,87 @@ transform-orgin: 200px 50px; // have to set in pixel
 4. rotating and scaling the star
 5. pusling effect in the star circle through scaling. 
 ***
+```
+// seperate svg into different classes
+<svg class="badge">
+	<circle class="outer">
+	<circle class="inner">
+	<path class="inline">
+	<g class="star">
+		//Star contents....
+		<path>
+		<circle>
+	</g>
+	
+/*-----------
+Adding Keyframes css
+-------------*/
+@keyframes grow{
+	0%{
+		transform: scale(0);
+	}
+	30%{
+		transform: scale(1.1);
+	}
+	60%{
+		transform: scale(0.9);
+	}
+}
+@keyframes turn{
+	0%{
+		transform: rotate(0) scale(0);
+		opacity:0;
+	}
+	60%{
+		transform: rotate(375deg) scale(1.1);
+	}
+	80%{
+		transform: rotate(355deg) scale(0.9);
+	}
+	100%{
+		transform: rotate(360deg) scale(1);
+	}
+}
+@keyframes pulse{
+	50%{
+		transform: scale(1.4);
+	}
+}
+/*-----------------
+SVG Styles
+------------------*/
+// Target
+.badge *{ // Select entire svg
+	transform-origin:50% 50%; //to set
+	transform-origin:180px 180px; // for firefox
+}
+
+.outer,
+.inner,
+.inline{
+	animation: grow 1s ease-out backwards;// Keyframe-animation-sequence duration timing backwards-sets-to-first-keyframe
+}
+.inner{
+	animaiton-delay:.1s;
+}
+.inline{
+	aniamtion-dealy:1.5s;
+}
+.star{
+	animation: turn 1.1s .2s ease-out backwards;
+}
+.star circle{
+	aniamtion: pulse .7s 1.5s;// Keyframe duration delay
+}
+.star circle:nth-of-type(2){// delay pulsing circles
+	animation-delay:1.6s;
+}
+
+.star circle:nth-of-type(3){
+	animation-delay:1.7s;
+}
+
+.star circle:nth-of-type(4){
+	animation-delay:1.8s;
+}
+```
