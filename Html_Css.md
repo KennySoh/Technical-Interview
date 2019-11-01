@@ -2817,6 +2817,8 @@ SVG transform form orgins at (Top left corner ) vs Normally (the center of the i
 }
 .heart-icon{
 	transition: transform .2s ease-out;
+	transform-origin: 50% 50%;
+	transform-origin: 200px 50px; // for fire fox cx cy values
 }
 ```
 ### SVG Transform different in Firefox
