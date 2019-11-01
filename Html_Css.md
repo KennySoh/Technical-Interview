@@ -2781,3 +2781,50 @@ Hammer
 	stroke-width:8px;
 }
 ```
+### Grouping and Transforming SVG
+```
+<svg>
+	<g class="heart"> (Group svgs together)
+		.... (Content here)
+		<circle></circle>
+	</g>
+</svg>
+
+/*-----Gear------*/
+.gear-icon{
+	transition: transform .4s ease-out;
+	transform-origin:50% 50%; //SVG transform form orgins at (Top left corner ) thus reset to center.
+}
+.gear:hover .gear-icon{
+	transform: rotate(45eg) scale(1.3);
+}
+```
+SVG transform form orgins at (Top left corner ) vs Normally (the center of the item)
+
+### Rotating and Scaling SVG
+```
+// Rotating SVG
+.hammer:hover .hammer-icon{
+	transform: rotate(45deg);
+}
+.hammer-icon{
+	transition: transform .3 ease-out;
+}
+
+// Scaling SVG
+.heart:hover .heart-icon{
+	transform: scale(1.3);
+}
+.heart-icon{
+	transition: transform .2s ease-out;
+}
+```
+### SVG Transform different in Firefox
+```
+transform-origin:50% 50%; // fire fox doesnt work for percentage
+transform-orgin: 200px 50px; // have to set in pixel
+
+<svg>
+	<circle class="gear-bg" cx="200" cy="50"> //look at cx cy values
+</svg>
+```
