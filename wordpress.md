@@ -43,5 +43,6 @@ While I originally used MAMP, as I teach in the current course videos, I now use
 - Virtual private server,VPS- Partition into seperate disk space
 - Cloud Hosting, Allow a group of hosting as web designer
 - Managed wordpress hosting (Flywheel, normamlly faster expensive , includes their own cache)
+
 ## 
 
