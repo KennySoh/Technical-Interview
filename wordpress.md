@@ -57,7 +57,7 @@ File structure
     - wp-config-sample (Normally have to change to wp-config if installing manually)
  - Database -> Local by fly wheel adminer  
  
- ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/wp1.PNG) 
+ ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/wp1.png) 
 ***
 ## Siteground , Managed hosting by flywheel
 
