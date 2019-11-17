@@ -45,6 +45,10 @@ While I originally used MAMP, as I teach in the current course videos, I now use
 - Managed wordpress hosting (Flywheel, normamlly faster expensive , includes their own cache)
 
 ## Local by flywheel , Local Mamp 
-
+***
+- posts (blog, has categories and tags)
+- pages (designed to be static pages, Setting-> reading -> set Homepage)
+- appearance -> Customizer
+***
 ## Siteground , Managed hosting by flywheel
 
