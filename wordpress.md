@@ -54,10 +54,9 @@ While I originally used MAMP, as I teach in the current course videos, I now use
 File structure  
 ***
  - Local Sites-> practice0site01 -> app -> public
-  - wp-config-sample (Normally have to change to wp-config if installing manually)
+    - wp-config-sample (Normally have to change to wp-config if installing manually)
  - Database -> Local by fly wheel adminer
- 
-- Local sites
+ ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/wp1.PNG) 
 ***
 ## Siteground , Managed hosting by flywheel
 
