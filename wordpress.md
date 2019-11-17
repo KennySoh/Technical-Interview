@@ -50,5 +50,14 @@ While I originally used MAMP, as I teach in the current course videos, I now use
 - pages (designed to be static pages, Setting-> reading -> set Homepage)
 - appearance -> Customizer
 ***
+
+File structure  
+***
+ - Local Sites-> practice0site01 -> app -> public
+  - wp-config-sample (Normally have to change to wp-config if installing manually)
+ - Database -> Local by fly wheel adminer
+ 
+- Local sites
+***
 ## Siteground , Managed hosting by flywheel
 
