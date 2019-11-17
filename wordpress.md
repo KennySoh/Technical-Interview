@@ -62,6 +62,5 @@ File structure
     - themes, plugins , uploads ( Only this change nothing else in the file structure change)
 ***
 ## Siteground , Managed hosting by flywheel
-***
 
 
