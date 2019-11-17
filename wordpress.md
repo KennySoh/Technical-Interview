@@ -44,5 +44,7 @@ While I originally used MAMP, as I teach in the current course videos, I now use
 - Cloud Hosting, Allow a group of hosting as web designer
 - Managed wordpress hosting (Flywheel, normamlly faster expensive , includes their own cache)
 
-## 
+## Local by flywheel , Local Mamp 
+
+## Siteground , Managed hosting by flywheel
 
