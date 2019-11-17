@@ -56,8 +56,12 @@ File structure
  - Local Sites-> practice0site01 -> app -> public
     - wp-config-sample (Normally have to change to wp-config if installing manually)
  - Database -> Local by fly wheel adminer  
- 
+    - wp users, wp options  
  ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/wp1.png) 
+ - wp-content
+    - themes, plugins , uploads ( Only this change nothing else in the file structure change)
 ***
 ## Siteground , Managed hosting by flywheel
+***
+
 
