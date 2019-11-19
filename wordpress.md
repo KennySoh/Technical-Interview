@@ -62,5 +62,12 @@ File structure
     - themes, plugins , uploads ( Only this change nothing else in the file structure change)
 ***
 ## Siteground , Managed hosting by flywheel
-
+***
+- My Account
+    - Primary Domain, Go to C panel
+    - Auto installer wordpress, 
+    - Setting , Timezone, lanaguage
+    - Media setting, uncheck organise my media by date
+    - Permalink Settings -> Postname
+***
 
