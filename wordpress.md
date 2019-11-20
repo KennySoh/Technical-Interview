@@ -51,8 +51,8 @@ While I originally used MAMP, as I teach in the current course videos, I now use
 - appearance -> Customizer
 ***
 
-File structure  
 ***
+File structure  
  - Local Sites-> practice0site01 -> app -> public
     - wp-config-sample (Normally have to change to wp-config if installing manually)
  - Database -> Local by fly wheel adminer  
@@ -60,6 +60,18 @@ File structure
  ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/wp1.png) 
  - wp-content
     - themes, plugins , uploads ( Only this change nothing else in the file structure change)
+***
+
+***
+Local by flywheel manually  
+- Database Adminer-> Drop all
+ ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/wp2.png) 
+***
+
+***
+Mamp
+- create new folder
+- copy wp files
 ***
 ## Siteground , Managed hosting by flywheel
 
@@ -72,4 +84,9 @@ SiteGround
     - Media setting, uncheck organise my media by date
     - Permalink Settings -> Postname
 ***
+## Explore Files annd db
+***
+- plugin -> hello dolly
+- just rename plug in to deactivate, hello-dolly-rename.php to deactivate 
 
+***
