@@ -72,7 +72,11 @@ new_project/new_project/local_settings_example.py and save as local_settings.py.
 4. Enter your database settings in local_settings.py.
 
 5. Initialize your database.
-
-python ./manage.py syncdb
 python ./manage.py migrate
+
+6. If your App has a custom user model, you'll need to create a new superuser for the admin
+python ./manage.py createsuperuser
+
+7. Run the development server to verify everthing is working
+python ./manage.py runserver
 ```
