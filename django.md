@@ -90,8 +90,8 @@ mysql -u root -p //Key in password
   - firstProject
     -__init__.py
     -settings.py (base directory, secret_key, debug=True to allow debugging-false when production,middleware, root_url,templates,wsgi_application, databases)
-    -urls.py
-    -wsgi.py
+    -urls.py (url patterns, routing)
+    -wsgi.py (For hosting)
   - manage.py
   - db.sqlite3
 ***
