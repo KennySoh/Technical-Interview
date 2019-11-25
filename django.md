@@ -84,3 +84,14 @@ mysql -u root -p //Key in password
 > SHOW DATABASES;
 > CREATE DATABASE nus_amp;
 ```
+## Django File Structure
+***
+- firstProject
+  - firstProject
+    -__init__.py
+    -settings.py (base directory, secret_key, debug=True to allow debugging-false when production,middleware, root_url,templates,wsgi_application, databases)
+    -urls.py
+    -wsgi.py
+  - manage.py
+  - db.sqlite3
+***
