@@ -121,7 +121,7 @@ This compartmentalise url patterns to url.py, function handling to view.html, fr
 ***
 - firstproject
   - templates // 1 (create new top level folder)
-    -home.html // 2 (create home.html)
+    - home.html // 2 (create home.html)
   - firstproject
   - manage.py
   -db.sqlite3
@@ -142,4 +142,26 @@ def your ownfunction2(request):
 ```
 --- home.html--- ownCreated.html
 <h1> Random HTML </h1>
+
+```
+## Django {{dictkey}} , render(request, 'home.html',{'dictkey','value'})
+Inserting dynamic text in html.
+```
+--- view.py--- ownCreated.py
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def yourownfunction(request):
+  return render(request,'home.html',{'dictkey':'value'}) // 1. place the dictionary, key value pairing
+  
+def your ownfunction2(request):
+  return HttpResponse('<h1> Hello </h1>')
+```
+
+```
+--- home.html--- ownCreated.html
+<h1> Random HTML {{dictkey}}</h1> //2 Django automatically inserts value into keys.
+```
+## Form
+```
 ```
