@@ -39,3 +39,20 @@ django-admin startproject firstProject // Create a new project
 
 python3 manage.py runserver // Starts server 127.0.0.1:8000
 ```
+## Python virtual environment
+```
+//Install pip3
+sudo apt-get install -y python3-pip
+
+//Install virtual env
+sudo pip3 install virtualenv
+
+//Create a new virtual environment
+virtualenv venv
+
+//Activate
+source venv/bin/activate
+
+//Deactivate
+deactivate
+```
