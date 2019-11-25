@@ -95,3 +95,25 @@ mysql -u root -p //Key in password
   - manage.py
   - db.sqlite3
 ***
+## Url
+Url Patterns let us configure the routing. 
+```
+--- url.py---
+from django.contrib import admin
+from django.urls import path, include
+from . import views //1 Import view.py
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.yourownfunction); //2 on path'' , direct to implement a funciotn
+]
+```
+3. Create view.py in the same directory with ur specific funcitons
+```
+--- view.py---
+from django.http import HttpResponse
+
+def yourownfunction(request):
+  return HttpResponse('<h1> Hello </h1>')
+```
+## Seperation of HTML code using Templates
