@@ -1,3 +1,5 @@
+## Cheat Sheet
+
 ```
 // Creating a new project
 django-admin startproject projectname
@@ -19,4 +21,14 @@ pyhton3 manage.py createsuperuser
 
 //collecting static files into one folder
 python3 manage.py collectstatic
+```
+## Downloading Django & Starting first project
+```
+pip3 install django //Newest verison
+pip3 install django==2.0.2 //Specific verison
+
+django-admin help
+django-admin startproject firstProject // Create a new project
+
+python3 manage.py runserver // Starts server 127.0.0.1:8000
 ```
