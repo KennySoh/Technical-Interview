@@ -32,3 +32,10 @@ django-admin startproject firstProject // Create a new project
 
 python3 manage.py runserver // Starts server 127.0.0.1:8000
 ```
+
+```
+python3
+>>> import django
+>>> django.VERSION
+(2, 0, 0, 'final', 0)
+```
