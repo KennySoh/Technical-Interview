@@ -64,19 +64,23 @@ git clone new_project.git
 2. Create a virtual environment and install dependencies
 virtualenv venv
 source venv/bin/activate
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
-3. Duplicate
-new_project/new_project/local_settings_example.py and save as local_settings.py.
-
-4. Enter your database settings in local_settings.py.
+3. Enter your database settings in settings.py. (Enter mysql to ensure it corresponds)
 
 5. Initialize your database.
-python ./manage.py migrate
+python3 ./manage.py migrate
 
 6. If your App has a custom user model, you'll need to create a new superuser for the admin
-python ./manage.py createsuperuser
+python3 ./manage.py createsuperuser
 
 7. Run the development server to verify everthing is working
-python ./manage.py runserver
+python3 ./manage.py runserver
+```
+## MYSQL
+```
+//Logging in to mysql db
+mysql -u root -p //Key in password
+> SHOW DATABASES;
+> CREATE DATABASE nus_amp;
 ```
