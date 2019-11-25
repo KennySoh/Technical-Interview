@@ -56,3 +56,23 @@ source venv/bin/activate
 //Deactivate
 deactivate
 ```
+## Setup and Existing Django Project
+```
+1. Grab a copy of the project
+git clone new_project.git
+
+2. Create a virtual environment and install dependencies
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+3. Duplicate
+new_project/new_project/local_settings_example.py and save as local_settings.py.
+
+4. Enter your database settings in local_settings.py.
+
+5. Initialize your database.
+
+python ./manage.py syncdb
+python ./manage.py migrate
+```
