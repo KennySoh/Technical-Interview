@@ -117,10 +117,29 @@ def yourownfunction(request):
   return HttpResponse('<h1> Hello </h1>')
 ```
 ## Seperation of HTML code using Templates
+This compartmentalise url patterns to url.py, function handling to view.html, front end to home.html.
 ***
 - firstproject
-  - templates (create new top level folder)
+  - templates // 1 (create new top level folder)
+    -home.html // 2 (create home.html)
   - firstproject
   - manage.py
   -db.sqlite3
 ***
+
+```
+--- view.py--- ownCreated.py
+from django.http import HttpResponse
+from django.shortcuts import render //3 import render
+
+def yourownfunction(request):
+  return render(request,'home.html')
+  
+def your ownfunction2(request):
+  return HttpResponse('<h1> Hello </h1>')
+```
+
+```
+--- home.html--- ownCreated.html
+<h1> Random HTML </h1>
+```
