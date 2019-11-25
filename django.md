@@ -117,3 +117,10 @@ def yourownfunction(request):
   return HttpResponse('<h1> Hello </h1>')
 ```
 ## Seperation of HTML code using Templates
+***
+- firstproject
+  - templates (create new top level folder)
+  - firstproject
+  - manage.py
+  -db.sqlite3
+***
