@@ -19,27 +19,20 @@ Tech-entrepreneur (possibly ecommerce/ healthcare)
   
 ## Mile stone goals  
 - Mastery of front end web  
-- Mastery of back end web  
-- Mastery of design  
-  
-Front end actionable goals  
--  
+- Mastery of Django
 
-## Overarching Goals for 2019:
-1) Aceing Technical Interviews
-2) Front end development portfolio 
+## Overarching Career Goals for 2019:
+- Mastery of Django
+- Development of Office 3.0 
+- Understanding core products on a deeper level
 
 # 27 Oct 2019
 ### DeadLines:
-- [ ] Team Tree House
-  - [ ] Unit 7 , Tues-Wed( Finished Videos)
-  - [ ] Unit 7 , Thurs-Fri ( Finished Project)
+- [ ] Django Udemy Course
+- [ ] SQL
 - [ ] Ecommerce
   - [ ] CSV Files
-- [ ] Job Application
-  - [ ] Apply 10 jobs (Monday)
-  - [ ] Hackerrank Js (Monday)
-  
+
 ### Things I'll Do in the Future:
 
 - [ ] Team Tree House documentation
