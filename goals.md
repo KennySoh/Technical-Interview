@@ -49,3 +49,10 @@ Tech-entrepreneur (possibly ecommerce/ healthcare)
 - [ ] Object Oriented Programming
 - [ ] Python
 - [ ] Java
+
+# Overview of the Future of Web Development
+https://www.youtube.com/watch?v=24tQRwIRP_w
+- typescript
+- webassembly (native application in the browser)
+- npm package (npm -config set ignore to prevent virus)
+- js alternative age well , elm
