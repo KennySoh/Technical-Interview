@@ -231,6 +231,7 @@ def count(request):
 ```
 
 ### Form: Creating a dictionary that show which word appear the most.
+Topic: Django template {% for loop}, Parsing dict, list
 ```
 --- view.py---
 from django.http import HttpResponse
