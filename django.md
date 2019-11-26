@@ -377,11 +377,25 @@ Password: something
 
 ```
 ---jobs>admin.py---
-from django.contrib import admin
+from django.contrib import admin 
 
 from .models import Job
 
-admin.site.register(Job)›
+admin.site.register(Job) 
 ```
 ![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django4.png)  
 ![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django5.png)   
+
+Add url to link to media 
+``` 
+from django.contrib import admin
+from django.urls import path
+from django.conf import settings
+form django.conf.urls.static import static
+
+---url.py---
+urlpatterns = [
+  path('admin/', admin.site.urls),
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+```
