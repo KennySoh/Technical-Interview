@@ -162,7 +162,7 @@ def your ownfunction2(request):
 --- home.html--- ownCreated.html
 <h1> Random HTML {{dictkey}}</h1> //2 Django automatically inserts value into keys.
 ```
-## Creating a Form, And handling submit
+## Form: Creating a Form, And handling submit. Linking everything. 
 ```
 --- home.html---
 <form action="{%url 'count'%}"> // 1 make it link to url name="count"
@@ -199,7 +199,7 @@ def count(request):
 <h1>Count </h1> //4 Declare count.html
 ```
 
-### Counting the words from Form
+### Form: Counting the words from Form
 Counting the word from the request object
 
 ```
@@ -221,10 +221,58 @@ def count(request):
   wordlist=fulltext.split()
   return render(request,'count.html',{'fulltext':fulltext,'count':len(wordlist)})  //2. parse variables
 ```
+
 ```
 --- count.html---
 <h1>There are {{ count }} words </h1>  //3. insert count of words
 
 <h1> Your Text</h1>
 {{ fulltext }}                         //4. insert original text
+```
+
+### Form: Creating a dictionary that show which word appear the most.
+
+```
+--- view.py---
+from django.http import HttpResponse
+from django.shortcuts import render
+import operator
+
+def homepage(request):
+  return render(request,'home.html') 
+
+def count(request):
+  fulltext = request.GET['fulltext'] 
+  wordlist=fulltext.split()
+  worddictionary={}
+  
+  for word in wordlist: // 1. add into dictionary
+    if word in worddictionary:
+      #increase
+      worddictionary[word] +=1
+    else: 
+      #add to the dictionary
+      worddictionary[word]=1
+      
+  sortedWords=sorted(worddictionary.items(),key=operator.itemgetter(1), reverse=True) //optional sort the list of tuple based on second tuple, countperword.. pass this if u want
+      
+  return render(request,'count.html', {'fulltext':fulltext,'count':len(wordlist),'worddictionary':worddictionary.items()}) //2. worddictionary.items() into list of key,value tuple
+```
+
+```
+--- count.html---
+<h1>There are {{ count }} words </h1>  
+
+<h1> Your Text</h1>
+{{ fulltext }}     
+
+<h1> Word Count: </h1>
+{% for word, countperword in worddictionary %}  //Django Templating for loop 
+
+{{ word }}
+<br />
+{{ countperword }}
+<br />
+
+{% endfor %}
 ```
