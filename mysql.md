@@ -14,3 +14,14 @@ Select the lightning icon to run existing database codes. ![images](https://gith
 
 Table is Created
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/mysql3.png)
+
+## Exploring the database
+***
+- Tables
+- View (virtual tables) 
+- stored procedures (Query the top10 paying customers , predefined functions) 
+- functions 
+***
+
+Clicked Tables, and the table calander icon to see the dewtails of the table . 
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/mysql4.png)
