@@ -45,3 +45,5 @@ ORDER BY first_name
 SELECT column1, column2, (points * 10) + 100 AS discount_factor
 FROM customers
 ```
+## Make Changes: Double click the specific data and apply changes
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/mysql6.png)
