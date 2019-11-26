@@ -47,11 +47,14 @@ sudo apt-get install -y python3-pip
 //Install virtual env
 sudo pip3 install virtualenv
 
+//Put ur virtual env next to ur project
+cd Desktop/urProject
+
 //Create a new virtual environment
-virtualenv venv
+virtualenv venvName
 
 //Activate
-source venv/bin/activate
+source venvName/bin/activate
 
 //Deactivate
 deactivate
@@ -281,3 +284,5 @@ def count(request):
 
 {% endfor %}
 ```
+
+
