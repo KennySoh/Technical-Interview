@@ -25,3 +25,17 @@ Table is Created
 
 Clicked Tables, and the table calander icon to see the details of the table . 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/mysql4.png)
+
+## Select Statement
+```
+USE table_name;
+
+--SELECT customer_id, first_name // "--" this is a comment
+--SELECT column1,column2
+//or
+SELECT *
+FROM customers 
+WHERE customer_id = 1
+ORDER BY first_name
+```
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/mysql5.png)
