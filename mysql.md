@@ -42,7 +42,7 @@ ORDER BY first_name
 
 ## Select clause
 ```
-SELECT column1, column2, (points * 10) + 100 AS discount_factor
+SELECT column1, column2, (points * 10) + 100 AS discount_factor //returns coloumn with arithmic expression as well
 FROM customers
 
 SELECT DISTINCT state // this selects database with no duplicate state entry
@@ -50,3 +50,6 @@ FROM customers
 ```
 ## Make Changes: Double click the specific data and apply changes
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/mysql6.png)
+
+## 
+
