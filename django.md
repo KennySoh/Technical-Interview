@@ -162,7 +162,7 @@ def your ownfunction2(request):
 --- home.html--- ownCreated.html
 <h1> Random HTML {{dictkey}}</h1> //2 Django automatically inserts value into keys.
 ```
-## Form
+## Creating a Form, And handling submit
 ```
 --- home.html---
 <form action="{%url 'count'%}"> // 1 make it link to url name="count"
@@ -196,5 +196,35 @@ def count(request):
 ```
 ```
 --- count.html---
-<h1>Count </h1> //4 Declare count
+<h1>Count </h1> //4 Declare count.html
+```
+
+### Counting the words from Form
+Counting the word from the request object
+
+```
+// After submiting form variable name="fulltext" is passed through the link. 
+www.youtube.com/?fulltext=eggs&var2=something
+```
+
+```
+--- view.py---
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def homepage(request):
+  return render(request,'home.html') 
+
+def count(request):
+  fulltext = request.GET['fulltext'] //1. get the fulltext variable from the request, link ?fulltext=eggs
+  print(fulltext)
+  wordlist=fulltext.split()
+  return render(request,'count.html',{'fulltext':fulltext,'count':len(wordlist)})  //2. parse variables
+```
+```
+--- count.html---
+<h1>There are {{ count }} words </h1>  //3. insert count of words
+
+<h1> Your Text</h1>
+{{ fulltext }}                         //4. insert original text
 ```
