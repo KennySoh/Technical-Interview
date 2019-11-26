@@ -163,6 +163,11 @@ def your ownfunction2(request):
 <h1> Random HTML {{dictkey}}</h1> //2 Django automatically inserts value into keys.
 ```
 ## Form: Creating a Form, And handling submit. Linking everything. 
+***
+1. add url routing direct to function
+2. add view.py function to custom.html & parse variables & get request details
+3. declare custom.html
+***
 ```
 --- home.html---
 <form action="{%url 'count'%}"> // 1 make it link to url name="count"
