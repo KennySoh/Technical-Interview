@@ -313,3 +313,20 @@ python manage.py startapp blog
 python manage.py startapp job
 ```
 ![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django1.png)
+
+## Models
+***
+- firstProject
+  - jobs
+    - models.py
+  - firstProject
+***
+
+```
+---models.py----
+from django.db import models
+
+class Job(models.Model):
+  image = models.ImageField(upload_to='')
+```
+Django Model field reference: https://docs.djangoproject.com/en/2.2/ref/models/fields/#imagefield
