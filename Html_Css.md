@@ -2956,7 +2956,20 @@ Using stroke-dasharray & stroke-dashoffset to create line animation
 (Skipped the rest) . 
 # Bootstrap 
 ## Bootstrap4
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-1.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-1.png) . 
 Front end framework  
-- solves common layout typography, and browser compatibility problems from the start . 
+- solves common layout typography, and browser compatibility problems from the start .  
+  
+Bootstrap layout: https://getbootstrap.com/docs/4.0/layout/grid/ (Grid systems)
+Bootstrap components: https://getbootstrap.com/docs/4.3/components/spinners/ 
+Bootstrap utilities: https://getbootstrap.com/docs/4.0/utilities/spacing/ (Responsive friendly margin etc, provides classes)
 
+## Download Bootstrap4 
+https://getbootstrap.com/docs/4.0/getting-started/download/
+
+Can install by BootstrapCDN fastest quick start but not most efficient . 
+```
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+```
