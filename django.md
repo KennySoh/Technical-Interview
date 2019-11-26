@@ -164,4 +164,37 @@ def your ownfunction2(request):
 ```
 ## Form
 ```
+--- home.html---
+<form action="{%url 'count'%}"> // 1 make it link to url name="count"
+  <textarea cols="40" rows="5" name="fulltext"></textarea>
+  <br/>
+  <input type="submit" value="Count!" />
+</form>
+```
+```
+--- url.py---
+from django.contrib import admin
+from django.urls import path, include
+from . import views //1 Import view.py
+
+urlpatterns = [
+    path('', views.homepage),
+    path('countpath/',views.count,name="count"); //2 add routing
+]
+```
+
+```
+--- view.py---
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def homepage(request):
+  return render(request,'home.html') 
+
+def count(request):
+  return render(request,'count.html') //3 render count.html
+```
+```
+--- count.html---
+<h1>Count </h1> //4 Declare count
 ```
