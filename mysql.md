@@ -23,5 +23,5 @@ Table is Created
 - functions 
 ***
 
-Clicked Tables, and the table calander icon to see the dewtails of the table . 
+Clicked Tables, and the table calander icon to see the details of the table . 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/mysql4.png)
