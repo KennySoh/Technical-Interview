@@ -312,4 +312,4 @@ def count(request):
 python manage.py startapp blog
 python manage.py startapp job
 ```
-![Image](https://www.rover.com/blog/wp-content/uploads/2015/05/dog-candy-junk-food-599x340.jpg)
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django1.png)
