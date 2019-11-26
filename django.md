@@ -372,3 +372,16 @@ Username : kenny
 Email address: ks.kennysoh@gmail.com
 Password: something
 ```
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django2.png)  
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django3.png)   
+
+```
+---jobs>admin.py---
+from django.contrib import admin
+
+from .models import Job
+
+admin.site.register(Job)›
+```
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django4.png)  
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django5.png)   
