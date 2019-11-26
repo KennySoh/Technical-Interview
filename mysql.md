@@ -10,3 +10,7 @@ Download Community server .dmg file: https://dev.mysql.com/downloads/mysql/
 Download MYSQL WorkBench graphical tool. https://dev.mysql.com/downloads/workbench/
 
 ## Creating database
+Select the lightning icon to run existing database codes. ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/mysql2.png)
+
+Table is Created
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/mysql3.png)
