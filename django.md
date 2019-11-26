@@ -327,6 +327,23 @@ python manage.py startapp job
 from django.db import models
 
 class Job(models.Model):
-  image = models.ImageField(upload_to='')
+  image = models.ImageField(upload_to='images/')
+  summary = models.CharField(max_length=200)
 ```
-Django Model field reference: https://docs.djangoproject.com/en/2.2/ref/models/fields/#imagefield
+Django Model field reference: https://docs.djangoproject.com/en/2.2/ref/models/fields/#imagefield . 
+  
+1. Once you change your Model , You need to apply migration
+```
+python manage.py migrate // getting databse up to speed
+python manage.py makemigrations // 
+```
+```
+----setting.py----
+INSTALLED_APPS = [
+  'jobs.apps.JobsCOnfig',
+  'django.contrib.admin,
+  
+]
+```
+
+```
