@@ -39,3 +39,9 @@ WHERE customer_id = 1
 ORDER BY first_name
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/mysql5.png)
+
+## Select clause
+```
+SELECT column1, column2, (points * 10) + 100 AS discount_factor
+FROM customers
+```
