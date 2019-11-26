@@ -87,6 +87,28 @@ mysql -u root -p //Key in password
 > SHOW DATABASES;
 > CREATE DATABASE nus_amp;
 ```
+## Git ignore file
+***
+-firstProject
+  -firtProject
+  -.gitignore, http://gitignore.io/api/django
+  ```
+  # Created by https://www.gitignore.io/api/django
+  # Edit at https://www.gitignore.io/?templates=django
+
+  ### Django ###
+  *.log
+  *.pot
+  *.pyc
+  __pycache__/
+  local_settings.py
+  db.sqlite3
+  db.sqlite3-journal
+  /media  
+  /static
+  ```
+***
+
 ## Django File Structure
 ***
 - firstProject
