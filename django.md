@@ -397,5 +397,16 @@ form django.conf.urls.static import static
 urlpatterns = [
   path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
-
 ```
+
+## Posgres
+postgress.app
+
+sql  
+Server:  
+Database:  
+Port:  
+Username:   
+Password:   
+
+
