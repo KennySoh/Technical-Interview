@@ -2952,3 +2952,11 @@ Using stroke-dasharray & stroke-dashoffset to create line animation
 	animation:offset 5s linear forwards, fill-it .8s 5s forwards;
 }
 ```
+  
+(Skipped the rest) . 
+# Bootstrap 
+## Bootstrap4
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-1.png)
+Front end framework  
+- solves common layout typography, and browser compatibility problems from the start . 
+
