@@ -9,3 +9,4 @@ Database Management System, DBMS  : MySQL, SQLite , Posgres, SQL server, Oracle
 Download Community server .dmg file: https://dev.mysql.com/downloads/mysql/
 Download MYSQL WorkBench graphical tool. https://dev.mysql.com/downloads/workbench/
 
+## Creating database
