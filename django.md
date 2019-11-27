@@ -528,7 +528,7 @@ class Course(models.Model):
 ```
 - Make migration and migrate whenever u change models . 
 
-## Adding instances
+## Adding instances from the manage.py shell
 ```
 -----terminal----
 python manage.py shell
@@ -592,3 +592,24 @@ urlpatterns=[
   url(r'^$', views.course_list),
 ]
 ```
+## Adding instance on Django Admin
+***
+- go to admin page , www.localhost/admin
+- create superuser
+- register model on admin
+***
+```
+---terminal---
+python manage.py createsuperuser
+- username:
+- pass:
+```
+```
+--- register new model on newapp>admin.py---
+from django.contrib import admin
+from .models import Course
+
+admin.site.register(Course)
+```
+
+## Templates
