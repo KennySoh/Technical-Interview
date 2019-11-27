@@ -409,4 +409,6 @@ Port:
 Username:   
 Password:   
 
+- One Database per project
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django6.png) 
 
