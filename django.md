@@ -668,3 +668,23 @@ TEMPLATES = [
   },
 ]
 ```
+## Template inheritance
+```
+---layout.html---
+{% extends "layout.html" %}
+{% block urowntitle%} Well hello there!{% endblock urowntitle %}
+
+{% block urowncontent %}
+<h1> Welcome</h1>
+{% endblock urowncontent%}
+```
+
+Example:
+We want to use our base.html template. Please add an {% extends %} tag to the article_list.html template.
+```
+---articles/templates/articles/article_list.html---
+{%extends "base.html" %}
+{% for article in articles %}
+{{ article.headline }}
+{% endfor %}
+```
