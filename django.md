@@ -126,12 +126,18 @@ Url Patterns let us configure the routing.
 --- url.py---
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
 from . import views //1 Import view.py
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.yourownfunction); //2 on path'' , direct to implement a funciotn
+    
+    url(r'^admin/', include(admin.site.urls)), //aternative way to add url.
+    url(r'^$',views.index),
+    
 ]
+
 ```
 3. Create view.py in the same directory with ur specific funcitons
 ```
@@ -487,3 +493,20 @@ def home(request):
 ```
 3. Directory  
 ![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django7.png) 
+
+# Django Team tree house
+## What are URL Patterns
+```
+------ urls.py ------
+from django.conf.urls import url
+from . import views
+
+urlpatterns = [
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$',views.index),
+]
+```
+```
+------ views.py ------
+```
+
