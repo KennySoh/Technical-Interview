@@ -485,5 +485,5 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'jobs/home.html')
 ```
-3. Directory
+3. Directory  
 ![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django7.png) 
