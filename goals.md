@@ -56,3 +56,48 @@ https://www.youtube.com/watch?v=24tQRwIRP_w
 - webassembly (native application in the browser)
 - npm package (npm -config set ignore to prevent virus)
 - js alternative age well , elm
+
+# Backend Roadmap
+***
+1. Package Manager, pip installer
+2. Django , Standards and best practices
+3. Make and Distribute Some Package/Library
+    - Contribute to Some Opensource Project
+4. Learn About Testing
+    - Testing terminologies such as mocks, stubs etc
+    - Unit and integration Testing
+5. Learn about Relational Databases
+    - MySQL
+6. Create a simple application, should have registration, login and CRUD
+7. Learn a Framework
+    - Django
+8. Build the same framework in 6
+9. Learn a NoSQL database
+10. Learn Caching
+    - app level caching , Memcached and Redis
+11. Creating RESTful APIs
+    - Read original REST paper by Ray Fielding
+12. Authentication/ Authorization Methodologies
+    - OAuth
+    - Basic Authentication
+    - Token Authentication
+    - JWT
+    - OpenID
+13. Message Brokers
+    - understand the "Why" and pick RabbitMQ
+14. Learn a Search Engine 
+    - (As application grow, simple queries arent going to cut it out)
+    - ElasticSearch
+    - Salr
+15. Learn How to use Docker
+16. Knowledge of Web Servers 
+    - Apache (for job) 
+    - Nginx 
+17. Learn how to use Web Sockets
+18. Learn GraphQL
+    - optional just why is it the new REST
+19. Look into Graph Databases
+20. Others 
+    - Profiling
+    - Static Analysis, DDD, SOAP, etc
+***
