@@ -688,3 +688,36 @@ We want to use our base.html template. Please add an {% extends %} tag to the ar
 {{ article.headline }}
 {% endfor %}
 ```
+
+## Static Assets
+```
+---settings.py---
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (                //add new static file dirs
+  os.path.join(BASE_DIR,'assets'),  
+)
+```
+```
+---urls.py---
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+...
+urlpatterns=[
+  url(r'^courses/', include('courses.urls')),
+]
+
+urlpatterns += staticfiles_urlpatterns() //check if we are in DEBUG mode in setting.py ? yes, they add a static path.
+```
+```
+{% load static from staticfiles %}
+<!doctype html>
+<html> 
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+   </body>
+</html>
+```
