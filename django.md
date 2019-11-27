@@ -802,14 +802,14 @@ Create a view named writer_detail that takes a pk argument. It should .get() the
 ```
 from django.shortcuts import render
 
-from .models import Article
-from .models import Writer
+from .models import Article, Writer
+
 
 def article_list(request):
     articles = Article.objects.all()
     return render(request, 'articles/article_list.html', {'articles': articles})
 
-def writer_detail(request,pk):
-    writer=Writer.objects.get(pk=pk)
-    return render(request, 'articles/writer_detail.html')
+def writer_detail(request, pk):
+    writer = Writer.objects.get(pk=pk)
+    return render(request, "articles/writer_detail.html", {'writer': writer})
 ```
