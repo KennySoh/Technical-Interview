@@ -495,18 +495,77 @@ def home(request):
 ![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django7.png) 
 
 # Django Team tree house
-## What are URL Patterns
+## URL Patterns
+## Views 
+## Multiple Apps
 ```
------- urls.py ------
-from django.conf.urls import url
-from . import views
+----setting.py----
+INSTALLED_APPS= (
+  'django.contrib.admin',
+  'courses',
+)
 
-urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^$',views.index),
-]
+....
+TIME_ZONE="",
+
 ```
+# Django Models
+Django ORM, Object relational mapper.
+Each model is a table, each attribute is a column in a table. When u add new instances the orm creates a new row in a table. 
+
+***
+-firstproject
+  - newapp
+    - models.py (here)
+  - firstproject
+***
+
 ```
------- views.py ------
+class Course(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+```
+- Make migration and migrate whenever u change models . 
+
+## Adding instances
+```
+-----terminal----
+python manage.py shell
+>>> from courses.models import Course
+>>> Course.objects.all()
+[]
+>>> type(Course.objects.all())
+<class 'django.db.models.query.QuerySet>
+>>> c = Course()
+>>> c.title = "Python Basics"
+>>> c.description = "Learn the basics of Python"
+>>> c.save()
+>>> Course.objects.all()
+[<Course: Course object>]
+>>> exit()
+
+python manage.py shell
+>>>
+>>> Course.objects.create(title="Object-Oriented Python", description="Learn about Python's classes")
+<Course: Course object>
 ```
 
+```
+// Adding __str__ returns the specified string on django query. 
+
+---models.py---
+class Course(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    
+    def __str__(self):
+      return self.title
+      
+ ---terminal---
+python manage.py shell
+>>> from courses.models import Course
+>>> Course.objects.all()
+[<Course: Python Basics>, <Course: Python Collections>, <Course: Object-Oriented Python>
+```
