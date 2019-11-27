@@ -648,6 +648,9 @@ def course_list(request):
     -home.html
   - firstproject
   - newapp
+      - templates
+        - courses
+          - course_list.html
 ***
 //Change settings to tell django to look for templates in specificapp folder
 --settings.py---
