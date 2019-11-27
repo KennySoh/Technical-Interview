@@ -613,3 +613,55 @@ admin.site.register(Course)
 ```
 
 ## Templates
+***
+-firstproject
+  -firstproject
+  - newapp 
+    - templates
+      - courses
+        - course_list.html
+***
+
+```
+--- course_list.html ---
+{% for course in courses %}
+<h2>{{ course.title }}</h2>
+{{ course.description }}
+{% endfor %}
+```
+```
+---app>views.py---
+from django.http import HttpResponse
+from django.shortcuts import render
+from .models import Course
+ 
+def course_list(request):
+  courses = Course.objects.all()
+  return render(request, 'courses/course_list.html', {'courses': courses})
+```
+```
+
+// Add outer template folder
+***
+- firstproject
+  - template
+    -home.html
+  - firstproject
+  - newapp
+***
+//Change settings to tell django to look for templates in specificapp folder
+--settings.py---
+TEMPLATES = [
+  {
+    'BACKEND': 'django.template.backends.django/DjangoTemplates',
+    'DIRS':['templates'],
+    'APP_DIRS':True,
+    'OPTIONS': {
+        'context_processors':[
+          'django.template.context_processprs.debug',
+          ...
+        ],
+    },
+  },
+]
+```
