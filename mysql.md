@@ -3,7 +3,16 @@ https://www.youtube.com/watch?v=7S_tz1z_5bA .
 SQL structure query language . 
   
 Database Management System, DBMS  : MySQL, SQLite , Posgres, SQL server, Oracle
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/mysql1.png)  
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/mysql1.png) 
+
+## MySQL Download Conflicts
+```
+//1.  MySql Download
+https://ruddra.com/posts/install-mysqlclient-macos/
+
+//2. The error when exportin use this 
+https://stackoverflow.com/questions/43612243/install-mysqlclient-for-django-python-on-mac-os-x-sierra
+```
   
 ## Download
 Download Community server .dmg file: https://dev.mysql.com/downloads/mysql/
