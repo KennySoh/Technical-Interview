@@ -461,5 +461,29 @@ from .models import Blog
 admin.site.register(Blog)
 ```
 ## Adding homepage 
+***
 1. Add url 
 2. Add views
+3. Directory
+***
+
+1. Add url
+```
+import jobs.views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',jobs.views.home,name="home"),
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA
+```
+
+2. add views
+```
+--jobs> views.py----
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'jobs/home.html')
+```
+3. Directory
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django7.png) 
