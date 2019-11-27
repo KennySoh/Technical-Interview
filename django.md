@@ -781,9 +781,35 @@ click a course name and see all the steps
 ```
 --- from django.shortcuts import render ---
 
-def course_detail(request, pk): //pk=primary key, djangi
+def course_detail(request, pk): //pk=primary key, django know its the primarykey
     course = Course.objects.get(pk=pk)
     return render(request, 'courses/course_detail.html', {'course':course})
 ```
+
+```
 ---url.py---
+from . import views
+
+urlpatterns = [
+  url(r'(?P<pk>\d+)/$',views.course_detail);
+]
+```
+
+Now we need to create the view. I've already made the URL and template for you.  
+  
+Create a view named writer_detail that takes a pk argument. It should .get() the Writer with the requested pk and render() the "articles/writer_detail.html" template. Provide the Writer in the context as "writer".
+
+```
+from django.shortcuts import render
+
+from .models import Article
+from .models import Writer
+
+def article_list(request):
+    articles = Article.objects.all()
+    return render(request, 'articles/article_list.html', {'articles': articles})
+
+def writer_detail(request,pk):
+    writer=Writer.objects.get(pk=pk)
+    return render(request, 'articles/writer_detail.html')
 ```
