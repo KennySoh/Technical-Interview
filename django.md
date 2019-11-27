@@ -760,3 +760,30 @@ urlpatterns += staticfiles_urlpatterns() //check if we are in DEBUG mode in sett
    </body>
 </html>
 ```
+## Django let us create smaller forms inside the admin form for model with InLine
+``` 
+---admin.py---
+from django.contrib import admin
+from .models import Course, Step
+
+class StepInline(admin.StackedInline): // there stacked and tabular add this 
+  model = Step
+
+class CourseAdmin(admin.ModelAdmin):
+  inlines = [StepInline,]
+  
+admin.site.register(Course, CourseAdmin)
+admin.site.register(Step)
+```
+
+## Add a Detail View
+click a course name and see all the steps
+```
+--- from django.shortcuts import render ---
+
+def course_detail(request, pk): //pk=primary key, djangi
+    course = Course.objects.get(pk=pk)
+    return render(request, 'courses/course_detail.html', {'course':course})
+```
+---url.py---
+```
