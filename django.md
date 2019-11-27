@@ -409,6 +409,54 @@ Port:
 Username:   
 Password:   
 
-- One Database per project
+- One Database per project . 
 ![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django6.png) 
+- Make migration when u have a change database. Cause all the model and data lives in the old one. 
 
+## Adding a new app
+***
+1. Add model
+  - Title, Pub_date, Body, images
+2. Add blog app to the setting
+3. Create a migration
+4. Migrate
+5. Add to the admin
+***
+
+1. Add model 
+```
+----newapp>models.py----
+from django.db import models
+
+class Blog(models.Model):
+    title = models.CharField(max_length=255)
+    pub_date = models.DateTimeField()
+    body = models.TextField()
+    image = models.ImageField(upload_to= 'images/')
+```
+
+2. Add new blog app to the setting
+```
+---setting.py---
+INSTALLED_APPS = [
+    'blog.apps.BlogConfig',
+    'jobs.apps.JobsConfig',
+    'django.contrib.admin'.
+    'django.contrib.auth',
+    ....
+]
+```
+3. Make migration
+4. Migrate
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+5. Add to the admin
+```
+---new app> admin.py---
+from django.contrib import admin
+from .models import Blog
+
+admin.site.register(Blog)
+```
