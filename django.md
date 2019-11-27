@@ -813,3 +813,14 @@ def writer_detail(request, pk):
     writer = Writer.objects.get(pk=pk)
     return render(request, "articles/writer_detail.html", {'writer': writer})
 ```
+## Ordering and 404s
+what if we get our steps out of order? what if someone puts in a bad URL?
+```
+--models.py---
+class Step(models.Model):
+  class Meta: //adding Meta , to set default ordering ...normally set by id
+    ordering =['order',]
+  def __str__(self):
+    return self.title
+```
+django 500 - python500 when theres an exception. need to throw a 404 when a bad url, such as non-existing pk is entered. 
