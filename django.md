@@ -410,7 +410,7 @@ Username:
 Password:   
 
 - One Database per project . 
-![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django6.png) 
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django6.png)  
 - Make migration when u have a change database. Cause all the model and data lives in the old one. 
 
 ## Adding a new app
