@@ -824,3 +824,56 @@ class Step(models.Model):
     return self.title
 ```
 django 500 - python500 when theres an exception. need to throw a 404 when a bad url, such as non-existing pk is entered. 
+
+## Step Detail View
+```
+---view.py---
+from .models import Course, Step
+
+def step_detail(request, course_pk, step_pk):
+  step = get_object_or_404(Step, course_id=course_pk, pk=step_pk)
+  return render(request, 'courses/step_detail.html', {'step':step})
+```
+```
+---url.py---
+
+urlpatterns = [
+  url(r'(?P<course_pk>\d+)/$', views.course_detail),
+]
+```
+
+Finally, we want to make sure we handle bad pks when looking up our Articles. Use get_object_or_404 to look up the Article. You'll need to import it from django.shortcuts.
+```
+---urls.py---
+from django.conf.urls import url
+from django.shortcuts import get_object_or_404
+
+from . import views
+
+urlpatterns = [
+    url(r'writer/(?P<pk>\d+)/$', views.writer_detail),
+    url(r'article/(?P<pk>\d+)/$',views.article_detail),
+    url(r'', views.article_list),
+]
+```
+
+```
+---views.py---
+from django.shortcuts import render,import get_object_or_404
+
+from .models import Article, Writer
+
+
+def article_list(request):
+    articles = Article.objects.all()
+    return render(request, 'articles/article_list.html', {'articles': articles})
+
+
+def writer_detail(request, pk):
+    writer = Writer.objects.get(pk=pk)
+    return render(request, 'articles/writer_detail.html', {'writer': writer})
+
+def article_detail(request, pk):
+    article= get_object_or_404(Article, pk=pk)
+    return render(request, 'articles/article_detail.html', {'article':article})
+```
