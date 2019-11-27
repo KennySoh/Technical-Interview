@@ -12,6 +12,8 @@ https://ruddra.com/posts/install-mysqlclient-macos/
 
 //2. The error when exportin use this 
 https://stackoverflow.com/questions/43612243/install-mysqlclient-for-django-python-on-mac-os-x-sierra
+
+
 ```
   
 ## Download
