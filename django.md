@@ -683,7 +683,7 @@ Example:
 We want to use our base.html template. Please add an {% extends %} tag to the article_list.html template.
 ```
 ---articles/templates/articles/article_list.html---
-{%extends "base.html" %}
+{% extends "base.html" %}
 {% for article in articles %}
 {{ article.headline }}
 {% endfor %}
