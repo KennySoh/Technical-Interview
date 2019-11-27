@@ -460,3 +460,6 @@ from .models import Blog
 
 admin.site.register(Blog)
 ```
+## Adding homepage 
+1. Add url 
+2. Add views
