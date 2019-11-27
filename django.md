@@ -569,3 +569,26 @@ python manage.py shell
 >>> Course.objects.all()
 [<Course: Python Basics>, <Course: Python Collections>, <Course: Object-Oriented Python>
 ```
+## First App View
+1. add view.py
+```
+---app> view.py---
+from django.shortcuts import render
+
+from .models import Course
+
+def course_list(request):
+  courses = Course.objects.all()
+  output=','.join([str(course) for course in courses])
+  return HtttpResponse(output)
+```
+2. add app> urls.py
+```
+from django.cong.urls import url
+from . import views
+
+urlpatterns=[
+  url(r'^courses/',include('courses.urls')),
+  url(r'^$', views.course_list),
+]
+```
