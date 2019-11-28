@@ -19,3 +19,12 @@ PublicKey on public sever and PrivateKey on private server .
 
 https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04 Loggin into your ubununtu instance server through ssh
 
+```
+// Can ssh with or without pem key
+// https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html  (Accessing through ubuntu)
+
+ssh ubuntu@13.23.43 // this logs in without pem but with password
+ssh -i /path/my-key-pair.pem ubuntu@2001:db8:1234:1a00:9691:9503:25ad:1761 // ubuntu@12:213:12 ubuntu is the default username
+
+
+```
