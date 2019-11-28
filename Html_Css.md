@@ -2986,11 +2986,10 @@ https://getbootstrap.com/docs/4.4/utilities/text/#text-alignment .   ( Text-alig
 https://getbootstrap.com/docs/4.4/components/input-group/#button-addons ( getting varying Components from bootstrap4) .  
 https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering (Horizontal centering of html elements with  Utilies) .   
   
-- Enhancing the page . 
+- Enhancing the page .  
 https://getbootstrap.com/docs/4.4/utilities/colors/#background-color . ( adding color)
 https://getbootstrap.com/docs/4.4/components/buttons/ (Buttons color)  
-  
-https://getbootstrap.com/docs/4.4/utilities/spacing/ .  ( Adding vertical padding) 
+https://getbootstrap.com/docs/4.4/utilities/spacing/ .  ( Adding vertical padding)  
 ```
 The classes are named using the format {property}{sides}-{size} for xs and {property}{sides}-{breakpoint}-{size} for sm, md, lg, and xl.  (look into link for more details)
 ```
