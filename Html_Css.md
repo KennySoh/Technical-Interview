@@ -2960,10 +2960,10 @@ Using stroke-dasharray & stroke-dashoffset to create line animation
 Front end framework  
 - solves common layout typography, and browser compatibility problems from the start .  
   
-Bootstrap layout: https://getbootstrap.com/docs/4.0/layout/grid/ (Grid systems)
-Bootstrap components: https://getbootstrap.com/docs/4.3/components/spinners/ 
-Bootstrap utilities: https://getbootstrap.com/docs/4.0/utilities/spacing/ (Responsive friendly margin etc, provides classes)
-
+Bootstrap layout: https://getbootstrap.com/docs/4.0/layout/grid/ (Grid systems) . 
+Bootstrap components: https://getbootstrap.com/docs/4.3/components/spinners/   
+Bootstrap utilities: https://getbootstrap.com/docs/4.0/utilities/spacing/ (Responsive friendly margin etc, provides classes) . 
+  
 ## Download Bootstrap4 
 https://getbootstrap.com/docs/4.0/getting-started/download/
 
@@ -2979,10 +2979,11 @@ Bootstrap has both css style to make all design the same acrosss browsers
 - normalize
 - reboot (more specific styles)
 ***
-https://getbootstrap.com/docs/4.4/content/typography/#display-headings .  
-https://getbootstrap.com/docs/4.4/layout/overview/#containers . 
-https://getbootstrap.com/docs/4.4/utilities/text/#text-alignment . 
-https://getbootstrap.com/docs/4.4/components/input-group/#button-addons
+https://getbootstrap.com/docs/4.4/content/typography/#display-headings .  (Changing the typography with Content)
+https://getbootstrap.com/docs/4.4/layout/overview/#containers . ( Container surround div tag automatically responsive) 
+https://getbootstrap.com/docs/4.4/utilities/text/#text-alignment .   ( Text-alignment with Utilies
+https://getbootstrap.com/docs/4.4/components/input-group/#button-addons ( getting varying Components from bootstrap4) . 
+https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering (Horizontal centering of html elements with Utilies) . 
 ```
 ----html------
 <body>
@@ -2990,7 +2991,7 @@ https://getbootstrap.com/docs/4.4/components/input-group/#button-addons
 		<h1 class="display-1"> Full Stack Conf</h1>
 		<p class="lead">Coming Soon, a One-day Conference About All Things Javascript</p>
 	</div>
-	<div class="input-group mb-3">
+	<div class="input-group mb-3"> 
 	  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
 	  <div class="input-group-append">
 	    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
