@@ -2967,11 +2967,27 @@ Bootstrap utilities: https://getbootstrap.com/docs/4.0/utilities/spacing/ (Respo
 ## Download Bootstrap4 
 https://getbootstrap.com/docs/4.0/getting-started/download/
 
-Can install by BootstrapCDN fastest quick start but not most efficient . 
+Can install by BootstrapCDN fastest quick start . 
 ```
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 ```
 ## Creating a Simple Page
+***
+Bootstrap has both css style to make all design the same acrosss browsers
+- normalize
+- reboot (more specific styles)
+***
+https://getbootstrap.com/docs/4.4/content/typography/#display-headings .  
+https://getbootstrap.com/docs/4.4/layout/overview/#containers . 
+```
+----html------
+<body>
+	<div class="container">
+		<h1 class="display-1"> Full Stack Conf</h1>
+		<p class="lead">Coming Soon, a One-day Conference About All Things Javascript</p>
+	</div>
+</body>
+```
 
