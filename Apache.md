@@ -12,3 +12,7 @@ https://www.youtube.com/watch?v=z7jVOenqFYk
 
 - to securly connect ur computer to another server through unsecrued internet. SSH conencts through a tunnel. 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/webserver2.png)  
+  
+Commonly acessed via the client server model . 
+PublicKey on public sever and PrivateKey on private server . 
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/webserver3.png)  
