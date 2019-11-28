@@ -28,3 +28,5 @@ ssh -i /path/my-key-pair.pem ubuntu@2001:db8:1234:1a00:9691:9503:25ad:1761 // ub
 
 
 ```
+## Pip install virtual environment and django, edit with Nano
+
