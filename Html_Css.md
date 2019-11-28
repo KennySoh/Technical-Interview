@@ -3046,3 +3046,25 @@ https://getbootstrap.com/docs/4.4/layout/grid/#equal-width (add any number of gr
 		</div>
 </div>
 ```
+### Adding spacing and amking Image responsive
+adding margings and padding ( class= "pt-4 mb-3 my-5 m-3")
+https://getbootstrap.com/docs/4.4/content/images/ (Responsive images, class="img-fluid") . 
+```
+<div class="container pt-4">
+	<div class="row">
+		<div class="col mb-4">
+			<img src="img/pdx.jpg" class="img-fluid" alt="Portland"> //
+		</div>
+		<div class="col">
+		</div>
+		<div class="col">
+		</div>
+</div>
+```
+
+### Column Sizing 
+display different col width for different breakpoints . 
+https://getbootstrap.com/docs/4.4/layout/grid/#grid-options (this shows all the possible grid-options . 
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-3.png) .  
+```
+```
