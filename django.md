@@ -134,10 +134,10 @@ mysql -u root -p //Key in password
 > CREATE DATABASE nus_amp;
 ```
 ## Django MVT isntead of MVC
-Normal Model View Controller . 
-![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django8.png)   
-Model View Template, Django is different in that it controls the own View themselves.   
-![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django9.png)   
+Normal Model View Controller .  
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django8.png)    
+Model View Template, Django is different in that it controls the own View themselves.    
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django9.png)    
 
 ## Git ignore file
 ***
