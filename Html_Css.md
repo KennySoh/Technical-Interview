@@ -3081,3 +3081,33 @@ https://getbootstrap.com/docs/4.4/layout/grid/#grid-options (this shows all the 
 </div>
 
 ```
+### Reordering and Offsetting Columns
+https://getbootstrap.com/docs/4.4/layout/grid/#order-classes . (ordering cols) . 
+```
+// In order to reorder the cols, u have to put order-lg-x for all cols. 
+// Good if u want to order for seo accesibility first then change the appearance
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6 order-lg-2">
+			<img src="img/pdx.jpg" class="img-fluid" alt="Portland"> //
+		</div>
+		<div class="col-lg-4 order-lg-1">
+		</div>
+		<div class="col-lg-2 order-lg-3">
+		</div>
+</div>
+```
+https://getbootstrap.com/docs/4.4/layout/grid/#offsetting-columns (offseting cols) . 
+https://getbootstrap.com/docs/4.4/layout/grid/#margin-utilities (ml-auto) . 
+```
+// Let say ur grid takes up a total of 10 cols/ 12cols, u can flush it tot he right with class="ml-auto"
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6 order-lg-2">
+			<img src="img/pdx.jpg" class="img-fluid" alt="Portland"> //
+		</div>
+		<div class="col-lg-4 order-lg-1">
+		</div>
+</div>
+```
