@@ -8,11 +8,14 @@ WSGI stands for “Web Server Gateway Interface”. It is used to forward reques
 https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04
 
 ## Connect to Ubuntu server with terminal and SHH 
-https://www.youtube.com/watch?v=z7jVOenqFYk 
-
+https://www.youtube.com/watch?v=z7jVOenqFYk  what is ssh?  
+  
 - to securly connect ur computer to another server through unsecrued internet. SSH conencts through a tunnel. 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/webserver2.png)  
   
 Commonly acessed via the client server model . 
 PublicKey on public sever and PrivateKey on private server . 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/webserver3.png)  
+
+https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04 Loggin into your ubununtu instance server through ssh
+
