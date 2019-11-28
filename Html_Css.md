@@ -2999,6 +2999,6 @@ https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering (Horiz
 	</div>
 </body>
 ```
-
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-2.png)
 
 
