@@ -2981,13 +2981,23 @@ Bootstrap has both css style to make all design the same acrosss browsers
 ***
 https://getbootstrap.com/docs/4.4/content/typography/#display-headings .  
 https://getbootstrap.com/docs/4.4/layout/overview/#containers . 
+https://getbootstrap.com/docs/4.4/utilities/text/#text-alignment . 
+https://getbootstrap.com/docs/4.4/components/input-group/#button-addons
 ```
 ----html------
 <body>
-	<div class="container">
+	<div class="container text-center">
 		<h1 class="display-1"> Full Stack Conf</h1>
 		<p class="lead">Coming Soon, a One-day Conference About All Things Javascript</p>
 	</div>
+	<div class="input-group mb-3">
+	  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+	  <div class="input-group-append">
+	    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+	  </div>
+	</div>
 </body>
 ```
+
+
 
