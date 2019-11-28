@@ -80,6 +80,52 @@ python3 ./manage.py createsuperuser
 7. Run the development server to verify everthing is working
 python3 ./manage.py runserver
 ```
+## Setting up Django Project With MySQL
+https://www.digitalocean.com/community/tutorials/how-to-create-a-django-app-and-connect-it-to-a-database
+1. Creating the django skeleton refer above
+
+2. Settings.py
+```
+TIME_ZONE = 'America/New_York'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+ALLOWED_HOSTS = ['your server IP address']
+```
+
+3. Install MySQL Database Connector . 
+In order to use MySQL with our project, we will need a Python 3 database connector library compatible with Django. So, we will install the database connector, mysqlclient, which is a forked version of MySQLdb.  
+```
+sudo apt-get install python3-dev
+sudo apt-get install python3-dev libmysqlclient-dev
+pip install mysqlclient
+sudo apt-get install mysql-server
+```
+
+4. Create the Database . 
+```
+systemctl status mysql.service //Verify that MySQL service is running
+mysql -u db_user -p //my sql login 
+
+mysql> SHOW DATABASES;
+
+mysql> CREATE DATABASE blog_data;
+- Query OK, 1 row affected (0.00 sec)
+
+
+```
+5. Add the MySQL Database Connection yo your Application . 
+```
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+```
+6. Test MySQL Connection to Application
+```
+python manage.py runserver your-server-ip:8000
+```
+
 ## MYSQL
 ```
 //Logging in to mysql db
