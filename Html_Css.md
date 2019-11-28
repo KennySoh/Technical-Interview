@@ -3010,3 +3010,39 @@ The classes are named using the format {property}{sides}-{size} for xs and {prop
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-2.png) . 
 
+## Full Stack Conf Project
+### Layout
+***
+Bootstrap4 provides several ways to layout ur project
+- Responsive Container (in Overview)
+- Grid
+- Media object 
+- Utilies for Layout
+
+Boostrap4 is built with mobilefirst approach with different breakpoitns
+- Small Devices (575px)
+- Medium Devices (768px)
+- Large Devices (992px)
+- Extra Large Device (1200px)
+***
+### Bootstrap4 Grid system
+https://getbootstrap.com/docs/4.4/layout/grid/ . 
+***
+Bootstrap grid has
+- Containers
+- Rows 
+- Columns
+***
+https://getbootstrap.com/docs/4.4/layout/grid/#equal-width (add any number of grid layouts)
+```
+// Row surrounds col, to form either a 2-3 equal width cols
+<div class="container"> // can also be container-fluid
+	<div class="row">
+		<div class="col">
+		</div>
+		<div class="col">
+		</div>
+		<div class="col">
+		</div>
+</div>
+```
