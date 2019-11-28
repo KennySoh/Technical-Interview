@@ -2979,11 +2979,11 @@ Bootstrap has both css style to make all design the same acrosss browsers
 - normalize
 - reboot (more specific styles)
 ***
-https://getbootstrap.com/docs/4.4/content/typography/#display-headings .  (Changing the typography with Content)
-https://getbootstrap.com/docs/4.4/layout/overview/#containers . ( Container surround div tag automatically responsive) 
-https://getbootstrap.com/docs/4.4/utilities/text/#text-alignment .   ( Text-alignment with Utilies
-https://getbootstrap.com/docs/4.4/components/input-group/#button-addons ( getting varying Components from bootstrap4) . 
-https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering (Horizontal centering of html elements with Utilies) . 
+https://getbootstrap.com/docs/4.4/content/typography/#display-headings .  (Changing the typography with Content) .  
+https://getbootstrap.com/docs/4.4/layout/overview/#containers . ( Container surround div tag automatically responsive)    
+https://getbootstrap.com/docs/4.4/utilities/text/#text-alignment .   ( Text-alignment with Utilies )  
+https://getbootstrap.com/docs/4.4/components/input-group/#button-addons ( getting varying Components from bootstrap4) .  
+https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering (Horizontal centering of html elements with  Utilies) .   
 ```
 ----html------
 <body>
