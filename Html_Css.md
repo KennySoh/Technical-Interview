@@ -2997,7 +2997,7 @@ The classes are named using the format {property}{sides}-{size} for xs and {prop
 ----html------
 <body class="bg-info text-white">
 	<div class="container text-center">
-		<h1 class="display-1"> Full Stack Conf</h1>
+		<h1 class="display-1 mt-5"> Full Stack Conf</h1>
 		<p class="lead">Coming Soon, a One-day Conference About All Things Javascript</p>
 	</div>
 	<div class="input-group mb-3"> 
