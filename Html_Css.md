@@ -2979,14 +2979,19 @@ Bootstrap has both css style to make all design the same acrosss browsers
 - normalize
 - reboot (more specific styles)
 ***
+- Basic  
 https://getbootstrap.com/docs/4.4/content/typography/#display-headings .  (Changing the typography with Content) .  
 https://getbootstrap.com/docs/4.4/layout/overview/#containers . ( Container surround div tag automatically responsive)    
 https://getbootstrap.com/docs/4.4/utilities/text/#text-alignment .   ( Text-alignment with Utilies )  
 https://getbootstrap.com/docs/4.4/components/input-group/#button-addons ( getting varying Components from bootstrap4) .  
 https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering (Horizontal centering of html elements with  Utilies) .   
+  
+- Enhancing the page . 
+https://getbootstrap.com/docs/4.4/utilities/colors/#background-color . ( adding color)
+https://getbootstrap.com/docs/4.4/components/buttons/ (Buttons color)  
 ```
 ----html------
-<body>
+<body class="bg-info text-white">
 	<div class="container text-center">
 		<h1 class="display-1"> Full Stack Conf</h1>
 		<p class="lead">Coming Soon, a One-day Conference About All Things Javascript</p>
@@ -2994,11 +2999,10 @@ https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering (Horiz
 	<div class="input-group mb-3"> 
 	  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
 	  <div class="input-group-append">
-	    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+	    <button class="btn btn-primary" type="button" id="button-addon2">Button</button>
 	  </div>
 	</div>
 </body>
 ```
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-2.png)
-
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-2.png) . 
 
