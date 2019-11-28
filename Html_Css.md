@@ -2989,6 +2989,11 @@ https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering (Horiz
 - Enhancing the page . 
 https://getbootstrap.com/docs/4.4/utilities/colors/#background-color . ( adding color)
 https://getbootstrap.com/docs/4.4/components/buttons/ (Buttons color)  
+  
+https://getbootstrap.com/docs/4.4/utilities/spacing/ .  ( Adding vertical padding) 
+```
+The classes are named using the format {property}{sides}-{size} for xs and {property}{sides}-{breakpoint}-{size} for sm, md, lg, and xl.  (look into link for more details)
+```
 ```
 ----html------
 <body class="bg-info text-white">
