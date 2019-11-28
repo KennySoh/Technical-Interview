@@ -3067,4 +3067,17 @@ display different col width for different breakpoints .
 https://getbootstrap.com/docs/4.4/layout/grid/#grid-options (this shows all the possible grid-options . 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-3.png) .  
 ```
+- Bootstrap has a 12 grid system , "col-sm-6" makes the specific col 6 grids.
+- col-sm col-md col-lg col-xl affects the respective breakpoint accordingly
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6">
+			<img src="img/pdx.jpg" class="img-fluid" alt="Portland"> //
+		</div>
+		<div class="col-lg-4">
+		</div>
+		<div class="col-lg-2">
+		</div>
+</div>
+
 ```
