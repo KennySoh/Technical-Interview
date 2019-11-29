@@ -936,3 +936,86 @@ def article_detail(request, pk):
     article= get_object_or_404(Article, pk=pk)
     return render(request, 'articles/article_detail.html', {'article':article})
 ```
+
+## Meet Peewee, Our ORM
+```
+pip install peewee
+
+peewee is a python tool for orms
+```
+### Modeling
+```
+from peewee import *
+
+db = SqliteDatabase('students.db')
+
+class Student(Model):
+  username = CharField (max_length =255, unique =True)
+  points =IntegerField(default =0)
+  
+  class Meta: //tell them what database they belong too, what field should be index, what order
+    database = db
+if __name__ == '__main__':
+  db.connect()
+  db.create_tables([Student], safe=True)
+  
+sqlite3 students.db
+> .tables
+> select * from student
+> .exit
+```
+### Queries are your friend
+***
+- .create()
+- .select()
+- .save()
+- .get()
+- .delete_instance()
+***
+```
+from peewee import *
+
+db = SqliteDatabase('students.db')
+
+class Student(Model):
+  username = CharField (max_length =255, unique =True)
+  points =IntegerField(default =0)
+  
+  class Meta: //tell them what database they belong too, what field should be index, what order
+    database = db
+    
+students=[
+  {'username' : 'kenny',
+   'points':100},
+  {'username' : 'kenny',
+   'points':100},
+  {'username' : 'kenny',
+   'points':100},
+  {'username' : 'kenny',
+   'points':100},
+]
+
+def add_students():
+  for student in students:
+      try:
+        Students.create(username= student['username'],
+                        points = student['points'])
+      except IntegrityError:
+        student_record = Student.get(username=student['username'])
+        student_record.points =student['points']
+        student_record.save()
+
+def top_student():
+   student = Student.select().order_by(Student.points.desc()).get()
+   return student
+
+if __name__ == '__main__':
+   db.connect()
+   db.create_tables([Student], safe=True)
+   add_students()
+   print("Our top student right now is :{0.username}.".format(top_students())) //0 is what is return by format
+
+if __name__ == '__main__':
+  db.connect()
+  db.create_tables([Student], safe=True)
+```
