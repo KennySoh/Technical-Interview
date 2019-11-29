@@ -3100,6 +3100,7 @@ https://getbootstrap.com/docs/4.4/layout/grid/#order-classes . (ordering cols) .
 ```
 https://getbootstrap.com/docs/4.4/layout/grid/#offsetting-columns (offseting cols) . 
 https://getbootstrap.com/docs/4.4/layout/grid/#margin-utilities (ml-auto) . 
+https://getbootstrap.com/docs/4.3/utilities/display/https://getbootstrap.com/docs/4.3/utilities/display/ (d-none d-sm-block) This make images dissapear in sm size.
 ```
 // Let say ur grid takes up a total of 10 cols/ 12cols, u can flush it tot he right with class="ml-auto"
 <div class="container">
@@ -3111,3 +3112,30 @@ https://getbootstrap.com/docs/4.4/layout/grid/#margin-utilities (ml-auto) .
 		</div>
 </div>
 ```
+
+### Building a Navbar
+https://getbootstrap.com/docs/4.0/components/navs/#base-nav (Navbar)
+https://getbootstrap.com/docs/4.0/components/navbar/#color-schemes (Nav Bar color schemes)
+
+1. getting the base nav , add the nav-bar or nav-pill classes to change different style. 
+2. order-1 , since it uses flex box we can change the order. It shifts to the right
+3. color schemes, navbar-dark bg-primary
+4. add mr-0, margin right 0 to remove right margin
+5. fixed-top, making it fixed to the top. 
+```
+<ul class="nav nav-bar">
+  <li class="nav-item order-1"> 
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+```
+
