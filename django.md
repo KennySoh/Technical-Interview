@@ -133,6 +133,8 @@ mysql -u root -p //Key in password
 > SHOW DATABASES;
 > CREATE DATABASE nus_amp;
 ```
+This is are django default database tables on intial setup.  using MySQLWorkbench to see.   
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django10.png) 
 ## Django MVT isntead of MVC
 Normal Model View Controller .  
 ![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/django8.png)    
