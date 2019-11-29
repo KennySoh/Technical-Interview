@@ -3223,3 +3223,4 @@ https://getbootstrap.com/docs/4.0/components/dropdowns/ Drop downs
 	</div>
 </div>
 ```
+## Displaying Content with cards
