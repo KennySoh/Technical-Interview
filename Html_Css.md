@@ -3177,11 +3177,13 @@ https://getbootstrap.com/docs/4.0/components/buttons/#examples (9 button style h
 Button group are buttons group together . 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-5png) .  
 
+1. btn-primary (changes to blue or the primary color)
+2. btn-light btn-lg
 
 ```
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary btn-lg">Left</button>
-  <button type="button" class="btn btn-secondary">Middle</button>
+  <button type="button" class="btn btn-primary btn-lg">Left</button> //makes it the primary color, makes it large
+  <button type="button" class="btn btn-light btn-lg">Middle</button> //makes it light in color and large
   <button type="button" class="btn btn-secondary">Right</button>
 </div>
 ```
