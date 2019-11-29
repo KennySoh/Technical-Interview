@@ -80,6 +80,11 @@ python3 ./manage.py createsuperuser
 7. Run the development server to verify everthing is working
 python3 ./manage.py runserver
 ```
+
+After creating 
+https://medium.com/python-pandemonium/better-python-dependency-and-package-management-b5d8ea29dff1
+
+
 ## Setting up Django Project With MySQL
 https://www.digitalocean.com/community/tutorials/how-to-create-a-django-app-and-connect-it-to-a-database
 1. Creating the django skeleton refer above
