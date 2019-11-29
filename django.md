@@ -81,10 +81,10 @@ python3 ./manage.py createsuperuser
 python3 ./manage.py runserver
 ```
   
-After creating project, 
-https://medium.com/python-pandemonium/better-python-dependency-and-package-management-b5d8ea29dff1
-
-
+After creating project, python dependecy so other people can run the git clone software on their environment . 
+https://medium.com/python-pandemonium/better-python-dependency-and-package-management-b5d8ea29dff1  
+  
+  
 ## Setting up Django Project With MySQL
 https://www.digitalocean.com/community/tutorials/how-to-create-a-django-app-and-connect-it-to-a-database
 1. Creating the django skeleton refer above
