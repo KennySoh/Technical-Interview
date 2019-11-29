@@ -80,8 +80,8 @@ python3 ./manage.py createsuperuser
 7. Run the development server to verify everthing is working
 python3 ./manage.py runserver
 ```
-
-After creating 
+  
+After creating project, 
 https://medium.com/python-pandemonium/better-python-dependency-and-package-management-b5d8ea29dff1
 
 
