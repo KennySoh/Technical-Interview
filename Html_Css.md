@@ -3187,3 +3187,39 @@ Button group are buttons group together .
   <button type="button" class="btn btn-secondary">Right</button>
 </div>
 ```
+## Inline Navs and Dropdown Buttons
+https://getbootstrap.com/docs/4.0/components/dropdowns/ Drop downs
+1. copy base nav components
+2. add the dropdown menu into the one of the nav bar items.
+```
+<div class="row py-3">
+	<div class="col-md-7">
+		<ul class="nav nav-bar">
+		  <li class="nav-item order-1"> 
+		    <a class="nav-link" href="#">Active</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#">Link</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#">Link</a>
+		  </li>
+		  <li class="nav-item">
+		  	// 2. add the drop down snippet into the nav bar
+			<div class="dropdown">
+			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Dropdown button
+			  </button>
+			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			    <a class="dropdown-item" href="#">Action</a>
+			    <a class="dropdown-item" href="#">Another action</a>
+			    <a class="dropdown-item" href="#">Something else here</a>
+			  </div>
+			</div>
+		  </li>
+		</ul>
+	</div>
+	<div class="col-md text-md-right">
+	</div>
+</div>
+```
