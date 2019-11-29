@@ -3161,3 +3161,17 @@ https://getbootstrap.com/docs/4.0/components/jumbotron/ .
   </p>
 </div>
 ```
+## Buttons and Button Groups
+Bootstrap4 has 9 button styles.
+https://getbootstrap.com/docs/4.0/components/buttons/#examples (9 button style have hover and active states) 
+  
+1. add button component from one of the many selections . 
+2. add btn-lg to adjust the size   
+3. add d-block to make it a block level componenet . 
+4. mx-auto to auto fill left and right . 
+```
+<button type="button" class="btn btn-outline-info btn-lg d-block mx-auto">Dont missout register now</button>
+```
+  
+Button group are buttons group together . 
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-5png) .  
