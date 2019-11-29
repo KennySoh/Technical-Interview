@@ -937,7 +937,7 @@ def article_detail(request, pk):
     return render(request, 'articles/article_detail.html', {'article':article})
 ```
 
-## Meet Peewee, Our ORM
+# Meet Peewee, Our ORM( python databases topic
 ```
 pip install peewee
 
@@ -1019,3 +1019,4 @@ if __name__ == '__main__':
   db.connect()
   db.create_tables([Student], safe=True)
 ```
+### Creating a diary app
