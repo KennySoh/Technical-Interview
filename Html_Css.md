@@ -3176,3 +3176,12 @@ https://getbootstrap.com/docs/4.0/components/buttons/#examples (9 button style h
   
 Button group are buttons group together . 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-5png) .  
+
+
+```
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-primary btn-lg">Left</button>
+  <button type="button" class="btn btn-secondary">Middle</button>
+  <button type="button" class="btn btn-secondary">Right</button>
+</div>
+```
