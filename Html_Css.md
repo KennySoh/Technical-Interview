@@ -3142,6 +3142,8 @@ https://getbootstrap.com/docs/4.0/components/navbar/#color-schemes (Nav Bar colo
 ## Using Jumbotron to Showcase Key Content
 A lightweight flexible component that can optionally extend the entire viewport to showcase key marketing messages on your site. 
 
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-4.png) . 
+
 ```
 
 ```
