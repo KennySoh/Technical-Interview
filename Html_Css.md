@@ -3250,4 +3250,4 @@ https://getbootstrap.com/docs/4.0/components/modal/
 Scroll spy basically highlight the active navigation link.  
   
 1. Scrolling down the page makes the corresponding link active. (When scrolling to speaker, "Speakers" become bolder.  
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-7.png) .
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-8.png) .
