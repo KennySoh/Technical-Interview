@@ -3239,3 +3239,11 @@ https://getbootstrap.com/docs/4.0/components/dropdowns/ Drop downs
 	</li>
 </ul>
 ```
+## Displaying a Modal Window 
+interactive pop up windows   
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-7.png) . 
+https://getbootstrap.com/docs/4.0/components/modal/  
+// 1. U need add the modal snippet 
+// 2. U need to add the trigger button
+
+###
