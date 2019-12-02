@@ -3224,3 +3224,18 @@ https://getbootstrap.com/docs/4.0/components/dropdowns/ Drop downs
 </div>
 ```
 ## Displaying Content with cards
+## Building the schedule with a list group
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-5png) .  
+// 1. list-group is better than the usual unorder list styling  
+// 2. d-flex allow flexbox behaviour, justify-content-between is a flexbox property that flushes contents to the left and right  
+// 3. badge are specially badge styled components.   
+```
+<ul class="list-group">
+	<li class="list-group-item">
+		<div class="d-flex justify-content-between">
+			<h5 class="mb-1">Keynote: Internet of Things</h5>
+			<span class="badge badge-pill badge-info">9:00</span>
+		</div>
+	</li>
+</ul>
+```
