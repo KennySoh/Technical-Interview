@@ -3249,5 +3249,5 @@ https://getbootstrap.com/docs/4.0/components/modal/
 ## Using ScrollSpy to Highlight Nav Links  
 Scroll spy basically highlight the active navigation link.  
   
-1. Scrolling down the page makes the corresponding link active. (When scrolling to speaker, "Speakers" become bolder.  
+1. Scrolling down the page makes the corresponding link active. (When scrolling to speaker, "Speakers" become bolder.) 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-8.png) .
