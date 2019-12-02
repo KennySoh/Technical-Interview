@@ -3251,3 +3251,8 @@ Scroll spy basically highlight the active navigation link.
   
 1. Scrolling down the page makes the corresponding link active. (When scrolling to speaker, "Speakers" become bolder.) 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-8.png) .
+
+## Form Groups and Form Controls
+Forms can be difficult to style. Not only do form elements display differently in different browsers, but most browsers limit the visual changes you can make to form controls. In this video, we'll start using Bootstrap's form control styles to build the Full Stack Conf registration form.  
+// 1. Form control on textual form controls like <input>, <select>, <textarea>
+// 2. Form group add strucutre to ur form, pairing of label and form controls. 
