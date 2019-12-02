@@ -3175,7 +3175,7 @@ https://getbootstrap.com/docs/4.0/components/buttons/#examples (9 button style h
 ```
   
 Button group are buttons group together . 
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-5png) .  
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-5.png)
 
 1. btn-primary (changes to blue or the primary color)
 2. btn-light btn-lg
@@ -3225,7 +3225,7 @@ https://getbootstrap.com/docs/4.0/components/dropdowns/ Drop downs
 ```
 ## Displaying Content with cards
 ## Building the schedule with a list group
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-6png) .  
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-6.png) .  
 // 1. list-group is better than the usual unorder list styling  
 // 2. d-flex allow flexbox behaviour, justify-content-between is a flexbox property that flushes contents to the left and right  
 // 3. badge are specially badge styled components.   
