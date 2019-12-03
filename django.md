@@ -937,6 +937,38 @@ def article_detail(request, pk):
     return render(request, 'articles/article_detail.html', {'article':article})
 ```
 
+## Template Inheritance
+Template tags . 
+- end block tag . 
+```
+---base.html-----
+<h1>{% block title %} {% endblock %}</h1>
+
+<main>
+{% block content %}{% endblock %}
+</main>
+```
+```
+---actual.html-----
+{% extends "base.html" %}
+{% block title %} Well hello there!{% endblock title %}
+{% block content %} <h1> Welcome ! </h1> {% endblock content %}
+```
+- url tag . 
+```
+--- actual.html----
+<a href="{% url 'views.hello_world' %}"> Hello World Page </a>
+<a href="{% url 'app_name:home_index %}"> List Page</a>
+```
+```
+--- urls.py-----
+urlpatterns = patterns('',    
+    url(r'^home$','get_home_index' ，name="home_index"),
+)
+```
+- static tag.
+- django filter
+
 # Meet Peewee, Our ORM( python databases topic
 ```
 pip install peewee
