@@ -1201,5 +1201,9 @@ datetime.date(1999, 2, 20)
 >>> Programmer.objects.count() // return 26
 >>> Programmer.objects.filter(name_isnull=False).count() // return 6
 
-
+//.get() returns Query, But only can have one item. >more than 1 or 0 will return error
+>>> Language.objects.filter(name_exact="Python").get() // <Language:Python>
+>>> Programmer.objects.all()[:5] // O-index to 5-1 Index
+>>> Programmer.objects.all() [5:5] // returns none, 5-index to 5-1index 
+>>> Programmer.objects.all() [5:10] // returns none, 5-index to 10-1index 
 ```
