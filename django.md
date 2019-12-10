@@ -1349,3 +1349,15 @@ urlpatterns=[
   path('complete/<todo_id>',views.completeTodo, name='complete')
 ]
 ```
+### Delete all completed Todos
+```
+-----html------
+<a href="{% url 'deletecomplete' %}"><buttton .....> </a>
+-----urls.py------
+path('deletecomplete',views.deleteCompleted, name='deletecomplete')
+-----view.py-------
+def deleteCompleted(request):
+  Todo.objects.filter(complete__exact=True).delete()
+  return redirect('index')
+```
+
