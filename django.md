@@ -1166,3 +1166,40 @@ class Membership(models.Model):
     date_joined = models.DateField()
     invite_reason = models.CharField(max_length=64)
 ```
+## Django Queries. 
+https://www.youtube.com/watch?v=WimXjp0ryOo . 
+```
+python shell
+>>> Company.objects 
+<django.db.models.manager.Manager object at 0x7fc38259sd> // This parse the manager object that we use to query
+
+>>> Languages.objects.all()
+<QuerySet [<Language : Python>, <Language : Java>]>
+
+>>> languages=Languages.objects.all()
+>>> languages[0]
+<Language: Python>
+
+>>> languages[0].name
+'Python'
+>>> languages[0].date_created
+datetime.date(1999, 2, 20)
+
+-------- Usign Filter or Exclude---------
+>>> Language.objects.filter(name_exact="Python") //<QuerySet [<Language:Python>]>
+>>> Language.objects.filter(name_iexact="Python") // Not case sensitive
+>>> Language.objects.exclude(name_exact="Pyhton") // Return all Queryset except for name="Python"
+>>> Language.objects.filter(age_gt=25) //returns greater than 25 , (gt,lt,gte,lte)
+>>> Programmer.objects.filter(name__contains="nt")
+>>> Programmer.objects.filter(name__icontains="nt") // Not case sensitive, depends on Db, Sqlite doesnt have case sensitive
+>>> Programmer.objects.filter(name__startswith="Jan")
+>>> Programmer.objects.filter(name__istartswith="jan")
+>>> Programmer.objects.filter(name__endswith="Jan")
+>>> Programmer.objects.filter(name__iendswith="jan")
+>>> Programmer.objects.filter(age__isnull=True)
+>>> Programmer.objects.filter(name__isnull=False)
+>>> Programmer.objects.count() // return 26
+>>> Programmer.objects.filter(name_isnull=False).count() // return 6
+
+
+```
