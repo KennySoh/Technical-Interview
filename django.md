@@ -1206,4 +1206,8 @@ datetime.date(1999, 2, 20)
 >>> Programmer.objects.all()[:5] // O-index to 5-1 Index
 >>> Programmer.objects.all() [5:5] // returns none, 5-index to 5-1index 
 >>> Programmer.objects.all() [5:10] // returns none, 5-index to 10-1index 
+
+>>> Company.objects.filter(date_created__gt='1990-01-01') //returns company created greater than '1990-01-01'
+>>> Company.objects.order_by('age')
+>>> Company.objects.order_by('-age')
 ```
