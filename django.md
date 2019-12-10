@@ -1247,7 +1247,7 @@ def index(request):
 ### Create a Todo row to DB , Add a row on db from html on form submit
 #### 1st Part: Create a django form and make it appear on django template
 ```
-------1. add django form, create a form.py------
+------1. add django form, create a forms.py------
 from django import forms
 
 class TodoForm(forms.Form):
