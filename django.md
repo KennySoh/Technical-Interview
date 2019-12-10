@@ -1211,3 +1211,34 @@ datetime.date(1999, 2, 20)
 >>> Company.objects.order_by('age')
 >>> Company.objects.order_by('-age')
 ```
+## Django To Do App, 
+### Registering Models on Admin
+```
+----admin.py-----
+from django.contrib import admin
+
+from .models import Todo
+
+admin.site.register(Todo)
+```
+### read from database and display in current html via (View.py-> Quries from db -> on Django Template)
+```
+------view.py-----
+def index(request):
+    todo_list = Todo.objects.order_by('id')
+    form = TodoForm()
+    context = {'todo_list' : todo_list, 'form' : form}
+    return render(request, 'todo/index.html', context)
+```
+```
+----todo/index.html--------
+<ul class="list-group t20">
+  {% for todo in todo_list %}
+    {% if todo.complete %}
+    <li class="list-group-item todo-completed">{{ todo.text }}</li>
+    {% else %}
+    <a href="{% url 'complete' todo.id %}"><li class="list-group-item">{{ todo.text }}</li></a>
+    {% endif %}
+  {% endfor %}
+</ul>
+```
