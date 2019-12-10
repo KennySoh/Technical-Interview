@@ -1224,6 +1224,8 @@ admin.site.register(Todo)
 ### read from database and display in current html via (View.py-> Quries from db -> on Django Template)
 ```
 ------view.py-----
+from .models import Todo
+
 def index(request):
     todo_list = Todo.objects.order_by('id')
     form = TodoForm()
