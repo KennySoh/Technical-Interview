@@ -1059,6 +1059,9 @@ https://www.youtube.com/watch?v=r9kT-jm136Q
 ------------ Models------------
 from django.db import models
 
+class GithubAccount(models.Model):
+  name =CharField(max_length=20)
+
 class Company(models.Model):
   name =CharField(max_length=20)
   
@@ -1075,7 +1078,8 @@ class Language(models.Model):
 
 class Programmer(models.Model):
    name = models.CharField(max_Length = 20 )
-   company= models.ForeignKey(Company, on_delete = models.CASADE)
+   githubaccount= models.OneToOneField(GithubAccount, on_delete = models.CASCADE, primary_key=True,) // One to One
+   company= models.ForeignKey(Company, on_delete = models.CASADE) //( Many to one relationship, Many Programmer to One Com)
    languages = models.ManyToManyField(Language) //( Many to many relationship put on object that makes more sense)
    
    def __str__(self):
@@ -1122,11 +1126,17 @@ Python shell
 >>> python = Language(name='Python')
 >>> java = Language(name='Java') // Create 2 Language
 
->>> anthony.languages.add(python)
+>>> anthony.languages.add(python) // Adding Langauges <-> Programmer . this adds to the adjoining table
 >>> anthony.languages.add(ruby)
 >>> stacy.languages.add(python)
 >>> stacy.languages.add(ruby)
 
+>>> anthony.save() //Possibly have to save
+>>> stacy.save()
 
-
+// Reading 
+>>> anthony.languages.all() //Programmer has ManytoMany Attribute
+<QuerySet [<Language: Java>, <Language :Haskell>]>
+>>>python.programmer_set.all() //Language does not have the ManyotMany Attribute
+<QuerySet [<Programmer: Anthony>, <Programmer :Stacy>]>
 ```
