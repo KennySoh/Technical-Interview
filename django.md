@@ -1221,7 +1221,7 @@ from .models import Todo
 
 admin.site.register(Todo)
 ```
-### read from database and display in current html via (View.py-> Quries from db -> passed to Django Template)
+### Read from database and display in current html via (View.py-> Quries from db -> passed to Django Template)
 ```
 ------view.py-----
 from .models import Todo
@@ -1244,7 +1244,8 @@ def index(request):
   {% endfor %}
 </ul>
 ```
-### Add a Todo , Create a row on db from html on form submit
+### Create a Todo row to DB , Add a row on db from html on form submit
+#### 1st Part: Create a django form and make it appear on django template
 ```
 ------1. add django form, create a form.py------
 from django import forms
@@ -1293,4 +1294,32 @@ class TodoForm(forms.Form):
   text = forms.CharField(max_length=40,
     widget=forms.TextInput(
       attrs={'class':'form-control','placeholder':'Enter todo eg. Delete junk files'}))
+```
+#### 2nd Part: Add the view to handle form submit, Link form submit url to view
+```
+-----5. Adding the view that handles Formpost data -----
+---------views.py---------
+from django.shortcuts import redirect // add redirect
+from django.views.decorators.http import require_POST // Only accept post request
+
+@require_POST // Only accept HTTP POST request
+def addTodo(request):
+  form = TodoForm(request.POST)
+  print(request.POST['text']) //text is your created form field name
+  
+  if form.is_valid(): // LASTLY, Add to newTodo to database
+    new_todo= Todo(text=request.POST['text'])
+    new_todo.save()
+
+  return redirect('index') //redirect back to index 
+```
+
+```
+-----6. Add URL -----
+---------urls.py---------
+urlpatterns = [
+  path('add', views.addTodo, name="add")
+]
+--------- index.html --------
+<form action="{% url 'add' %}" method="POST" role="form">
 ```
