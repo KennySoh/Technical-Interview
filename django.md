@@ -1051,4 +1051,82 @@ if __name__ == '__main__':
   db.connect()
   db.create_tables([Student], safe=True)
 ```
-### Creating a diary app
+
+# Pretty printed Tutorials
+https://www.youtube.com/watch?v=r9kT-jm136Q
+## Django Models 
+```
+------------ Models------------
+from django.db import models
+
+class Company(models.Model):
+  name =CharField(max_length=20)
+  
+  def __str__(self):               //(Take not 2 underscores __)
+    return self.name
+
+
+class Language(models.Model):
+    name= models.CharField(max_length=20)
+    
+    def __str__(self):
+      return self.name
+      
+
+class Programmer(models.Model):
+   name = models.CharField(max_Length = 20 )
+   company= models.ForeignKey(Company, on_delete = models.CASADE)
+   languages = models.ManyToManyField(Language) //( Many to many relationship put on object that makes more sense)
+   
+   def __str__(self):
+      return self.name
+
+
+```
+
+```
+------------ Creating, Updating , Deleting, Reading from Database ------------
+Python shell 
+>>> from yourapp.models import Company
+
+// Creating
+>>> google = Company(name="Google")
+>>> google.save()
+
+// Update
+>>> google.name="Alphabet"
+>>> google.save()
+
+// Delete
+>>> google.delete()
+(1, {'yourapp.Company':1}) // Tells u what got delted
+
+// Read
+>>> apple= Company.objects.get(pk=2)
+>>> apple
+<Company: Company object (2)>
+
+------------ Creating objects with foreign key ------------
+>>> anthony = Programer (name= 'Anthony', company=apple)
+>>> anthony.save()
+
+// Getting its foreign key 
+>>> anthony.company   // (from object with foreign key in attribute) 
+<Company: APPLE>
+>>> apple.programmer_set.all()  // (from object without foreign key attribute)
+<QuerySet [<Programmer :Stacy>, <Programmer : Kelly>]>
+
+------------ Many to many relationship, Django automatically creates adjoining table ------------
+>>> anthony = Programmer.objects.get(pk=1)
+>>> stacy = Programmer.objects.get(pk=2) // Create 2 Programmer
+>>> python = Language(name='Python')
+>>> java = Language(name='Java') // Create 2 Language
+
+>>> anthony.languages.add(python)
+>>> anthony.languages.add(ruby)
+>>> stacy.languages.add(python)
+>>> stacy.languages.add(ruby)
+
+
+
+```
