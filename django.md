@@ -1323,3 +1323,29 @@ urlpatterns = [
 --------- index.html --------
 <form action="{% url 'add' %}" method="POST" role="form">
 ```
+### Update which todo is completed on mouse click
+```
+-----Index.html-----
+{% for todo in todo_list %}
+  {% if todo.complete %}
+  <li class="list-group-item todo-completed">{{ todo.text }}</li>
+  {% else %}
+  <a href="{% url 'complete' todo.id %}"><li class="list-group-item">{{ todo.text }}</li></a>
+  // Will Send to url complete/todo_id on click
+  {% endif %}
+{% endfor %}
+```
+```
+----views.html----
+def completeTodo(request, todo_id):
+  todo = Todo.objects.get(pk=todo_id)
+  todo.complete= True
+  todo.save()
+  
+  return redirect('index')
+
+-----urls.py------
+urlpatterns=[
+  path('complete/<todo_id>',views.completeTodo, name='complete')
+]
+```
