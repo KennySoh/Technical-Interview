@@ -1221,7 +1221,7 @@ from .models import Todo
 
 admin.site.register(Todo)
 ```
-### read from database and display in current html via (View.py-> Quries from db -> on Django Template)
+### read from database and display in current html via (View.py-> Quries from db -> passed to Django Template)
 ```
 ------view.py-----
 from .models import Todo
@@ -1243,4 +1243,54 @@ def index(request):
     {% endif %}
   {% endfor %}
 </ul>
+```
+### Add a Todo , Create a row on db from html on form submit
+```
+------1. add django form, create a form.py------
+from django import forms
+
+class TodoForm(forms.Form):
+  text = forms.CharField(max_length=40)
+```
+
+```
+----2. send into template through views.py-----
+from django.shortcuts import render
+
+from .models import Todo
+from .forms import TodoForm // Import created form
+
+def index(request):
+  todo_list = Todo.objects.order_by('id')
+  form = TodoForm() // create an instance
+  context={'todo_list' : todo_list, 'form': form}
+  return render(request, 'todo/index.html', context)
+```
+
+```
+-----3. Add django form into django template-----
+<form action="#" method="POST" role="form">
+  {% csrf_token %} // Add CRSF for safety
+  <div class="form-group">
+    <div class="input-group">
+
+    <input type="text" class="form-control" placeholder="Enter todo eg. Delete junk files" aria-label = "Todo" area-describeby="add-btn"> // <--- put all this attributes into django form widget to replicate
+
+      {{ form.text}} // Add self made form attribute
+      <span class = "input-group-btn">
+        <button type="submit" class="btn btn-default" id="add-btn">ADD</button>
+      </span>
+    </div>
+  <div>
+</form>
+```
+
+```
+-----4. Add widget to make django form equally pretty-----
+---------Form.py---------
+
+class TodoForm(forms.Form):
+  text = forms.CharField(max_length=40,
+    widget=forms.TextInput(
+      attrs={'class':'form-control','placeholder':'Enter todo eg. Delete junk files'}))
 ```
