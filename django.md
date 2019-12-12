@@ -969,6 +969,103 @@ urlpatterns = patterns('',
 - static tag.
 - django filter
 
+## Django Form 
+### Handling the submision of Form 
+```
+def suggestion_view(request):
+  form= forms
+  if request.method == "POST":
+    form = forms.SuggestionForm(request.POST)
+    if form.is_valid():
+      print("good form")
+      send_mail(
+        'Suggestion from {}'.format(form.cleaned_data['name']),   //form.cleaned_data["name"] return submitted value
+        form.cleaned_date['suggestion'],      
+        '{name} <{email}>'.format(**form.cleaned_data),           ///'{name}'.format(**form.cleaned_data) send in dict_form
+        ['kenny@gmail.com']
+      )
+      messages.add_message(request, messages.SUCCESS, //Django flash emssages on screen
+        'Thanks for your suggestion!')
+      return HTTPResponseRedirect(reverse('suggestion'))
+   return render(request, 'suggestion_form.html', {'form':form})
+```
+
+#### Custom field validation
+***
+- We can validate the form as whole. Use this if we need to validate two or more field in relaiton to each other. Like making sure somone gives us either a phone number Or Email or both
+- We can validate individual fiels with custom cleaning methods.
+- We can use Django's built-in validators or create our own. Validators are functions that take a vlaue and return a specific error if the value is wrong. 
+*** . 
+
+##### Part1: Custom cleaning validator 
+- Preventing spiders bots,  
+Provide a hidden input , called a honey pot. If filled should be a bot?   
+```
+class SuggestionForm(forms.Form):
+  name= forms.CharField()
+  email = forms.EmailField()
+  suggestion = forms.CharField(widget = forms.Textarea)
+  honeypot = forms.CharField(required=False, widget = forms.HiddenInput, label="Leave empty") // This prevents bots
+  
+  def clean_honeypot(self):
+    honeypot=self.cleaned_data['honeypot']
+    if len(hoenypot):
+      raise forms.ValidationError(
+        "honeypot should be left empty. Bad bot!")
+    return honeypot
+```
+##### Part2: Django built-in validator
+```
+class SuggestionForm(forms.Form):
+  name= forms.CharField()
+  email = forms.EmailField()
+  suggestion = forms.CharField(widget = forms.Textarea)
+  honeypot = forms.CharField(required=False, 
+                    widget = forms.HiddenInput,
+                    label="Leave empty",
+                    validators=[validators.MaxLengthValidator(0)]
+                   )
+```
+##### Part3: Django Custom validator
+```
+def must_be_empty(value):
+  if value:
+    raise forms.ValidationError('is not empty')
+
+class SuggestionForm(forms.Form):
+  name= forms.CharField()
+  email = forms.EmailField()
+  suggestion = forms.CharField(widget = forms.Textarea)
+  honeypot = forms.CharField(required=False, 
+                    widget = forms.HiddenInput,
+                    label="Leave empty",
+                    validators=[validators.must_be_empty] .    // custom validator here
+                   )
+```
+
+##### Cleaning a Whole Form
+Checking 2 or more fields together to know if form is valid . 
+- We can validate the form as whole. Use this if we need to validate two or more field in relaiton to each other. Like making sure somone gives us either a phone number Or Email or both . 
+
+using the clean Method , def clean(self): ... This check the entire form 
+```
+
+class SuggestionForm(forms.Form):
+  name= forms.CharField()
+  email = forms.EmailField()
+  verify_email = forms.EmailField(label="Please verify your email address")
+  suggestion = forms.CharField(widget = forms.Textarea)
+  
+  def clean(self):
+    cleaned_data =super().clean()
+    email = cleaned_data.get('email')
+    verify = cleaned_date.get('verify_email')
+    
+    if email != verify:
+      raise forms.ValidationError(
+        "You need to enter the same email in both fields")
+
+```
 # Meet Peewee, Our ORM( python databases topic
 ```
 pip install peewee
