@@ -35,3 +35,7 @@ https://unix.stackexchange.com/questions/119358/create-file-in-folder-permission
 ```
 chmod u+w .
 ```
+# Udacity Full-stack Course
+https://github.com/mikesprague/udacity-nanodegrees#full-stack-web-developer-nanodegree
+  
+## Authentication vs Authorization
