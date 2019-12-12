@@ -1475,4 +1475,90 @@ def deleteCompleted(request):
   Todo.objects.filter(complete__exact=True).delete()
   return redirect('index')
 ```
+# Bootstrap Table onClick Modals appears and handle Crud 
+1. Parse information using data- in Django Templates
+```
+------- Workign with bootstrap4 tables-----------------
+<table id="dtExampleUser" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th class="th-sm" scope="col">Name</th>
+      <th class="th-sm" scope="col">Usere</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in user_list %}                       // Django Template to parse information
+    <tr data-user-id="{{ user.id }}">                 // data- html attribute to allow jquery to handle        
+      <th scope="row">{{ user.name }}</th>
+    </tr>
+    {% endfor %}
+</tbody>
+```
+2. Jquery to handle table tr onclick
+```
+$(document).ready( function () {
+  $("#dtExampleUser tr").click(function(){ 
+    var userId = $(this).data('user-id');   //parse user-id
+  	$.ajax({  //use ajax to query entire user data with id 
+  		type: "GET",
+  		dataType: 'json',
+  		data: {'user_id': userId , 'csrfmiddlewaretoken': $('[name="csrfmiddlewaretoken"]').val()},
+  		url: "/user/get",
+  		success: function (data) {
+        openEditUserModal(data.personnel); //Opens Bootstrap4 Modal
+      }
+    });
+  });
+});
+```
+3. Handle Ajax Get user based on user.id
+```
+------view.py----------
+from django.views.decorators.http import require_http_methods
+from django.http import JsonResponse
+from django.forms.models import model_to_dict
+...
+
+#Get user with id parameters
+@require_http_methods(["GET"])
+def get_user(request):
+	user_id = request.GET.get('user_id')
+	user = User.objects.get(pk=user_id)
+	return JsonResponse({'user': model_to_dict(user)})
+```
+```
+---url.py---
+path('personnel/get', views.get_personnel, name='get_personnel'),
+```
+4. Change into Form.py 
+```
+-------forms.py-------
+class EditUserForm(forms.Form):
+    name = forms.CharField(max_length=100, widget=forms.TextInput(
+      attrs={'id':'id-name','name':'name','placeholder':'Alex Lim'}))
+    company_name = forms.CharField(max_length=100, widget=forms.TextInput(
+      attrs={'id':'id-company-name','name':'company-name','placeholder':'Ebay-Pte-Ltd'}))
+
+// HTTML 
+<label for="name">Name</label>
+{{ addUserForm.name}}
+
+
+```
+
+4. jQuery open Form on successful ajax. And pre populate
+```
+function openEditUserModal(user) {
+  var $modal = $('.modal#editUserModal');
+	$modal.find('#name').val(user.name);
+  $modal.find('.edit_User_Btn').click(function() {
+    $modal.find('form').attr('action','editUser/'+user.id);
+  });
+  $modal.find('.delete_User_Btn').click(function() {
+    $modal.find('form').attr('action','deleteUser/'+user.id);
+
+  });
+	$modal.modal('show');
+}
+```
 
