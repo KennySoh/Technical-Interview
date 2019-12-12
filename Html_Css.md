@@ -3009,7 +3009,33 @@ The classes are named using the format {property}{sides}-{size} for xs and {prop
 </body>
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/bootstrap4-2.png) . 
+## Ajax
+Asychronos javascrpt and XML form.... Used to send request in the background.... allows googlemap to have a continuous flow. 
+  
+Request <-> Response . 
 
+Used to be called XML http request or , XHR for short . 
+### How Ajax Works
+***
+1. Create an XMLHTTP Request object //Javascript object used to manage AJAX requests
+2. Create a callback function . //process the success/failed responses 
+3. Open a request.		//give 2 things. 1) Method get or post 2)Url that will be send
+4. Send the request. 
+***
+
+### A Simple AJAX Example
+```
+<script>
+	var xhr = new XMLHttpRequest(); // 1st Create an XMLHttpRequest
+	xhr.onreadystatechange = function(){ . //one of more important ajax events
+		if (xhr.readyState === 4){ //4 is when we got the response back 
+			document.getElementById('ajax').innerHTML = xhr.responseText;
+		}		
+	};
+	xhr.open("GET",'sidebar.html'); //3rd Open a request
+	xhr.send();			//4th send the request
+</script>
+```
 ## Full Stack Conf Project
 ### Layout
 ***
