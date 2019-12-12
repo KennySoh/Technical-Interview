@@ -1066,6 +1066,24 @@ class SuggestionForm(forms.Form):
         "You need to enter the same email in both fields")
 
 ```
+### Models Abstract Inheritance
+***
+Django has 2 main type of inheritance 
+- Abstract 
+Like User class is like the class. 
+```
+class User(models.Model):
+  class Meta:
+    abstract = True
+ class Student(models.Model):
+ class Staff(models.Model):
+```
+- Multi Table
+***
+
+```
+```
+#### 
 # Meet Peewee, Our ORM( python databases topic
 ```
 pip install peewee
