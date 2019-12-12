@@ -1546,7 +1546,7 @@ class EditUserForm(forms.Form):
 
 ```
 
-4. jQuery open Form on successful ajax. And pre populate
+5. jQuery open Form on successful ajax. And pre populate
 ```
 function openEditUserModal(user) {
   var $modal = $('.modal#editUserModal');
@@ -1561,4 +1561,18 @@ function openEditUserModal(user) {
 	$modal.modal('show');
 }
 ```
-
+6.views.py handle crud functions
+```
+@require_POST
+def editUser(request, user_id):
+    # Form Validation
+    form = EditUserForm(request.POST)
+    if form.is_valid():
+        print("Form is Valid!!!")
+    # Get Form Instance and Value with cleaned data
+    user = User.objects.get(pk=user_id)
+    user.name=form.cleaned_data['name']
+    user.company_name=form.cleaned_data['company_name']
+    user.save()
+    return redirect('user')
+```
