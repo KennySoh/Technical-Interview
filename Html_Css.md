@@ -3183,6 +3183,9 @@ if(xhr.status === 200){
 ## Using Ajax with jquery
 ### Get request AJAX jQuery
 https://www.yogihosting.com/jquery-ajax/
+					  
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/ajax_jquery_1.png) . 
+					  
 ```
 var $orders = $('#orders');
 $(function (){
