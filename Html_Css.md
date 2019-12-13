@@ -3208,6 +3208,7 @@ $(function (){
 ```
 ### Post request AJAX jquery
 ```
+----- Before we do validation on front end------
 $('#add-order-btn').on('click', function(){
 	var order={
 		name: $name.val();
@@ -3225,6 +3226,56 @@ $('#add-order-btn').on('click', function(){
 		}
   	});
 });
+```
+### Simple Email submit 
+```
+<script>
+    $(document).ready(function () {
+        $("#submit").click(function (e) {
+            var result = Validate();
+            if (result == true) {
+                $.ajax({
+                    type: "POST",
+                    url: "jquery-ajax-subscribe.php",
+                    data: {email: $("#email").val()},
+                    success: function (msg) {
+                            $("#message").html(msg);
+                    },
+                    error: function (req, status, error) {
+                        alert(req + " " + status + " " + error);
+                    }
+                });
+            }
+            return false;
+        });
+  
+        function EmailValidate() {
+            var numericExpression = /^\w.+@[a-zA-Z_-]+?\.[a-zA-Z]{2,3}$/;
+            var elem = $("#email").val();
+            if (elem.match(numericExpression))
+                return true;
+            else
+                return false;
+        }
+  
+        function Validate() {
+            var errorMessage = "";
+  
+            //Email
+            if ($("#email").val() == '')
+                errorMessage += " Enter your email address<br/>";
+            else if (!(EmailValidate()))
+                errorMessage += " Invalid email address<br/>";
+            //End
+  
+            $("#message").html(errorMessage);
+            if (errorMessage.length == 0)
+                return true;
+            else
+                return false;
+        }
+    });
+</script>
 ```
 ## Full Stack Conf Project
 ### Layout
