@@ -3028,7 +3028,7 @@ Used to be called XML http request or , XHR for short .
 <script>
 	var xhr = new XMLHttpRequest(); // 1st Create an XMLHttpRequest
 	xhr.onreadystatechange = function(){ . //one of more important ajax events
-		if (xhr.readyState === 4){ //4 is when we got the response back 
+		if (xhr.readyState === 4){ //4 is for when we got the response back 
 			document.getElementById('ajax').innerHTML = xhr.responseText;
 		}		
 	};
@@ -3036,6 +3036,48 @@ Used to be called XML http request or , XHR for short .
 	xhr.send();			//4th send the request
 </script>
 ```
+### GET and POST
+***
+Difference between GET and POST
+- Get puts all the information in url (Limited to 2000 words in url)  
+	- http:///website.com/employee.php?lastName=Jones&lastName=Joe 
+	- (?lastName=Jones) is a querystring . 
+	- Name <-> Value Pair
+- Post puts additional informaiton in HTTP body (Allow more informaiton to be parse)  
+	- Sensitive informaiton like Password
+	- Alot of inofrmaiton like JSON objects 
+***
+### AJAX Response Formats 
+***
+Webservers commonly send a response in Plain Text, HTML, XML and JSON
+- Extensible Markup Language (XML) (hard to work with javascript so we use JSON instead)
+```
+------XML own language------
+<?xml version="1.0" encoding="UTF-8"?>
+<songs>
+  <song>
+    <title>Heal the world</title>
+    <artist> Mj</artist>
+  </song>
+</songs>
+
+```
+***
+### AJAX Security Limitations
+Web browsers prevent certain types of AJAX requests, such as requests to other web sites. Learn the rules of a web browser's "same-origin" policy and ways to work around these limitations.  
+***
+Ajax Cannot
+1. Requesting data form another website 
+2. Switching to https:
+3. Switching port numbers
+4. db.myserver.com vs myserver.com
+***
+***
+Escaping same origin policy
+- Web Proxy 
+- JSONP- JSON with Padding 
+- CORS- Cross-Origin Resource Sharing ( WC recommendation ) 
+***
 ## Full Stack Conf Project
 ### Layout
 ***
