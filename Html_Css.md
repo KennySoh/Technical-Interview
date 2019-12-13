@@ -3180,6 +3180,25 @@ if(xhr.status === 200){
   	statusHTML +='</ul>';
 }  
 ```
+## Using Ajax with jquery
+### Get request AJAX jQuery
+```
+var $orders = $('#orders');
+$(function (){
+	$.ajax({
+		type: "GET",
+		url: '/api/orders',
+		success:function(orders){
+			console.log('success',data);
+			$.each(orders, function(i, order){
+					  $orders.append('<li>name: ' + order.name + ', drink: '+ order.drink +'</li>');	
+			});
+		}
+	});
+});
+```
+### Post request AJAX jquery
+					  
 ## Full Stack Conf Project
 ### Layout
 ***
