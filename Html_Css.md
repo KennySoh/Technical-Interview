@@ -3078,6 +3078,46 @@ Escaping same origin policy
 - JSONP- JSON with Padding 
 - CORS- Cross-Origin Resource Sharing ( WC recommendation ) 
 ***
+
+### AJAX Callbacks 
+***
+readyState 0-4,
+- 0, XMLHTTP request obect is created 
+- 3, When the response is coming
+- 4, When all data is received form web server. 
+***
+***
+Things might go wrong, We have to check for status code as well as readySTATE
+- Web server cant connect to database
+- Web program handling the request crashes
+- Ajax request points to a url that not around, FILE NOT FOUND ERROR
+***
+***
+Status code
+- 1xx informational response – the request was received, continuing process
+- 2xx successful – the request was successfully received, understood and accepted
+- 3xx redirection – further action needs to be taken in order to complete the request
+- 4xx client error – the request contains bad syntax or cannot be fulfilled
+- 5xx server error – the server failed to fulfill an apparently valid request
+
+Common Status Code
+- 200 OK
+- 404 Not Found
+- 500 Internal Server Error
+***
+```
+<script>
+	var xhr = new XMLHttpRequest(); 
+	xhr.onreadystatechange = function(){ . 
+		if (xhr.readyState === 4 && xhr.status === 200){ 
+			document.getElementById('ajax').innerHTML = xhr.responseText;
+		}		
+	};
+	xhr.open("GET",'sidebar.html'); //3rd Open a request
+	xhr.send();			//4th send the request
+</script>
+```
+
 ## Full Stack Conf Project
 ### Layout
 ***
