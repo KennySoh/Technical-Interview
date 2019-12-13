@@ -3188,7 +3188,12 @@ $(function (){
 	$.ajax({
 		type: "GET",
 		url: '/api/orders',
-		success:function(orders){
+		data:{ //QueryString
+			ajaxid:4,
+			UserID: UserID,
+			EmailAddress: EmailAddress
+		},
+		success: function(orders){
 			console.log('success',data);
 			$.each(orders, function(i, order){
 					  $orders.append('<li>name: ' + order.name + ', drink: '+ order.drink +'</li>');	
@@ -3198,7 +3203,25 @@ $(function (){
 });
 ```
 ### Post request AJAX jquery
-					  
+```
+$('#add-order-btn').on('click', function(){
+	var order={
+		name: $name.val();
+		drink: $drink.val();
+	};
+	$.ajax({
+		type: 'POST',
+		url: '/api/orders',
+		data:order,
+		success:function(newOrder){
+	  		$orders.append('<li>name: '+ order.name +', drink: '+order.drink+ '</li>');		
+		},
+		error : function(){
+			alert('error saving order');
+		}
+  	});
+});
+```
 ## Full Stack Conf Project
 ### Layout
 ***
