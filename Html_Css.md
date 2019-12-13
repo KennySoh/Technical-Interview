@@ -3182,6 +3182,7 @@ if(xhr.status === 200){
 ```
 ## Using Ajax with jquery
 ### Get request AJAX jQuery
+https://www.yogihosting.com/jquery-ajax/
 ```
 var $orders = $('#orders');
 $(function (){
@@ -3193,7 +3194,7 @@ $(function (){
 			UserID: UserID,
 			EmailAddress: EmailAddress
 		},
-		success: function(orders){
+		success: function(result,status,xhr){
 			console.log('success',data);
 			$.each(orders, function(i, order){
 					  $orders.append('<li>name: ' + order.name + ', drink: '+ order.drink +'</li>');	
@@ -3213,7 +3214,7 @@ $('#add-order-btn').on('click', function(){
 		type: 'POST',
 		url: '/api/orders',
 		data:order,
-		success:function(newOrder){
+		success:function(result,status,xhr){
 	  		$orders.append('<li>name: '+ order.name +', drink: '+order.drink+ '</li>');		
 		},
 		error : function(){
