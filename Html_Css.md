@@ -3080,6 +3080,7 @@ Escaping same origin policy
 ***
 
 ### AJAX Callbacks 
+AJAX callbacks has a readyState (data received) and Status Code ( Http Response Success/Failed)
 ***
 readyState 0-4,
 - 0, XMLHTTP request obect is created 
@@ -3091,8 +3092,7 @@ Things might go wrong, We have to check for status code as well as readySTATE
 - Web server cant connect to database
 - Web program handling the request crashes
 - Ajax request points to a url that not around, FILE NOT FOUND ERROR
-***
-***
+
 Status code
 - 1xx informational response – the request was received, continuing process
 - 2xx successful – the request was successfully received, understood and accepted
@@ -3109,15 +3109,77 @@ Common Status Code
 <script>
 	var xhr = new XMLHttpRequest(); 
 	xhr.onreadystatechange = function(){ . 
-		if (xhr.readyState === 4 && xhr.status === 200){ 
-			document.getElementById('ajax').innerHTML = xhr.responseText;
+		if (xhr.readyState === 4 ){
+			if(xhr.status === 200){
+				document.getElementById('ajax').innerHTML = xhr.responseText;
+			} else if (xhr.status === 404){
+				// file not found
+			} else if (xhr.status === 500){
+				// server had a problem 
+			}
 		}		
 	};
-	xhr.open("GET",'sidebar.html'); //3rd Open a request
-	xhr.send();			//4th send the request
+	xhr.open("GET",'sidebar.html'); 
+	xhr.send();			
 </script>
 ```
+### Introducing JSON
+```
+[
+	{
+		"name" : "Jin",
+		"phone": "503-555-1212",
 
+	},
+	{
+		"name": "Amit",
+		"inoffice": true
+	},
+	{
+		"name": "Ben",
+		"inoffice": true
+	}
+]
+```
+### Parsing JSON Data
+```
+<script>
+	var xhr = new XMLHttpRequest(); 
+	xhr.onreadystatechange = function(){ . 
+		if (xhr.readyState === 4 ){
+			if(xhr.status === 200){
+				var employess= JSON.parse(xhr.responseText);
+				console.log(employees) // An array of Objects
+			} 	
+		}		
+	};
+	xhr.open("GET",'sidebar.html'); 
+	xhr.send();			
+</script>
+```
+### Processing JSON Data
+***
+1. Create a new HTML list item 
+2. Check the "inoffice" property
+3. Get the value for the "name" property; Insert it inside the <li> tag
+4. Close the <li> tag
+***
+```
+if(xhr.status === 200){
+	var employess= JSON.parse(xhr.responseText);
+	var statusHTML = '<ul class="bulleted">';
+	for (var i=0; i<employees.length; i +=1){
+		if (employess[i].inoffice === true){
+			statusHTML += '<li class="in">';
+		} else {
+			statusHTML +='<li class="out">';
+		}
+		statusHTML += employees[i].name;
+	  	statusHTML += '</li>';
+	}
+  	statusHTML +='</ul>';
+}  
+```
 ## Full Stack Conf Project
 ### Layout
 ***
