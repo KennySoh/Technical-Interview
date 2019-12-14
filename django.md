@@ -1069,21 +1069,34 @@ class SuggestionForm(forms.Form):
 ### Models Abstract Inheritance
 ***
 Django has 2 main type of inheritance 
-- Abstract 
-Like User class is like the class. 
-```
-class User(models.Model):
-  class Meta:
-    abstract = True
- class Student(models.Model):
- class Staff(models.Model):
-```
-- Multi Table
+- Abstract Model
+- Multi table Model
 ***
 
+#### Step Abstract Model , Text and Quiz inheritate
 ```
+class Step(models.Model):
+	title = models.CharField(max_length=255)
+	description = models.TextField()
+	order = models.IntegerField(default = 0)
+	course = models.ForeignKey(Course)
+	
+	class Meta:
+		abstract=True
+		ordering = ['order',]
+	
+	def __str__(self):
+		return self.title
+
+class Text(Step):
+	content = models.TextField(blank = True, default='')
+
+class Quiz(Step):
+	total_questions = models.IntegerField(default = 4)
+	
+	class Meta:
+		verbose_name_plural= "Quizzes" // Change pluralize name of registered model admin 
 ```
-#### 
 # Meet Peewee, Our ORM( python databases topic
 ```
 pip install peewee
