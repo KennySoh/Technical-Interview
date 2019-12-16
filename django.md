@@ -1589,3 +1589,41 @@ def editUser(request, user_id):
     user.save()
     return redirect('user')
 ```
+# Ajax and django 
+```
+    data = {
+        'id':1,
+	'name': "test",
+    }
+    $.ajax({
+      type: "POST",
+      dataType: 'json',
+      data : JSON.stringify(data),
+      url: "/user/update",
+      success: function (result, status, xhr) {
+        if (result['status'] != 'success') {
+          console.log(result['message']);
+          console.log(result);
+          console.log(status);
+          console.log(xhr);
+        }
+      },
+      error : function(xhr, status, error){
+        console.log(xhr["responseJSON"]["message"]);
+        console.log(status);
+        console.log(error);
+  	}
+    });
+```
+
+```
+@require_http_methods(["POST"])
+def update_user(request):
+    if (True): #success
+        response = JsonResponse({"message": "success"})
+        return response
+    else : #failuer
+        response = JsonResponse({"message": "Error Message stuff not found"})
+        response.status_code = 404
+    return response
+```
