@@ -1627,3 +1627,21 @@ def update_user(request):
         response.status_code = 404
     return response
 ```
+
+```
+#Update access_group
+@require_http_methods(["POST"])
+def update_access_group(request):
+    if (True): #success
+        data = json.loads(request.body.decode())
+        user_group = UserGroup.objects.get(pk=data["id"])
+        user_group.name=data["name"]
+        user_group.save()
+        response = JsonResponse({})
+        return response
+    else : #failure
+        response = JsonResponse({"message": "Error Message stuff not found"})
+        response.status_code = 404
+        return response
+
+```
