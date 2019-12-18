@@ -970,8 +970,45 @@ urlpatterns = patterns('',
 - django filter
 
 ## Django Form 
+### Creating form
+```
+----forms.py-----
+from django import forms
+
+class SuggesionForm(forms.Form):
+	name=forms.CharField()
+	email=forms.EmailField()
+	suggesion= forms.CharField(widgets=forms.Textarea)
+```
+### Sending forms to template through view
+```
+---views.py------
+from .forms import SuggestionForm
+
+def hello_word(request):
+	return render(request, 'home.html');
+	
+def suggestion_view(request):
+	form=forms.SuggestionForm()
+	return render(request, 'suggestion_form.html',{'form':form})
+```
+```
+---.html-----
+<form action="" method="POST">
+	{{ form.as_p }}
+	{% crsf_token %}
+	<input type="submit">
+</form>
+```
 ### Handling the submision of Form 
 ```
+from django.contrib import messages
+from django.core.mail import send_mail
+from django.core.urlresolvers import reverse
+from django.shortcuts import render
+
+from . import forms 
+
 def suggestion_view(request):
   form= forms
   if request.method == "POST":
