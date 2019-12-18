@@ -1645,3 +1645,28 @@ def update_access_group(request):
         return response
 
 ```
+
+# CRSF and ajax request
+https://docs.djangoproject.com/en/3.0/ref/csrf/#acquiring-csrf-token-from-html . 
+```
+----base.html-----
+{% csrf_token %}
+<script type="text/javascript">
+// using jQuery
+var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+</script>
+```
+```
+-----base.js-------
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
+```
