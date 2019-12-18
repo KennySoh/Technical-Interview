@@ -1043,13 +1043,13 @@ class SuggestionForm(forms.Form):
   email = forms.EmailField()
   suggestion = forms.CharField(widget = forms.Textarea)
   honeypot = forms.CharField(required=False, widget = forms.HiddenInput, label="Leave empty") // This prevents bots
-  
-  def clean_honeypot(self):
-    honeypot=self.cleaned_data['honeypot']
-    if len(hoenypot):
-      raise forms.ValidationError(
-        "honeypot should be left empty. Bad bot!")
-    return honeypot
+
+	def clean_honeypot(self):
+				honeypot = self.cleaned_data['honeypot']
+				if len(honeypot):
+			raise forms.ValidationError('Error: Honeypot should be left empty.')
+				else:
+			return honeypot
 ```
 ##### Part2: Django built-in validator
 ```
