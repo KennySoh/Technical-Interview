@@ -1734,3 +1734,51 @@ class LanguageSerializer(serializers.HyperLinkedModelSerializer): //shows the ur
 	fields = ('id','url','name','paradigm')
 
 ```
+# Django REST Framework, Team treehouse
+***
+- Model Serializer, Makes turning queryset to json a breeze (Foreign key or file fields are a headache)
+- Token based authetication, Out of the box ...
+- DRF 201, 401 proper status message
+***
+## Installation and Setup
+```
+// 1. CLI installation 
+pip install djangorestframework
+
+// 2. Adding ur own app 
+INSTALLED_APPS=[
+	....
+	'rest_framework',
+	'courses',
+]
+
+//REST_FRAMEWORK = {
+	'DEFAULT_AUTHETICATION_CLASSES': (
+		'rest_framework.authetication.SessionAuthentication',
+	),
+	'DEFAULT_PERMISSION_CLASSES':(
+		'rest_framework.permissions.IsAutheticatedOrReadOnly',
+	)
+}
+
+// 3. add urls 
+from django.conf.urls import url, include
+from django.contrib import admin
+
+urlpatterns=[
+ url(r'^admin/', admin.site.urls),
+ url(r'^api-auth/', include('rest_framework.urls', 
+	namespace='rest_framework'))
+]
+```
+## Model Serializers
+1. add a new serializers.py 
+
+```
+from rest_framework import serializers 
+from . import models 
+
+class ReviewSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = models.Review
+```
