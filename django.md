@@ -1670,3 +1670,57 @@ $.ajaxSetup({
     }
 });
 ```
+# Django REST Framework Pretty Printed
+https://www.youtube.com/watch?v=263xt_4mBNc . 
+```
+pip install djangorestframework
+python manage.py migrate 
+python manage.py createsuperuser
+python manage.py startapp languages 
+
+INSTALLED_APPS= {
+	...
+	'rest_framework',
+	'languages'
+}
+```
+1. Route lanaguages url 
+2. Create Models 
+```
+class Language(models.Model):
+	name= models.CharField(max_length=50)
+	paradigm = models.CharField(max_length=50)
+```
+3. Register Language in admin.py
+4. Create serializers.py 
+```
+----serializers.py-------
+from rest_framework import serializers
+from .models import Language
+
+class LanguageSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Language		//link up the existing model u want to serialise 
+		fields = ('id','name','paradigm')//fields u want to display
+```
+5. ViewSets from DRF, allow faster CRUD system 
+```
+from .models import Language
+from .serializers import LanguageSerializer
+
+class LanguageView(viewsets.ModelViewSet):
+	queryset =  Language.objects.all() //get all, can changed to get filtered amount , ModelView set will take over
+	serializer_class = LanguageSerializer 
+```
+5a. Routers, handles the url routing for DRF Viewsets
+```
+from . import views
+from rest_framework import routers 
+
+router = routers.DefaultRouter()
+router.register('languages', views.LanguageView)
+
+urlpatterns =[
+	path('',include(router.urls))
+]
+```
