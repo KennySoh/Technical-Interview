@@ -1725,8 +1725,12 @@ urlpatterns =[
 	path('',include(router.urls))
 ]
 ```
-Additional. Changed url field 
+Additional. HyperlinkedModelSerializer shows url field 
 ```
 ----serializer.py-----
-class LanguageSerializer(serializers.HyperLinkedModelSerializer):
+class LanguageSerializer(serializers.HyperLinkedModelSerializer): //shows the url 
+ class Meta:
+ 	model = Language
+	fields = ('id','url','name','paradigm')
+
 ```
