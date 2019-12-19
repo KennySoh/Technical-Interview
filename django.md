@@ -1218,6 +1218,31 @@ def quiz_edit(request,course_pk,quiz_pk):
 		return render(request,'courses/quiz_form.html', {'form':form, 'course':quiz.course}
 ```
 ### Formsets
+Creating a form set
+***
+1. Create formset factory
+```
+DigitalFormset = forms.modelformset_factory( 
+    models.Digital, 
+    fields = ['name', 'description', 'url'],
+    extra=5,       // Make five (5) products at a time , set extra and max_num to be 5
+    max_num=5	
+```
+2. Set up the view
+```
+def bulk_create_products(request):
+    formset = forms.DigitalFormset()
+    if request.method == 'POST':
+        formset = forms.DigitalFormset(request.POST)
+        if formset.is_valid():
+            formset.save()
+            return HttpResponseRedirect(reverse('products:bulk_create'))
+    return render(request, 'products/bulk_create.html', {'formset': formset})
+```
+
+***
+
+
 ```
 -----views.py-----
 def answer_form(request, question_pk, answer_pk=None):
