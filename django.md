@@ -1819,3 +1819,28 @@ class ReviewSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = models.Review
 ```
+
+# A Quick Intro to Model Form 
+# A Quick Intro to Modal Formsets
+```
+---models.py-----
+from django.db import models
+
+class Example(models.Model):
+	name = models.CharField(max_length=20)
+	location = models.CharField(max_length=20)
+```
+```
+---views.py----
+from django.forms import modelformset_factory
+from .models import Example
+
+def index(request):
+	ExampleFormSet = modelformset_factory(Example, fields=('name','location'),extra=4)
+	form = ExampleFormSet(queryset=Example.objects.none())
+	return render(request,'index.html',{'form':form})
+```
+```
+----.html----
+{{ form }}
+```
