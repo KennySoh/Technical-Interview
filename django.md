@@ -1110,7 +1110,7 @@ class SuggestionForm(forms.Form):
 ### Models Abstract Inheritance
 ***
 Django has 2 main type of inheritance 
-- Abstract Model
+- Abstract Model , cant be used for queries 
 - Multi table Model
 ***
 
@@ -1137,6 +1137,85 @@ class Quiz(Step):
 	
 	class Meta:
 		verbose_name_plural= "Quizzes" // Change pluralize name of registered model admin 
+```
+```
+----views.py-----
+from itertools import chain
+
+def course_detail(request,pk):
+	course = get_object_or_404(models.Course, pk=pk)
+	steps = sorted(chain(course.text_set.all(),course.quiz_set.all()),
+		key=lambda step:step.order)
+	return render(request,'courses/course_detail.html',{
+			'course':course,
+			'steps':steps
+		})
+```
+### Model Forms
+Forms made from our models 
+```
+---forms.py----
+from django import forms
+from . import models
+
+class QuizForm(forms.ModelForm):
+	class Meta:
+		model = models.Quiz
+		fields=[
+			'title',
+			'description',
+			'order',
+			'total_questions',
+		]
+		exclude = [
+			'course',
+		]
+
+class TrueFalseQuestionForm(forms.ModelForm):
+	class Meta:
+		model = models.TrueFalseQuestion
+		fields = ['order', 'prompt']
+
+class MultipleChoiceQuestionForm(forms.ModelForm):
+	class Meta:
+		model = models.MultipleChoiceQuestion
+		fields = [
+			'order',
+			'prompt',
+			'shuffle_answers'
+		]
+```
+#### Using a Model Form 
+```
+from . import forms 
+
+@login_required
+def quiz_create(request, course_pk):
+	course = get_object_or_404(models.Course, pk=course_pk)
+	quizForm = forms.QuizForm()
+	
+	if request.method == 'POST':
+		quizForm = forms.QuizForm(request.POST)
+		if form.is_valid():
+			quiz = quizForm.save(commit=False) //Dont put in database just make the model instance 
+			quiz.course = course
+			quiz.save()
+			messages.add_message(request,messages.SUCCESS,"Quiz added!")
+			return HttpResponseRedirect(quiz.get_absolute_url())
+		return render(request , 'courses/quiz_form.html', {'form':form})
+		
+@login_required
+def quiz_edit(request,course_pk,quiz_pk):
+	quiz=get_object_or_404(modes.Quiz, pk=quiz_pk, course_id=course_pk)
+	quizForm = forms.QuizForm(instance=quiz)
+	
+	if request.method == 'POST':
+		quizForm = forms.QuizForm(instace = quiz, data=requiest.POST)
+		if form.is_valid():
+			form.save()
+			message.success(request,"Updated {}".format(form.cleaned_data['title']))
+			return HttpResponseReditect(quiz.get_absolute_url())
+		return render(request,'courses/quiz_form.html', {'form':form, 'course':quiz.course}
 ```
 # Meet Peewee, Our ORM( python databases topic
 ```
