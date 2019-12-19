@@ -1268,7 +1268,49 @@ def answer_form(request, question_pk, answer_pk=None):
 AnswerFormSet = forms.modelformset_factory(
 	models.Answer,
 	form=AnswerForm,
-	
+)
+```
+#### Inline Model Formset
+```
+---.html----
+{{ form.as_p }}
+{{ formset.management_form }}
+<table role="grid" class="stack hover" style="width: 100%">
+	<thead>
+		<tr>
+			<th scope="col" class="text-center" style="width 10%">Order</th>
+			<th scope="col" class="text-center">Text</th>
+			<th scope="col" class="text-center" style="width: 10%">Correct</th>
+			<th scope="col" class="text-center" style="width: 10%">Delete?</th>
+		</tr>
+	</thead>
+	<tbody class="order">
+		{% for form in formset %}
+			<tr class="answer-form {% if form.instance.pk %} item {% else %} new {% endif %}">
+				<td>{{ form.id }} {{ form.order }}</td>
+				<td>{{ form.text }}</td>
+				<td class="text-center">{{ form.correct }}</td>
+				{% if form.instance.pk %}
+					<td class="text-center">{{ form.DELETE }}</td>
+				{% else %}
+					<td class="text-center"></td>
+				{% endif %}
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+--------views.py---------
+AnswerInlineFormSet = forms.inlineformset_factory(
+	models.Question,
+	models.Answer,
+	extra=0,
+	fields=('order','text','correct'),
+	formset=AnswerFormSet,
+	min_num=1,
 )
 ```
 
