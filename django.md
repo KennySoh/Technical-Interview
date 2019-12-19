@@ -1299,15 +1299,12 @@ AnswerFormSet = forms.modelformset_factory(
 		{% endfor %}
 	</tbody>
 </table>
-			</tr>
-		{% endfor %}
-	</tbody>
-</table>
+			
 --------views.py---------
 AnswerInlineFormSet = forms.inlineformset_factory(
 	models.Question,
 	models.Answer,
-	extra=0,
+	extra=2,
 	fields=('order','text','correct'),
 	formset=AnswerFormSet,
 	min_num=1,
