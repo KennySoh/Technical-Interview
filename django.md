@@ -1217,6 +1217,36 @@ def quiz_edit(request,course_pk,quiz_pk):
 			return HttpResponseReditect(quiz.get_absolute_url())
 		return render(request,'courses/quiz_form.html', {'form':form, 'course':quiz.course}
 ```
+### Formsets
+```
+-----views.py-----
+def answer_form(request, question_pk, answer_pk=None):
+	question = get_object_or_404(models.Question, pk=question_pk)
+	formset = forms.AnswerFormSet(queryset=question.answer_set.all())
+	
+	if request.method == 'POST':
+		formset= forms.ANswerFormSet(request.POST, queryset=question.answer_set.all())
+		
+		if formset.is_valid():
+			answers = formset.save(commit=False)
+			
+			for answer in answers:
+				answer.question = question
+				answer.save()
+			messages.success(request, "Added answers")
+			return HttpResponseRedirect(question.quiz.get_absolute_url())
+	return render(request, 'courses/answer_form.html', {
+		'formset' : formset,
+		'question':question
+	})
+
+AnswerFormSet = forms.modelformset_factory(
+	models.Answer,
+	form=AnswerForm,
+	
+)
+```
+
 # Meet Peewee, Our ORM( python databases topic
 ```
 pip install peewee
