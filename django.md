@@ -1031,9 +1031,9 @@ def suggestion_view(request):
 ***
 - We can validate the form as whole. Use this if we need to validate two or more field in relaiton to each other. Like making sure somone gives us either a phone number Or Email or both
 - We can validate individual fiels with custom cleaning methods.
-- We can use Django's built-in validators or create our own. Validators are functions that take a vlaue and return a specific error if the value is wrong. 
-*** . 
-
+- We can use Django's built-in validators or create our own. Validators are functions that take a value and return a specific error if the value is wrong.  
+***   
+  
 ##### Part1: Custom cleaning validator 
 - Preventing spiders bots,  
 Provide a hidden input , called a honey pot. If filled should be a bot?   
@@ -1053,6 +1053,8 @@ class SuggestionForm(forms.Form):
 ```
 ##### Part2: Django built-in validator
 ```
+from django.core import validators
+
 class SuggestionForm(forms.Form):
   name= forms.CharField()
   email = forms.EmailField()
@@ -1065,6 +1067,8 @@ class SuggestionForm(forms.Form):
 ```
 ##### Part3: Django Custom validator
 ```
+from django.core import validators
+
 def must_be_empty(value):
   if value:
     raise forms.ValidationError('is not empty')
@@ -1076,7 +1080,7 @@ class SuggestionForm(forms.Form):
   honeypot = forms.CharField(required=False, 
                     widget = forms.HiddenInput,
                     label="Leave empty",
-                    validators=[validators.must_be_empty] .    // custom validator here
+                    validators=[must_be_empty] .    // custom validator here
                    )
 ```
 
