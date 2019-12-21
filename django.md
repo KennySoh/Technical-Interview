@@ -939,7 +939,8 @@ def article_detail(request, pk):
 
 ## Template Inheritance
 Template tags . 
-- end block tag . 
+### Recap 
+#### end block tag . 
 ```
 ---base.html-----
 <h1>{% block title %} {% endblock %}</h1>
@@ -954,11 +955,10 @@ Template tags .
 {% block title %} Well hello there!{% endblock title %}
 {% block content %} <h1> Welcome ! </h1> {% endblock content %}
 ```
-- url tag . 
+#### url tag . 
 ```
 --- actual.html----
-<a href="{% url 'views.hello_world' %}"> Hello World Page </a>
-<a href="{% url 'app_name:home_index %}"> List Page</a>
+<a href="{% url 'app_name:home_index %}"> List Page</a>		  #Parsing the name path
 ```
 ```
 --- urls.py-----
@@ -966,9 +966,15 @@ urlpatterns = patterns('',
     url(r'^home$','get_home_index' ，name="home_index"),
 )
 ```
-- static tag.
-- django filter
-
+#### static tag.
+```
+{% load static from staticfiles %}
+<link rel="stylesheet" href="{% static 'css/layout.css' %}"> #Look in static folder...(could be inside app)
+```
+####  django filter
+```
+<p> I love <br>
+```
 ## Django Form 
 ### Creating form
 ```
