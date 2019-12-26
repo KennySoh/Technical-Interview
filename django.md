@@ -2027,3 +2027,16 @@ def index(request):
 ----.html----
 {{ form }}
 ```
+# Admin.py registering custom admin display and editforms 
+https://stackoverflow.com/questions/5947843/django-how-does-manytomanyfield-with-through-appear-in-admin
+
+```
+class TeachSubjectInline(admin.TabularInline):
+    model = TeachSubject
+    extra = 2 # how many rows to show
+
+class SchoolClassAdmin(admin.ModelAdmin):
+    inlines = (TeachSubjectInline,)
+
+admin.site.register(SchoolClass, SchoolClassAdmin)
+```
