@@ -514,7 +514,9 @@ Json Returns
    }
 ]
 ```
-Option 2 . **(BEST Option)**
+Option 2 . **(When creating need to include Author...not ideal)**
+Requires author when creating Article....
+Result in constraint error when author sets as "read_only=true"
 ```
 Class JournalistSerializer(serializers.ModelSerializer):
   class Meta:
@@ -550,4 +552,60 @@ Json Returns
      }
    }
 ]
+```  
+Option 3- Most ideal
 ```
+---serializer.py nested serializers---
+Class JournalistSerializer(serializers.ModelSerializer):
+  articles = ArticleSerailizer(many=True, read_only=True)
+  
+  class Meta:
+    model = Journalist 
+    fields = "__all__"
+ 
+class ArticleSerializer(serializers.ModelSerializer):
+
+  time_since_publication = serializers.SerializerMethodField()
+```
+```
+class JournalistListCreateAPIView(APIView):
+  def get(self.request):
+    journalists = Journalist.objects.all()
+    serializer = JournalistSerializer(journalists, many =True)
+    return Response(serializer.data)
+    
+  def post(self,request):
+    serializer = JournalistSerializer(data=request.data)
+    if serialzier.is_valid():
+      serializer.save()
+      return Response(serializer.data, status = status.HTTP_201_CREATED)
+    return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)  
+```
+```
+---url.py---
+path("journalists/",
+    JournalistListCreateAPIView.as_view(),
+    name="journalist-list")
+```
+Json Returns
+```
+/api/journalists/
+[
+  {
+    ...,
+    "articles":[
+      {
+          "time_since_publicaiton":"16 hours, 54 minutes",
+          "first_name":"John",
+          "last_name":"Titor",
+       },
+       {
+          "time_since_publicaiton":"16 hours, 54 minutes",
+          "first_name":"John",
+          "last_name":"Titor",
+       }
+     ],
+     "first_name":"john"
+  }
+]
+```  
