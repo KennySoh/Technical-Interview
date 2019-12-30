@@ -165,9 +165,27 @@ class ArticleSerializer(serializers.Serializer):
     instance.description=validated_data.get('description',instance.description)
     instance.body = validated_data.get('body',instance.body)
     instance.location=validated_data.get('location',instance.location)
-    instance.publication_data=validated_data.get('publication_data',instance.publication_date)
+    instance.publication_date=validated_data.get('publication_date',instance.publication_date)
     instance.active=validated_data.get('active',instance.active)
     instance.save()
     return instance
-  
+```
+```
+python manage.py shell
+>>> from news.models import Article
+>>> from news.api.serializers import ArticleSerializer
+>>> article_instance = Article.objects.first()
+>>> serializer = ArticleSerializer(article_instance)
+>>> serializer
+ArticleSerializer(<Article: John Doe Happy Birthday ISS>):
+  id= IntegerField(read_only =true)
+  ....
+>>> serializer.data       #This returns python native datatype.A Dictionary 
+{'id':1,'author':'JohnDoe','publication_date':'2019-02-21','created_at':'2019-02-21T15:10:59.873736z','updated_at':'2019-02-21T15:10:59.874787z'...}
+>>> from rest_framework.renderers import JSONRenderer
+>>> json=JSONRenderer().render(serializer.data)  #Change dict into Json
+>>> json
+b'{"id:1,"author":"John Doe","title":"Happy Birthday ISSL200"...}
+
+
 ```
