@@ -72,3 +72,41 @@ urlpatterns = [
 <img src="{{ object.photo.url }}" alt="product photo">
 ```
 ## Your First Django api part2
+***
+Setup 2 endpoints for our API
+1) will allow users to retrieve information about a specific product instance
+2) will allow users to retrieve a list of all the avaliable products
+***
+```
+----views.py-----
+def product_list(request):
+  products = Product.objects.all()
+  data = {"products":list(products.values("pk","name"))}
+  response = JsonResponse(data)
+  return response
+  
+def product_detail(request,pk):
+  try:
+    product=Product.objects.get(pk=pk)
+    data={"product:"{
+    "name":product.name,
+    "manufacturer":product.manufacturer.name,
+    "description":product.description,
+    "photo":product.photo.url,
+    }}
+  except Product.DoesNotExist:
+    response= JsonResponse({
+      "error":{
+        "code":404,
+        "message":"product not found!"
+    }},
+    status=404)
+  return response
+```
+```
+---- urls.py ----
+path("api/products/",views.product_list,name="product-list"),
+path("api/products/<int:pk>/",product_detail,name="product-detail")
+```
+--- Json Response, Not the best way ... we only get first_bike.jpg doesnt give us image.url or manufacturer name--- 
+
