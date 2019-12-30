@@ -110,3 +110,13 @@ path("api/products/<int:pk>/",product_detail,name="product-detail")
 ```
 --- Json Response, Not the best way ... we only get first_bike.jpg doesnt give us image.url or manufacturer name--- 
 
+# DRF Level One 
+***
+- How to use DRF to create REST APIs
+- Understand the concept of serialization and deserialization
+- How to use the Serializer and ModelSerializer classes
+- How to create Function/Class Based API Views
+- WHat the Browsable API is and how to use it
+- Define Validation criteria for user input
+- How to properly represent nested relationships between entities with DRF
+***
