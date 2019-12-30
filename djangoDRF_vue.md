@@ -459,4 +459,95 @@ class ArticleSerializer(serializers.ModelSerializer):
        raise serializers.ValidationError("The title has to be at least 60 characters long")
     return value
 ```
-# Nested Relationships
+# Nested Relationships in our Serializer Classes
+how to define **Nested Relationships** in our Serializer Classes!  
+```
+---models.py-----
+class Journalist(models.Model):
+  first_name=models.CharField(max_length=60)
+  last_name=models.CharField(max_length=60)
+  biography=models.CharField(max_length=60)
+
+  def __str__(self):
+  return f"{ self.first_name }"
+
+class Article(models.Model):
+  author = models.ForeignKey(Journalist, on_delete=models.CASCADE, related_name="articles")
+  title = models.CharField(max_length=120)
+  description = models.CharField
+```
+Json Returns
+```
+/api/articles/
+[
+  {
+    ...,
+    "author":1  #primary key for foreign key
+  },
+  {
+    ...,
+    "author":2 
+  }
+]
+```
+## Showing name of author(foreignkey) instead of primary key
+Option1 . 
+```
+class ArticleSerializer(serializers.ModelSerializer):
+
+  time_since_publication = serializers.SerializerMethodField()
+  author = serializers.StringRelatedField() # Include this
+  ...
+```
+Json Returns
+```
+/api/articles/
+[
+  {
+    ...,
+    "author":"John",
+  },
+  {
+    ...,
+    
+    "author":"John",
+   }
+]
+```
+Option 2 . **(BEST Option)**
+```
+Class JournalistSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Journalist 
+    fields = "__all__"
+    
+
+class ArticleSerializer(serializers.ModelSerializer):
+
+  time_since_publication = serializers.SerializerMethodField()
+  author = JournalistSerializer()
+  ...
+```
+Json Returns
+```
+/api/articles/
+[
+  {
+    ...,
+    "author":{
+        "id":1,
+        "first_name":"John",
+        "last_name":"Titor",
+     }
+  },
+  {
+    ...,
+    
+    "author":{
+        "id":1,
+        "first_name":"John",
+        "last_name":"Titor",
+     }
+   }
+]
+```
