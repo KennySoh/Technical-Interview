@@ -120,3 +120,54 @@ path("api/products/<int:pk>/",product_detail,name="product-detail")
 - Define Validation criteria for user input
 - How to properly represent nested relationships between entities with DRF
 ***
+
+its a package to include in existing django
+## Downloading drf
+```
+pip install django
+pip install djangorestframework
+django-admin startproject newsapi
+```
+```
+INSTALLED_APPS =[
+  ...
+  'rest_framework',
+]
+```
+## Serializers
+Serializers allow complex data such as querysets and model instances to be converted to native Python data types that can be rendered into useful formats like JSON: this process is known as Serialization of Data. 
+
+Serializer also provide deserailization. Also talk about Parsers and Renderers
+```
+---create a serializer.py----
+from rest_framework import serializers
+from new.models import Article
+
+class ArticleSerializer(serializers.Serializer):
+  id = serializers.IntegerField(read_only = True)
+  author = serializers.CharField()
+  title = serializers.CharField()
+  description = serializers.CharField()
+  body = serializers.CharField()
+  location = serializers.CharField()
+  publication_data = serializers.DateField()
+  active = serializers.BooleanField()
+  created_at = serializers.DateTimeField(read_only=True)
+  updated_at = serializers.DateTimeField(read_only=True) #read_only because django controls this
+  
+  def create(self,validated_data):
+    print(validated_data)
+    return Article.objects.create(**validated_data)
+  
+  def update(self,instance,validated_data):
+    instance.author= validated_data.get('author', instance.author)
+    instance.title= validated_data.get('title',instance.title)
+    instance.description=validated_data.get('description',instance.description)
+    instance.body = validated_data.get('body',instance.body)
+    instance.location=validated_data.get('location',instance.location)
+    instance.publication_data=validated_data.get('publication_data',instance.publication_date)
+    instance.active=validated_data.get('active',instance.active)
+    instance.save()
+    return instance
+  
+```
