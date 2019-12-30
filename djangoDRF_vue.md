@@ -342,6 +342,10 @@ We are going to see how to specify custom validation checks for our models and s
   
 ### Built in Validators
 https://www.django-rest-framework.org/api-guide/validators/#uniquevalidator
+
+### Object Level Validation vs Field Level Validation
+- Object Level -> check on multiple fields 
+- Field Level Validation-> check on single fields 
 ### Custom Validators- Object Level Validation
 
 
