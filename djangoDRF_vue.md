@@ -273,3 +273,5 @@ from news.api.view import (article_detail_api_view)
 path("articles/<int:pk>/",article_detail_api_view, name="article-detail")
 
 ```
+
+## APIView Class
