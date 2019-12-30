@@ -330,3 +330,18 @@ urlpatterns=[
   path("articles/<int:pk>/",ArticleListCreateAPIView,as_view(), name="article-detail")
 
 ```
+## Serializers Validation
+if any error occur the, **.error** property will contain a dictionary with the corresponding error messages:  
+```
+serializer = ContactSerializer(data={'body':'some text', 'email':'name#gmail.com'})
+serializer.is_valid() # Returns False
+serializer.errors     # Returns {'email':[u'Enter a valid e-mail address.']}
+```
+  
+We are going to see how to specify custom validation checks for our models and serializers using both **Field-Level Validation** and **Object-Level Validation** . 
+  
+### Built in Validators
+https://www.django-rest-framework.org/api-guide/validators/#uniquevalidator
+### Custom Validators- Object Level Validation
+
+
