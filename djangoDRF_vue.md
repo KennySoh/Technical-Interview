@@ -139,7 +139,7 @@ Serializers allow complex data such as querysets and model instances to be conve
 
 Serializer also provide deserailization. Also talk about Parsers and Renderers
 ```
----create a serializer.py----
+---create a serializer.py inside api folder----
 from rest_framework import serializers
 from new.models import Article
 
@@ -170,7 +170,10 @@ class ArticleSerializer(serializers.Serializer):
     instance.save()
     return instance
 ```
+
+
 ```
+------------Python Shell , using serializers ----------
 python manage.py shell
 >>> from news.models import Article
 >>> from news.api.serializers import ArticleSerializer
@@ -191,7 +194,38 @@ b'{"id:1,"author":"John Doe","title":"Happy Birthday ISSL200"...}
 >>> import io
 >>> from rest_framework.parsers import JSONParser
 >>> stream = io.BytesIO(json)
-
-
-
+>>> data = JSONParser().parse(stream)
+>>> data          # Python dictionary
+{'id':1,'author':'John Doe' ....} 
+>>> serializer = ArticleSerializer(data=data)
+>>> serializer.is_valid()     #make sure it valid
+>>> serializer.validated_data 
+>>> serializer.save()         #Creates another query
 ```
+## @api_view Decorator Part One
+***
+Django REST Framework provides two wrappers we can use to write API Views:
+- The @api_view decorator, for working with Function Based API Views
+- The APIView class, for working with Class Based API Views
+***
+We will also look at Browsable API .   
+  
+***
+1) create-api folder 
+2) Create views.py
+```
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+from news.models import Article
+from news.api.serializers import ArticleSerializer
+
+@api_view(["GET"])
+def article_list_create_api_view(request):
+  if request.method == "GET":
+    articles = Article.objects.filter(active=True)
+    serializer = ArticleSerializer(articles, many=True) // "many=True" is when u are sending serializer a query Set
+    return Response(serializer.data)
+```
+***
