@@ -208,7 +208,11 @@ Django REST Framework provides two wrappers we can use to write API Views:
 - The @api_view decorator, for working with Function Based API Views
 - The APIView class, for working with Class Based API Views
 ***
-We will also look at Browsable API .   
+These wrappers provide a few bits of functionality such as making sure you receive Request instances in your view, and adding context to Response objects so that content negotiation can be performed.  
+  
+The wrappers also provide behaviour such as returning 405 Method Not Allowed responses when appropriate, and handling any ParseError exception that occurs when accessing request.data with malformed input . 
+  
+We will also look at **Browsable API** .   
   
 ***
 1) create-api folder 
