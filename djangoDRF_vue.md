@@ -609,3 +609,34 @@ Json Returns
   }
 ]
 ```  
+Option 4 - Hyperlink sending url for articles\
+```
+---serializer.py nested serializers---
+Class JournalistSerializer(serializers.ModelSerializer):
+  articles =serializers.HyperLinkedRelatedField(many=True,read_only=True,view_name="article-detail")
+  
+  class Meta:
+    model = Journalist
+    fields = "__all__"
+```
+```
+class JournalistListCreateAPIView(APIView):
+  def get(self.request):
+    journalists = Journalist.objects.all()
+    serializer = JournalistSerializer(journalists, many =True, context = {'request':request})
+    return Response(serializer.data)
+```
+Json Returns
+```
+/api/journalists/
+[
+  {
+    ...,
+    "articles":[
+      "http://127.0.0.1:8000/articles/1/",
+      "http://127.0.0.1:8000/articles/2/"
+     ],
+     "first_name":"john"
+  }
+]
+```  
