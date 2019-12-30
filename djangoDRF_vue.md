@@ -387,3 +387,76 @@ HTTP 400 Bad Request
 }
 ```
 # Model Serializer Class
+### Basic Model Serializer . 
+```
+from rest_framework import serializers
+from news.models import Article
+
+class ArticleSerializer(serializers.ModelSerializer):
+
+  class Meta:
+    model = Article
+    fields = ("title","description", "body")
+```  
+  
+### Model Serializer with additional field time since publication   
+```
+from datetime import datetime
+from django.utils.timesince import timesince
+from rest_framework import serializers
+from news.models import Article
+ 
+class ArticleSerializer(serializers.ModelSerializer):
+
+  time_since_publication = serializers.SerializerMethodField()
+
+  class Meta:
+    model = Article
+    fields = ("title","description", "body")
+
+  def get_time_since_publication(self,object):
+    publication_date = object.publication_date
+    now = datetime.now()
+    time_delta = timesince(publication_date,now)
+    return time_delta
+```
+```
+-----Python Shell------
+python manage.py shell
+>>> from news.api.serializers import ArticleSerializer
+>>> serializer = ArticleSerializer()
+>>> print(repr(serializer))
+ArticleSerializer():
+  time_since_publication = SerializerMethodField() . //Includes this additional field
+  author = CharField(max_length =50)
+  ...
+```
+### Model Serializer with validation errors
+Same as Custom validators. 
+```
+class ArticleSerializer(serializers.ModelSerializer):
+
+  time_since_publication = serializers.SerializerMethodField()
+
+  class Meta:
+    model = Article
+    fields = ("title","description", "body")
+
+  def get_time_since_publication(self,object):
+    publication_date = object.publication_date
+    now = datetime.now()
+    time_delta = timesince(publication_date,now)
+    return time_delta
+    
+  def validate(self,data): #Object-Level Validators
+    """ Check that description and title are different """
+    if data["title"] == data["description"]
+       raise serializers.ValidationError("Title and Description must be different")
+    return data
+    
+  def validate_title(self,value):  #Field-Level Validators 
+    if len(value)<60:
+       raise serializers.ValidationError("The title has to be at least 60 characters long")
+    return value
+```
+# Nested Relationships
