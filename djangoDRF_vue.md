@@ -346,6 +346,43 @@ https://www.django-rest-framework.org/api-guide/validators/#uniquevalidator
 ### Object Level Validation vs Field Level Validation
 - Object Level -> check on multiple fields 
 - Field Level Validation-> check on single fields 
+
 ### Custom Validators- Object Level Validation
+```
+----serializer.py----
 
+  def validate(self,data):
+    """ Check that description and title are different """
+    if data["title"] == data["description"]
+       raise serializers.ValidationError("Title and Description must be different")
+    return data
+```
 
+Result of error return
+```
+HTTP 400 Bad Request
+
+{
+ "non_field_errors":[
+    "Title and Description must be different from one another!"
+  ]
+}
+```
+### Custom Validators- Field Level Validation
+```
+----serializer.py----
+
+  def validate_title(self,value):
+    if len(value)<60:
+       raise serializers.ValidationError("The title has to be at least 60 characters long")
+    return value
+```
+Result of error return
+```
+HTTP 400 Bad Request
+{
+ "title":[
+    "The title has to be at least 60 chars long!"
+  ]
+}
+```
