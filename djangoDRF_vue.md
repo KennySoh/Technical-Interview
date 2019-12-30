@@ -187,5 +187,11 @@ ArticleSerializer(<Article: John Doe Happy Birthday ISS>):
 >>> json
 b'{"id:1,"author":"John Doe","title":"Happy Birthday ISSL200"...}
 
+-----------deserialization------------------
+>>> import io
+>>> from rest_framework.parsers import JSONParser
+>>> stream = io.BytesIO(json)
+
+
 
 ```
