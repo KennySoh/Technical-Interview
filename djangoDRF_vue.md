@@ -386,3 +386,4 @@ HTTP 400 Bad Request
   ]
 }
 ```
+# Model Serializer Class
