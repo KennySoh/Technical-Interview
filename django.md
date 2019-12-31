@@ -58,6 +58,10 @@ source venvName/bin/activate
 
 //Deactivate
 deactivate
+
+// Setting up requirements.txt for current environment
+pip freeze > requirements.txt
+
 ```
 ## Setup and Existing Django Project
 ```
