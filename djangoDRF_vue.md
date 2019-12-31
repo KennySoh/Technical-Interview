@@ -139,7 +139,7 @@ Serializers allow complex data such as querysets and model instances to be conve
 
 Serializer also provide deserailization. Also talk about Parsers and Renderers
 ```
----create a serializer.py inside api folder----
+---create a serializers.py inside api folder----
 from rest_framework import serializers
 from new.models import Article
 
