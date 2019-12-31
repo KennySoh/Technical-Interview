@@ -648,3 +648,54 @@ Json Returns
 - Secure your Web APIs with a Permissions System
 ***
 
+## Ebook Example Project
+```
+-------Models.py---------
+from django.db import models
+from django.core.valudators import MinValueValidator, MaxValueValidator
+
+class Ebook(models.Model):
+  title = models.CharField(max_length=140)
+  author = models.CharField(max_length=60)
+  description= models.TextField()
+  publication_date = models.DateField()
+  
+class Review(models.Model):
+  created_at = models.DateTimeField(auto_now_add=True)
+  updated_at = models.DateTimeField(auto_now=True)
+  review_author = models.CharField(max_length=8 , blank=True, null=True)
+  review = models.TextField(blank=True, null=True)
+  rating = models.PositiveIntegerField(validators=[MinValueValidator(1),MaxValueValidator(5)])
+  ebook = models.ForeignKey(Ebook, on_delete = models.CASCADE, related_name="reviews")
+  
+  def __str__(self):
+    return str(self.rating)
+```
+```
+-------add serializers.py in api folder---------
+from rest_framework import serializers
+from ebooks.models import Ebook, Review
+
+class ReviewSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Review
+    fields="__all__"
+    
+class EbookSerializer(serializers.ModelSerializer):
+  reviews = ReviewSerializer(many=True, read_only=True)
+  
+  class Meta:
+    model = Ebook
+    fields="__all__"
+    
+```
+## GenericAPIView & Mixins
+***
+- One of the key benefits of using the Generic Views in DRF is offers alot of ready-to-use code.
+- CRUD operation in a model-backed API will be implemented in the same way in most cases.   
+- DRF has a class called GenericAPIView that extends the APIView class.  
+  
+- GenericAPIView class is often used with Mixins
+  - Mixin Classes provide action methods such as .list() or create() 
+  rather then defining handler methods such as .get() or .post()
+***
