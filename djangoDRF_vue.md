@@ -640,3 +640,11 @@ Json Returns
   }
 ]
 ```  
+# DRF Level Two
+***
+- Learn to use the Generic APIView and Mixins Classes
+- Learn to use and customize Generic Class Based Views
+- Group the results provided by your APIs with a pagination system 
+- Secure your Web APIs with a Permissions System
+***
+
