@@ -694,8 +694,104 @@ class EbookSerializer(serializers.ModelSerializer):
 - One of the key benefits of using the Generic Views in DRF is offers alot of ready-to-use code.
 - CRUD operation in a model-backed API will be implemented in the same way in most cases.   
 - DRF has a class called GenericAPIView that extends the APIView class.  
-  
+    
 - GenericAPIView class is often used with Mixins
-  - Mixin Classes provide action methods such as .list() or create() 
-  rather then defining handler methods such as .get() or .post()
+  - Mixin Classes provide action methods such as .list() or create() rather then defining handler methods such as .get() or .post()
 ***
+https://www.django-rest-framework.org/api-guide/generic-views/#genericapiview . 
+```
+Basic Attributes :
+queryset
+serializer_class
+
+Mixin Classes
+```
+```
+----- views.py in api-folder-------
+from rest_framework import generics
+from rest_framework import mixins
+
+from ebooks.models import Ebook
+from ebooks.api.serializers import EbookSerializer
+
+class EbookListCreateAPIView(mixins.ListModelMixin,
+                             mixins.CreateModelMixin,
+                             generics.GenericAPIView):
+                             
+    queryset = Ebook.objects.all()
+    serializer_class = EbookSerializer
+    
+    def get(self,request, *args, **kwargs):
+      return self.list(request, *args, **kwargs)
+    
+    def post(self,request,*args, **kwargs):
+      return self.create(request, *args, **kwargs)
+```
+```
+----- urls.py --------
+from django.urls import path
+from ebooks.api.views import EbookListCreateAPIView
+
+urlpatterns = [
+  path("ebooks/",EbookListCreateAPIView.as_view(), name ="ebook-list")
+]
+```
+## Concrete View Classes (one of Generic classes thats most practical)
+```
+class EbookListCreateAPIView(generics.ListCreateAPIView):
+  queryset = Ebook.objects.all()
+  serializer_class = EbookSerializer
+  
+class EbookDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+  queryset = Ebook.objects.all()
+  serializer_class = EbookSerializer
+  
+```
+```
+----- urls.py --------
+from django.urls import path
+from ebooks.api.views import EbookListCreateAPIView, EbookDetailAPIView
+
+urlpatterns = [
+  path("ebooks/",EbookListCreateAPIView.as_view(), name ="ebook-list")
+  path("ebooks/",EbookDetailAPIView.as_view(), name ="ebook-detail")
+]
+```
+Dealing with foreign key relationship
+```
+------views.py-------
+from rest_framework.generics import get_object_or_404
+
+class ReviewCreateAPIView(generics.CreateAPIView):
+  queryset= Review.objects.all()
+  serializer_class = ReviewSerializer
+  
+  def perform_create(self, serializer):
+      ebook_pk = self.kwargs.get("ebook_pk")
+      ebook = get_object_or_404(Ebook, pk=ebook_pk)
+      serializer.save(ebook=ebook)      //changing the specific ebook instance to be saved
+
+class ReviewDetailAPIView(generics.RetriveUpdateDestroyAPIView):
+  queryset= Review.objects.all()
+  serializer_class = ReviewSerializer
+```
+```
+----serializers.py--------
+# Remove the ebook instance from serializer
+class ReviewSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Review
+    exclude = ("ebook",)
+```
+```
+----urls.py-----
+from django.urls import path
+from ebooks.api.views import EbookDetailAPIView, EbookListCreateAPIView, ReviewCreateAPIView, ReviewDetailAPIView
+
+urlpatterns = [
+  path("ebooks/",EbookListCreateAPIView.as_view(), name ="ebook-list"),
+  path("ebooks/<int:pk>",EbookDetailAPIView.as_view(), name ="ebook-detail"),
+  path("ebooks/<int:ebook_pk>/review/",ReviewCreateAPIView.as_view(), name ="ebook-review"),
+  path("reviews/<int: pk>/",ReviewDetailAPIView.as_view(), name ="review-detail")
+]
+```
