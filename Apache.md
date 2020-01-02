@@ -35,6 +35,25 @@ https://unix.stackexchange.com/questions/119358/create-file-in-folder-permission
 ```
 chmod u+w .
 ```
+## Instructions to redeploy
+```
+ssh kenny@11.23.41    # log in with pass
+cd /home/okta/        # cd into your ubuntu
+.bin/activate         # Activate venv
+cd project/           # cd into Project
+git pull              # pull the existing repo
+
+mysql -u -d # loginto my sql
+>>> Drop Database;
+>>> Create Database;
+
+rm - r migrations folder
+
+./ manage.py collectstatic #create staticfolder that is reference in wsgi config folder
+sudo nano .etc.init.d/apache2 restart #restarts apache
+
+Stable Version: Python3.5.2
+```
 # Udacity Full-stack Course
 https://github.com/mikesprague/udacity-nanodegrees#full-stack-web-developer-nanodegree
   
