@@ -861,3 +861,39 @@ class EbookListCreateAPIView(generics.ListCreateAPIView):
 ```
 
 ## The Permissions Systems Part Two
+secure our review instances so taht they can be updated or deleted only by the same users who have created them.   
+  
+In order to do so we will first need to modify our Review model, binding it to Django's User model using a ForeignKey field.  
+```
+----models.py----- #Adding reviews to User-Author
+from django.contrib.auth.models import User
+
+class Review(models.Model):
+  review_author= models.ForeignKey(User, on_delete = models.CASCADE)
+```
+
+```
+----serializers.py---- 
+class ReviewSerializer(serializers.ModelSerializer):
+  review_author = serializers.StringRelatedField(read_only=True)
+  
+  class Meta: 
+    model = Review
+```
+
+```
+----views.py----
+class ReviewCreateAPIView(generics.CreateAPIView):
+  queryset = Review.objects.all()
+  serializer_class = ReviewSerializer
+  permission_classes = [permissions.IsAutheticatedOrReadOnly]
+  
+  def perform_create(self,serializer):
+    review_author = self.request.user
+    
+    review_queryset = Review.objects.filter(review_author=review_author) . # make sure one review <->one ebook
+    if review_queryset.exists():
+      raise ValidationError("You have already reviewed this book!)
+    
+    serializer.save(review_author=review_author)
+```
