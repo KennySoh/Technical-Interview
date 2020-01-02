@@ -914,3 +914,47 @@ class ReviewDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
   permission_classes = [IsReviewAuthorOrReadOnly] // add custom permissions into views
 ```
 ## Pagination System 
+django-rest-framework.org/api-guide/pagination/   
+  
+**Request**  
+```
+GET https://api.example.org/accounts/?page=4
+```
+**Response**   
+```
+HTTP 200 OK
+{
+  "count":1023,
+  "next":"https://api.example.org/accounts/?page=5",
+  "previous":"https://api.example.org/accounts/?page=3",
+  "results":[
+    ...
+  ]
+}
+```
+### Setting pagination globally
+```
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 100
+}
+```
+### Setting pagination per view 
+```
+---create pagination.py in api folder----
+from rest_framework.pagination import PageNumberPagination
+
+class SmallSetPagination(PageNumberPagination):
+  page_size = 3
+```
+```
+--- views.py-----
+from ebooks.api.pagination import SmallSetPagination
+
+class EbookListCreateAPIView(generics.ListCreateAPIView):
+  queryset = Ebook.objects.all().order_by("-id") //order ur queryset to order properly
+  serializer_class = EbookSerializer
+  permission_classes = [IsAdminUserOrReadOnly]
+  pagination_class = SmallSetPagination
+```
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/drf-vue4.png) 
