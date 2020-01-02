@@ -970,6 +970,85 @@ class EbookListCreateAPIView(generics.ListCreateAPIView):
 
 - Bonus: how to extend Django's User Model with a custom Profile Model
 ***
+## UserProfiles API
+***
+- Extend Django basic User model with a second model
+- Store further information about our users such as a user's biography, city and avatar.
+- Each user will then be able to write status messages that will be bind to his profile
+
+- Django Signals, allow certain senders to notify a set of receivers that some action has taken place elsewhere in the framework
+- Automatically create and bind a Profile's Instance to a User Object as soon as new one is created
+***
+### Setup
+```
+------settings.py------
+INSTALLED_APPS=[
+  ...
+  'rest_framework',
+  'profiles'
+]
+
+MEDIA_URL="/media/"
+MEDIA_ROOT="uploads"
+```
+```
+-----urls.py----
+if settins.DEBUG:
+  urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+```
+### Creating the Models
+bind user model to profile model 
+```
+from django.db import models
+form django.contrib.auth.models import User
+
+class Profile(models.Model):
+  user = models.OneToOneField(User, on_delete = models.CASCADE)
+  bio = models.CharField(max_length = 240 , blank = True)
+  city = models.CharField(max_length = 30 , blank = True)
+  avatar = modelsImageField(null=True, blank = True)
+  
+  def __str__(self):
+    return self.user.username
+    
+class ProfileStatus(models.Model):
+  user_profile = models.ForeignKey(Profile, on_delete = models.CASCADE)
+  status_content = models.CharField(max_length = 240)
+  created_at = models.DateTimeField(auto_now_add = True)
+  updated_at = models.DateTimeField(auto_now = True)
+  
+  def __str__(self):
+    return str(self.user_profile)
+```
+## UserProfilesAPI - Project Setup Part Two
+Send a signal everytime a user is saved,   
+a function with decorator receiver will receive the signal  
+- we will know if user has been created or modified
+```
+---- signals.py-----
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from profiles.models import Profile
+
+@receiver(post_save, sender = User)
+def create_profile(sender , instance, created, **kwargs):
+  print("Created: ", created)
+  if created:                               # if user has just been created , create profile instance
+    Profile.objects.create(user=instance)
+  
+```
+CONFIGURATIONS
+```
+----apps.py----
+from django.apps import AppConfig
+
+class ProfileConfig(AppConfig):
+  name='profiles'
+  
+  def ready(self):
+    import profiles.signals
+```
 ## ViewSets & Routers
 ***
 ViewSet classes allow us to combine the logic for a set of related views in a single class : 
