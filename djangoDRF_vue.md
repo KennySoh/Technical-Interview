@@ -796,3 +796,19 @@ urlpatterns = [
 ]
 ```
 ## The Permissions Systems Part One
+https://www.django-rest-framework.org/api-guide/permissions/ . 
+  
+```
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
+
+// If not specificed Defauts to 
+'DEFAULT_PERMISSION_CLASSES': [
+   'rest_framework.permissions.AllowAny',
+]
+```
+
+
