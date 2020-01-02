@@ -897,3 +897,20 @@ class ReviewCreateAPIView(generics.CreateAPIView):
     
     serializer.save(review_author=review_author)
 ```
+### Adding Permission class to allow review author to edit their own review
+```
+----permissions.py------
+class IsReviewAuthorOrReadOnly(permissions.BasePermission):
+  def has_object_[permission(self,request,view,obj):
+    if request.method in permissions.SAFE_METHODS:
+      return True
+      
+    return obj.review_author == request.user
+```
+```
+---views.py----
+class ReviewDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+  ...
+  permission_classes = [IsReviewAuthorOrReadOnly] // add custom permissions into views
+```
+## Pagination System 
