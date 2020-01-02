@@ -819,7 +819,7 @@ REST_FRAMEWORK = {
 When Not Authenticated returns . 
 ![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/drf-vue1.png)   
   
-## Setting permissions per api 
+### Setting permissions per api 
 ```
 ---views.py in api folder---------
 class EbookListCreateAPIView(generics.ListCreateAPIView):
@@ -827,7 +827,7 @@ class EbookListCreateAPIView(generics.ListCreateAPIView):
   serializer_class = EbookSerializer
   permission_classes = [permissions.IsAutheticatedOrReadOnly]
 ```
-## Including auth 
+### Including auth 
 ```
 ---urls.py---
 urlpatterns = [
@@ -836,3 +836,28 @@ urlpatterns = [
 ```
 ![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/drf-vue2.png)   
 ![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/drf-vue3.png)   
+  
+Creating ur own permission class
+```
+--- permission.py in api folder-----
+from rest_framework import permissions
+
+class IsAdminUserOrReadOnly(permissions.IsAdminUser):
+  
+  def has_permission(self,request,view):
+    is_admin = super().has_permission(request,view)
+    return request.method in permissions.SAFE_METHODS or is_admin
+
+```
+Using custom permission class in views.py
+```
+--- views.py in api folder---
+from rest_framework import permissions
+
+class EbookListCreateAPIView(generics.ListCreateAPIView):
+  queryset = Ebook.objects.all()
+  serializer_class = EbookSerializer
+  permission_classes = [permissions.IsAdminUserOrReadOnly]
+```
+
+## The Permissions Systems Part Two
