@@ -970,4 +970,31 @@ class EbookListCreateAPIView(generics.ListCreateAPIView):
 
 - Bonus: how to extend Django's User Model with a custom Profile Model
 ***
-##
+## ViewSets & Routers
+***
+ViewSet classes allow us to combine the logic for a set of related views in a single class : 
+- Get a list of elments from a queryset
+- get the details of a single instance of the same model
+
+- Highest abstraction level
+***
+  
+They are another kind of Class Based View, that does not provide any method handlers such as .get() or .post() but instead provide action methods such as **.list()** and **.create()**.  
+    
+**Commonly used with Router** . 
+  
+```
+----views.py in api folder----
+from rest_framework.viewsets import ReadOnlyModelViewSet
+
+class ProfileViewSet(ReadOnlyModelViewSet):
+  queryset = Profile.objects.all()
+  serializer_class = ProfileSerializer
+  permission_classes = [IsAuthenticated]
+```
+```
+from django.urls import path
+from profiles.api.views import ProfileViewSet
+
+profile_list = Pr
+```
