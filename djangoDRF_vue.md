@@ -958,3 +958,16 @@ class EbookListCreateAPIView(generics.ListCreateAPIView):
   pagination_class = SmallSetPagination
 ```
 ![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/drf-vue4.png) 
+
+# DRF Level Three
+***
+- Knowledge of the main Authentication Methods in DRF
+- Set Up a Registration and Authentication System via REST
+- Familiarity with Django-REST-Auth
+- Knowledge of Viewset and Router Classes
+- Filtering via Django REST Framework
+- Being able to write automated tests with Django and DRF
+
+- Bonus: how to extend Django's User Model with a custom Profile Model
+***
+##
