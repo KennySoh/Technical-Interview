@@ -810,5 +810,7 @@ REST_FRAMEWORK = {
    'rest_framework.permissions.AllowAny',
 ]
 ```
-
-
+  
+When Not Authenticated returns . 
+![Image](https://github.com/KennySoh/Technical-Interview/blob/master/oop/drf-vue1.png)   
+  
