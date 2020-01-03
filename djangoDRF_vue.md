@@ -1253,8 +1253,63 @@ In this lesson you will learn how to use the Django-REST-Auth package in order t
   
 Thanks to these endpoints, clients such as Androis and iOS apps will be able to easily and indepndently communicate with all the services provided by your web app's backend via REST.
 ### Setting authetication globally
+https://www.django-rest-framework.org/api-guide/authentication/
+```
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # 'rest_framework.authentication.BasicAuthentication', #Can comment out for testing
+        'rest_framework.authentication.SessionAuthentication',
+	'rest_framework.authentication.TokenAuthentication
+    ]
+}
+
+INSTALLED_APPS = [
+    ...
+    'rest_framework.authtoken'
+]
 ```
 
+### install django-rest-auth
+Django-rest-auth library provides a set of REST API endpoints for registration, authentication (including social media authentication), password reset, retrieve and update user details, etc. By having these API endpoints, your client apps such as AngularJS, iOS, Android, and others can communicate to your Django backend site independently via REST APIs for user management.
+```
+pip install django-rest-auth
+```
+```
+---settings.py-----
+INSTALLED_APPS = [
+    ...
+    'rest_auth'
+]
+```
+```
+---urls.py---
+urlpatterns=[
+	path("api-auth/",include("rest_framework.urls")),
+	path("api/rest-auth/",include("rest_auth.urls"))
+]
+```
+  
+#### rest-auth.views import LoginView
+***
+- Accept the following POST parameters:username, password
+- Return the REST Framework Token Object's key. 
+***
+Using the end point
+```
+import requests
+
+def client():
+	credentials ={"username":"admin","password":"asdasdasd"}
+	response = request.post("http://127.0.0.1:8000/api/rest-auth/login/",
+				data=credentials)
+	print("Status Code: ", response.status_code)
+	response_data = response.json()
+	print(response_data)
+if __name__=="__main__":
+	client()
+
+-------
+returns  Status Code: 200 {'key':'affe53j20vvbF345j295j3290k1k2kko1ju21'}
 ```
 ## ViewSets & Routers
 ***
