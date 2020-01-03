@@ -1248,7 +1248,7 @@ One of the main differences with other token-based standards is that because of 
   
 JSON Web tokens can be easily used in a DRF powered REST API using the django-rest-framework-simplejwt package.  
   
-## Django-REST-Auth
+## Django-REST-Auth Part1
 In this lesson you will learn how to use the Django-REST-Auth package in order to expose registration and authentication endpoints for your REST APIs!  
   
 Thanks to these endpoints, clients such as Androis and iOS apps will be able to easily and indepndently communicate with all the services provided by your web app's backend via REST.
@@ -1342,6 +1342,13 @@ if __name__=="__main__":
 	client()
 
 ```
+## Django-REST-Auth Part2 
+Setup registrations end point so users can create new account via rest
+
+```
+pip install
+```
+
 ## ViewSets & Routers
 ***
 ViewSet classes allow us to combine the logic for a set of related views in a single class : 
