@@ -1311,6 +1311,37 @@ if __name__=="__main__":
 -------
 returns  Status Code: 200 {'key':'affe53j20vvbF345j295j3290k1k2kko1ju21'}
 ```
+### Is Authenticated permissions for Views
+```
+-----views.py----
+from rest_framework import generics
+from rest_framework.permissions import IsAuthenticated
+from profiles.models import Profile
+from profiles.api.serializers import ProfileSerializer
+
+class ProfileList(generics.ListAPIView):
+	queryset = Profile.objects.all()
+	serializer_class = ProfileSerializer
+	permission_classes = [IsAuthenticated]
+```
+
+Including Token in request
+```
+import requests
+
+def client():
+	token_h = "Token affe53j20vvbF345j295j3290k1k2kko1ju21"
+	headers = {"Authorization":token_h}
+	
+	response = request.get("http://127.0.0.1:8000/api/api/profiles/",
+				headers=headers)
+	print("Status Code: ", response.status_code)
+	response_data = response.json()
+	print(response_data)
+if __name__=="__main__":
+	client()
+
+```
 ## ViewSets & Routers
 ***
 ViewSet classes allow us to combine the logic for a set of related views in a single class : 
