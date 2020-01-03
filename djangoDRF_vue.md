@@ -640,6 +640,124 @@ Json Returns
   }
 ]
 ```  
+## Notes: Class Based Views. ->Bulk Crud, Single Crud
+***
+- api/ebook/    (Get Many,Post Many, Put Many, Delete Many , Post Single)
+- api/ebook/<int:pk>   (Get Many,Post Many, Put Many, Delete Many , Post Single)
+***
+```
+---- Class Based Views, views.py in api folder----
+class EbookListAPIView(APIView):
+
+  def get(self, request):
+    ebook= Ebook.objects.all()
+    serializer = EbookSerializer(ebook,many=True)
+    return Response(serializer.data)
+
+  def post(self,request):
+    if type(request.data) is list:
+        serializer = EbookSerializer(data = request.data,many=True)   # Create Multiple
+    else:
+        serializer = EbookSerializer(data = request.data)             # Create Single
+    if serializer.is_valid():
+        library=Library.objects.first() # Foreign Key
+        serializer.save(library=library)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
+
+  def put(self, request):
+    ebook= Ebook.objects.all()
+    serializer = EbookUpdateSerializer(data = request.data,instance=ebook,many=True) #To do: Make sure ids are valid
+    if serializer.is_valid():
+      serializer.save()
+      return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
+  
+  def delete(self,request):
+    try:
+      ids=(request.data["ids"])
+      if type(ids)!=list:
+        raise TypeError("ids must be a list")
+    except KeyError as e:
+      errors=[{str(e): ["This field is required."]}]
+      return Response(errors,status.HTTP_400_BAD_REQUEST)
+    except TypeError as e:
+      errors=[str(e)]
+      return Response(errors,status.HTTP_400_BAD_REQUEST)
+    except Exception as e:
+      errors=["Something Went Wrong"]
+      return Response(errors,status.HTTP_400_BAD_REQUEST)    
+    ids_not_found=[]
+    ids_deleted=[]
+    for id in ids:
+      try:
+        ebook=Ebook.objects.get(pk=id)
+        ebook.delete()
+        ids_deleted.append(id)
+      except Exception as e:
+        ids_not_found.append(id)
+    res=[{"ids_not_found": ids_not_found,"ids_deleted": ids_deleted}]
+    return Response(res,status = status.HTTP_204_NO_CONTENT)
+
+class EbookDetailAPIView(APIView):
+  def get_object(self,pk):
+    ebook = get_object_or_404(Ebook, pk=pk)
+    return ebook
+   
+  def get(self,request,pk):
+    ebook = self.get_object(pk)
+    serializer = EbookSerializer(ebook)
+    return Response(serializer.data)
+   
+  def put(self, request, pk):
+    ebook =self.get_object(pk)
+    serializer = EbookSerializer(ebook, data = request.data)
+    if serializer.is_valid():
+      serializer.save()
+      return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serilizer.errors, status.HTTP_400_BAD_REQUEST)
+
+  def delete(self, request, pk):       #TODO: Handle errors
+    ebook=Ebook.objects.get(pk=pk)
+    ebook.delete()
+    return Response(status = status.HTTP_204_NO_CONTENT)
+```
+```
+---- Serializers, serializers.py in api folder----
+class EbookUpdateListSerializer(serializers.ListSerializer):
+	def create(self, validated_data):
+		ebook = [Ebook(**item) for item in validated_data]
+		return Ebook.objects.bulk_create(ebook)
+	
+	def update(self, instance, validated_data):
+        # Maps for id->instance and id->data item.
+		eb_mapping = {eb.id: eb for eb in instance}
+		data_mapping = {item['id']: item for item in validated_data}
+
+		# Perform creations and updates.
+		ret = []
+		for eb_id, data in data_mapping.items():
+			eb = eb_mapping.get(eb_id, None)
+			if eb is None:
+				ret.append(self.child.create(data))
+			else:
+				ret.append(self.child.update(eb, data))
+		return ret
+
+class EbookUpdateSerializer(serializers.ModelSerializer):
+	id = serializers.IntegerField()
+
+	class Meta:
+		list_serializer_class = EbookUpdateListSerializer
+		model = Ebook
+		fields = ('id','name','description')
+
+class EbookSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Ebook
+		fields = ('id','title','description')
+```
 # DRF Level Two
 ***
 - Learn to use the Generic APIView and Mixins Classes
