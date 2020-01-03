@@ -1034,7 +1034,7 @@ from profiles.models import Profile
 @receiver(post_save, sender = User)
 def create_profile(sender , instance, created, **kwargs):
   print("Created: ", created)
-  if created:                               # if user has just been created , create profile instance
+  if created:                               # if user has just been created=True, create a profile instance
     Profile.objects.create(user=instance)
   
 ```
@@ -1048,6 +1048,95 @@ class ProfileConfig(AppConfig):
   
   def ready(self):
     import profiles.signals
+```
+### Create API Serializer
+```
+---- serializers.py in api folder----
+from rest_framework import serializers
+form profiles.models import Profile, ProfileStatus
+
+class ProfileSerializer(serializers.ModelSerializer):
+  user = serializers.StringRelatedField(read_only = True)
+  avatar = serializers.ImageField(read_only = True) #Create another end point to update media individually
+  
+  class Meta:
+    model = Profile
+    fields = "__all__"
+
+class ProfileAvatarSerializer(serializers.ModelSerializer):     #only update media avatar for one endpoint
+  class Meta:
+    model = Profile
+    fields = ("avatar",)
+
+class ProfileStatusSerializer(serializers.ModelSerializer):
+  user_profile = serializers.StringRelatedField(read_only=True)
+  
+  class Meta:
+    model = ProfileStatus
+    fields = "__all__"
+```
+## Authetication
+Associate a series of identification credentials to an incoming request, obtaining critical information such as the specific user  
+  
+We can then user a system of permissions to decide wether or not to accept the incoming request  based on the type of users( admin users, basic users and so on..)  
+  
+### Basic Authetication 
+Most Primitive and least secure. Only for testing. 
+
+***
+Request/Response cycle
+-> The client makes a HTTP request to the server
+<- The server responds with a HTTP 401 Unauthorized response containg the WWW-AUthenticate header, explaining how to autheticate(WWW-Authenticate:Basic)
+-> The Client sends it authcredentials in base 64 with the Authorization header.
+Authentication credentials are here unencrypted.
+<- The server evaluates the access credentials and responds with the 200 or 403 status code, therefore authorizing or denying the client's request.
+***
+### Token Authentication 
+This is the ideal system for authenticating smartphone and desktop clients.  
+  
+Authentication token gets saved either in a cookie or in the browser's localStorage. 
+... authentication token in localStorage is very dangerous, as it makes it vulnerable to XSS attacks!  
+  
+Using a httpOnly cookie on the other hand is much safer because this way the token cant be accessed via Javascript... but because of the you are now losing the flexibility that you would get by using localStorage instead!  
+***
+Request/Response cycle
+-> The client sends it's authentication credentials once
+<- The server checks the credentials, and if they are valid it creates an exclusive signed token made of a string of characters that then sends back to the client as response
+-> The Client sends its token with the Authorization Header of every following request
+<- The server checks the received token and if valid, allows the request to proceed.
+***
+
+It is the authentication scheme that we will use in the Final Project. 
+  
+If successfully autheticated using Session Authetication, Django will provide us the corresponding User Object, accessible via request.user  
+  
+For non-authenticated requests, an AnonymousUser instance will be provided instead.
+  
+**Important** Once the authticated via session auth, the framework will require a valid CSRF token to be sent for any unsafe HTTP method request such as PUT, PATCH, POST, DELETE. 
+### Session Authetication
+This authentication scheme uses Django's default session backend for authentication.  
+  
+Session authetication is the safest and most appropriate way for authenticating AJAX clients that are running in the same session context as your website, and uses a combination of Sessions and Cookies. 
+***
+Request/Response cycle
+-> Users send their authetication credentials, typically using a Login Form
+<- Server checks the data and if correct, it creates a corresponding Session Object that will be saved in the database, sending back to the client a Session ID
+-> The Session ID gets saved in a Cookie in the browser and will be part of every future request to the server, that will check it every time
+-> when the client logs out, the Session ID is destroyed by both the client and the server, and a new one will be created at the next login
+***
+
+### Bonus JWT
+One of the main differences with other token-based standards is that because of their structure JWT tokens dont require database validation.  
+  
+JSON Web tokens can be easily used in a DRF powered REST API using the django-rest-framework-simplejwt package.  
+  
+## Django-REST-Auth
+In this lesson you will learn how to use the Django-REST-Auth package in order to expose registration and authentication endpoints for your REST APIs!  
+  
+Thanks to these endpoints, clients such as Androis and iOS apps will be able to easily and indepndently communicate with all the services provided by your web app's backend via REST.
+### Setting authetication globally
+```
+
 ```
 ## ViewSets & Routers
 ***
