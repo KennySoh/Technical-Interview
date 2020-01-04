@@ -1346,7 +1346,58 @@ if __name__=="__main__":
 Setup registrations end point so users can create new account via rest
 
 ```
-pip install
+pip install django-allauth   	#Dependecy of django rest auth
+pip freeze > requirement.txt
+```
+
+```
+---settings.py---
+INSTALLED_APPS = [
+	...
+	'django.contrib.sites',
+	
+	'allauth',
+	'allauth.account',
+	'allauth.socialaccount',
+		
+	'rest_auth',
+	'rest_auth.registration'
+]
+
+...End of file
+SITE_ID =1
+ACCOUNT_EMAIL_VERICATION = "none"
+ACCOUNT_EMAIL_REQUIRED = (True)
+```
+```
+---urls.py----
+urlpatterns = [
+	path("api/rest-auth/registration/", include("rest_auth.registration.urls"))
+]
+```
+
+Sending a client registration to end point
+Including Token in request
+```
+import requests
+
+def client():
+	data={
+		"username":"admin",
+		"email":"test@rest.com",
+		"password1":"asdasd",
+		"password2":"asdasd"
+	}
+	
+	response = request.get("http://127.0.0.1:8000/api/rest-auth/registration",
+				data=data)
+	print("Status Code: ", response.status_code)
+	response_data = response.json()
+	print(response_data)
+if __name__=="__main__":
+	client()
+
+Returns Status Code: 2-1 ,{'key','640c2db23d832af832g8h239dcgrvvd28329'}
 ```
 
 ## ViewSets & Routers
@@ -1377,3 +1428,4 @@ from profiles.api.views import ProfileViewSet
 
 profile_list = Pr
 ```
+
