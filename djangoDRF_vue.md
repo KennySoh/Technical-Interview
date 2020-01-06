@@ -1542,3 +1542,9 @@ we are going to make a child component communicate with its parent using $emit, 
 - AbstractUser
 ### User Authentication - Settings and Templates 
 ### Single Page Application Entry-Point and First REST Endpoint 
+### Models and Signals
+### Serializers
+### Question ViewSet
+### Creation and Listing
+### Authentication Template - CSS Styling 
+### 
