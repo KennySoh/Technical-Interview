@@ -1538,4 +1538,7 @@ we are going to make a child component communicate with its parent using $emit, 
 - How to keep Webpack's Hot-Module-Replacement (HMR) working with VueCli and Django during development
 - How to use session authenticaiton in a DRF powered SPA
 ***
-## 
+### Users Application and Authentication Settings
+- AbstractUser
+### User Authentication - Settings and Templates 
+### Single Page Application Entry-Point and First REST Endpoint 
