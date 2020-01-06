@@ -1529,4 +1529,13 @@ we are going to make a child component communicate with its parent using $emit, 
 // Single Comment component -single 
 ```
 
-## 
+# Final Project 
+## Intro- Vue.js, Django Spa
+***
+- How to use Django, DRF and Vue Js to build Real World Projects
+- How to use Vue CLI and Vue Router
+- How to build Single PageApplications with Vue JS and Vue CLI
+- How to keep Webpack's Hot-Module-Replacement (HMR) working with VueCli and Django during development
+- How to use session authenticaiton in a DRF powered SPA
+***
+##
