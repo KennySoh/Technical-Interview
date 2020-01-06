@@ -1412,10 +1412,12 @@ ViewSet classes allow us to combine the logic for a set of related views in a si
 They are another kind of Class Based View, that does not provide any method handlers such as .get() or .post() but instead provide action methods such as **.list()** and **.create()**.  
     
 **Commonly used with Router** . 
-  
+
+### Adding Viewsets
 ```
 ----views.py in api folder----
-from rest_framework.viewsets import ReadOnlyModelViewSet
+...
+from rest_framework.viewsets import ReadOnlyModelViewSet 
 
 class ProfileViewSet(ReadOnlyModelViewSet):
   queryset = Profile.objects.all()
@@ -1423,9 +1425,31 @@ class ProfileViewSet(ReadOnlyModelViewSet):
   permission_classes = [IsAuthenticated]
 ```
 ```
+----urls.py---
 from django.urls import path
 from profiles.api.views import ProfileViewSet
 
-profile_list = Pr
+profile_list = ProfileViewSet.as_view({"get":"list"})
+profile_detail = ProfileViewSet.as_view({"get":"retrieve"})
+
+urlpatterns = [
+	path("profiles/",profile_list. name="profile-list"),
+	path("profiles/<int:pk>/", profile_detail, name="profile-detail"),
+]
+```
+### Adding Router
+use the router class to automatically create the endpoints from Viewsets
+```
+----urls.py---
+from django.urls import include, path
+from rest_frameworks.routers import DefaultRouter
+from profiles.api.views import ProfileViewSet
+
+router = DefaultRouter()
+router.register(r"profiles", ProfileViewSet)
+
+urlpatterns = [
+	path("",include(router.urls))
+]
 ```
 
