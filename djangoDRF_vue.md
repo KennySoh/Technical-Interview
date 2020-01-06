@@ -1455,4 +1455,78 @@ urlpatterns = [
 
 This results in API ROOT, API list,API detail
 
+# Vue Js
+The Vue ecosystem is formed by a series of complementary official projects, which allow us to extend its capabilities far beyond the "core view layer" according to our needs:
+***
+- Vue-Router (Single Page Application Routing)
+- VueX(Large Scale State Management)
+- Vue-CLI (Project Scaffolding - Rapid Development Toolkit)
+- Vue-Loader (Single File Component(*.vue file) loader for web pack)
+- Vue-DevTools (Browser DevTool Extension)
+- Vue-Server-Renderer
+- Vue-Class-Component
+- Vue RXs
+***
 
+## First Vue Instance
+***
+
+***
+
+```
+---main.js---
+var app = new Vue({
+	el: '#app',
+	data:{
+		message:"Hello world!"
+	}
+})
+```
+## Events and Methods
+```
+- handling events
+```
+## Conditional Rendering 
+```
+<v-if , v-else>
+```
+
+js console
+app.auth = true
+
+## Class & Style Binding 
+```
+v-binding 
+```
+## List Rendering with v-for
+v-for 
+
+## Computed Properties 
+computed:
+vs
+methods:
+
+## Forms and User Input
+```
+--allow us to create a 2 way binding ---
+immediate reflects changes accordingly 
+```
+v-model chnges data immediately
+
+- validation 
+
+## Components and Props 
+```
+Vue.component("comment",{
+
+}
+```
+## How to use  $emit
+we are going to make a child component communicate with its parent using $emit, giving them the ability to call methods an pass values.. altering the prop memory
+```
+// List Component - Parent
+
+// Single Comment component -single 
+```
+
+## 
