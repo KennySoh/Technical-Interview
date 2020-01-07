@@ -1474,21 +1474,67 @@ The Vue ecosystem is formed by a series of complementary official projects, whic
 ***
 
 ## First Vue Instance
-
 ***
-
+- Create vue folder
+- Create veu.html
+- visual studio>html5 for boiler plate code
+- copy path 
 ***
+### Including vue.js 
 
+We import via CDN for this . 
+https://vuejs.org/v2/guide/installation.html <- we can also install via npm 
 ```
----main.js---
+---vue.html---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello Vue</title>
+</head>
+<body>
+	<div id="app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	<script src="yourmain.js">
+</body>
+</html>
+```
+### Creating a new vue instance
+```
+---yourmain.js---
 var app = new Vue({
-	el: '#app',
-	data:{
-		message:"Hello world!"
+	el: '#app',    			//el expects a css selector
+	data:{					//all the variable
+		message:"Hello world!",
+		value:5
+		imgSrc: "https://cdn.pixabay.com/photo/1234.jpg"
 	}
 })
 ```
+```
+---vue.html---
+...
+<div id=app>
+	<h1>{{ message }}</h1> 		//Commonly used this
+	<h1 v-text="message"></h1>
+	
+	<h2>{{ value * 5 }}</h2>
+	<h2>{{ "Hello" + " Vue!" }}</h2>
+	<h2>{{ (33/11) * 5 }}</h2>
+	<h2>{{ Math.random() }}</h2>
+	<h2>{{ message.split('').reverse().join('') }}</h2>
+	
+	<img v-bind:src="imgSrc" alt=""></h2>
+	<a v-bind:href = "link">Official Websites</a>
+</div>
+```
 ## Events and Methods
+Let our Vue Application listen for DOM events that we can use to trigger different methods defined in the application itself.   
+  
+Introduce the **v-on directive**
+  
 ```
 - handling events
 ```
