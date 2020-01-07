@@ -1469,6 +1469,7 @@ The Vue ecosystem is formed by a series of complementary official projects, whic
 ***
 
 ## First Vue Instance
+
 ***
 
 ***
@@ -1540,6 +1541,7 @@ we are going to make a child component communicate with its parent using $emit, 
 ***
 ### Users Application and Authentication Settings
 - AbstractUser
+- 
 ### User Authentication - Settings and Templates 
 ### Single Page Application Entry-Point and First REST Endpoint 
 ### Models and Signals
