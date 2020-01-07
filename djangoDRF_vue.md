@@ -1456,6 +1456,11 @@ urlpatterns = [
 This results in API ROOT, API list,API detail
 
 # Vue Js
+## Introduction
+### A Progressive Framework:
+Application Complexity vs Framework Complexity ....  
+- Will feel guilty using angular to build a static page vs vanila javascript to build gmail  
+### Vue Ecosystem
 The Vue ecosystem is formed by a series of complementary official projects, which allow us to extend its capabilities far beyond the "core view layer" according to our needs:
 ***
 - Vue-Router (Single Page Application Routing)
