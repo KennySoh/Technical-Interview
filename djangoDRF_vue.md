@@ -1611,9 +1611,49 @@ js console
 -> app.sale = true  
 
 ## Class & Style Binding 
-
+**v-bind**
 ```
-v-binding 
+var app= new Vue({
+	el:'#app',
+	data:{
+		flag:false,
+		styleObject:{
+			backgroundColor: 'green',
+			border: '5px solid orange'
+		}
+	},
+	methods:{
+		changeShape(){
+			this.flag = !this.flag;
+		}
+	}
+})
+```
+```
+ ----vue.html----
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min/css">
+ <style> 
+ 	.circle{
+		width: 250px;
+		height:250px;
+		border-radius:50%;
+	}
+	.square{
+		width: 250px;
+		height:250px;
+	}
+</style>
+<body>
+	<div id="app">
+		<div class = "row justify-content-center mt-3">
+			<div v-bind:class="{ circle:flag, square:!flag }" v-bind:style="styleObject"></div>
+		</div>
+		<div class = "row justify-content-center mt-3">
+			<button class="btn btn-success" @click="changeShape">Change Shape</button>
+		</div>
+	</div>
+	...
+</body>
 ```
 ## List Rendering with v-for
 v-for 
