@@ -1851,6 +1851,13 @@ passing components into html file
 ## How to use  $emit
 we are going to make a child component communicate with its parent using $emit, giving them the ability to call methods an pass values.. altering the prop memory
 ```
+---vue.html---
+<div id="app">
+	<comment-list : comments = "comments">
+	</comment-list>
+</div>
+```
+```
 // List Component - Parent
 Vue.component("comment-list",{
 	props"{
@@ -1868,7 +1875,11 @@ Vue.component("comment-list",{
 		}
 	},
 	template:`
-		<
+		<div class="mt-2">
+			<single-comment v-for="(comment, index) in comments" :comment="comment" :key="index">
+			</single-comment>
+		</div>
+			
 	`
 
 // Single Comment component -single 
@@ -1889,8 +1900,10 @@ Vue.component("single-comment",{
 				<p>{{ comment.content }}
 			<div>
 		</div>
+	`
 }
 ```
+### Using $emit when submiting form 
 
 # Final Project 
 ## Intro- Vue.js, Django Spa
