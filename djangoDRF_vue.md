@@ -1967,15 +1967,27 @@ Listening for emit signal ,@submit-comment (onsubmit-comment -> addNewComment())
 - How to keep Webpack's Hot-Module-Replacement (HMR) working with VueCli and Django during development
 - How to use session authenticaiton in a DRF powered SPA
 ***
-### Users Application and Authentication Settings
+## Users Application and Authentication Settings
 - AbstractUser
 - 
-### User Authentication - Settings and Templates 
-### Single Page Application Entry-Point and First REST Endpoint 
-### Models and Signals
-### Serializers
-### Question ViewSet
-### Creation and Listing
-### Authentication Template - CSS Styling 
-### Vue CLI, Node and Single Page Applications
-### 
+## User Authentication - Settings and Templates 
+## Single Page Application Entry-Point and First REST Endpoint 
+## Models and Signals
+## Serializers
+## Question ViewSet
+## Creation and Listing
+## Authentication Template - CSS Styling 
+## Vue CLI, Node and Single Page Applications
+Creating a new project using Vue CLI instead of using the <script> tag is in a way similar to creating a Django Project with the startproject command:  
+  
+It creates most of the initial boilerplate code and configuration files that we need automatically, allowing us to install and integrate extra packages in our projects easily.
+***
+Using Vue CLI:
+- We can select the libraries that we want to use immediately such as Vue Router
+- We can develop the HTML,CSS and Javascript code for the project according to our needs and preferences, using single file components(.vue), SCSS, TypeScript
+- Ready-to-use Webpack configuration that allow us to group and minify all the JS,CSS and dependencies code in bundles to use in production.
+- Development server with Hot Module Replacement(HMR), showing us real time browser updates about all the changes we are applying to our application while developing
+- Recent versions of Vue CLI also include a Web interface called Vue UI
+
+NPM needed for VueCLI
+***
