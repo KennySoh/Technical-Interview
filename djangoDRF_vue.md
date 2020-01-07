@@ -1536,17 +1536,82 @@ Let our Vue Application listen for DOM events that we can use to trigger differe
 Introduce the **v-on directive**
   
 ```
-- handling events
+var app= new Vue({
+	el:'#app',
+	data:{
+		lesson:"Events and Methods",
+		counter:0
+	},
+	methods:{
+		incrementCounter(){
+			this.counter+=1;
+			console.log(this.counter);
+			if(this.counter === 10){
+				alert("Counter is at 10!");
+		},
+		overTheBox(){
+			console.log("Over the green box")
+		}
+	}
+})
+```
+```
+---vue.html---
+...
+<h1>{{ lesson }}</h1>
+<h3>Counter: {{ counter }}</h3>
+<button v-on:click="counter += 1">Increment ++</button>
+<button v-on:click="incrementCounter += 1">Increment ++</button>
+
+<div class="box" @mouseover=="overTheBox"></div>
 ```
 ## Conditional Rendering 
+**v-if , v-else**  
 ```
-<v-if , v-else>
+var app= new Vue({
+	el:'#app',
+	data:{
+		auth:false,
+		product:"Sunglasses",
+		quantity:0,
+		sale:true
+	},
+	methods:{
+		incrementCounter(){
+			this.counter+=1;
+			console.log(this.counter);
+			if(this.counter === 10){
+				alert("Counter is at 10!");
+		},
+		overTheBox(){
+			console.log("Over the green box")
+		}
+	}
+})
 ```
-
-js console
-app.auth = true
+```
+---vue.html---
+<div id="app">
+	<h1 v-if="auth"> Your User Profile </h1>
+	<h1 v-else>Login to Access Your Profile!</h1>
+	
+	<h1> Product: {{ product }}
+	<h2 v-if="quantity >= 20"> Available </h1>
+	<h2 v-else-if="quantity > 0 && quantity < 20">Limited Availability</h1>
+	<h2 v-else>Sold Out</h2>
+	<br>
+	<h3 v-show="sale">On Sale!!!!</h3>
+</div>
+```
+js console   
+-> app.auth = true   
+-> app.auth = false 
+  
+-> app.quantity=20  
+-> app.sale = true  
 
 ## Class & Style Binding 
+
 ```
 v-binding 
 ```
