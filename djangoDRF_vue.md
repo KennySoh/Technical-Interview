@@ -1731,15 +1731,32 @@ var app = new Vue({
 computed: vs methods:
 
 ## Forms and User Input
+**v-model**
 ```
 --allow us to create a 2 way binding ---
-immediate reflects changes accordingly 
+immediate reflects changes accordingly  
 
+----------text----------------
+<input type="text" v-model="color"> 
+<p>Color Data: {{ color }}</p>
 
+----------text-area----------------
+<textarea class="form-control" v-model="text" placeholder="write something!" cols="60" rows="5"></textarea>
+<p>{{ text }}</p>
+
+----------input----------------
+<input type="checkbox" id="checkbox" , v-model="checked">
+<label for="checkbox">Value: {{ checked }}</label>
+
+----------drop down----------------
+<select v-model="city">
+	<option>Rome</option>
+	<option>New York</option>
+</select>
+<span>City : {{ city }}</span>
 ```
-v-model chnges data immediately
 
-- validation 
+### Submitting form 
 
 ## Components and Props 
 ```
