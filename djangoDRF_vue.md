@@ -1656,12 +1656,79 @@ var app= new Vue({
 </body>
 ```
 ## List Rendering with v-for
-v-for 
+**v-for** 
+```
+---main.js---
+var app = new Vue({
+	el:"#app",
+	data: {
+		users: [{
+			id:567,
+			name:"alice",
+			profession:"developer"
+		},{
+			id:568,
+			name:"kenny",
+			profession:"developer"
+		},{
+			id:568,
+			name:"jack",
+			profession:"marketer"
+		}]
+	}
+})
+```
+```
+---.html---
+<div id="app">
+	<h1>Users List</h1>
+	<div class="card" v-for="user in users" :key="user.id">
+		<div class="card-body">
+			<p><strong>Name:</strong> {{ user.name }}</p>
+			<p><strong>Professsion:</strong> {{ user.profession }}</p>
+		</div>
+	</div>
+</div>
+```
+## Computed Properties
+Its possible to define and use expression directly within our templates: (not reccomended) . 
+```
+<h1> {{ (33/11)*5 </h1>
+```
 
-## Computed Properties 
-computed:
-vs
-methods:
+A better alternative is to use the computed values. Can be think of extension of our data model.
+```
+var app = new Vue({
+	el:"#app",
+	data:{
+		first_name: "John",
+		last_name:"Doe"
+	}
+	computed: {
+		getRandomComputed(){ 			//similar to a value 
+			return Math.random()
+		},
+		fullName(){
+			return `${ this.first_name } ${ this.last_name }
+		},
+	},
+	methods:{
+		getRandomNumber(){
+			return Math.random();
+		}
+	}
+})
+```
+```
+<p>Method -1: {{ getRandomNumber() }} </p>
+<p>Method -1: {{ getRandomNumber() }} </p>
+
+<p>Computed -1: {{ getRandomComputed }} </p>
+<p>Computed -1: {{ getRandomComputed }} </p>
+
+<p> {{ fullName }} </p>
+```
+computed: vs methods:
 
 ## Forms and User Input
 ```
