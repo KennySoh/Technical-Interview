@@ -1755,8 +1755,29 @@ immediate reflects changes accordingly
 </select>
 <span>City : {{ city }}</span>
 ```
-
 ### Submitting form 
+```
+data:{
+	comments: null,
+	comments:[]
+},
+methods:{
+	onSubmit(){
+		let new_comment = this.comment;
+		this.comments.push(new_comment);
+		this.comment= null
+	}
+}
+```
+```
+<form @submit.prevent>
+	<div class="form-group">
+		<label for="commentText">Publish a comment!</label>
+		<textarea class="form-control" v-model="comment" id="commentText" cols="80" rows="5"></textarea>
+	</div>
+	<button type="submit">Publish</button>
+</form>
+```
 
 ## Components and Props 
 ```
