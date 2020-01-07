@@ -1734,6 +1734,8 @@ computed: vs methods:
 ```
 --allow us to create a 2 way binding ---
 immediate reflects changes accordingly 
+
+
 ```
 v-model chnges data immediately
 
