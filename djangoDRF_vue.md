@@ -1852,8 +1852,44 @@ passing components into html file
 we are going to make a child component communicate with its parent using $emit, giving them the ability to call methods an pass values.. altering the prop memory
 ```
 // List Component - Parent
+Vue.component("comment-list",{
+	props"{
+		comment:{
+			type: Array,
+			required:true
+		}
+	
+	},
+	data: function(){
+		return {
+			new_comment:null,
+			comment_author: null,
+			error: null
+		}
+	},
+	template:`
+		<
+	`
 
 // Single Comment component -single 
+Vue.component("single-comment",{
+	props"{
+		comment:{
+			type: Object,
+			required:true
+		}
+	
+	},
+	template: `
+		<div>
+			<div class='card-header">
+				<p>Published by: {{ comment.username }}</p>
+			</div>
+			<div>
+				<p>{{ comment.content }}
+			<div>
+		</div>
+}
 ```
 
 # Final Project 
