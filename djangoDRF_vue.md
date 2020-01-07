@@ -1992,7 +1992,7 @@ Using Vue CLI:
 NPM needed for VueCLI
 ***
 
-## Installing Node & NPM, Vue CLi
+### Installing Node & NPM, Vue CLi
 https://nodejs.org/en/  
 
 ```
@@ -2017,3 +2017,13 @@ vue create hello-vue 		# start vue project
 cd hello-vue 			# cd into project
 npm run serve			# run server
 ```
+## Installing Vue.js into Django
+***
+- cd into django project
+- vue create frontend
+***
+###  Install Webpack Bundle Tracker for development and Django Webpack Loader 
+***
+- rendering Vue spa inside django index.html through webpack bundle tracker 
+***
+## Vue Router and Single File Components
