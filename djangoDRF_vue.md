@@ -1952,12 +1952,11 @@ methods:{
 }
 
 ```
-
+Listening for emit signal ,@submit-comment (onsubmit-comment -> addNewComment())
 ```
 ---vue.html---
 <comment-list :comments="comments" @submit-comment="addNewComment"></comment-list>
 ```
-
 
 # Final Project 
 ## Intro- Vue.js, Django Spa
