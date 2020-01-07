@@ -1809,10 +1809,44 @@ methods: {
 <p v-if="errors">{{ errors }} </p>
 ```
 ## Components and Props 
-```
-Vue.component("comment",{
+**Components** allow us to keep our code ordered and maintainable, thus gicing us the chance to create large scale projects easily. 
 
+**Props** a special type of attribute that we pass data between parent and child components.
+```
+--main.js--
+Vue.component("comment_component",{
+	props: {
+		comment_prop: {
+			type:Object,
+			required: true,
+		}
+	},
+	template:`
+		<div>
+			<div class="card-body">
+				<p>{{ comment_prop.username }}</p>
+				<p>{{ comment_prop.content }}</p>
+			</div>
+		</div>
+	`
 }
+var app=Vue new Vue({
+	el:"#app",
+	data"{
+		comments: [
+			{ username:"alice", content:"first comment! },
+			{ username:"bob", content:"hello world! },
+		]
+	}
+})
+```
+passing components into html file
+```
+---vue.html---
+<div id="app">
+	<comment_component v-for="(comment,index) in comments" :comment_prop="comment" :key="index">
+	</comment_component
+</div>
 ```
 ## How to use  $emit
 we are going to make a child component communicate with its parent using $emit, giving them the ability to call methods an pass values.. altering the prop memory
