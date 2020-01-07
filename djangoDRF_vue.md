@@ -1770,15 +1770,44 @@ methods:{
 }
 ```
 ```
-<form @submit.prevent>
+<form @submit.prevent="onSubmit"> //prevents default submit and use our own method
 	<div class="form-group">
 		<label for="commentText">Publish a comment!</label>
 		<textarea class="form-control" v-model="comment" id="commentText" cols="80" rows="5"></textarea>
 	</div>
 	<button type="submit">Publish</button>
 </form>
-```
 
+<div v-for="comment in comments">
+	<div>{{ comment }}</div>
+</div>
+```
+### Handling Form Errors
+```
+data:{
+	comment: null,
+	comments: [],
+	errors: null
+},
+methods: {
+	onSubmit(){
+		if(this.comment){
+			let new_comment = this.comment;
+			this.comments.push(new_comment);
+			this.comment=null;
+			
+			if(this.errors){
+				this.errors = null;
+			}
+		}else{
+			this.errors = " The comment field cant be empty!"
+		}
+	}
+}
+```
+```
+<p v-if="errors">{{ errors }} </p>
+```
 ## Components and Props 
 ```
 Vue.component("comment",{
