@@ -2003,5 +2003,17 @@ npm-v				#node package manager
 node 				#allow us to run js code outside of browser
 > console.log("Hello world")
 
-sudo npm i -g @vue/cli			# -install -global
+sudo npm i -g @vue/cli		# -install -global
+```
+
+```
+cd Desktop/
+vue create hello-vue 		# start vue project
+> Manually
+>> Choose Babel, Router, Linter/Formatter
+>>> Yes , use history mode
+>>> ESLint + Prettier >>> Lint on save >>> in package.json file >>> No dont use this preset
+
+cd hello-vue 			# cd into project
+npm run serve			# run server
 ```
