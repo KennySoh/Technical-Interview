@@ -1991,3 +1991,17 @@ Using Vue CLI:
 
 NPM needed for VueCLI
 ***
+
+## Installing Node & NPM, Vue CLi
+https://nodejs.org/en/  
+
+```
+node -v
+>>> v11.11.0
+npm-v				#node package manager
+>>> 6.9.0
+node 				#allow us to run js code outside of browser
+> console.log("Hello world")
+
+sudo npm i -g @vue/cli			# -install -global
+```
