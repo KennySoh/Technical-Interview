@@ -1904,6 +1904,60 @@ Vue.component("single-comment",{
 }
 ```
 ### Using $emit when submiting form 
+```
+// List Component - Parent
+Vue.component("comment-list",{
+	props"{
+		comment:{
+			type: Array,
+			required:true
+		}
+	
+	},
+	data: function(){
+		return {
+			new_comment:null,
+			comment_author: null,
+			error: null
+		}
+	},
+	methods:{
+		submitComment(){
+			this.$emit('submit-comment', {username: this.comment_author, content: this.new_comment })
+		}
+	},
+	template:`
+		<div class="mt-2">
+			<single-comment v-for="(comment, index) in comments" :comment="comment" :key="index">
+			</single-comment>
+		</div>
+		
+		<h3> {{ error }} </h3>
+		<form @submit.prevent = "submitComment">
+			<div class="form-group">
+				<label for="commentAuthor"> Your Username </label>
+				<input class="form-control" id="commentAuthor" type="text" v-model="comment_author">
+			</div>
+			<button class="btn btn-sm btn-primary" type="submit">Publish</button>
+		</form>
+		`
+		
+
+//Vue instance methods
+...
+methods:{
+	addNewComment(new_comment){
+		this.comments.push(new_comment);
+	}
+}
+
+```
+
+```
+---vue.html---
+<comment-list :comments="comments" @submit-comment="addNewComment"></comment-list>
+```
+
 
 # Final Project 
 ## Intro- Vue.js, Django Spa
