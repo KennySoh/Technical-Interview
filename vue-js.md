@@ -171,3 +171,7 @@ computed:{
 }
 ```
 # Conditionals & List
+### Conditional rendering with v-if
+```
+```
+### 
