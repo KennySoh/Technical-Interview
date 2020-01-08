@@ -229,3 +229,12 @@ computed:{
 </ul>
 <button @click="ingredients.push('spice')">Add New</button> 
 ```
+
+------Take note, adding keys ensures it points to the list item------ (in case of any bugs)
+```
+<ul>
+ <li v-for="(ingredient, i) in ingredients" :key="ingredient">{{ ingredient }} ({{ i }}) </li>
+</ul>
+<button @click="ingredients.push('spice')">Add New</button> 
+```
+# Section 4:First Course Project- The Monster Slayer
