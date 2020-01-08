@@ -59,5 +59,23 @@ methods:{
 ```
 ### Writing Javascript Code in Templates
 ```
-<button v-on:click 
+# Only can be in a single line , but not recommended
+<button v-on:click="counter++">Click me</button> ## automatically increment counter js code
+<p>{{ counter * 2 > 10 ? 'Greater than 10' : 'Smaller than 10' }} </p> # turnary expression
+```
+
+### Using Two-Way-Binding
+```
+<input type= "text" v-model="name">
+<p>{{ name }}</p>
+```
+
+### Reacting to Changes with Computed Properties 
+Computed properties will only change if the data it uses changes
+```
+computed:{
+ output: function(){
+  return this.counter > 5 ? 'Greater 5' : 'Smaller than 5';
+ }
+},
 ```
