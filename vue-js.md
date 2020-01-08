@@ -79,3 +79,94 @@ computed:{
  }
 },
 ```
+### An Alternative to Computed Properties: Watching for Changes
+```
+watch:{
+ counter:function(value){
+  setTimeout(function(){
+   vm.counter = 0;
+  }, 2000);
+ }
+}
+```
+### Saving Time with Shorthands
+```
+v-on:click 
+@click //shorthand
+
+v-bind:href
+:href //shorthand
+```
+
+### Dynamic Styling with CSS classes - Basics
+```
+---css---
+.red{ background-color: red; }
+
+---js----
+data:{
+ attachRed: false
+}
+
+---html---
+<div id="app">
+ <div class="demo" @click="attachRed = !attachRed" :class="{red:attachRed}"></div> 
+</div>
+```
+### Dynamic Styling with CSS classes - Using Objects
+```
+computed:{
+ divClasses: function(){
+  return {
+   red: this.attachRed,
+   blue: !this.attachRed
+  };
+}
+---html---
+<div id="app">
+ <div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div> 
+</div>
+```
+### Dynamic Styling with CSS classes - Using Names
+```
+----puting class Names directly----
+<div class="demo" :class="color"></div>
+
+<input type="text" v-model="color">
+----a list into class----
+<div class="demo" :class="[color,{red:attachRed}]">  // if color is green, shows red if attachRed=true... applies both class
+
+<input type="text" v-model="color">
+```
+
+### Setting Styles Dynamically( without CSS classes)
+```
+--- 1. directly injected style----
+<div class="demo" :style="{'background-color'}"></div>
+
+---2. directing to a computed style---
+<div class="demo" :style="myStyle"></div>
+
+computed:{
+ myStyle:function(){
+  return {
+  backgroundColor: this.color,
+  width: this.width + 'px'
+  };
+ }
+}
+```
+### Styling Elements with the Array Syntax 
+```
+---3. combination of parsing styles---
+<div class="demo" :style="[myStyle, {height: width + 'px'}]"></div>
+
+computed:{
+ myStyle:function(){
+  return {
+  backgroundColor: this.color,
+  width: this.width + 'px'
+  };
+ }
+}
+```
