@@ -246,3 +246,31 @@ computed:{
 Changing data from different intance . instance 1 -change-> instance 2
 ```
 ### How VueJS manages your Data and Methods
+set up a watcher for each data, so when it changes it will alter accordinly
+```
+vm1.newProp='new!'; << this wont have a getter or setter ... wouldnt be watched
+```
+### A Closer Look at $el and $data
+```
+console.log(vm1.$data.title)
+```
+### Placing $refs and Using them on your Templates
+Going striagth to the dom but it will be rerendered
+
+### Mounting a Template
+### Using Components
+```
+Vue.component('hello',{
+ template:'<h1>Hello!</h1>
+});
+```
+### Limitations of some Templates
+### How VueJS Updates the DOM
+### The VueJS Instance LifeCycle
+### The VueJS Instance Lifecycle in Practice
+
+# Section 6: Moving to a "Real" Development Workflow with Webpack
+### Why do we need a Development Server?
+### What does "Development Workflow"
+### Using the Vue CLI to create Projects
+### Installing the Vue CLI and Creating a new Project
