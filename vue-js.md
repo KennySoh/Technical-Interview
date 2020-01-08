@@ -173,5 +173,56 @@ computed:{
 # Conditionals & List
 ### Conditional rendering with v-if
 ```
+<p v-if="show">You can see me! </p>
+<p v-else>Now you see me!</p>
 ```
-### 
+### Using an Alternative v-if Syntax
+```
+---grouping multiple elements but doont use div---
+<template v-if="show"> 
+ <h1> Heading </h1>
+ <p> Inside a template </p>
+</template>
+```
+### Dont Detach it with v-show
+```
+<p v-show="show"> do u see me </p> #This results in display: none, elements are rendered but not displayed... 
+                                   #v-if is more efficient because it remove entirely from dom
+```
+### Rendering Lists with v-for
+```
+<ul>
+ <li v-for ="ingredient in ingredients">{{ ingredient }}</li>
+</ul>
+```
+### Getting the Current Index
+```
+<ul>
+ <li v-for ="(ingredient,i) in ingredients">{{ ingredient }} {{ i }}</li>
+</ul>
+```
+### Using an Aleternative for v-for syntax
+```
+<template>
+ <h1>{{ ingredient }}</h1>
+ <p>{{ index }}</p>
+</template>
+```
+### Looping through Objects
+```
+<li v-for="person in perons">
+ <div v-for="(value,key) in person">{{ key }}:{{ value }})</div>
+</li>
+
+<li v-for="person in perons">
+ <div v-for="(value,key,index) in person">{{ key }}:{{ value }}({{ index }})</div>
+</li>
+```
+### Looping through a List of Numbers
+```
+<span v-for="n in 10">{{ n }}</span>
+```
+### Keeping Track of Elements when using v-for 
+```
+
+```
