@@ -224,5 +224,8 @@ computed:{
 ```
 ### Keeping Track of Elements when using v-for 
 ```
-
+<ul>
+ <li v-for="(ingredient, i) in ingredients">{{ ingredient }} ({{ i }}) </li>
+</ul>
+<button @click="ingredients.push('spice')">Add New</button> 
 ```
