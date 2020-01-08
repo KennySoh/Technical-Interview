@@ -238,3 +238,11 @@ computed:{
 <button @click="ingredients.push('spice')">Add New</button> 
 ```
 # Section 4:First Course Project- The Monster Slayer
+# Section 5: Understanding the VueJs Instance
+### Some Basics about the VueJS Instance
+### Using Multiple Vue Instances
+### Accessing the Vue Instance from Outside
+```
+Changing data from different intance . instance 1 -change-> instance 2
+```
+### How VueJS manages your Data and Methods
