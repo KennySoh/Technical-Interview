@@ -280,3 +280,10 @@ vue init webpack-simple vue-cli
 ### An Overview over the Webpack Template Folder Structure
 ### Understanding the ".vue" Files
 ### Understanding the Object in the Vue File
+
+# Section 7: An Introduction to components
+## Components
+```
+new Vue({
+
+```
