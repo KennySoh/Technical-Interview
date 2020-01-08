@@ -274,3 +274,6 @@ Vue.component('hello',{
 ### What does "Development Workflow"
 ### Using the Vue CLI to create Projects
 ### Installing the Vue CLI and Creating a new Project
+```
+vue init webpack-simple vue-cli
+```
