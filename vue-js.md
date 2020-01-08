@@ -277,3 +277,6 @@ Vue.component('hello',{
 ```
 vue init webpack-simple vue-cli
 ```
+### An Overview over the Webpack Template Folder Structure
+### Understanding the ".vue" Files
+### Understanding the Object in the Vue File
