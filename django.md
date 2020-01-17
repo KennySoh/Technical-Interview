@@ -2044,3 +2044,48 @@ class SchoolClassAdmin(admin.ModelAdmin):
 
 admin.site.register(SchoolClass, SchoolClassAdmin)
 ```
+
+# Django Handling User-upload File/Image files
+https://www.youtube.com/watch?v=Zx09vcYq1oc
+https://gist.github.com/vitorfs/0a889e491085f6044bc328ae300b3d19
+
+***
+Django File Upload
+- Basic Concepts
+	- Send file using POST request 
+	- Set proper form encode type (enctype="multipart/form-data")
+	- Files are uploaded to request.FILES
+		- Dictionary-like object (eg name_of_file_object "document_name":)
+		- Each file is an UploadedFile instance( Django object)
+		https://docs.djangoproject.com/en/3.0/ref/files/uploads/#uploaded-files
+- Configuration 
+	- MEDIA_ROOT 
+	- MEDIA_URL
+	- Serving media files on local machines (In production suppose to be from Apache/nginx in production)
+- 
+***
+```
+Configuration
+---- settings.py ----
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'amp/media')
+
+---- urls.py ----
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+```
+Handling uploaded Files
+- File storage API - FileSystemStorage
+- Model form fields FileField and ImageField
+
+-----views.py------
+from django.core.files.storage import FileSystemStorage
+
+def upload(request):
+	if request.method== 'POST':
+		uploaded_file = request.FILES['document']
+		fs=FileSystemStorage()
+		fs.save(uploaded_file.name, uploaded_file)
+	return render(request, 'upload.html')
+```
