@@ -2155,4 +2155,45 @@ def book_list(request):
 
 Uploading Image field 
 - Similar to File Field  (pip install pillow) 
-- 
+
+## Part 3: Class-Based Views - Django File Upload
+```
+----- Normal CBV ------
+class BookList(View):
+	def get(self, request):
+	def post(self, request):
+	
+---- Generics------
+class BookListView(ListView):
+	model = Book
+	template_name= "book_list.html"
+	context_object_name = 'books'
+```
+## Deleting Uploaded Files- Django File Upload
+```
+def delete_book(request,pk):
+	if request.method =='POST':
+		book = Book.objects.get(pk=pk)
+		book.delete()
+	return redirect('book_list')
+```
+Overwriting model save/ delete
+https://docs.djangoproject.com/en/3.0/topics/db/models/#overriding-predefined-model-methods
+```
+from django.db import models
+
+class Blog(models.Model):
+    name = models.CharField(max_length=100)
+    tagline = models.TextField()
+
+    def delete(self, *args, **kwargs):
+        self.pdf.delete()
+	self.cover.delete()
+        super().delete(*args, **kwargs)  # Call the "real" delete() method. 
+	
+----- Take Note: -----
+Book.objects.filter().delete() - will not trigger 
+
+for book in Book.objects.all(): - have to delete() one by one
+	book.delete() 
+```
