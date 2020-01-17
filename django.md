@@ -2048,7 +2048,7 @@ admin.site.register(SchoolClass, SchoolClassAdmin)
 # Django Handling User-upload File/Image files
 https://www.youtube.com/watch?v=Zx09vcYq1oc
 https://gist.github.com/vitorfs/0a889e491085f6044bc328ae300b3d19
-
+## Part 1 
 ***
 Django File Upload
 - Basic Concepts
@@ -2062,8 +2062,13 @@ Django File Upload
 	- MEDIA_ROOT 
 	- MEDIA_URL
 	- Serving media files on local machines (In production suppose to be from Apache/nginx in production)
+- Handling Uploaded Files 
+	- File storage API - FileSystemStorage
+	- Model forms fields FileField and ImageField 
+	https://docs.djangoproject.com/en/3.0/ref/files/storage/#the-filesystemstorage-class ( also how to Handle File Permission)
 - 
 ***
+
 ```
 Configuration
 ---- settings.py ----
@@ -2073,6 +2078,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'amp/media')
 ---- urls.py ----
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+```
+{% block content %}
+	<h2> Upload </h2>
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<input type="file" name="document">
+		<button type="submit"> Upload file </button>
+	</form>
+	{% if url %}
+		<p> Uploaded file: <a href="{{ url }}">{{ url }}</a></p>
+	{% endif %}
+{% endblock %}
 ```
 ```
 Handling uploaded Files
@@ -2086,6 +2104,55 @@ def upload(request):
 	if request.method== 'POST':
 		uploaded_file = request.FILES['document']
 		fs=FileSystemStorage()
-		fs.save(uploaded_file.name, uploaded_file)
-	return render(request, 'upload.html')
+		name=fs.save(uploaded_file.name, uploaded_file)
+		context['url'] = fs.url(name)
+	return render(request, 'upload.html',context)
 ```
+## Part 2: Model Forms - Django File Upload
+***
+- Handling Uploaded Files 
+	- File storage API - FileSystemStorage
+	- Model forms fields FileField and ImageField 
+		- FileField 
+			- File saved in the file syste,
+			- Saved url reference as text in the database 
+			- File is not deleted if object is deleted 
+		- ImageField 
+			- same as file field 
+***
+```
+----models.py----
+class Books(models.Model):
+	title = models.CharField(max_length = 100)
+	author = models.CharField(max_length = 100)
+	pdf = models.FileField(upload_to='books/pfds/')
+	
+	def__str__(self):
+		return self.title
+```
+```
+---views.py---
+def upload_book(request):
+	if request.method == 'POST':
+		form =BookForm(request.POST, request.FILES)
+		if form.is_valid():
+			form.save()
+			return redirect('book_list')
+	else:
+		form = BookForm()
+	return render(request,'uplaod_book.html',{
+		'form':form
+	})
+
+def book_list(request):
+	books= Book.objects.all()
+	return render(request,'book_list.html',{'books':books})
+```
+```
+---Templates -- book_list.html---
+{{ books.pdf.url }}
+```
+
+Uploading Image field 
+- Similar to File Field  (pip install pillow) 
+- 
