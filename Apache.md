@@ -50,7 +50,9 @@ mysql -u -d # loginto my sql
 rm - r migrations folder
 
 ./ manage.py collectstatic #create staticfolder that is reference in wsgi config folder
-sudo nano .etc.init.d/apache2 restart #restarts apache
+sudo /etc/init.d/apache2 restart #restarts apache
+
+->Finally create superuser
 
 Stable Version: Python3.5.2
 ```
