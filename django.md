@@ -2197,3 +2197,61 @@ Book.objects.filter().delete() - will not trigger
 for book in Book.objects.all(): - have to delete() one by one
 	book.delete() 
 ```
+# DRF upload Files 
+https://chrisbartos.com/articles/uploading-images-drf/
+```
+-----settings.py-------
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+------models.py--------
+from django.db import models
+
+class MyFile(models.Model):
+    file = models.FileField(blank=False, null=False)
+    description = models.CharField(max_lenth=255)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+    
+------serializers.py-----
+from rest_framework import serializers
+from .models import MyFile
+
+class MyFileSerializer(serializers.ModelSerializer):
+	class Meta():
+		model = MyFile
+		fields = ('file', 'description', 'uploaded_at')
+```
+
+A view that can parse a multipart and a form so we can fully support any kind of HTML form data   
+```
+------views.py------
+from rest_framework.views import APIView
+from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.response import Response
+from rest_framework import status
+from .serializers import MyFileSerializer
+
+class MyFileView(APIView):
+		# MultiPartParser AND FormParser
+		# https://www.django-rest-framework.org/api-guide/parsers/#multipartparser
+		# "You will typically want to use both FormParser and MultiPartParser
+		# together in order to fully support HTML form data."
+		parser_classes = (MultiPartParser, FormParser)
+		def post(self, request, *args, **kwargs):
+				file_serializer = MyFileSerializer(data=request.data)
+				if file_serializer.is_valid():
+						file_serializer.save()
+						return Response(file_serializer.data, status=status.HTTP_201_CREATED)
+				else:
+						return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+```
+
+Postman Data  
+```
+POST : http://localhost:8000/file/upload/
+{
+	"file": "/media/dude_I2FPPum.jpg", (select File in the KEY-> Text, File dropdown)
+	"description": "Big Lebowski",
+	"uploaded_at": "2019-04-26T12:30:09.4633345Z"
+}
+```
