@@ -2197,7 +2197,7 @@ Book.objects.filter().delete() - will not trigger
 for book in Book.objects.all(): - have to delete() one by one
 	book.delete() 
 ```
-# DRF upload Files 
+## DRF upload Files 
 https://chrisbartos.com/articles/uploading-images-drf/
 ```
 -----settings.py-------
@@ -2254,4 +2254,36 @@ POST : http://localhost:8000/file/upload/
 	"description": "Big Lebowski",
 	"uploaded_at": "2019-04-26T12:30:09.4633345Z"
 }
+```
+## Alternative creating a seperate endpoint just for DRF file uplaod 
+https://goodcode.io/articles/django-rest-framework-file-upload/
+One of the things many developers do with DRF is handle file uploads the same way they handled file uploads in the old days: via as multi-part form data.   
+  
+Although this approach works, I would argue that sending such a request with encoded file in the body is not very RESTful. Instead, in this case I prefer my API to accept a POST or PUT request with a file being directly uploaded, with the request body being thefile content.  
+  
+### FileUploadParser, 
+A parser in DRF is a component that takes a raw request from the client and parses it into parts. Examples of parsers include JSON parser and form parser. 
+  
+FileUploadParser assumes the entire request body is a single file.   
+```
+from rest_framework.exceptions import ParseError
+from rest_framework.parsers import FileUploadParser
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
+class MyUploadView(APIView):
+	parser_class = (FileUploadParser,)
+
+	def put(self, request, format=None):
+		if 'file' not in request.data:
+		    raise ParseError("Empty content")
+
+		f = request.data['file']
+
+		mymodel.my_file_field.save(f.name, f, save=True)
+		return Response(status=status.HTTP_201_CREATED)
+
+	def delete(self, request, format=None):
+		mymodel.my_file_field.delete(save=True)
+		return Response(status=status.HTTP_204_NO_CONTENT)
 ```
