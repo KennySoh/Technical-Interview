@@ -129,4 +129,9 @@ CREATE TABLE cats
     name VARCHAR(100),
     age INT
   );
+  
+SHOW TABLES;
+
+SHOW COLUMNS FROM cats;
+DESC cats; #describe cats same as show column in this context
 ```
