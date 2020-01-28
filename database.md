@@ -59,6 +59,7 @@ https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to
 ***
 ### Database vs DBMS
 App >> DBMS >> Database
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/database_2_1.png)
 ### SQL vs MYSQL 
 Structured Query Language,SQL is the language we use to "talk" to our database
 ```
