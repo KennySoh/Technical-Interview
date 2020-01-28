@@ -135,3 +135,8 @@ SHOW TABLES;
 SHOW COLUMNS FROM cats;
 DESC cats; #describe cats same as show column in this context
 ```
+### Delete Tables
+```
+DROP TABLE <tablename>; 
+DROP TABLE cats; 
+```
