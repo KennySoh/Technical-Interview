@@ -66,12 +66,21 @@ SELECT * FROM Users WHERE Age >= 18;
 ```
 Working with MySQL/Posgres is primary working with SQL
 
-## Installation 
+### Installation 
+https://ide-run.goorm.io/
 ```
-mysql-ctl start
+mysql-ctl start #Creates Database server
 mysql-ctl stop
 mysql-ctl cli
 mysql> Type all the sql commands here
 mysql> Select 1 + 1;
 mysql> exit
+```
+## Creating Databases and Tables
+### Creating Databases
+```
+mysql-ctl start #Creates Database sever
+
+>SHOW DATABASES;
+>CREATE DATABASE hello_world_db;
 ```
