@@ -82,6 +82,7 @@ mysql> exit
 ```
 mysql-ctl start #Creates Database sever
 
+mysql-ctl cli #Start the CLI
 >SHOW DATABASES;
 >CREATE DATABASE hello_world_db;
 ```
