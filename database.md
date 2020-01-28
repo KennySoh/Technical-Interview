@@ -84,3 +84,4 @@ mysql-ctl start #Creates Database sever
 >SHOW DATABASES;
 >CREATE DATABASE hello_world_db;
 ```
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/database_3_1.png)
