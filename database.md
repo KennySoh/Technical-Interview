@@ -87,3 +87,21 @@ mysql-ctl cli #Start the CLI
 >CREATE DATABASE hello_world_db;
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/database_3_1.png)
+
+### Drop Database (Delete Database)
+```
+DROP DATABASE database_name;
+```
+### USE Database (Which database u want to use)
+```
+>USE <database name>;
+-- example:
+>USE dog_walking_app;
+ 
+>SELECT database();
+dog_walking_app
+```
+### Tables, A Database is a bunch if table
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/database_3_2.png)
+- Coloumns (Name, Breed, Age)
+- Rows
