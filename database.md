@@ -48,3 +48,8 @@ Basic Constructs
 ```
 ## JSON
 ## Relational-Algebra-1
+
+# The Ultimate MYSQL BootCamp
+https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/learn/lecture/7054304#overview
+
+
