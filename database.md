@@ -106,9 +106,9 @@ dog_walking_app
 - Coloumns (Name, Breed, Age)
 - Rows
 #### Tables, Datatypes
-- Name: Text
-- Breed: Text
-- Age: Number
+- Name: varchar(100)
+- Breed: varchar(100)
+- Age: int
 - Cat Age: Age*7 ( This must be all number)
 
 ***
@@ -116,3 +116,17 @@ dog_walking_app
 - String Types: CHAR, VARCHAR, BINARY, VARBINARY, BLOB, TINYBLOB, MEDIUMBLOB, LONGBLOB, TEXT, TINYTEXT, MEDIUMTEXT, LONGTEXT, ENUM
 - Date Types: DATE, DATETIME, TIMESTAMP, TIME, YEAR
 ***
+### Creating your own table
+```
+CREATE TABLE tablename
+  (
+    column_name data_type,
+    column_name data_type
+  );
+  
+CREATE TABLE cats
+  (
+    name VARCHAR(100),
+    age INT
+  );
+```
