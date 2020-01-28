@@ -52,4 +52,26 @@ Basic Constructs
 # The Ultimate MYSQL BootCamp
 https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/learn/lecture/7054304#overview
 
+## What is a Database
+***
+1. a collection of data ( eg. a phonebook)
+2. a method to accessing and manipulating data (eg. find all first name: Nate)
+***
+### Database vs DBMS
+App >> DBMS >> Database
+### SQL vs MYSQL 
+Structured Query Language,SQL is the language we use to "talk" to our database
+```
+SELECT * FROM Users WHERE Age >= 18;
+```
+Working with MySQL/Posgres is primary working with SQL
 
+## Installation 
+```
+mysql-ctl start
+mysql-ctl stop
+mysql-ctl cli
+mysql> Type all the sql commands here
+mysql> Select 1 + 1;
+mysql> exit
+```
