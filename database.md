@@ -105,3 +105,14 @@ dog_walking_app
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/database_3_2.png)
 - Coloumns (Name, Breed, Age)
 - Rows
+#### Tables, Datatypes
+- Name: Text
+- Breed: Text
+- Age: Number
+- Cat Age: Age*7 ( This must be all number)
+
+***
+- Numeric Types: INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT, DECIMAL , NUMERIC, FLOAT, DOUBLE, BIT
+- String Types: CHAR, VARCHAR, BINARY, VARBINARY, BLOB, TINYBLOB, MEDIUMBLOB, LONGBLOB, TEXT, TINYTEXT, MEDIUMTEXT, LONGTEXT, ENUM
+- Date Types: DATE, DATETIME, TIMESTAMP, TIME, YEAR
+***
