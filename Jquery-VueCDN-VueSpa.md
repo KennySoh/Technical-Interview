@@ -57,6 +57,50 @@ transformNotes(notes).forEach(function(note){
 ```
 ### Select a note on title click
 Clicking on a note title should both highlight the selected note on the left as well as display the contents in the editor on the right. 
-```
 
+***
+1. Keep track of selected note , default first element
 ```
+var notes = [
+  {id: 1, body: "This is a first test", timestamp: Date.now()},
+  {id: 2, body: "This is a second test", timestamp: Date.now()},
+  {id: 3, body: "This is a third test", timestamp: Date.now()}
+];
+var selectedNote = notes[0];
+```
+2. binding between the DOM and the data in JavaScript.   
+Keep it in data- attribute . 
+```
+function domCreateNoteSelectors(notes, selectedNote) {
+  transformNotes(notes).forEach(function(note) {
+    var $noteSelector = $( //$ is a convention to signal dom variables
+      '<div class="note-selector' + (note === selectedNote ? ' active' : '') + '">' +
+        '<p class="note-selector-title">' + formatTitle(note.body) + '</p>' +
+        '<p class="note-selector-timestamp">' + formatTimestamp(note.timestamp) + '</p>' +
+      '</div>'
+    );
+    $noteSelector.data(note); // This puts the relevant dictionary into data- 
+    $('.note-selectors').append($noteSelector);
+  });
+}
+```
+3. Now that we have data binding, we’ll need to make an event listener to trigger whenever the user clicks on a note title . 
+- Changing the class of node
+- The note data is extracted from the DOM using $(this).data(), and is passed to a separate domUpdateNoteEditor function:
+```
+$('.note-selectors').on('click', '.note-selector', function() {
+  $('.note-selector').removeClass('active');
+  $(this).addClass('active');
+  domUpdateNoteEditor($(this).data());
+});
+```
+4. Another function to Update Selected Note
+```
+function domUpdateNoteEditor(selectedNote) {
+  $('.note-editor-info')
+    .html(formatTimestamp(selectedNote.timestamp));
+  $('.note-editor-input')
+    .val(selectedNote.body);
+}
+```
+***
