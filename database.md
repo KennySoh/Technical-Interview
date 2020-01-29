@@ -140,3 +140,75 @@ DESC cats; #describe cats same as show column in this context
 DROP TABLE <tablename>; 
 DROP TABLE cats; 
 ```
+## Inserting Data 
+### INSERT
+```
+INSERT INTO table_name(column_name) 
+VALUES (data);
+
+INSERT INTO cats(name,age)
+VALUES ('Jetson', 7);
+-> Query OK, 1 row affected(0.01 sec)
+```
+### SELECT
+View all the data
+```
+SELECT * FROM cats;
+```
+
+### Multiple INSERT
+```
+INSERT INTO table_name (column_name, column_name) 
+    
+VALUES  (value, value), 
+        (value, value), 
+        (value, value);
+
+INSERT INTO cats(name,age)
+VALUES ('Jetson',7),
+        ('Kenny',10);
+```
+### MYSQL Warning, A note about warning
+Warnings happen when u insert a varchar thats over the limit or wrong datatype
+```
+CREATE TABLE cats ( name varchar(10),age int);
+
+INSERT INTO cats(name,age)
+VALUES ('This is a string that is over 10',7);  //name is over > varchar(10), Results in warning
+
+> Query OK, 1 row affected, 1 warning 
+
+SHOW WARNINGS;
+> Warning | 1265 | Data truncated for column 'name' at row 1
+```
+### NULL and NOT_NULL
+```
+INSERT INTO cats() 
+VALUES();
+
+SELECT * FROM cats
+> name | age
+> NULL | NULL
+```
+In order to ensure a column must not be empty, define the column not null when creating table
+```
+CREATE TABLE cats2(
+name VARCHAR(100) NOT NULL,
+age INT NOT NULL
+);
+
+DESC cats2;
+> Field | Type        | Null | Key | Default | Extra|
+> name  | varchar(100)| NO   |     | NULL    |      |
+> age   | int(11)     | NO   |     | NULL    |      |
+
+INSERT INTO cats2(name) VALUES('Texas');
+>Query OK, 1 row affected, 1 warning 
+
+SHOW WARNINGS;
+>Warning |1384 | Field age doesnt have a default value|
+
+SELECT * FROM cat2
+> name    | age
+> 'Texas' |  0        // Age automatically set to 0, If name not defined sets to '' empty string
+```
