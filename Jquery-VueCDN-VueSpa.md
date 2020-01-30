@@ -174,3 +174,28 @@ table.rows.add(data); // Add new data
 table.columns.adjust().draw(); // Redraw the DataTable
 table.order( [[ 0, 'desc' ]] ).draw( false );
 ```
+```
+<script>
+  // Regenerate List from list of data 
+  var notes = [
+    {id: 1, body: "This is a first test", timestamp: Date.now()},
+    {id: 2, body: "This is a second test", timestamp: Date.now()},
+    {id: 3, body: "This is a third test", timestamp: Date.now()}
+  ];
+
+  $dtPersonnel=$('#dtPersonnel').find('tbody')
+  $dtPersonnel.empty()
+  notes.forEach(function(note){
+    $dtPersonnel.append(
+    '<tr data-personnel-id="1">'+
+      '<th scope="row">Test</th>'+
+      '<td>Test@gmail.com</td>'+
+      '<td>Test</td>'+
+      '<td>'+note.body+'</td>'+
+      '<td>'+
+      '</td>'+
+      '<td>{{ personnel.status }}</td>'+
+    '</tr>);')
+  });
+</script>
+```
