@@ -251,3 +251,19 @@ CREATE TABLE unique_cats
   );
 INSERT INTO unique_cats(cat_id, name, age) VALUES (1,"James",3);
 ```
+## CRUD commands
+### CREATE
+```
+INSERT INTO cats(name, age) VALUES(‘Taco’, 14);
+```
+### READ
+```
+SELECT * FROM cats; 
+
+SELECT age FROM cats; 
+
+SELECT age, breed, name, cat_id FROM cat
+s; 
+SELECT cat_id, name, age, breed FROM cats; 
+```
+### 
