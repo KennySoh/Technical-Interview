@@ -111,7 +111,8 @@ https://mdbootstrap.com/docs/jquery/tables/sort/
 https://datatables.net/manual/data/
 ```
 var data = [
-    {
+    {   
+        "id":1,
         "name":       "Tiger Nixon",
         "position":   "System Architect",
         "salary":     "$3,120",
@@ -120,6 +121,7 @@ var data = [
         "extn":       "5421"
     },
     {
+        "id":22,
         "name":       "Garrett Winters",
         "position":   "Director",
         "salary":     "$5,300",
@@ -139,14 +141,17 @@ var table = $('#dtAccessPointTEST').DataTable({
       { title:"Position",data: 'position' },
       { title:"Salary",data: 'salary' },
       { title:"Office",data: 'office' }
-  ]
+  ],
+  createdRow: function (row, data, dataIndex) {
+      $(row).attr('data-access-point-id', data.id);
+      $(row).addClass("TestClass");
+  }
 
 });
 table.order( [[ 0, 'asc' ]] ).draw( false );
 
-
 data = [
-    {
+    {   "id":1,
         "name":       "TEST?",
         "position":   "System Architect",
         "salary":     "$3,120",
@@ -155,6 +160,7 @@ data = [
         "extn":       "5421"
     },
     {
+        "id":2,
         "name":       "Garrett Winters",
         "position":   "Director",
         "salary":     "$5,300",
@@ -167,12 +173,4 @@ table.clear().draw();
 table.rows.add(data); // Add new data
 table.columns.adjust().draw(); // Redraw the DataTable
 table.order( [[ 0, 'desc' ]] ).draw( false );
-
-$('#example').dataTable( {
-  "createdRow": function( row, data, dataIndex ) {
-    if ( data[4] == "A" ) {
-      $(row).addClass( 'important' );
-    }
-  }
-} );
 ```
