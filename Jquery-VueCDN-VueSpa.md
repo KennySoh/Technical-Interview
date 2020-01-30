@@ -104,3 +104,32 @@ function domUpdateNoteEditor(selectedNote) {
 }
 ```
 ***
+
+# JQuery Data tables
+
+https://mdbootstrap.com/docs/jquery/tables/sort/
+https://datatables.net/manual/data/
+```
+data = [
+    {
+        "name":       "TEST?",
+        "position":   "System Architect",
+        "salary":     "$3,120",
+        "start_date": "2011/04/25",
+        "office":     "Edinburgh",
+        "extn":       "5421"
+    },
+    {
+        "name":       "Garrett Winters",
+        "position":   "Director",
+        "salary":     "$5,300",
+        "start_date": "2011/07/25",
+        "office":     "Edinburgh",
+        "extn":       "8422"
+    }
+]
+table.clear().draw();
+table.rows.add(data); // Add new data
+table.columns.adjust().draw(); // Redraw the DataTable
+table.order( [[ 0, 'desc' ]] ).draw( false );
+```
