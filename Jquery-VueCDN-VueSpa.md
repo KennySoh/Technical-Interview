@@ -110,6 +110,41 @@ function domUpdateNoteEditor(selectedNote) {
 https://mdbootstrap.com/docs/jquery/tables/sort/
 https://datatables.net/manual/data/
 ```
+var data = [
+    {
+        "name":       "Tiger Nixon",
+        "position":   "System Architect",
+        "salary":     "$3,120",
+        "start_date": "2011/04/25",
+        "office":     "Edinburgh",
+        "extn":       "5421"
+    },
+    {
+        "name":       "Garrett Winters",
+        "position":   "Director",
+        "salary":     "$5,300",
+        "start_date": "2011/07/25",
+        "office":     "Edinburgh",
+        "extn":       "8422"
+    }
+]
+
+var table = $('#dtAccessPointTEST').DataTable({
+  "searching": false, // false to disable search (or any other option)
+  "paging":false,
+  "info":false,
+  data: data,
+  columns: [
+      { title:"Name",data: 'name' },
+      { title:"Position",data: 'position' },
+      { title:"Salary",data: 'salary' },
+      { title:"Office",data: 'office' }
+  ]
+
+});
+table.order( [[ 0, 'asc' ]] ).draw( false );
+
+
 data = [
     {
         "name":       "TEST?",
@@ -132,4 +167,12 @@ table.clear().draw();
 table.rows.add(data); // Add new data
 table.columns.adjust().draw(); // Redraw the DataTable
 table.order( [[ 0, 'desc' ]] ).draw( false );
+
+$('#example').dataTable( {
+  "createdRow": function( row, data, dataIndex ) {
+    if ( data[4] == "A" ) {
+      $(row).addClass( 'important' );
+    }
+  }
+} );
 ```
