@@ -212,3 +212,29 @@ SELECT * FROM cat2
 > name    | age
 > 'Texas' |  0        // Age automatically set to 0, If name not defined sets to '' empty string
 ```
+### To Set Default Values
+```
+CREATE TABLE cats3
+(
+  name VARCHAR(100) DEFAULT 'unamed',
+  age INT DEFAULT 99
+);
+```
+Set NOT NULL
+```
+CREATE TABLE cats3
+(
+  name VARCHAR(20) NOT NULL DEFAULT 'no name provided',
+  age INT NOT NULL DEFAULT 99
+);
+
+INSERT INTO cats4(name,age) VALUES ('Cali', NULL);
+>ERROR 10248 Column cannot be NULL
+```
+### A Primer on Primary Keys
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/database_3_2.png)
+Unique identifier Primary Key
+```
+
+INSERT INTO unique_cats(cat_id, name, age) VALUES (1,"James",3);
+```
