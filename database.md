@@ -242,6 +242,12 @@ CREATE TABLE unique_cats
     age INT,
     PRIMARY KEY (cat_id)
   );
-  
+
+CREATE TABLE unique_cats
+  (
+    cat_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT
+  );
 INSERT INTO unique_cats(cat_id, name, age) VALUES (1,"James",3);
 ```
