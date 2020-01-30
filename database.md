@@ -232,7 +232,7 @@ INSERT INTO cats4(name,age) VALUES ('Cali', NULL);
 >ERROR 10248 Column cannot be NULL
 ```
 ### A Primer on Primary Keys
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/database_3_2.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/database_3_3.png)
 Unique identifier Primary Key
 ```
 CREATE TABLE unique_cats
