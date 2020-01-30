@@ -235,6 +235,13 @@ INSERT INTO cats4(name,age) VALUES ('Cali', NULL);
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/database_3_2.png)
 Unique identifier Primary Key
 ```
-
+CREATE TABLE unique_cats
+  (
+    cat_id INT NOT NULL,
+    name VARCHAR(100),
+    age INT,
+    PRIMARY KEY (cat_id)
+  );
+  
 INSERT INTO unique_cats(cat_id, name, age) VALUES (1,"James",3);
 ```
