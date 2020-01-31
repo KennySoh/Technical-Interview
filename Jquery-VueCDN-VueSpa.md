@@ -199,3 +199,13 @@ table.order( [[ 0, 'desc' ]] ).draw( false );
   });
 </script>
 ```
+Pagination 
+https://datatables.net/reference/option/dom (dom)  
+https://datatables.net/reference/option/pageLength (pagination)
+```
+var table= $('#dtAccessPoint').DataTable({
+        "paging":true,
+        "dom": '<tp>',
+        data: data,
+      });
+```
