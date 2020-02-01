@@ -170,7 +170,7 @@ $('#myTable').on( 'click', 'tbody tr', function () {
     myTable.row( this ).delete();
 } );
 ```
-## Pagination 
+### Pagination 
 https://datatables.net/reference/option/dom (dom)  
 https://datatables.net/reference/option/pageLength (pagination)
 ```
@@ -180,7 +180,24 @@ var table= $('#dtAccessPoint').DataTable({
         data: data,
       });
 ```
-
+### Simple Pooling 
+https://stackoverflow.com/questions/18153382/efficient-way-to-long-poll-in-jquery
+```
+(function poll(){
+    $.ajax({
+        url: "server",
+        success: function(data){
+            //Update your dashboard gauge
+            salesGauge.setValue(data.value);
+        },
+        dataType: "json",
+        complete: function () {
+            setTimeout(poll, 0);
+        },
+        timeout: 30000
+    });
+})();
+```
 # Jquery Direct Table Dom Manipulation
 ```
 <script>
