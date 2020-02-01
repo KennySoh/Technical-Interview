@@ -109,6 +109,7 @@ function domUpdateNoteEditor(selectedNote) {
 
 https://mdbootstrap.com/docs/jquery/tables/sort/
 https://datatables.net/manual/data/
+## Data table init
 ```
 var data = [
     {   
@@ -148,32 +149,39 @@ var table = $('#dtAccessPointTEST').DataTable({
   }
 
 });
+```
+## Ordering Table
+```
 table.order( [[ 0, 'asc' ]] ).draw( false );
+table.order( [[ 2, 'desc' ]] ).draw( false );
 
-data = [
-    {   "id":1,
-        "name":       "TEST?",
-        "position":   "System Architect",
-        "salary":     "$3,120",
-        "start_date": "2011/04/25",
-        "office":     "Edinburgh",
-        "extn":       "5421"
-    },
-    {
-        "id":2,
-        "name":       "Garrett Winters",
-        "position":   "Director",
-        "salary":     "$5,300",
-        "start_date": "2011/07/25",
-        "office":     "Edinburgh",
-        "extn":       "8422"
-    }
-]
+```
+## RefreshAll
+```
 table.clear().draw();
 table.rows.add(data); // Add new data
 table.columns.adjust().draw(); // Redraw the DataTable
-table.order( [[ 0, 'desc' ]] ).draw( false );
 ```
+## Create
+## Update
+## Delete
+```
+$('#myTable').on( 'click', 'tbody tr', function () {
+    myTable.row( this ).delete();
+} );
+```
+## Pagination 
+https://datatables.net/reference/option/dom (dom)  
+https://datatables.net/reference/option/pageLength (pagination)
+```
+var table= $('#dtAccessPoint').DataTable({
+        "paging":true,
+        "dom": '<tp>',
+        data: data,
+      });
+```
+
+# Jquery Direct Table Dom Manipulation
 ```
 <script>
   // Regenerate List from list of data 
@@ -198,14 +206,4 @@ table.order( [[ 0, 'desc' ]] ).draw( false );
     '</tr>);')
   });
 </script>
-```
-Pagination 
-https://datatables.net/reference/option/dom (dom)  
-https://datatables.net/reference/option/pageLength (pagination)
-```
-var table= $('#dtAccessPoint').DataTable({
-        "paging":true,
-        "dom": '<tp>',
-        data: data,
-      });
 ```
