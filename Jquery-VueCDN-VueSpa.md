@@ -109,7 +109,7 @@ function domUpdateNoteEditor(selectedNote) {
 
 https://mdbootstrap.com/docs/jquery/tables/sort/
 https://datatables.net/manual/data/
-## Data table init
+### Data table init
 ```
 var data = [
     {   
@@ -150,21 +150,21 @@ var table = $('#dtAccessPointTEST').DataTable({
 
 });
 ```
-## Ordering Table
+### Ordering Table
 ```
 table.order( [[ 0, 'asc' ]] ).draw( false );
 table.order( [[ 2, 'desc' ]] ).draw( false );
 
 ```
-## RefreshAll
+### RefreshAll
 ```
 table.clear().draw();
 table.rows.add(data); // Add new data
 table.columns.adjust().draw(); // Redraw the DataTable
 ```
-## Create
-## Update
-## Delete
+### Create - add rows into table
+### Update - update existing rows
+### Delete - delete existing rows
 ```
 $('#myTable').on( 'click', 'tbody tr', function () {
     myTable.row( this ).delete();
