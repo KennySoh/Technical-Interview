@@ -2287,3 +2287,9 @@ class MyUploadView(APIView):
 		mymodel.my_file_field.delete(save=True)
 		return Response(status=status.HTTP_204_NO_CONTENT)
 ```
+# Working with legacy databases
+https://docs.djangoproject.com/en/3.0/howto/legacy-databases/
+```
+python manage.py inspectdb > models_inspect.py
+python manage.py inspectdb > models_inspect.py --database blah #Generate inspectdb for another database
+```
