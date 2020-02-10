@@ -2292,4 +2292,10 @@ https://docs.djangoproject.com/en/3.0/howto/legacy-databases/
 ```
 python manage.py inspectdb > models_inspect.py
 python manage.py inspectdb > models_inspect.py --database blah #Generate inspectdb for another database
+
+# Copy deployed server db into local db
+Using MYSQLWORKBENCH gui, Copy to clipboard> Create statement to recreate table locally. 
+mysql> SHOW DATABASES;
+mysql> USE webdb;
+mysql> "Create statement paste "
 ```
