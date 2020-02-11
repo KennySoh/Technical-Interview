@@ -387,8 +387,20 @@ HTTP 400 Bad Request
 }
 ```
 ### Default Validators : Not required 
+Making field not required by setting "allow_blank":True.  
 ```
-
+class UserSerializer(serializers.ModelSerializer):
+	class Meta:	
+		model = User
+		fields = ('id','user_id', 'name','description')
+		read_only_fields = ('user_id',)
+		extra_kwargs = {
+		'description': {
+			# Tell DRF that the link field is not required.
+			'required': True,
+			'allow_blank': True,
+			}
+		}
 ```
 # Model Serializer Class
 ### Basic Model Serializer . 
