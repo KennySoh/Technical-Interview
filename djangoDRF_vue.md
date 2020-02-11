@@ -386,6 +386,10 @@ HTTP 400 Bad Request
   ]
 }
 ```
+### Default Validators : Not required 
+```
+
+```
 # Model Serializer Class
 ### Basic Model Serializer . 
 ```
