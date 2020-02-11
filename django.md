@@ -2299,3 +2299,5 @@ mysql> SHOW DATABASES;
 mysql> USE webdb;
 mysql> "Create statement paste "
 ```
+# Creating an audit trail 
+https://spapas.github.io/2015/01/21/django-model-auditing/
