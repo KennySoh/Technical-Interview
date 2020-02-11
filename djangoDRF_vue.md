@@ -386,7 +386,7 @@ HTTP 400 Bad Request
   ]
 }
 ```
-### Default Validators : Not required 
+### Default Validators Bahaviour : This Field is required error  
 Making field not required by setting "allow_blank":True.  
 ```
 class UserSerializer(serializers.ModelSerializer):
