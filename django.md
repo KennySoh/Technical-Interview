@@ -2301,3 +2301,16 @@ mysql> "Create statement paste "
 ```
 # Creating an audit trail 
 https://spapas.github.io/2015/01/21/django-model-auditing/
+
+# Customizing the Django Admin
+## Registering Admin 
+```
+class GroupAdmin(admin.ModelAdmin):
+    fields = ['id', 'group','keystring']
+    
+admin.site.register(Group,GroupAdmin)
+```
+## Customizing Django Admin 
+```
+
+```
