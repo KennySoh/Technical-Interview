@@ -2333,7 +2333,7 @@ class GroupAdmin(admin.ModelAdmin):
     
 admin.site.register(Group,GroupAdmin)
 ```
-## There is the List view and Detailed View
+## Listview, There is the List view and Detailed View
 ### Adding Search and Filters
 ```
 class CourseAdmin(admin.ModelAdmin):
@@ -2362,4 +2362,13 @@ class YearListFilter(admin.SimpleListFilter):
 		if self.value()=='2016':
 			return queryset.filter(created_at__gte=date(2016,1,1), 
 						created_at__lte=date(2016,12,31))
+```
+### List Display View
+```
+class CourseAdmin(admin.ModelAdmin):
+	inlines=[ TextInline, QuizInline]
+	search_fields=['title', 'description']
+	
+	list_filter=['created_at','is_live']
+	list_display=['title','created_at','is_live'] <<< This controls the columns on list views
 ```
