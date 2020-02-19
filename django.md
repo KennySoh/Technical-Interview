@@ -2372,3 +2372,30 @@ class CourseAdmin(admin.ModelAdmin):
 	list_filter=['created_at','is_live']
 	list_display=['title','created_at','is_live'] <<< This controls the columns on list views
 ```
+
+### editing the list view directly, list_editable
+```
+class CourseAdmin(admin.ModelAdmin):
+	inlines=[ TextInline, QuizInline]
+	search_fields=['title', 'description']
+	
+	list_filter=['created_at','is_live']
+	list_display=['title','created_at','is_live'] 
+	list_editable=['title','workspace']<<< This controls the columns on list views
+
+```
+## Detail view
+### Customize the look and feel of view
+```
+class CourseAdmin(admin.ModelAdmin):
+	#fields=['course','title'] have to comment out to prevent conflict with fieldset
+	fieldsets=(
+		(None,{
+			'fields':('course','title','order','description')
+			}),
+		('Add content'),{
+			'fields':('content',),
+			'classes':('collapse',)
+			}),
+	)
+```
