@@ -2311,6 +2311,17 @@ class GroupAdmin(admin.ModelAdmin):
 admin.site.register(Group,GroupAdmin)
 ```
 ## Customizing Django Admin 
+Django Source code: https://github.com/django/django/blob/master/django/contrib/admin/templates/admin/base_site.html  
+  
+Overwrite Django base_site.html> Save in folder similar to sourcecode to overwrite admin>base_site.html
 ```
+{% extends "admin/base.html" %}
 
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Learning Site Administration</a></h1>  //This change django admin title 
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
 ```
