@@ -2303,14 +2303,15 @@ mysql> "Create statement paste "
 https://spapas.github.io/2015/01/21/django-model-auditing/
 
 # Customizing the Django Admin
-## Registering Admin 
+## Basic Customization
+### Registering Admin 
 ```
 class GroupAdmin(admin.ModelAdmin):
     fields = ['id', 'group','keystring']
     
 admin.site.register(Group,GroupAdmin)
 ```
-## Customizing Django Admin 
+### Customizing Django Admin 
 Django Source code: https://github.com/django/django/blob/master/django/contrib/admin/templates/admin/base_site.html  
   
 Overwrite Django base_site.html> Save in folder similar to sourcecode to overwrite admin>base_site.html
@@ -2324,4 +2325,41 @@ Overwrite Django base_site.html> Save in folder similar to sourcecode to overwri
 {% endblock %}
 
 {% block nav-global %}{% endblock %}
+```
+### Changing Field Order
+```
+class GroupAdmin(admin.ModelAdmin):
+    fields = ['id', 'group','keystring']  << This changed the order
+    
+admin.site.register(Group,GroupAdmin)
+```
+## There is the List view and Detailed View
+### Adding Search and Filters
+```
+class CourseAdmin(admin.ModelAdmin):
+	inlines=[ TextInline, QuizInline]
+	search_fields=['title', 'description']
+	
+	list_filter=['created_at','is_live']
+```
+### Building custom filters
+```
+----- admin.py------
+class YearListFilter(admin.SimpleListFilter):
+	title='year created'
+	
+	parameter_name = 'year'//link?'year'=2016
+	
+	def lookups(self,request, model_admin):
+		return(
+			('2015','2015'),
+			('2016','2016'),
+		)
+	def queryset(self, request,queryset):
+		if self.value()=='2015':
+			return queryset.filter(created_at__gte=date(2015,1,1), 
+						created_at__lte=date(2015,12,31))
+		if self.value()=='2016':
+			return queryset.filter(created_at__gte=date(2016,1,1), 
+						created_at__lte=date(2016,12,31))
 ```
