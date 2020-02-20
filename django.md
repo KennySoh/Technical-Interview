@@ -2399,3 +2399,25 @@ class CourseAdmin(admin.ModelAdmin):
 			}),
 	)
 ```
+### Horizontal Select and TabularInlinebuttons
+```
+// Changed to radio 
+class CourseAdmin(admin.ModelAdmin):
+	#fields=['course','title'] have to comment out to prevent conflict with fieldset
+	fieldsets=(
+		(None,{
+			'fields':('course','title','order','description')
+			}),
+		('Add content'),{
+			'fields':('content',),
+			'classes':('collapse',)
+			}),
+	)
+
+	radio_fields={'quiz':admin.HORIZONTAL}
+	
+// Changed from stackedinline to tablularinline
+class CourseInLine(admin.StackedInline): // TablularInline
+	model=models.Course
+
+```
