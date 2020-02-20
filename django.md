@@ -2419,5 +2419,75 @@ class CourseAdmin(admin.ModelAdmin):
 // Changed from stackedinline to tablularinline
 class CourseInLine(admin.StackedInline): // TablularInline
 	model=models.Course
+```
+### Making a Text Preview
+Overwrite ChangeFormField:
+https://github.com/django/django/blob/master/django/contrib/admin/templates/admin/change_form.html  
+Overwrite Include>Fieldset: https://github.com/django/django/blob/master/django/contrib/admin/templates/admin/includes/fieldset.html  
+
+```Change Form Field
+-----App_name>Model_name>change_form.html
+-----Courses>course>change_form.html
+
+search for fieldset.html
+->{% include "admin/includes/fieldset.html" %} 
+Changed to 
+->{% include "admin/courses/course/includes/fieldset.html" %}
+```
+```Change fieldset.html
+-----App_name>Model_name>includes>fieldset.html
+-----Courses>course>includes>fieldset.html
+{% if field.is_readonly %}
+    <div class="readonly">{{ field.contents }}</div>
+{% else %}
+    {{ field.field }}
+{% endif %}
+>> Line 20: 
+{% if field.field.name == 'description' %}
+	<div id = "preview"></div>
+{% endif %}
+```
+
+### Finishing a markdown preview
+Installing external markdown previwer library
+
+### Adding Custom Admin Actions
+```
+-----models.py------
+STATUS_CHOICES=(
+	('i','In Progress'),
+	('r','In Review'),
+	('p','Published'),
+)
+
+class Course(models.model):
+	status=models.CharField(max_length=1,choices=STATUS_CHOICES,default='i')
+```
+```
+-----admin.py------
+class CourseAdmin(admin.ModelAdmin):
+	inlines=[ TextInline, QuizInline]
+	search_fields=['title', 'description']
+	
+	list_filter=['created_at','is_live']
+	list_display=['title','created_at','is_live','status']<<< Add status into list_display
+	list_editable=['title','workspace']
+```
+  
+- Adding Admin Actions for chekcbox and Bulk Actions  
+```
+def make_published(modeladmin,request,queryset):
+	queryset.update(status='p',is_live=True)
+	
+make_published.short_description= "Mark selected courses as Published" // Adding the message for the drop down 
+
+class CourseAdmin(admin.ModelAdmin):
+	inlines=[ TextInline, QuizInline]
+	search_fields=['title', 'description']
+	
+	list_filter=['created_at','is_live']
+	list_display=['title','created_at','is_live','status']
+	list_editable=['title','workspace']
+	actions=[make_published]<<< Add funciton into respective admin
 
 ```
