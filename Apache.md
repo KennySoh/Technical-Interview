@@ -56,6 +56,11 @@ sudo /etc/init.d/apache2 restart #restarts apache
 
 Stable Version: Python3.5.2
 ```
+## Logging errors in Apache
+```
+# print() in django to log errors in apache
+sudo tail -f /var/log/apache2/error.log
+```
 # Udacity Full-stack Course
 https://github.com/mikesprague/udacity-nanodegrees#full-stack-web-developer-nanodegree
   
