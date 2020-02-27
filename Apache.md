@@ -34,6 +34,7 @@ https://stackoverflow.com/questions/14547631/python-locale-error-unsupported-loc
 https://unix.stackexchange.com/questions/119358/create-file-in-folder-permission-denied (ubuntu default dont allow creation need to allow permission)
 ```
 chmod u+w .
+sudo nano office.py
 ```
 ## Instructions to redeploy
 ```
