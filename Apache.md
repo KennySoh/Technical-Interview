@@ -61,6 +61,8 @@ Stable Version: Python3.5.2
 ```
 # print() in django to log errors in apache
 sudo tail -f /var/log/apache2/error.log
+
+sudo /etc/init.d/mysql restart - Restarting db
 ```
 # Udacity Full-stack Course
 https://github.com/mikesprague/udacity-nanodegrees#full-stack-web-developer-nanodegree
