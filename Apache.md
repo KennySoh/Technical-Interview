@@ -64,6 +64,19 @@ sudo tail -f /var/log/apache2/error.log
 
 sudo /etc/init.d/mysql restart - Restarting db
 ```
+## Deployed Https
+1) Try to keep a make of a copy of files before editing to prevent breaking it .  
+2) Only alter sites-avaliable> then send files u want as symbolic links 
+https://www.alibabacloud.com/help/doc-detail/102450.htm
+```
+sudo a2enmod ssl
+
+sudo /etc/init.d/apache2 force-reload #reloads apache configuration file
+sudo /etc/init.d/apache2 restart #restarts apache
+
+sudo a2enmod rewrite
+Redirect permanent /secure https://yourdomain.com/secure
+```
 # Udacity Full-stack Course
 https://github.com/mikesprague/udacity-nanodegrees#full-stack-web-developer-nanodegree
   
