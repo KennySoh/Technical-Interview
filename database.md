@@ -303,4 +303,39 @@ UPDATE cats SET breed ="Shorthair" WHERE breed="Tabby";
 UPDATE cats SET age=14 WHERE name="Misty";
 ```
 
+### Introduction to DELETE
+```
+DELETE FROM cats; //delete all cats
+DELETE FROM cats WHERE name="egg";
+DELETE FROM cats WHERE age=4;
+```
+
+## The World Of STRING Functions
+### Running SQL Files 
+Instead of running sql create commnads, we can run files 
+```
+1) Create new file and save as .sql
+----first_file.sql----
+CREATE TABLE cat (name VARCHAR(100), age INT);
+-----------------
+
+2) Running the sql 
+>>>source first_file.sql // will run the sql file.
+```
+### Loading Our Book Data 
+```
+CREATE DATABASE book_shop;
+USE book_shop;
+source book_data.sql
+DESC book;// describe book table to verify
+```
+
+### Working with CONCAT
+combines 2 string coloumns. Example: fname +" "+ lname => full name 
+```
+SELECT author_fname, author_lname FROM books; 
+SELECT CONCAT('Kenny',' ','Soh') FROM books; 
+SELECT CONCAT('Kenny',' ','Soh') FROM books AS "full name"; 
+```
+
 ### 
