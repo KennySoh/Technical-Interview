@@ -338,4 +338,11 @@ SELECT CONCAT('Kenny',' ','Soh') FROM books;
 SELECT CONCAT('Kenny',' ','Soh') FROM books AS "full name"; 
 ```
 
+### Introducing to SUBSTRING 
+```
+SELECT SUBSTRING('Hello World', 7); // Returns World (7 to the end of the index)
+SELECT SUBSTRING('Hello World', 1,4); // Returns Hell
+SELECT SUBSTRING('Hello World',-3); // Returns rld
+```
+
 ### 
