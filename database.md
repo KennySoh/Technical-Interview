@@ -292,3 +292,15 @@ SELECT cat_id, age FROM cats WHERE cat_id=age;
 
 SELECT * FROM cats WHERE cat_id=age;
 ```
+### Introduction to Aliases
+```
+SELECT cat_id AS id, name FROM cats;
+SELECT name AS 'cat name', breed AS "kitty breed" FROM cats;
+```
+### The UPDATE Command 
+```
+UPDATE cats SET breed ="Shorthair" WHERE breed="Tabby";
+UPDATE cats SET age=14 WHERE name="Misty";
+```
+
+### 
