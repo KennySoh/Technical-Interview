@@ -31,7 +31,8 @@ ssh -i /path/my-key-pair.pem ubuntu@2001:db8:1234:1a00:9691:9503:25ad:1761 // ub
 ## Pip install virtual environment and django, edit with Nano
 https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04 (continue) 
 https://stackoverflow.com/questions/14547631/python-locale-error-unsupported-locale-setting/36257050 (Local Errors)
-https://unix.stackexchange.com/questions/119358/create-file-in-folder-permission-denied (ubuntu default dont allow creation need to allow permission)
+https://unix.stackexchange.com/questions/119358/create-file-in-folder-permission-denied (ubuntu default dont allow creation need to allow permission). 
+https://phoenixnap.com/kb/access-denied-for-user-root-localhost (prevents user root) 
 ```
 chmod u+w .
 sudo nano office.py
