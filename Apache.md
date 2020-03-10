@@ -78,6 +78,14 @@ sudo /etc/init.d/apache2 restart #restarts apache
 sudo a2enmod rewrite
 Redirect permanent /secure https://yourdomain.com/secure
 ```
+## Deploment Guide
+https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04
+```
+Installing Apache
+
+
+
+```
 # Udacity Full-stack Course
 https://github.com/mikesprague/udacity-nanodegrees#full-stack-web-developer-nanodegree
   
