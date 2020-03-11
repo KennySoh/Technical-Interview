@@ -1,11 +1,34 @@
-## Cheat Sheet
+## Cheat Sheet, set up a new Project
 
 ```
-// Creating a new project
+// Create a new virtual env 
+virtualenv project_venv --python=python3.6 
+
+// Creating a new project -> cd into project_venv
 django-admin startproject projectname
 
 //Add an app to a project
 python3 manage.py startapp appname
+
+//Organise file 
+- appname
+	- custom_admin
+	- api
+		- views.py
+		- urls.py
+		- serializers.py
+	- media
+	- static
+		- js
+		- css
+		- media
+	- templates
+	- admin.py
+	- decorator.py
+	- models.py
+	- urls.py
+	- utils.py
+	- views.py
 
 //Starting the server
 python3 manage.py runserver
