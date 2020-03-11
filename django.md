@@ -29,6 +29,39 @@ python3 manage.py startapp appname
 	- urls.py
 	- utils.py
 	- views.py
+projectname
+	-settings.py
+	-urls.py
+```
+Configure the url 
+```
+---- projectname > urls.py-----
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('', include('appname.urls')),
+    path('admin/', admin.site.urls),
+]
+
+---- appname > urls.py-----
+from django.urls                import include,path
+from .                          import views
+from django.conf                import settings
+from django.conf.urls.static    import static
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('user/', views.get_user, name='get_user'),
+    
+    path('api/', include('appname.api.urls')),
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+
+```
 
 //Starting the server
 python3 manage.py runserver
