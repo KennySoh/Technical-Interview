@@ -146,7 +146,8 @@ https://medium.com/python-pandemonium/better-python-dependency-and-package-manag
   
   
 ## Setting up Django Project With MySQL
-https://www.digitalocean.com/community/tutorials/how-to-create-a-django-app-and-connect-it-to-a-database
+https://www.digitalocean.com/community/tutorials/how-to-create-a-django-app-and-connect-it-to-a-database (ubuntu)
+https://ruddra.com/posts/install-mysqlclient-macos/ (mac os)
 1. Creating the django skeleton refer above
 
 2. Settings.py
