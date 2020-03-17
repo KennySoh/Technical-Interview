@@ -11,6 +11,12 @@ https://pypi.org/project/django-adminrestrict/
 https://simpleisbetterthancomplex.com/tutorial/2016/07/18/how-to-create-a-custom-django-middleware.html
 
 4) Iprestrict Apache2 
+https://httpd.apache.org/docs/2.4/mod/mod_authz_core.html#require. 
+Location directive is for url  
 ```
-
+---sites-available> 000-default.config------
+ <Location /admin>
+         Require all denied
+         Require ip 122.1321.21321.321
+ </Location>
 ```
