@@ -20,3 +20,11 @@ Location directive is for url
          Require ip 122.1321.21321.321
  </Location>
 ```
+## Ensuring Apache is upgraded to latest release version 
+
+```
+apt-get install apache2
+```
+
+ https://www.tecmint.com/apache-security-tips/
+
