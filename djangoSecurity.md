@@ -27,4 +27,13 @@ apt-get install apache2
 ```
 
  https://www.tecmint.com/apache-security-tips/
+ 
+ ## Hiding Apache Version  
+ ```
+ ---- conf-avaliable >> security.conf ------
+ ServerTokens Prod
+ ServerSignature Off
+ ```
+ https://tecadmin.net/hide-apache-version-from-http-header/
+ 
 
