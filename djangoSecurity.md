@@ -36,4 +36,8 @@ apt-get install apache2
  ```
  https://tecadmin.net/hide-apache-version-from-http-header/
  
-
+ ## Disabling Debug Error/access.log 
+```
+#CustomLog ${APACHE_LOG_DIR}/access.log combined
+ErrorLog /dev/null
+```
