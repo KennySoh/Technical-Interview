@@ -1,7 +1,7 @@
 
 # The Complete Guide (incl Hooks, React Router
 ## Writing First React Code
-```react
+```reactjs
 function Person(props){
   return (
     <div className="person">
