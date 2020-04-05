@@ -47,4 +47,35 @@ document.querySelector('#p1'));
 ```html
 <div id="p1"></div>
 ```
+## Next-Gen JavaScript
+### let and const
+```js
+var x=1;
 
+let y_variable=1;
+const x_constant=1;
+```
+### Arrow Function 
+```
+function myFnc(x,y){
+  console.log(x,y)
+}
+
+function myFnc=(x,y)=>{
+  console.log(x,y)
+}
+```
+### Exports & Imports(Modules) 
+```js
+---person.js----
+const person={
+  name:'Max'
+}
+
+export default person
+```
+```js
+---utility.js---
+export const clean =()=> {...}
+export 
+```
