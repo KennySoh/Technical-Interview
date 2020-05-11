@@ -2254,6 +2254,17 @@ Book.objects.filter().delete() - will not trigger
 for book in Book.objects.all(): - have to delete() one by one
 	book.delete() 
 ```
+## Part5: Update 
+Take note: we use django-cleanup to handle updated imagefields in filestorage
+```
+pip install django-cleanup
+
+INSTALLED_APPS = (
+    ...,
+    'django_cleanup.apps.CleanupConfig',
+)
+```
+https://pypi.org/project/django-cleanup/
 ## DRF upload Files 
 https://chrisbartos.com/articles/uploading-images-drf/
 ```
