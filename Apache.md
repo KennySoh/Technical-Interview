@@ -117,7 +117,7 @@ ls - l
 ### Changing file/directory permissions
 ```
 chmod permissions filename // Change Mode, change permission rwx
-chmod 764 filename (absolute numberic) 
+chmod 764 filename (absolute numberic) equivalent to 
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/linux_persmission1.png)
 ```
