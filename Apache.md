@@ -110,16 +110,26 @@ Permission
 ### Listing the current directory files user/owner/other permissions. 
 ```
 ls - l  
->>> drwxrwxrwx 
+>>> drwxrwxrwx 1 user123 group123
 ( USER read|write|execute | GROUP read|write|execute | OTHER read|write|execute )
 ```
 
 ### Changing file/directory permissions
 ```
 chmod permissions filename // Change Mode, change permission rwx
-chmod 764 filename (absolute numberic) equivalent to 
+chmod 764 filename (absolute numberic) 
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/linux_persmission1.png)
 ```
+chmod o=rwx test (symbolic mode)
+```
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/linux_permission2.png)
 
+### Changing Ownership and Group 
+```
+chown user123 filename          //change user
+chown user123:group123 filename //change user and group
+chgrp group123 filename         //change group
+
+groups                          //show all the groups you are in
 ```
