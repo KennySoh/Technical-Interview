@@ -93,7 +93,7 @@ https://github.com/mikesprague/udacity-nanodegrees#full-stack-web-developer-nano
 
 # Linux 
 ## Ownership and Permission  
-https://youtu.be/D-VqgvBMV7g. 
+https://youtu.be/D-VqgvBMV7g. (Linux Ownership / permsission in Deatil
 ***
 3 type of owner
 - User  (Owner)
@@ -102,8 +102,24 @@ https://youtu.be/D-VqgvBMV7g.
 ***
 
 ***
-***
+Permission
+- Read  (authority to open file/ authority to ls its directory )
+- Write (authority to modify file/ authority to add/rm/rename file in directory)
+- Execute (authority to execute a .exe/ run a file) 
+*** 
+### Listing the current directory files user/owner/other permissions. 
 ```
-ls - l  //
+ls - l  
+>>> drwxrwxrwx 
+( USER read|write|execute | GROUP read|write|execute | OTHER read|write|execute )
+```
+
+### Changing file/directory permissions
+```
+chmod permissions filename // Change Mode, change permission rwx
+chmod 764 filename (absolute numberic) 
 ```
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/webserver3.png)
+```
+
+```
