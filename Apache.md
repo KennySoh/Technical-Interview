@@ -91,7 +91,18 @@ https://github.com/mikesprague/udacity-nanodegrees#full-stack-web-developer-nano
   
 ## Authentication vs Authorization
 
-# Linux File Permission 
+# Linux 
+## Ownership and Permission  
+https://youtu.be/D-VqgvBMV7g. 
+***
+3 type of owner
+- User  (Owner)
+- Group (Contains Many User)
+- Other (Everyone else) 
+***
+
+***
+***
 ```
 ls - l  //
 ```
