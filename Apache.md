@@ -119,7 +119,7 @@ ls - l
 chmod permissions filename // Change Mode, change permission rwx
 chmod 764 filename (absolute numberic) 
 ```
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/linux_permission1.png)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/linux_persmission1.png)
 ```
 
 ```
