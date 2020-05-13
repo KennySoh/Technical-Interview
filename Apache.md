@@ -90,3 +90,9 @@ Installing Apache
 https://github.com/mikesprague/udacity-nanodegrees#full-stack-web-developer-nanodegree
   
 ## Authentication vs Authorization
+
+# Linux File Permission 
+```
+ls - l  //
+```
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/webserver3.png)
