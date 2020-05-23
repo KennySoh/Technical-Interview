@@ -75,7 +75,12 @@ from django.shortcuts               import render, redirect
 def email_sent( request):
     return render(request, 'email/sendemail.html')  will be template folder 
 ```
+for html file
+```
+{% load static %}
 
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+```
 ```
 
 //Starting the server
