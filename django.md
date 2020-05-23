@@ -68,7 +68,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'appname/media')
 ```
+Serving up views.py  Html response
+```
+from django.shortcuts               import render, redirect
 
+def email_sent( request):
+    return render(request, 'email/sendemail.html')  will be default folder 
+```
 
 ```
 
