@@ -73,7 +73,7 @@ Serving up views.py  Html response
 from django.shortcuts               import render, redirect
 
 def email_sent( request):
-    return render(request, 'email/sendemail.html')  will be default folder 
+    return render(request, 'email/sendemail.html')  will be template folder 
 ```
 
 ```
