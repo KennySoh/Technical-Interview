@@ -36,6 +36,13 @@ ErrorLog /dev/null
 ```
 
 # Security 
+## Git branch Master, QA, Master
+https://medium.com/@sairamkrish/git-branching-strategy-for-true-continuous-delivery-eade4435b57e
+```
+git branch project_qa
+git checkout project_qa
+```
+
 ## Applying security settings
 Apply to both prod and qa 
 ```
