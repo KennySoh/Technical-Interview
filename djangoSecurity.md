@@ -27,7 +27,32 @@ apt-get install apache2
 ```
 
  https://www.tecmint.com/apache-security-tips/
- 
+
+
+ ## Disabling Debug Error/access.log 
+```
+#CustomLog ${APACHE_LOG_DIR}/access.log combined
+ErrorLog /dev/null
+```
+
+# Security 
+## Applying security settings
+Apply to both prod and qa 
+```
+SESSION_COOKIE_HTTPONLY = True
+REMEMBER_COOKIE_HTTPONLY = True
+SECURE_BROWSER_XSS_FILTER = True
+
+SECURE_SSL_REDIRECT=True
+
+SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_HTTPONLY = True
+
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = True
+
+X_FRAME_OPTIONS = 'DENY'
+```
  ## Hiding Apache Version  
  ```
  ---- conf-avaliable >> security.conf ------
@@ -36,8 +61,24 @@ apt-get install apache2
  ```
  https://tecadmin.net/hide-apache-version-from-http-header/
  
- ## Disabling Debug Error/access.log 
+ -----------------testing apache fix-----------------
+ 
+ curl -I  https://yourwebsite.com
+
 ```
-#CustomLog ${APACHE_LOG_DIR}/access.log combined
-ErrorLog /dev/null
+
+HTTP/1.1 302 Found
+
+Date: Fri, 20 Mar 2020 07:51:55 GMT
+
+Server: Apache
+
+Location: /admin/login
+
+X-Frame-Options: SAMEORIGIN
+
+Vary: Cookie
+
+Content-Type: text/html; charset=utf-8
 ```
+
