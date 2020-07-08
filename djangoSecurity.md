@@ -72,6 +72,17 @@ apt-get install apache2
  https://www.tecmint.com/apache-security-tips/
  
 ## 4. Disabling Django Restframework browsable api 
+You just need to remove the browsable API renderer from your list of supported renderers for the view.
+
+Generally:
+```
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}
+```
+https://stackoverflow.com/questions/11898065/how-to-disable-admin-style-browsable-interface-of-django-rest-framework
 
 ## 5. Applying security settings
 Apply to both prod and qa 
