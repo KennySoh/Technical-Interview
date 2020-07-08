@@ -36,14 +36,44 @@ ErrorLog /dev/null
 ```
 
 # Security 
-## Git branch Master, QA, Master
+## 1. Git branch Master, QA, Master
 https://medium.com/@sairamkrish/git-branching-strategy-for-true-continuous-delivery-eade4435b57e
 ```
 git branch project_qa
 git checkout project_qa
 ```
+## 2. Ip restriction 
+a) ip restrict for django admin only  
+https://pypi.org/project/django-adminrestrict/  
 
-## Applying security settings
+b) Iprestrict Apache2 
+https://httpd.apache.org/docs/2.4/mod/mod_authz_core.html#require. 
+Location directive is for url  
+```
+---sites-available> 000-default.config------
+ <Location /admin>
+         Require all denied
+         Require ip 122.1321.21321.321
+ </Location>
+```
+Other Option
+1) ip restrict for the whole django project   
+https://pypi.org/project/django-ip-restriction/   
+   
+2) Hacking into django middleware 
+https://simpleisbetterthancomplex.com/tutorial/2016/07/18/how-to-create-a-custom-django-middleware.html
+
+## 3. Keeping Apache2 to current stable release under ubuntu 18.04
+```
+apt-get install apache2
+>>> apache2 is already the newest version (2.4.29-1ubuntu4.12).
+```
+
+ https://www.tecmint.com/apache-security-tips/
+ 
+## 4. Disabling Django Restframework browsable api 
+
+## 5. Applying security settings
 Apply to both prod and qa 
 ```
 SESSION_COOKIE_HTTPONLY = True
@@ -60,7 +90,8 @@ CSRF_COOKIE_HTTPONLY = True
 
 X_FRAME_OPTIONS = 'DENY'
 ```
- ## Hiding Apache Version  
+
+ ## 6. Hiding Apache Version  
  ```
  ---- conf-avaliable >> security.conf ------
  ServerTokens Prod
