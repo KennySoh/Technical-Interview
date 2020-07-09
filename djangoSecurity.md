@@ -132,7 +132,8 @@ Content-Type: text/html; charset=utf-8
 ```
 
 ## 7. Cross-site scripting [XSS]. Broswer Password autocomplete
-XSS could garb the credentials from your browser. Broswer might be vunerable. 
+Broswers version might be vunerable. When they use password managers to store password on the broswer local cache.
+Bad Hates , XSS could grabb the credentials from your browser with a js script. 
 
 Modern broswer
 https://stackoverflow.com/questions/39462123/should-i-prevent-password-autocomplete
