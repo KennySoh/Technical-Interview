@@ -142,4 +142,44 @@ Added to prevent old broswers from xss
 ```
 <input type="password" id="password" name="password" class="form-control return2submit" autocomplete="off">
 ```
-## 8. 
+## 8. Password Strength 
+Using Django Build in Password Validator ensure
+```
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 9,
+        }
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
+```
+Making sure its included in API serializers , if you are using apis to create/reset password 
+```
+class UserPasswordResetSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = User
+		fields = ['id', 'password']
+
+	def update(self, instance, validated_data):
+		user = super().update(instance, validated_data)
+		try:
+			user.set_password(validated_data['password'])
+			user.save()
+		except KeyError:
+			pass
+		return user
+		
+	def validate_password(self,value):
+		validate_password(value)
+		return value
+```
