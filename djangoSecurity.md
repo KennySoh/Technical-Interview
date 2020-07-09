@@ -137,3 +137,8 @@ XSS could garb the credentials from your browser. Broswer might be vunerable.
 Modern broswer
 https://stackoverflow.com/questions/39462123/should-i-prevent-password-autocomplete
 
+Added to prevent old broswers from xss
+```
+<input type="password" id="password" name="password" class="form-control return2submit" autocomplete="off">
+```
+
