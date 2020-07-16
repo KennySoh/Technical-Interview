@@ -147,3 +147,9 @@ mysql -u [new_user] -p [database_name] < [file_name].sql
 https://support.hostway.com/hc/en-us/articles/360000220190-How-to-backup-and-restore-MySQL-databases-on-Linux. 
 https://www.garron.me/en/articles/mysql-backup-restore.html. 
 https://stackoverflow.com/questions/48392553/win-10-mysqldump-gives-error-mysqldump-got-error-1045-access-denied-for-use. 
+```
+git checkout branch_prod
+git merge branch_qa
+
+git mergetool
+```
