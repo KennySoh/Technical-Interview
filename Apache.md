@@ -133,3 +133,13 @@ chgrp group123 filename         //change group
 
 groups                          //show all the groups you are in
 ```
+
+# Migrations Schedule 
+```
+# Backing Up Db into Sql file
+mysqldump -u root -p  -h 127.0.0.1 [database_name] > [file_name].sql
+
+# Restoring DB from Sql File
+create database [database_name];
+mysql -u [new_user] -p [database_name] < [file_name].sql
+```
