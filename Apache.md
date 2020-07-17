@@ -135,6 +135,8 @@ groups                          //show all the groups you are in
 ```
 
 # Migrations Schedule 
+## Workflow
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/migration_workflow.png)  
 ## Migration Schedule Plan 
 1. Submit all fixes/changes, [QA] to verify fixes individually on QA env.
 2. Define the release version number. [Product Manager]
