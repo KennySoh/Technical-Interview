@@ -135,6 +135,23 @@ groups                          //show all the groups you are in
 ```
 
 # Migrations Schedule 
+## Migration Schedule Plan 
+1. Submit all fixes/changes, [QA] to verify fixes individually on QA env.
+2. Define the release version number. [Product Manager]
+3. Once all changes are verified, code freeze. [QA] to do full test on QA. If issues found, return to step 1.
+4. If there are any data migration, the scenario should be replicated on QA env (by engineer doing the data migration script) and tested. if issues found, return to step 1.
+5. Compile all changes to release note [QA] [Product Manager]
+6. Submit App update to app store for approval.
+7. Schedule maintenance window on Prod, all customers must be notified (Could be a system notification email).  ===> 4pm - 7pm
+8. Sure Inform the CST team members [Support Team] for the go-live release plan. 
+9. Merge QA branch change to PROD branch if needed (for code repository). Code freeze on QA lifted.
+10. Got the release version number, “tag” (trigger tag function in SVN) for the latest commit in branch [all Dev Team]
+11. During maintenance window, backup DB and conduct update to PROD servers and necessary data migration. [Backend/ Web Backend]  (Backup DB saved path and file name: /GTRIIP/backup/hh_mm_dd_mm_yyyy_{QA/PROD}_{whodidbackup}.sql)
+12. Do full test on Prod using test workspaces. [QA]
+13. Release version sign-off(one dev, one qa, one product sign), Just make sure everyone is kept informed.
+14. If there are any data migration, the scenario should be replicated on Prod and tested.
+15. If no issues found, declare end of maintenance.
+
 ## Backing and restoring db 
 ```
 # Backing Up Db into Sql file
