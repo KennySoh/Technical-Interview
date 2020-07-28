@@ -192,3 +192,5 @@ https://django-session-security.readthedocs.io/en/latest/quick.html
 SESSION_SECURITY_EXPIRE_AFTER = 3600 #seconds
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 ```
+## 10. Prevent Concurrent Logins
+https://pypi.org/project/django-preventconcurrentlogins/
