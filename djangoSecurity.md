@@ -183,3 +183,12 @@ class UserPasswordResetSerializer(serializers.ModelSerializer):
 		validate_password(value)
 		return value
 ```
+
+## 9. Session Security
+ Django Security for session timeout  
+https://django-session-security.readthedocs.io/en/latest/quick.html 
+  
+```
+SESSION_SECURITY_EXPIRE_AFTER = 3600 #seconds
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+```
