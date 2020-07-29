@@ -194,3 +194,42 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 ```
 ## 10. Prevent Concurrent Logins
 https://pypi.org/project/django-preventconcurrentlogins/
+
+## 11. Configuring Different Django Environment
+https://thinkster.io/tutorials/configuring-django-settings-for-production
+
+Settings File Structure.  
+```
+|-yourapp/
+|_|-settings/
+|__|-base.py
+|__|-dev.py
+|__|-prod.py
+|__|-qa.py
+|-manage.py
+|-requirements.txt
+|-.gitignore
+```
+  
+For qa.py and prod.py. 
+```
+from yourapp.settings.base *
+
+DEBUG = False
+
+SECRET_KEY = os.environ['SECRET_KEY']
+
+# SECURITY WARNING: update this when you have the production host
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
+```
+
+Change manage.py and wsgi.py 
+```
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "yourapp.settings.dev")
+```
+
+Set the local environment variables for your respective servers on CLI
+```
+export DJANGO_SETTINGS_MODULE=yourapp.settings.dev
+export SECRET_KEY="32jokokgokowkoO(#@)49302jifje_=32ionjr"
+```
