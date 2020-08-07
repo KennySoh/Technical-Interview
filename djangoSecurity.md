@@ -230,6 +230,9 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "yourapp.settings.dev")
 
 Set the local environment variables for your respective servers on CLI
 ```
-export DJANGO_SETTINGS_MODULE=yourapp.settings.dev
+export DJANGO_SETTINGS_MODULE=yourapp.settings.dev		#Set Environment Variables
 export SECRET_KEY="32jokokgokowkoO(#@)49302jifje_=32ionjr"
+
+printenv 			#List of Environment Variables
+unset DJANGO_SETTINGS_MODULE	#Remove Environment Variables
 ```
