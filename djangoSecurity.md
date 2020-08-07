@@ -236,7 +236,7 @@ export SECRET_KEY="32jokokgokowkoO(#@)49302jifje_=32ionjr"
 printenv 			#List of Environment Variables
 unset DJANGO_SETTINGS_MODULE	#Remove Environment Variables
 ```
-Set the qa/prod environment 
+Set the qa/prod environment   
 https://stackoverflow.com/questions/46891408/django-setting-environment-variables-in-etc-apache2-envvar-is-not-working.  
 https://stackoverflow.com/questions/51430759/how-to-specify-environment-variables-in-apache-site-config-for-django.  
 ```
