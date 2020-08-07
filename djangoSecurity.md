@@ -236,3 +236,30 @@ export SECRET_KEY="32jokokgokowkoO(#@)49302jifje_=32ionjr"
 printenv 			#List of Environment Variables
 unset DJANGO_SETTINGS_MODULE	#Remove Environment Variables
 ```
+Set the qa/prod environment 
+https://stackoverflow.com/questions/46891408/django-setting-environment-variables-in-etc-apache2-envvar-is-not-working.  
+https://stackoverflow.com/questions/51430759/how-to-specify-environment-variables-in-apache-site-config-for-django.  
+```
+-----------apache2.conf------------
+SetEnv DJANGO_SETTINGS_MODULE 'yourapp.settings.qa'
+SetEnv SECRET_KEY '123456778877'
+
+-----------Django> wsgi.py---------
+import os
+
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "yourapp.settings.base")
+
+_application = get_wsgi_application(). <---- Modified
+
+def application(environ, start_response): <----- Added
+    # pass the WSGI environment variables on through to os.environ
+    os.environ['DJANGO_SETTINGS_MODULE'] = environ['DJANGO_SETTINGS_MODULE']
+    os.environ['SECRET_KEY'] = environ['SECRET_KEY']
+    return _application(environ, start_response)
+    
+-----------settings > qa.py-----------
+SECRET_KEY = os.environ['SECRET_KEY']
+
+```
