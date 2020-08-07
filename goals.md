@@ -21,25 +21,22 @@ Tech-entrepreneur (possibly ecommerce/ healthcare)
 - Mastery of front end web  
 - Mastery of Django
 
-## Overarching Career Goals for 2019:
-- Mastery of Django
-- Development of Office 3.0 
-- Understanding core products on a deeper level
+## Overarching Career Goals for 2020:
+- Django JWT token User Auth Service
+- Vue.js 
+- Database Refactoring, Backup and Migrations 
+- CICD Jenkins setup?
+- Django Unti Test
+- Microservice Queue Broker?
 
-# 27 Oct 2019
+# 7 Aug 2020
 ### DeadLines:
-- [ ] Django Udemy Course
-- [ ] SQL
-- [ ] Ecommerce
-  - [ ] CSV Files
+- [ ] SPH
+- [ ] OFFICE 3.0
 
 ### Things I'll Do in the Future:
 
-- [ ] Team Tree House documentation
-- [ ] Encoding on Github/ Revision on Anki notes
-- [ ] One Kind App, git documentation
-- [ ] Cheat Code, git documentation
-- [ ] Technical Interview/ Algorithms + Datastructure
+- [ ] Building a user auth service
 
 ### Skills to be encoded into long term memory
 - [ ] Javascript
