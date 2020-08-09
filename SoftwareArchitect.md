@@ -67,6 +67,18 @@ Baseline Requirements:
 -- Performance.  
 -- Load   
 -- Data Volume.   
--- C0ncurrent Users.    
+-- Concurrent Users.    
 -- SLA.   
+***
+## Non-Functional requirements
+### Performance 
+What is the required performane for this system? Fast...
+***
+- Latency.  
+-- How much time does it take to perform a single task (1 second).  
+- Through put   
+-- how many users can be saved in the database in a minute. (well designed app -1000usrs/min). 
+- Load 
+-- Quantity of work without crashing. ( 5000 usrs without crashing) 
+
 ***
