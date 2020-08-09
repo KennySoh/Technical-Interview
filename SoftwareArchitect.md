@@ -64,9 +64,9 @@ Baseline Requirements:
 -- user interfaces.  
 
 - what should the system deal with.(Non-functional Requirements).  
--- Performance. 
--- Load  
--- Data Volume. 
--- Cincurrent Users.  
--- SLA.  
+-- Performance.  
+-- Load   
+-- Data Volume.   
+-- C0ncurrent Users.    
+-- SLA.   
 ***
