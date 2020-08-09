@@ -37,3 +37,14 @@ Baseline Requirements:
 ## Organization Chart 
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/softwareOrgChart.png)
 
+## The Architect's Process
+***
+- Understand the System's Requirements
+- Understand the Non-Functional Requirements
+- Map the Componenets
+- Select the Technology Stack
+- Design the Architecture
+- Write the Architecture Document
+- Support the Team
+***
+
