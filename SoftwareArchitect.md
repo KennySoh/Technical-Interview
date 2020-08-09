@@ -35,5 +35,5 @@ Baseline Requirements:
 ***
 
 ## Organization Chart 
-![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/softwareOrgChart.PNG)
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/softwareOrgChart.png)
 
