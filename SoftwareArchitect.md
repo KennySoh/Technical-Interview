@@ -56,3 +56,11 @@ Baseline Requirements:
 - Support the Team
 ***
 
+## Understanding System Requirements
+***
+- what the system should do (Funcional requirements)
+-- business flow
+-- business services
+-- user interfaces
+
+***
