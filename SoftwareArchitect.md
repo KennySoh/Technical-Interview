@@ -58,9 +58,15 @@ Baseline Requirements:
 
 ## Understanding System Requirements
 ***
-- what the system should do (Funcional requirements)
--- business flow
--- business services
--- user interfaces
+- what the system should do (Funcional requirements).  
+-- business flow.  
+-- business services.  
+-- user interfaces.  
 
+- what should the system deal with.(Non-functional Requirements).  
+-- Performance. 
+-- Load  
+-- Data Volume. 
+-- Cincurrent Users.  
+-- SLA.  
 ***
