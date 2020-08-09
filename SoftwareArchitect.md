@@ -39,10 +39,18 @@ Baseline Requirements:
 
 ## The Architect's Process
 ***
-- Understand the System's Requirements
-- Understand the Non-Functional Requirements
+- Understand the System's Requirements 
+(What should the system do?)
+
+- Understand the Non-Functional Requirements 
+(Define Technical & Service Level Attributes # of Users,Loads,Volumes,Performance)
+
 - Map the Componenets
+(Represent the Tasks of the System. 2 Goals - System Functionality, Communicate your undertanding to the client, Non-Technical)
+
 - Select the Technology Stack
+(Back End, FrontEnd , Data Store)
+
 - Design the Architecture
 - Write the Architecture Document
 - Support the Team
