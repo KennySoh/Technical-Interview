@@ -262,3 +262,14 @@ def application(environ, start_response): <----- Added
 SECRET_KEY = os.environ['SECRET_KEY']
 
 ```
+## 12. Cache Busting 
+To prevent cache from remembering.  
+https://pypi.org/project/django-forgiving-collectstatic/#description
+```
+-------Cli-------
+pip install django-forgiving-collectstatic 
+```
+```
+-------settings.py---------
+STATICFILES_STORAGE = 'django_forgiving_collectstatic.storages.ForgivingManifestStaticFilesStorage' 
+```
