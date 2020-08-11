@@ -251,12 +251,11 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "yourapp.settings.base")
 
-_application = get_wsgi_application(). <---- Modified
-
 def application(environ, start_response): <----- Added
     # pass the WSGI environment variables on through to os.environ
     os.environ['DJANGO_SETTINGS_MODULE'] = environ['DJANGO_SETTINGS_MODULE']
     os.environ['SECRET_KEY'] = environ['SECRET_KEY']
+    _application = get_wsgi_application()<---- Modified, Shifted down here
     return _application(environ, start_response)
     
 -----------settings > qa.py-----------
