@@ -34,3 +34,8 @@
 ### Private vs Public ip 
 - IPv4 (Most Common) vs IPv6 ( More of newer iot systems)
 
+### EC2 User Data (Bootstrap scipt)
+- Only run once.... can use it to reset configurations. 
+```
+to automate server instance creation
+```
