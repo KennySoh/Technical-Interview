@@ -34,6 +34,20 @@
 ### Private vs Public ip 
 - IPv4 (Most Common) vs IPv6 ( More of newer iot systems)
 
+### EC2 Overview
+#### Ram ( random access memory ) , 
+it is known as Hot memory. Application such as dictionary...
+
+Out of memory error ,  The RAM will extend to the disc called swapping, when swapping performance degrade.
+```
+free -m // show the number of free ram avaliable, 
+top //Show all process running
+shift + f then  m // sort by memory
+```
+#### CPU 
+cpu will be used for computation. 
+
+
 ### EC2 User Data (Bootstrap scipt)
 - Only run once.... can use it to reset configurations. 
 ```
