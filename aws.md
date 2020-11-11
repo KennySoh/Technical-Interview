@@ -25,3 +25,10 @@
 4b) Key pair
 
 ***
+
+### Security Group 
+***
+- Security Group are fundamental to Network Security 
+- They Control Inbound and Outbound traffic 
+![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/EC2_3.png)
+***
