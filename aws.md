@@ -39,3 +39,6 @@
 ```
 to automate server instance creation
 ```
+### AMI
+Its an Image we can use for faster server instance creation
+
