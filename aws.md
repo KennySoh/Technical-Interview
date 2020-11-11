@@ -30,3 +30,7 @@
 ***
 ![images](https://github.com/KennySoh/Technical-Interview/blob/master/oop/EC2_3.png)
 ***
+
+### Private vs Public ip 
+- IPv4 (Most Common) vs IPv6 ( More of newer iot systems)
+
