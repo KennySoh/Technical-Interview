@@ -30,9 +30,12 @@ This is the threat landscape.
 Risk = Vunerabilities x Threats x Consequences.  
   
 ***
-What are classification of security assest
+What are classification of security assest ( Google for risk assesment. ISO guidelines)
 - Function ( Eg. the login function of a bank )
 - Departments (Eg. Sales) 
 - Processes (Eg. Handling people leaving) 
 - Information and data ( Important credential)
 *** 
+
+### Select security controls
+![](https://github.com/KennySoh/Technical-Interview/blob/master/oop/cyber_2.png)
