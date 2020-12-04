@@ -24,5 +24,7 @@
 - Anonymity, no idea who post this comment   
 - Pseudonymity, no idea who is it but can interact with fake profile. 
 
-### 
-[!image https://github.com/KennySoh/Technical-Interview/blob/master/oop/cyber_1.png]
+### Security, Vunerabilities, Threats and Adversaries
+![](https://github.com/KennySoh/Technical-Interview/blob/master/oop/cyber_1.png)
+This is the threat landscape.  
+Risk = Vunerabilities x Threats x Consequences.  
