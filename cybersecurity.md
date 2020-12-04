@@ -25,3 +25,4 @@
 - Pseudonymity, no idea who is it but can interact with fake profile. 
 
 ### 
+[!image https://github.com/KennySoh/Technical-Interview/blob/master/oop/cyber_1.png]
