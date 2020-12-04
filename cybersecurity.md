@@ -19,4 +19,9 @@
 - Primary Email
 ***
 
-### Privacy, Anonymity and Pseudonymity
+### What is Privacy, Anonymity and Pseudonymity
+- Privacy, Top secret. 
+- Anonymity, no idea who post this comment   
+- Pseudonymity, no idea who is it but can interact with fake profile. 
+
+### 
