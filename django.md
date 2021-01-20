@@ -212,6 +212,11 @@ mysql> CREATE DATABASE blog_data;
 python manage.py runserver your-server-ip:8000
 ```
 
+## For centos bug
+```
+https://vkafed.com/apache-2-4-6-mod_wsgi-python-3-6-django-2-2-6-on-centos-7
+```
+
 ## MYSQL
 ```
 //Logging in to mysql db
