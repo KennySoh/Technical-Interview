@@ -21,18 +21,17 @@ Tech-entrepreneur (possibly ecommerce/ healthcare)
 - Mastery of front end web  
 - Mastery of Django
 
-## Overarching Career Goals for 2020:
-- Django JWT token User Auth Service
-- Vue.js 
-- Database Refactoring, Backup and Migrations 
-- CICD Jenkins setup?
-- Django Unti Test
-- Microservice Queue Broker?
+## Overarching Career Goals for 2021:
+Taking on an EM role. 
+- leading a team along the same drum beat. 
+- Consolidating knowledge of different hard technical knowledge. 
+- Gaining skills in Flutter , Huge focus here to build up mobile front end skills along side web . 
+- Gaining skills in AWS and its different backup services. 
+- Gaining skills in Spring Boat
 
-# 7 Aug 2020
+# 16 Feb 2021
 ### DeadLines:
-- [ ] SPH
-- [ ] OFFICE 3.0
+- [ ] Start the Flutter udemy course. 
 
 ### Things I'll Do in the Future:
 
