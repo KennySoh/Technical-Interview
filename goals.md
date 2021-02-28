@@ -17,9 +17,17 @@ Tech-entrepreneur (possibly ecommerce/ healthcare)
 ## Brick by brick  
 "You don't set out to build a wall. You don't say 'I'm going to build the biggest, baddest, greatest wall that's ever been built.' You don't start there. You say, 'I'm going to lay this brick as perfectly as a brick can be laid. You do that every single day. And soon you have a wall."  
   
-## Mile stone goals  
-- Mastery of front end web  
-- Mastery of Django
+## Mile stone goals 
+Skills mastered
+- Django API 
+- Backend DB design
+- Jquery Front end
+- React js.
+
+Skills to learn
+- Mastery of Flutter
+- Mastery of AWS EC2, AWS load balancer, Linux
+- Mastery of JAVA sprint boot. 
 
 ## Overarching Career Goals for 2021:
 Taking on an EM role. 
