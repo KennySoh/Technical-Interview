@@ -74,8 +74,8 @@ const person={
 
 export default person
 ```
-```js ----- named export
----utility.js---
+```js 
+---utility.js--- named export
 export const clean =()=> {...}
 export const baseData =10;
 ```
