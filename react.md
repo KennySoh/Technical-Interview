@@ -93,4 +93,21 @@ import {baseData} from './utility.js'
 import {clean} from './utility.js'
 ```
 
-### 
+### Classes 
+```js
+class Person{
+  constructor(){
+    this.name= 'Max';
+  }
+  
+  printMyName(){
+    console.log(this.name);
+  }
+}
+
+const person= new Person();
+person.printMyName();
+
+class Human {
+ const
+}
