@@ -66,20 +66,24 @@ function myFnc=(x,y)=>{
 }
 ```
 ### Exports & Imports(Modules) 
+default export. 
 ```js
----person.js---- default export
+---person.js----
 const person={
   name:'Max'
 }
 
 export default person
 ```
+
+named export. 
 ```js 
----utility.js--- named export
+---utility.js--- 
 export const clean =()=> {...}
 export const baseData =10;
 ```
   
+The js script we are importing the other js exports into.
 ```
 ---app.js---
 import person from './person.js'
