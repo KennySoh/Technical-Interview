@@ -107,7 +107,99 @@ class Person{
 
 const person= new Person();
 person.printMyName();
+```
 
+Extends
+```
 class Human {
- const
+ constructor(){
+  this.gender='male';
+  }
+  
+  printGender(){
+    console.log(this.gender);
+  }
 }
+
+class Person extends Human{
+  constructor(){
+    super();  //Must add this if u are implementing a constructor on Person as well.
+    this.name='Max';
+    this.gender ='female';
+   }
+   printMyName(){
+    console.log(this.name);
+   }
+}
+
+const person= new Person();
+person.printMyName();
+person.printGender();
+```
+### Classes, Properties & Methods
+A more modern syntax of using properties(variables) and methods(functions)
+ES6 above vs ES7 
+```
+class Human{
+  gender='male';
+  printGender =()=>{
+    console.log(this.gender);
+  }
+}
+
+class Person extends Human{
+  name='Max';
+  gender='female';
+  
+  printMyName= () =>{
+    console.log(this.name);
+  }
+}
+
+const person = new Person();
+person.printMyName();
+person.printGender();
+```
+
+### Spread & Rest Operators
+```js
+--- Spread ---- Used to split up array elements OR object Properties
+const newArray=[...oldArray,1,2]
+const newObject={...oldObject,newProp:5}
+```
+
+```js
+--- Rest ---- Used to merge a list of function arguments into an array
+function sortArgs(...args){
+  return args.sort()
+}
+```
+```
+--- Spread Example----
+const numbers = [1,2,3];
+const newNumbers1 [numbers,4]; 
+const newNumbers2 [...numbers,4]; 
+
+console.log(newNumbers1)  // [[1,2,3],4]
+console.log(newNumbers2)  // [1,2,3,4] 
+
+const person={
+  name:'Max'
+};
+
+const newPerson={
+  ...person,
+  age:28
+}
+console.log(newPerson); // [object Object]{ age:28, name:"Max" }
+
+```
+```
+--- Rest Example----
+const filter = (...args)=>{
+  return args
+}
+
+console.log(filter(1,2,3))  // [1,2,3]
+```
+
