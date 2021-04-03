@@ -257,3 +257,23 @@ console.log(doubleNumArray);
 - Use a Development Server. 
 ***
 
+### Using create react app. 
+create react app tool to set up bundler, compiler, development server.
+https://github.com/facebook/create-react-app. 
+  
+1. Need to download node.js to use npm. npm install.
+https://nodejs.org/en/
+
+2. npm install create-react-app.
+```
+sudo npm install create-react-app -g //install create-react-app tool
+```
+  
+3. create new project. 
+```
+cd to [desired file path]
+create-react-app [project-name] --scripts-version 1.1.5 // script-version defines a folder structure
+
+
+```
+
