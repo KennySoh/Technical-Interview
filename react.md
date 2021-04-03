@@ -203,3 +203,57 @@ const filter = (...args)=>{
 console.log(filter(1,2,3))  // [1,2,3]
 ```
 
+### Destructuring
+Easily extract array elements or object properties and store them in variables
+```js
+---- Array destructuring-----
+[a,b]= ["hello,"Max"]
+console.log(a) // hello
+console.log(b) // Max
+
+---- Object Destructuring----
+{name}={name:'max',age:28}
+console.log(name) //Max
+console.log(age) // undefined
+```
+
+### Reference and primitive type
+```js
+// Primitive type (eg: number, string) means the underlying value gets copied
+const number =1;
+const num2 = nummber //underlying value gets copied
+
+// reference type (eg: objects) , pointer get referenced
+const person ={
+ name:'Max'
+}
+const secondPerson = person; // Pointer is reference
+person.name ='Manu';
+console.log(secondPerson);
+```
+### Refreshing Array Functions
+```js
+const numbers = [1,2,3];
+
+const doubleNumArray = numbers.map((num) => {
+  return num*2;
+});
+
+console.log(numbers);
+console.log(doubleNumArray);
+```
+## Section3 : Understanding the Base Features & Syntax
+### The build workflow
+***
+**Why?** 
+- We want to ship code as optimise as possible. 
+- Use Next-Gen JavaScript Features to write less error prone code
+- Be more Productive. css prefixes, or linting (tool to markout suboptimal code)
+  
+**How?**
+Use Dependency Management Tool npm or yarn ( Managing third party dependencies). 
+Use Bundler. Recommended: Webpack (Write moduler code, allow this modular code to compiled together)
+Use Compiler (Next-Gen JavaScript) Babel + Presets
+Use a Development Server. 
+***
+
