@@ -251,9 +251,9 @@ console.log(doubleNumArray);
 - Be more Productive. css prefixes, or linting (tool to markout suboptimal code)
   
 **How?**
-Use Dependency Management Tool npm or yarn ( Managing third party dependencies). 
-Use Bundler. Recommended: Webpack (Write moduler code, allow this modular code to compiled together)
-Use Compiler (Next-Gen JavaScript) Babel + Presets
-Use a Development Server. 
+- Use Dependency Management Tool npm or yarn ( Managing third party dependencies). 
+- Use Bundler. Recommended: Webpack (Write moduler code, allow this modular code to compiled together)
+- Use Compiler (Next-Gen JavaScript) Babel + Presets (Compiles nextgen js to browser readable js)
+- Use a Development Server. 
 ***
 
