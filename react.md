@@ -357,5 +357,5 @@ When building a new component.
 ***
 - src
 -- Person
----Person.js
+--- Person.js
 ***
