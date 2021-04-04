@@ -280,6 +280,11 @@ npm start // will run the react develelopment server , hot reloading is applied 
 ```
 
 ### Understanding Folder Structure
-
+***
+- node_modules ( holds all the dependecies and sub dependencies... generated automatically)
+- public (holds the index.html files)
+- **src** ( where the react file is, js and css files)
+- package.json ( the dependencies , scripts allow us to do npm start etc)
+***
 
 
