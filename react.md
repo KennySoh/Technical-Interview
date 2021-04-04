@@ -273,7 +273,13 @@ sudo npm install create-react-app -g //install create-react-app tool
 ```
 cd to [desired file path]
 create-react-app [project-name] --scripts-version 1.1.5 // script-version defines a folder structure
-
-
 ```
+4. Start Development server
+```
+npm start // will run the react develelopment server , hot reloading is applied automatically.
+```
+
+### Understanding Folder Structure
+
+
 
