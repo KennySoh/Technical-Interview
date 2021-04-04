@@ -352,7 +352,7 @@ return (
 ```
 
 ### Creating a Funcitonal Component. 
-When building a new component, Best practice to create a Folder with First Capital Letter "Person" and the js file with the same name. 
+1. When building a new component, Best practice to create a Folder with First Capital Letter "Person" and the js file with the same name. 
 
 ***
 src
@@ -370,4 +370,26 @@ const person = () => {
 }
 
 export default person;
+```
+
+2. Importing into Person component into the main App component
+```
+--- App.js ----
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Person from './Person/Person' // Importing the "Person" react component
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h1> Hi Im a react app</h1>
+        <Person />           // Inserting the "Person" component into the "App" Component
+      </div>
+    );
+  }
+}
+
+export default App;
 ```
