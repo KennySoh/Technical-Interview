@@ -355,7 +355,7 @@ return (
 When building a new component.   
 - Best Practice : 
 ***
-- src
--- Person
---- Person.js
+src
+> Person
+>> Person.js
 ***
