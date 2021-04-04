@@ -339,9 +339,10 @@ class App extends Component {
 ```
 ### JSX Restriction
 ```
+1. Must use className, JSX complier conflict
 <div className ="App"> // cant use class="App" , React JSX complier conflict
 
-// Only every jsx react componenet only can have one root component
+2. Only every jsx react componenet only can have one root component
 return ( 
   <div className="App">     // This is jsx, react syntax to allow easier writing of html
     <h1> Hi Im a react app</h1>
@@ -349,3 +350,12 @@ return (
   <h1> Second root componeent </h1> // Cannot!
 );
 ```
+
+### Creating a Funcitonal Component. 
+When building a new component.   
+- Best Practice : 
+***
+- src
+-- Person
+---Person.js
+***
