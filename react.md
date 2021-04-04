@@ -352,10 +352,22 @@ return (
 ```
 
 ### Creating a Funcitonal Component. 
-When building a new component.   
-- Best Practice : 
+When building a new component, Best practice to create a Folder with First Capital Letter "Person" and the js file with the same name. 
+
 ***
 src
 > Person
 >> Person.js
 ***
+```
+-----Person.js------
+import React from 'react';
+
+
+// Using ES6 Arrow function
+const person = () => {
+    return <p>Im a Person!</p>
+}
+
+export default person;
+```
