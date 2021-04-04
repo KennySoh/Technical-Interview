@@ -287,4 +287,65 @@ npm start // will run the react develelopment server , hot reloading is applied 
 - package.json ( the dependencies , scripts allow us to do npm start etc)
 ***
 
+### Understanding the Component Basics
+mount a root component in index.js
+```js
+-----  index.js ------
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';       // this imports the App from app.js
+import registerServiceWorker from './registerServiceWorker';
 
+ReactDOM.render(<App />, document.getElementById('root')); // Mount a root component APP
+registerServiceWorker();
+```
+
+```js
+----- App.js----
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+  render() {                    // all react component need to render() some html
+    return ( 
+      <div className="App">     // This is jsx, react syntax to allow easier writing of html
+        <h1> Hi Im a react app</h1>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+### Understanding jsx
+```
+// JSX Simplifies development
+class App extends Component {
+  render() {                    // all react component need to render() some html
+    return ( 
+      <div className="App">     // This is jsx, react syntax to allow easier writing of html
+        <h1> Hi Im a react app</h1>
+      </div>
+    );
+  }
+}
+
+// Without jsx , we have to use the React.createElement function much more complicated
+class App extends Component {
+  render() {                    // all react component need to render() some html
+    return React,createElement('div',{className:'App'} ,React.createElement('h1, etc....
+```
+### JSX Restriction
+```
+<div className ="App"> // cant use class="App" , React JSX complier conflict
+
+// Only every jsx react componenet only can have one root component
+return ( 
+  <div className="App">     // This is jsx, react syntax to allow easier writing of html
+    <h1> Hi Im a react app</h1>
+  </div>
+  <h1> Second root componeent </h1> // Cannot!
+);
+```
