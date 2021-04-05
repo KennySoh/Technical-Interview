@@ -401,4 +401,66 @@ Functional components (also referred to as "presentational", "dumb" or "stateles
 
 class-based components (also referred to as "containers", "smart" or "stateful" components) => class Cmp extends Component { render () { return <div>some JSX</div> } } 
 ```
+### JSX running javascript code
+{ Math.random() } , Single Curly braces to escape jsx html and run js
+```
+import React from 'react';
 
+
+// Using ES6 Arrow function
+const person = () => {
+    return <p>Im a Person and I am {Math.floor(Math.random()*30)} years old!</p>
+}
+
+export default person;
+```
+### Working with Props
+```
+----app.js---
+<Person name = "Max" age="28" />
+
+---person.js---
+const person = (props) => {
+    return <p>Im {props.name} and I am {props.age} years old!</p>
+}
+```
+
+### Understand the children props
+```
+----app.js---
+<Person name = "Max" age="28"> My Hobbies: Racing </Person>
+
+---person.js---
+const person = (props) => {
+    return (
+      <div>
+        <p>Im {props.name} and I am {props.age} years old!</p>
+        <p>{props.children}</p>  // Any elements between the component tags. "My Hobbies: Racing"
+      </div>
+    
+}
+```
+### Understanding and Using State
+```js
+----- App.js----
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+
+  state =  
+
+
+
+  render() {                    // all react component need to render() some html
+    return ( 
+      <div className="App">     // This is jsx, react syntax to allow easier writing of html
+        <h1> Hi Im a react app</h1>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
