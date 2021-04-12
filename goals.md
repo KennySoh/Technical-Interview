@@ -25,7 +25,7 @@ Skills mastered
 - React js.
 
 Skills to learn
-- Mastery of Flutter
+- Mastery of React
 - Mastery of AWS EC2, AWS load balancer, Linux
 - Mastery of JAVA sprint boot. 
 
@@ -39,7 +39,7 @@ Taking on an EM role.
 
 # 16 Feb 2021
 ### DeadLines:
-- [ ] Start the Flutter udemy course. 
+- [ ] Start the React udemy course. 
 
 ### Things I'll Do in the Future:
 
