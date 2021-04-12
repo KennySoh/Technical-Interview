@@ -449,7 +449,13 @@ import './App.css';
 
 class App extends Component {
 
-  state =  
+  state = {
+    persons: [
+      {name: 'Max', age:28},
+      {name: 'Manu', age:29},
+      {name:'Stephanie',age:26}
+    ]
+  } // state is something unique to class extends Component 
 
 
 
@@ -457,6 +463,7 @@ class App extends Component {
     return ( 
       <div className="App">     // This is jsx, react syntax to allow easier writing of html
         <h1> Hi Im a react app</h1>
+        <Person name={this.state.persons[0].name} age={this.state.person[0].age}/> //this references the current class and we can point to the state.
       </div>
     );
   }
@@ -464,3 +471,69 @@ class App extends Component {
 
 export default App;
 ```
+### Handling Events with Methods
+```js
+----- App.js----
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+
+  state = {
+    persons: [
+      {name: 'Max', age:28},
+      {name: 'Manu', age:29},
+      {name:'Stephanie',age:26}
+    ]
+  } // state is something unique to class extends Component 
+
+  switchNameHandler = () =>{
+    console.log('Was clicked!');
+  }
+
+  render() {                    // all react component need to render() some html
+    return ( 
+      <div className="App">     // This is jsx, react syntax to allow easier writing of html
+        <button onClick={this.switchNameHandler}>Click here</button>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+A range of events React can respond to 
+https://reactjs.org/docs/events.html#supported-events
+
+### Manipulating State
+Must use this.setState so react will reload.
+```
+switchNameHandler = () =>{
+    this.setState({
+      persons: [
+        {name: 'Maximilian',age: 28},
+        ...
+    })
+}
+```
+
+### Using  New React hook, the useState() Hook for State Manipulation. 
+Normally we use the old classbased state setState to change .  
+react 16.8 or higher only.  
+```
+const app = props =>{
+  const [personState,setPersonState] = useState({
+    persons: [
+      { name: 'Max', age: 28 },
+      { name: 'Manu', age: 29 },
+      { name: 'Stephanie', age: 26 }
+     ],
+     otherState: 
+  });
+}
+```
+### Stateless vs Stateful Component
+Creating more stateless component is better. 
+### Passing Method References betwwen Components
+
