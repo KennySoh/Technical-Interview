@@ -545,3 +545,80 @@ Creating more stateless component is better.
 - Visual Studio Code
 
 ### Building a component tree.
+***
+- src
+-- components
+--- ExpenseItem.js //Conventional way of naming files
+***
+```
+function ExpenseItem(){
+  return <h2>Expensive stuff </h2>
+}
+
+export default ExpenseItem; 
+```
+```
+import ExpenseItem from './components/ExpenseItem';
+
+function App() {
+  return (
+    <div>
+      <h2> Lets get Started </h2>
+      <ExpenseItem> </ExpenseItem>
+    </div>
+  );
+}
+
+export default App;
+```
+### Writing More Complex JSX Code
+Only have element per return statement
+```
+function ExpenseItem(){
+  return (
+    <div>
+      <div>Date</div>
+      <div>
+       <h2>Title</h2>
+       <div>Amount</div>
+      </div>
+    </div>
+  );
+}
+```
+
+### Adding Basic CSS styling 
+***
+-src
+--componenets
+---ExpenseItem.css
+---ExpenseItem.js
+***
+```
+.expense-item{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba
+}
+.expense-item__description{
+  display:flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-flow: column-reverse;
+}
+```
+```
+import './ExpenseItem.css';
+
+function ExpenseItem(){
+  return (
+    <div className ="expense-item"> 
+      <div>March 28th 2021</div>
+    </div>
+  );
+ }
+ 
+ export default ExpenseItem;
+```
