@@ -535,5 +535,11 @@ const app = props =>{
 ```
 ### Stateless vs Stateful Component
 Creating more stateless component is better. 
-### Passing Method References betwwen Components
 
+### New Section3 : Building Expense Tracker
+- react uses a Declarative Approach. 
+- Define the desired target states and let react figure out the actual Javascript DOM Instruction.
+- Build your own, custom HTML Elements
+- Create react app and the instruction
+- npm start. 
+- Visual Studio Code
