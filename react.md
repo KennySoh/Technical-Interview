@@ -543,3 +543,5 @@ Creating more stateless component is better.
 - Create react app and the instruction
 - npm start. 
 - Visual Studio Code
+
+### Building a component tree.
