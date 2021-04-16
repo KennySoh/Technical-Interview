@@ -733,4 +733,5 @@ jsx is complied with React Library
 ### An Alternative Syntax (Arrow function) 
 const ExpenseDate = (props) =>{}
 
-### 
+## Section 4
+About State
