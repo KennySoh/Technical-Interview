@@ -622,3 +622,115 @@ function ExpenseItem(){
  
  export default ExpenseItem;
 ```
+
+### Outputting Dynamic Data & Working with Expressions with JSX
+```
+import './ExpenseItem.css';
+
+function ExpenseItem(){
+  const expenseDate = new Date(2021, 2, 28);
+  const expenseTitle = 'Car Insurance';
+  const expenseAmount = 294.67
+
+  return (
+    <div className ="expense-item"> 
+      <div>{ 1=1 }1</div> // Single curly braces runs js
+      <div>{ expenseTitle } </div> // javascript variable.
+      <div>{ expenseDate.toISOString() }</div> //converting js object to string then outputting
+    </div>
+  );
+ }
+ 
+ export default ExpenseItem;
+```
+
+### Passing Data via "Prop"
+From parent App.js => child ExpenseItem.js 
+```
+-App,js--
+function App(){
+  const expenses=[
+    {
+      id:'e1',
+      title:'Toilet Paper',
+      amount: 94.12,
+      date: new Date(2020, 7, 14),
+    },
+    ...
+  ]
+
+  return (
+    <div>
+      <ExpenseItem 
+            title={expenses[0].title} 
+            amount={expense[0].amount}
+      ></ExpenseItem> 
+     </div>
+    );
+}
+```
+
+```
+-Expenseitem.js-
+function ExpenseItem(props){
+  <h2>{prop.title}</h2>
+}
+```
+### Adding "normal" Javacript Logic to Components
+Best practice
+```
+Put js logic in the variable instead inside jsx { 1+1 }
+
+const month = props.date.toLocaleString('en-US', {month:'long'});
+const day = props.date.toLocalString('en-US', {day:'2-digit'});
+```
+### Splitting Components into Multiple Components
+Ensure the components are reduced to smaller components.
+
+### The Concept of "Composition" ("children props")
+Allow you the wrap <Card><div>children props</div></Card>
+function Card(props){ <div>{ props.children }</div>
+```
+function ExpenseItem(props){
+  return (
+    <Card className='expense-item'>
+      <ExpenseDate date={props.date} />
+      <div className='expense-item__description'>
+        <h2>{props.title}</h2>
+        <div className='expense-item__price'>${props.amount}</div>
+       </div>
+     </Card>
+  );
+}
+
+export default ExpenseItem;
+```
+```
+import './Card.css';
+
+function Card(props){
+  return <div className="card">{props.children}</div>;
+}
+
+export default Card;
+```
+### A First Summary
+### A Closer look at JSX
+Used to import React. now Jsx doesnt need to. 
+```
+jsx is complied with React Library
+```
+### Organizing Component Files
+```
+-components
+--Expenses
+---ExpenseDate.css
+---ExpenseDate.js
+--UI
+---card.css
+---card.js
+```
+### An Alternative Syntax (Arrow function) 
+const ExpenseDate = (props) =>{}
+
+### 
