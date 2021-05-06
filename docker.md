@@ -34,7 +34,7 @@ After conflict
 
 Just have the run a docker command to pull the image into the server
 
-## What is a Conatiner?
+## What is a Container?
 ***
 - LAyers of iamges
 - Mostly Linux Base Image, Because small in size
