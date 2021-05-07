@@ -46,3 +46,21 @@ Just have the run a docker command to pull the image into the server
 - layer.
 - Alpine:3.10 Layer-linux base image
 ***
+```
+--- go to docker hub----
+docker ps // we can see the container running
+docker run postgres:9.6 //advantage only different layer will be downloaded. 
+
+Image -> artificat 
+container -> official running image
+```
+
+## docker vs vm machine 
+operating system
+- application <- docker,vm
+- os kernel <- vm
+- hardware
+
+## Install docker 
+Before installing Docker 
+- 
