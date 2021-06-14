@@ -1,3 +1,6 @@
+## How to Become a Good Backend Engineer (Fundamentals) , Hussein Nasser
+https://www.youtube.com/watch?v=V3ZPPPKEipA&list=PLQnljOFTspQUNnO4p00ua_C5mKTfldiYT&index=1&t=1243s
+
 ### Communication Protocols
 ***
 1. TCP vs UDP
