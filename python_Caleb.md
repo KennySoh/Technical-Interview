@@ -92,8 +92,24 @@ ages[1:] # list slicing
 ages[1:]=[6,7] #Update the list 
 ```
 
-
-
+### Input
+```python3
+print("Hey What's your name?")
+name = input()
+print("Hello, " + name)
+print("What's your favourite number?")
+fav_num=input()
+print("Give us another number.")
+fav_num2 = input()
+print(fav_num +fav_num2)
+```
+### Data Type, Type Casting
+```
+type() #int, float, str
+str()
+float()
+int()
+```
 
 
 
