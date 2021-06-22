@@ -110,6 +110,24 @@ str()
 float()
 int()
 ```
+### If else statements
+```
+if (x==1):
+  print("Welcome to our app!")
+elif (age>65):
+  print("Hey, you get a special discount")
+elif (age>20):
+  print("Yay!")
+else:
+  print("You're not old enough")
+```
+
+### for loop 
+```
+for i in range(len(foods)):
+  print(i, foods[i], end ="")
+print()
+```
 
 
 
