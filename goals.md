@@ -37,6 +37,13 @@ Taking on an EM role.
 - Gaining skills in AWS and its different backup services. 
 - Gaining skills in Spring Boat
 
+Looking for a Backend Development Role in a great startup or Good company.
+- Leetcode
+  - Easy and Medium Problem first
+  - Brute force, then optimal
+  - Explore edge case.
+- Cracking the coding interview
+
 # 16 Feb 2021
 ### DeadLines:
 - [ ] Start the React udemy course. 
