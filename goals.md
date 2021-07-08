@@ -43,6 +43,8 @@ Looking for a Backend Development Role in a great startup or Good company.
   - Brute force, then optimal
   - Explore edge case.
 - Cracking the coding interview
+- Python Mastery 
+- Algo and data structure
 
 # 16 Feb 2021
 ### DeadLines:
