@@ -10,11 +10,28 @@ Basic
 - Loops and Iterables
 - Basic Data Structures
 
-
+**Basic stuff**
 - Functions
 - Mutable vs Immutable
 - Common Methods
 - File IO
+***
+
+Intermediate
+***
+- Object Oriented Programming
+- Data Structures
+- Comprehensions 
+- Lambda Functions
+- Map, Filter
+- Collections
+- *args & **kwargs
+- Inheritance
+- Dunder Methods
+- PIP
+- Environments
+- Modules
+- Async IO
 ***
 
 ### Expression
