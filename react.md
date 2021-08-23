@@ -888,3 +888,6 @@ return (
 }
 ```
 ### Adding normal js to components
+### Splitting components into multi-smaller components
+### The Concept of "Composition" ( "children props")
+
