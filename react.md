@@ -762,6 +762,53 @@ npm start
 ```
 
 ### Analysing a react app
+-- src> Index.js --  
 ```
+import React from 'react';
+import ReactDOM from 'react-dom';  <-- We are importing react dom 
+import './index.css';
+import App from './App'; <--  we are importing the App function from App.js
+import reportWebVitals from './reportWebVitals';
 
+
+ReactDOM.render( 
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+  
+-- public > index.html --  
+```
+This is where the main html page is
+```
+  
+-- src> App.js --  
+```
+import logo from './logo.svg';
+import './App.css';
+
+function App() {. <-- we export this function
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;
 ```
