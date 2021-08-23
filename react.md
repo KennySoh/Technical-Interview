@@ -811,4 +811,80 @@ function App() {. <-- we export this function
 }
 
 export default App;
+``` 
+### Build a First Custom Component
+To create a new component, We follow a component tree in react. 
+-- src>components>ExpenseItem.js ---
+```js
+import './ExpenseItem.css'
+
+function ExpenseItem() {
+ return <div className="expense-item"><h2>Expense item!</h2></div>
+}
+
+export default ExpenseItem;
 ```
+
+Importing component into App.js. 
+-- src>App.js---  
+```js
+import ExpenseItem from './components/ExpenseItem';
+import Exp
+
+<ExpenseItem></ExpenseItem> //Make sure its uppercase so react can detect its custom component. 
+```
+-- src > components> ExpenseItem.css --
+```css
+.expense-item{
+ width:15px;
+}
+
+```
+### Writing more complex code. 
+Using the code>preference>Format Document ( To prettify the code)
+```
+up_arrow + Option + F // to prettify ur code. 
+```
+### Adding Basic Styling
+### Outputting Dynamic Data 
+```
+function ExpenseItem(){
+  const expenseDate = new Date(2021,2,28)
+  
+  return (
+    <div className = "expense-item">
+      <div> { expenseDate.toISOString() }</div> // JSX: How we use js code..
+      <div className="expense-item__decription'>
+      </div>
+    </div>
+  )
+}
+```
+### Passing Data via "Props"
+-- src > App.js --
+```
+const expenses = [
+ {
+    id:'e1',
+    title: 'Toilet Papper'
+ },
+ {
+    id:'e2',
+    title: 'Car insurance'
+ }
+]
+
+<ExpenseItem title= {expenses[0].title} ></ExpenseItem>
+```
+
+-- src>components> ExpenseItem.js --
+```
+function ExpenseItem(props){
+
+return ( 
+<div>
+{props.title}
+</div>
+}
+```
+### Adding normal js to components
