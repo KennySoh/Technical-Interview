@@ -735,3 +735,33 @@ const ExpenseDate = (props) =>{}
 
 ## Section 4
 About State
+
+
+
+## Section 3 
+### What are Components? 
+### React Code is Written in a Declarative Way
+### Creating a new React Project
+
+-- Create a new react app --
+```
+-- Make sure node and npm is installed --
+1) Download https://nodejs.org/en/
+node -v //needs to be above version ? , to use npx 
+npm -v 
+
+-- using the create react app tool. https://reactjs.org/docs/create-a-new-react-app.html --
+npx create-react-app my-app
+cd my-app
+npm start
+```
+-- Opening an existing react app --  
+```
+npm install //Will look into package.json and install all necessary dependency
+npm start
+```
+
+### Analysing a react app
+```
+
+```
