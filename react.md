@@ -890,4 +890,32 @@ return (
 ### Adding normal js to components
 ### Splitting components into multi-smaller components
 ### The Concept of "Composition" ( "children props")
+https://realpython.com/inheritance-composition-python/. 
+Composition : A car **has a** engine, has a steering wheel. 
+Inheritance: A sportscar **is a** car. 
+  
+Card adds like a wrapper. 
+```
+function Card(props){
+  const classes = 'card' +props.className;
+  
+  return <div className={classes}> {props.children} </div>
+}
 
+export default Card;
+
+-- App.js--
+<Card>
+  <ExpenseItem></ExpenseItem>
+  <ExpenseItem></ExpenseItem>
+</Card>
+```
+
+### A First Summary
+### A Closer Look at JSX
+### Arrow Function 
+```
+const App=()=>{
+}
+```
+## Section 4: React State & Working with Events
