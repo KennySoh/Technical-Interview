@@ -105,11 +105,73 @@ websocket_urlpatterns = [
 - Routing are like Django urls. (Decides which consumer should be called on incoming requests)
 - Long running except for Http events
 
+https://channels.readthedocs.io/en/stable/topics/consumers.html#channel-layers
+
 ``` 
 -- sideapp chat.consumer.py -----
 from channels.generic.websocket import AsyncWebsocketConsumer
 
 class ChatRoomConsumer(AsyncWebsocketConsumer):
-  pass
+    async def connect(self):
+        self.room_name = self.scope['url_route']['kwargs']['room_name']
+        self.room_group_name = 'chat_%s' % self.room_name
+        
+        await self.channel_layer.group_add(
+            self.room_group_name,
+            self.channel_name
+        )
+        
+        await self.accept() // To accept incoming connection
+        
+        await self.channel_layer.group_send(
+            self.room_group_name,
+            {
+                'type': 'tester_message',
+                'tester': 'hello_world',
+            }
+        )
+        
+    async def tester_message(self, event):
+        tester = event['tester']
+        
+        await self.send(text_data = json.dumps({
+            'tester':tester,
+        }))
+        
+    async def disconnect(self, close_code):
+        await self.channel_layer.group_discard(
+            self.room_group_name,
+            self.channel_name
+        )
+        
+```
 
+### Channel Layer using an inMemory
+```
+-- In production u have to use redis ---
+
+-- just to get up and running ---
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
+```
+
+### Frontend calling websocket
+```js
+<script>
+    const chatSocket = new WebSocket(
+        'ws://'+
+        window.location.host + #127.0.1.0:8002 
+        '/ws/chat/' +
+        roomName +
+        '/'
+    );
+    
+    chatSocket.onmessage = function (e){
+        const data = JSON.parse(e.data);
+        console.log(data)
+    }
+</script>
 ```
