@@ -143,8 +143,28 @@ class ChatRoomConsumer(AsyncWebsocketConsumer):
             self.room_group_name,
             self.channel_name
         )
+    
+    //receiving data
+    async def receive(se;f,text_data):
+        text_data_json = json.loads(text_data)
+        message = text_data_json['message']
         
-```
+        await self.channel_layer.group_send(
+            self.room_group_name,
+            {
+                'type':'chatroom_message',
+                'message':message,
+            }
+        )
+   
+   async def chatroom_message(self,event):
+        message = event['message']
+        
+        await self.send(text_data=json.dumps({
+            'message' : message, 
+        }))
+        
+   pass
 
 ### Channel Layer using an inMemory
 ```
@@ -173,5 +193,7 @@ CHANNEL_LAYERS = {
         const data = JSON.parse(e.data);
         console.log(data)
     }
+    
+    
 </script>
 ```
