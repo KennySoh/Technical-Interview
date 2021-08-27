@@ -194,6 +194,11 @@ CHANNEL_LAYERS = {
         console.log(data)
     }
     
+    //sending Data
+    chatSocket.send(JSON.stringify({
+        'message':message,
+    }));
+    
     
 </script>
 ```
