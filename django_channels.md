@@ -1,5 +1,6 @@
 # Django Channels 
 Websockets, ASGI, Channels
+https://www.youtube.com/watch?v=F4nwRQPXD8w
 
 ## Websockets
 ***
@@ -9,6 +10,11 @@ Websockets, ASGI, Channels
 ***
 
 ![Screenshot 2021-08-27 at 3 50 36 PM](https://user-images.githubusercontent.com/32699647/131092479-27732f56-29d7-4577-a3d0-5c51452cce43.png)
+
+## Async and Await
+https://www.youtube.com/watch?v=bs9tlDFWWdQ
+- Acheieving concurrency in python. 
+- MultiThreading
 
 ## Django Channels
 ***
@@ -33,4 +39,77 @@ How do we know who to send the messsage to? by using channels.
 - In group chat received message can be send to other sockets/application instances
 - Can be neabled using channel layer 
 
+### Installation
+***
+- Install Django Channels
+- Create Django Templates / Views
+- Channels Routing
+- Consumer (view)
+- Template configuration handle WS
+***
+```
+python -m venv venv
+venv/bin/activate
 
+pip install django
+
+# -- https://channels.readthedocs.io/en/stable/installation.html --
+# 1) Install Django Channels
+python -m pip install -U channels
+
+# 2) Include channels in Installed APP
+
+INSTALLED_APPS = (
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    ...
+    'channels',
+)
+
+# Set ASGI Application
+ASGI_APPLICATION = "core.routing.application"
+```
+
+### Routing 
+- Routers - Protocol
+
+``` 
+-- mainapp core.routing.py -----
+from channels.auth import AuthMiddlewareStack # Use django authentication (Not-compulsory)
+from channels.routing import ProtocolTypeRouter, URLRouter
+#import chat.routing
+
+application = ProtocolTypeRouter({
+  'websocjet':AuthmiddlewareStack(
+    URLRouter(
+      chat.routing.websocket_urlpatterns
+      # application.routing.websocket_urlpatterns
+    )
+  ),
+})
+```
+
+``` 
+-- sideapp chat.routing.py -----
+from django.urls import re_path
+
+websocket_urlpatterns = [
+  re_path(r'ws/chat/(?P<room_name>\w+)/$' , consumers.ChatRoomConsumer),
+]
+```
+
+### Consumers
+- Consumers are like Django views.
+- Routing are like Django urls. (Decides which consumer should be called on incoming requests)
+- Long running except for Http events
+
+``` 
+-- sideapp chat.consumer.py -----
+from channels.generic.websocket import AsyncWebsocketConsumer
+
+class ChatRoomConsumer(AsyncWebsocketConsumer):
+  pass
+
+```
