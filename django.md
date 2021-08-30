@@ -4,6 +4,8 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" //install brew
 brew install python3 // install python3
 brew postinstall python3 // install pip3
+pip3 install virtualenv virtualenvwrapper
+
 
 
 // Create a new virtual env 
