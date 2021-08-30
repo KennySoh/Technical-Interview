@@ -68,7 +68,21 @@ INSTALLED_APPS = (
     'channels',
 )
 
-# Set ASGI Application
+# 3) asgi.py
+
+import os
+
+from channels.routing import ProtocolTypeRouter
+from django.core.asgi import get_asgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_channels.settings')
+
+application = ProtocolTypeRouter({
+    "http": get_asgi_application(),
+    # Just HTTP for now. (We can add other protocols later.)
+})
+
+# 4) Set ASGI Application
 ASGI_APPLICATION = "core.routing.application"
 ```
 
