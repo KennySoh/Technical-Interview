@@ -1,6 +1,11 @@
 ## Cheat Sheet, set up a new Project
 
 ```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" //install brew
+brew install python3 // install python3
+brew postinstall python3 // install pip3
+
+
 // Create a new virtual env 
 virtualenv project_venv --python=python3.6 
 
