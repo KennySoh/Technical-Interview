@@ -68,6 +68,35 @@ nest new <project-name>
 
 npm run start:dev
 // disable eslintrc, you can comment out eslintrc.js
-
-
 ```
+## Generating files from scratch
+```
+nest generate module message
+nest generate controller messages/messages --flat //watch tutorial for more info
+```
+
+## Adding Routing Logic
+```
+@Controller('/messages')
+export class Messages Controller{
+  @Get()
+  listMessages(){
+  }
+  
+  @Post()
+  createMessage(){
+  }
+  
+  @Get('/:id')
+  getMessage(){
+  }
+}
+```
+- Use Postman to test your routes. 
+- VSCode REST Client Extension
+
+## Accessing Request Data with Decorators
+```
+````
+## USing Pipes for Validation
+## Adding Validation Rules
