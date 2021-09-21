@@ -95,8 +95,78 @@ export class Messages Controller{
 - Use Postman to test your routes. 
 - VSCode REST Client Extension
 
-## Accessing Request Data with Decorators
+## Accessing Request Data with Decorators in controller
+<img width="701" alt="Screenshot 2021-09-21 at 10 16 44 AM" src="https://user-images.githubusercontent.com/32699647/134101819-881a8595-6b26-4bc9-b9d6-955f33a52b0a.png">
 ```
-````
-## USing Pipes for Validation
+import {}
+
+@Controller('/messages')
+export class Messages Controller{
+  @Get()
+  listMessages(){
+  }
+  
+  @Post()
+  createMessage(@Body() body:any){
+    console.log(body);
+  }
+  
+  @Get('/:id')
+  getMessage(@Param('id' id:string){
+    console.log(id);
+  }
+}
+```
+
+## Using Pipes for Validation
+```
+-- main.ts--
+import {ValidationPipe } from '@nestjs/common'
+
+app.useGlobalPipes(
+  new ValidationPipe()
+); 
+```
+
 ## Adding Validation Rules
+***
+1. Tell Nest to use Global Validation
+2. Create a class that describes the different properties that the request body should have Data transfer object . Dto
+3. Add Validation rules to the class
+4. Apply that class to the request handler
+***
+  
+**Step1: Tell Nest to use Global Validation**. 
+```
+-- main.ts--
+import {ValidationPipe } from '@nestjs/common'
+
+app.useGlobalPipes(
+  new ValidationPipe()
+); 
+```
+  
+**Step2: Create a class that describes the different properties that the request body should have Data transfer object . Dto**
+```
+-- src>messages>dtos>create-message.dto.ts
+export class CreateMessageDto {
+  content: string;
+}
+```
+**step3: Add Validation rules to the class**. 
+add class-validator library. 
+```
+npm install class-validator class-transformer. 
+```
+```
+import { IsString } from 'class-validator';
+
+export class CreateMessageDto{
+  @IsString()
+  content:string;
+}
+```
+  
+**step4: Apply that class to the request handler**
+
+
