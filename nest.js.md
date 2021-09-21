@@ -159,5 +159,9 @@ export class CreateMessageDto{
 ```
   
 **step4: Apply that class to the request handler**
+```
+import { CreateMessageDTO } from './dtos.create-message.dto.ts
 
+
+```
 
