@@ -118,17 +118,7 @@ export class Messages Controller{
 }
 ```
 
-## Using Pipes for Validation
-```
--- main.ts--
-import {ValidationPipe } from '@nestjs/common'
-
-app.useGlobalPipes(
-  new ValidationPipe()
-); 
-```
-
-## Adding Validation Rules
+## Using Pipes for Validation, Adding Validation Rules
 ***
 1. Tell Nest to use Global Validation
 2. Create a class that describes the different properties that the request body should have Data transfer object . Dto
