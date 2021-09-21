@@ -166,4 +166,8 @@ import { CreateMessageDTO } from './dtos.create-message.dto.ts
 
 ## Services and repository
 <img width="657" alt="Screenshot 2021-09-21 at 11 10 15 AM" src="https://user-images.githubusercontent.com/32699647/134105963-6df70824-7904-4cb7-b60c-80e86129c78f.png">
+- Create Repositoy, Data Access Layer
+- Create Services, BL
+- Dependency injection setup
 
+## Organising into modules
