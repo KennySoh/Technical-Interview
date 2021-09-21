@@ -57,3 +57,9 @@ class AppModule
 ```
 
 ## Using the nest cli
+```
+sudo npm install -g @nestjs/cli
+nest new <project-name>
+```
+
+<img width="713" alt="Screenshot 2021-09-21 at 9 16 23 AM" src="https://user-images.githubusercontent.com/32699647/134097680-adc26046-3079-452a-9f6f-2f823ced19fa.png">
