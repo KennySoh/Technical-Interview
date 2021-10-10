@@ -1,3 +1,28 @@
+# How I approach a react project. 
+
+Project structure ( Styled-Component, Typescript, React router, Redux )
+- pages
+    - api
+    - component 
+        - Booking
+    - BookingPage
+    - HomePage
+    - AllBooking
+- services
+- redux
+- utils
+
+Mobile first 
+- Ensure the Layout ( 2 col, sider … etc)
+- ( Create the nav bar, @media Queries )
+
+Pages start putting all the different pages in 
+- Fill in the pages 
+
+Axios, Fetch hooking up backend 
+- Ensure interface is created for req , res, dataschema. 
+
+
 
 # The Complete Guide (incl Hooks, React Router
 ## Writing First React Code
