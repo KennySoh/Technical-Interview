@@ -1,3 +1,12 @@
+# Docker Cheat Sheet
+```
+
+docker exec -it <container-id> bash     //Entering container 
+
+
+```
+
+
 # Docker Tutorial 
 https://www.youtube.com/watch?v=3c-iBn73dDE
 
