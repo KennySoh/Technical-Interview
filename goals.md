@@ -28,3 +28,13 @@ Important Skills mastered
 - AWS Cloud. ( AWS ec2, Cloudfront, S3 )
 
 ## Overarching goals in 2022
+Becoming an expert in Reactjs, Nestjs. 
+- Taking control of FMCS, TGO, Camello in OTSAW
+
+- Building out a Clone Project From Clever Programmer
+ https://www.youtube.com/watch?v=1_IYL9ZMR_Y
+
+- Building out Distributor Site , that will connect local Hardware shops to local hardware distributors get email leads. 
+(Part of Kakilai) 
+
+
