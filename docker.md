@@ -42,6 +42,21 @@ EXPOSE 8080/tcp 8089/tcp
 ENTRYPOINT ["/bin/bash", "-c", "service nginx start && tail -f /dev/null"]
 
 ```
+# Docker-Compose File
+```
+version: "3.9"
+services:                                     // we create 2 services , "web" & "redis"
+  web:    
+    build: ./web                              // This is the directory where ur docker file is located
+    ports:
+      - "8000:5000"                           // bind our host 8000 port to docker-container 5000 port
+    extra_hosts:
+      - "host.docker.internal:host-gateway"   // this make ur docker-container /etc/hosts follow ur localhost /etc/hosts ( Local dns)
+
+  redis:
+    image: "redis:alpine"
+
+```
 
 
 # Docker Tutorial 
