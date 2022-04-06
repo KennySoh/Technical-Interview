@@ -24,6 +24,24 @@ docker kill $(docker ps -q)          // kill all running containers
 docker rm $(docker ps -a -q)                // delete all stopped containers
 docker rmi $(docker images -q)       // delete all images
 ```
+# DockerFile
+```
+FROM ubuntu:20.04
+
+ENV MY_ENV=noninteractive
+
+# Installation packages for Ubuntu 20.04
+RUN apt-get -y update
+RUN wget http://mirrors.kernel.org/ubuntu/pool/universe/s/srtp/libsrtp0_1.4.5~20130609~dfsg-2ubuntu1_amd64.deb && apt install -y 
+
+WORKDIR /usr/src/test/
+RUN pwd && ls -l
+COPY config/sorcery.conf /etc/asterisk/
+
+EXPOSE 8080/tcp 8089/tcp
+ENTRYPOINT ["/bin/bash", "-c", "service nginx start && tail -f /dev/null"]
+
+```
 
 
 # Docker Tutorial 
