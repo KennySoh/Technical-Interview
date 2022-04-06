@@ -11,6 +11,9 @@ docker run -p 8000:8000 kenny/images
 
 // Operational commands
 docker exec -it <container-id> bash     // Entering container 
+docker exec -it fmcs-backend_asterisk_1 sh
+docker exec -it fmcs-backend_asterisk_1 /bin/bash
+
 docker ps                               // show running container
 docker ps -a                            // show all container
 docker stop <container_id>              // stop running container
