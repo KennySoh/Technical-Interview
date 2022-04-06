@@ -23,6 +23,7 @@ docker rm <container_id>
 // Docker Compose
 docker-compose up                    // will build container , if doesnt exist and run containers
 docker-compose down                  // stop containers from running 
+docker-compose build                 // build the images
 docker kill $(docker ps -q)          // kill all running containers 
 docker rm $(docker ps -a -q)                // delete all stopped containers
 docker rmi $(docker images -q)       // delete all images
