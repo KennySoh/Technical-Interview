@@ -1,9 +1,28 @@
 # Docker Cheat Sheet
 ```
+//--- Step1) Build the docker image ---
+docker build -t kenny/image1  // with tags , you call this iamge kenny/image1
+docker images -a              // to see all the docker images u build 
+docker image prune -a         // removes images that are not actively running-containers. 
+docker prune system -a        // removes images & containers that are not actively running-containers. 
 
-docker exec -it <container-id> bash     //Entering container 
+//--- Step2) Run the docker image
+docker run -p 8000:8000 kenny/images
+
+// Operational commands
+docker exec -it <container-id> bash     // Entering container 
+docker ps                               // show running container
+docker ps -a                            // show all container
+docker stop <container_id>              // stop running container
+docker rm <container_id>
 
 
+// Docker Compose
+docker-compose up                    // will build container , if doesnt exist and run containers
+docker-compose down                  // stop containers from running 
+docker kill $(docker ps -q)          // kill all running containers 
+docker rm $(docker ps -a -q)                // delete all stopped containers
+docker rmi $(docker images -q)       // delete all images
 ```
 
 
