@@ -28,6 +28,18 @@ docker-compose run web bash          // access container via docker-compose
 docker kill $(docker ps -q)          // kill all running containers 
 docker rm $(docker ps -a -q)                // delete all stopped containers
 docker rmi $(docker images -q)       // delete all images
+
+// Docker network 
+Each Container has their own ip and the host is the gateway. 
+Host: 172.17.0.1
+
+// Docker volume 
+Docker volume is so the container data can persist often used for databases
+
+docker volume ls 
+docker volume <volune> rm
+
+
 ```
 # DockerFile
 ```
