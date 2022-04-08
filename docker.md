@@ -39,7 +39,20 @@ Docker volume is so the container data can persist often used for databases
 docker volume ls 
 docker volume <volune> rm
 
-
+// Docker-compose
+services:
+  postgres:
+    env_file:
+      - .env
+    image: postgis/postgis
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+volumes:
+  postgres-db:
+  
+  
 ```
 # DockerFile
 ```
