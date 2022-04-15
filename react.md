@@ -28,7 +28,8 @@ Start cleaning up
 
 ## ES7 Code snippets
 ```
-rfce > this will create component for you
+rfce -> this will create component for you
+div.header__left ->. <div className="header__left"></div>
 ```
 
 ## Material UI Icons
@@ -63,10 +64,22 @@ import './Header.css';
 .header{
     display: flex;
     align-items: center;  //make things vertically - centered
+    justify-content: space-between;
 }
 
+.header__left{}
+.header__right{}
+.header__center{}
+
 .header__logo{
-    
+    height: 25px;
+    object-fit: contain; 
+}
+
+.header__input{}
+.header__input > input{  // targets the direct child of an input
+    flex: 1;
+    border:none;
 }
 ```
 
