@@ -57,7 +57,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 </div>
 ```
 
-2. Use flexbox for layout
+2. Use flexbox for layout & BEM for our css style guide
 ```
 import './Header.css';
 
@@ -65,8 +65,12 @@ import './Header.css';
     display: flex;
     align-items: center;  //make things vertically - centered
     justify-content: space-between;
+    position: sticky; //make header fixed to tje top
+    top: 0;
+    z-index: 100;
 }
 
+/* 3Container , left, center, right
 .header__left{}
 .header__right{}
 .header__center{}
@@ -81,6 +85,7 @@ import './Header.css';
     flex: 1;
     border:none;
 }
+.header__inputButton{}
 ```
 
 
