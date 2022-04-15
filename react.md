@@ -88,6 +88,33 @@ import './Header.css';
 .header__inputButton{}
 ```
 
+## Building out a side bar
+```
+- 20% sideBar & 80% mainPage
+
+.sidebar{
+    flex: 0.2;
+}
+.mainPage{
+    flex:0.8;s
+}
+.sidebarRow:hover{
+    background-color:lightgray;
+    cursor: pointer;
+}
+.sidebarRow:hover > .sidecarRow__icon{
+    color: red;
+}
+.sidebarRow:hover > .sidecarRow__title {
+   font-weight: bold;
+}
+```
+```
+<SideBar title="Home" />
+```
+
+
+
 
 
 
