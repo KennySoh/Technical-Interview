@@ -1,3 +1,95 @@
+# Steps to build a react project from scratch
+***
+- Create a wire frame (Draw.io)
+- Clean Up ur React Project
+- 
+***
+
+## Create-React-App & clean up your project
+```
+npx create-react-app <your_project>
+
+Start cleaning up 
+- Delete all the content in App,js. #BEM naming class
+- Delete all the App.css
+- Modify index.css 
+// ( add this at the top of the file , this remove browser default styles )
+* {
+    margin: 0;
+}
+```
+
+## Start planning out your app & put comments into your page
+```
+{/* Header */}
+{/* Sidebar */}
+{/* Body- Recommended Video */}
+```
+
+## ES7 Code snippets
+```
+rfce > this will create component for you
+```
+
+## Material UI Icons
+```
+// with npm
+npm install @mui/icons-material
+
+https://mui.com/material-ui/material-icons/?query=alert&theme=Sharp
+
+import MenuIcon from '@mui/icons-material/Menu';
+```
+
+## Building out the Header
+1. Add out the Html Elements + MaterialUI Icons
+```
+<div clasName="header">
+    <MenuIcon />
+    <img className="header__logo" src="https://upload.wikimedia.org/wikipedia/commons alt="" />
+    <input type="text" />
+    <SearchIcon />
+    <VideoCallIcon />
+    <AppsIcon />
+    <NotificationsIcon />
+    <Avatar alt="Kenny" src="img" />
+</div>
+```
+
+2. Use flexbox for layout
+```
+import './Header.css';
+
+.header{
+    display: flex;
+    align-items: center;  //make things vertically - centered
+}
+
+.header__logo{
+    
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # How I approach a react project. 
 
 Project structure ( Styled-Component, Typescript, React router, Redux )
