@@ -145,7 +145,6 @@ Project structure ( Styled-Component, Typescript, React router, Redux )
     - BookingPage
     - HomePage
     - AllBooking
-- services
 - redux
 - utils
 
