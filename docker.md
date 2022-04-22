@@ -4,7 +4,7 @@
 docker build -t kenny/image1  // with tags , you call this iamge kenny/image1
 docker images -a              // to see all the docker images u build 
 docker image prune -a         // removes images that are not actively running-containers. 
-docker prune system -a        // removes images & containers that are not actively running-containers. 
+docker system prune -a        // removes images & containers that are not actively running-containers. 
 
 //--- Step2) Run the docker image
 docker run -p 8000:8000 kenny/images
