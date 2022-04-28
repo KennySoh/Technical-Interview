@@ -38,6 +38,7 @@ Docker volume is so the container data can persist often used for databases
 
 docker volume ls 
 docker volume <volune> rm
+docker volume prune
 
 // Docker-compose
 services:
