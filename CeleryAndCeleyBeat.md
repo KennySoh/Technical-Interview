@@ -34,3 +34,15 @@ app.autodiscover_taks()
 def debug_task(self):
   print('sample')
 ```
+
+# Create a new task.py file
+```
+from celery import shared_task 
+
+@shared_task(bind=True)
+def test_func(self):
+  #operations
+  for i in range(10):
+    print(i)
+  return "Done"
+```
