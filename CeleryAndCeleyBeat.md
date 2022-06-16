@@ -13,11 +13,24 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Asia/Singapore' 
 ```
 
-# Create a new celer.py file
+# Create a new celery.py file
 ```
 -- create a celery.py---
 from celery import Celery
 from django.conf import settings
 
-os.environ.setdefauly('DJANGO_SETTINGS_
+os.environ.setdefauly('DJANGO_SETTINGS_MODULE' , 'django_project_seetings;)
+
+app = Celery('django_celery_project')
+app.conf.enable_utc=False
+
+app.conf.update(timezone = 'Asia/Singapore')
+app.config_from_object(settings, namespace='CELERY
+
+# Celery Beat Settings
+app.autodiscover_taks()
+
+@app.task(bind=True)
+def debug_task(self):
+  print('sample')
 ```
