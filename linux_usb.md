@@ -8,5 +8,15 @@ lsusb -s 001:013 // finding specific info with Bus & Device
 lsusb -sv 001:013 // verbose info
 
 
+sudo dmesg | less
+udevadm 
+udev 
+
+use vlc to navigate to different nodes. 
+vlc v4l2:///dev/video0 
+
+
+ffserver
+
 
 ```
