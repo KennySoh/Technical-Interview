@@ -10,7 +10,7 @@ lsusb -sv 001:013 // verbose info
 
 sudo dmesg | less
 udevadm 
-udev 
+udev change the routes 
 
 use vlc to navigate to different nodes. 
 vlc v4l2:///dev/video0 
