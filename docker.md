@@ -8,7 +8,7 @@ docker image prune -a         // removes images that are not actively running-co
 docker system prune -a        // removes images & containers that are not actively running-containers. 
 
 //--- Step2) Run the docker image
-docker run -p 8000:8000 kenny/images
+docker run -p 8000:5000 kenny/images   //expose port 8000 on the inside to port 5000 on the outside
 
 // Operational commands
 docker exec -it <container-id> bash     // Entering container 
