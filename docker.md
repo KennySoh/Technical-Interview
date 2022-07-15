@@ -1,7 +1,8 @@
 # Docker Cheat Sheet
 ```
 //--- Step1) Build the docker image ---
-docker build -t kenny/image1  // with tags , you call this iamge kenny/image1
+docker build .                 // build without tag
+docker build -t kenny/image1 . // with tags , you call this iamge kenny/image1
 docker images -a              // to see all the docker images u build 
 docker image prune -a         // removes images that are not actively running-containers. 
 docker system prune -a        // removes images & containers that are not actively running-containers. 
