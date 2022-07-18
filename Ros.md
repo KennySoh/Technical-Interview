@@ -27,3 +27,28 @@ Ros Path Planning & Navigation
 
 ```
 ## ROS Workspace & ROS PACKAGE
+```
+1. You must always run setup.bash in a workspace for your ros command to work
+2. Create your own workspace : http://wiki.ros.org/catkin/Tutorials/create_a_workspace
+3. Create your ros packages
+
+roscd
+roscore
+
+```
+
+## ROS Computation Graph
+```
+Deep dive into Ros Communication Paradigms
+1. Topics / Services/ ActionLib
+2. Ros messages 
+3. A 2d turtle sim and how to control it with ur key <-> how to control it 
+```
+
+## ROS TOPICS
+## ROS MESSAGES 
+## ROS SERVICE
+## ROS Motions
+## ROS Tools & Utilies 
+## Turtlebot3 Simulation
+
