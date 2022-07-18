@@ -21,6 +21,8 @@ Ros Communication Paradigms
 1. Topics / Services/ ActionLib
 
 Ros Path Planning & Navigation 
-
+- Global Path Planner (dijkstra algorithm)
+- Local Path Planner 
+* Uses the TF module
 
 ```
