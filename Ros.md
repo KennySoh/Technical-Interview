@@ -51,4 +51,13 @@ Deep dive into Ros Communication Paradigms
 ## ROS Motions
 ## ROS Tools & Utilies 
 ## Turtlebot3 Simulation
+```
+https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/. #follow the video here.
+https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#gazebo-simulation
+https://classic.gazebosim.org/tutorials?tut=ros2_installing&cat=connect_ros  
+# /usr/share/gazebo/setup.sh
+
+export TURTLEBOT3_MODEL=burger
+ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:True
+```
 
