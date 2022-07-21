@@ -51,6 +51,7 @@ Deep dive into Ros Communication Paradigms
 ## ROS Motions
 ## ROS Tools & Utilies 
 ## Turtlebot3 Simulation
+### Downloading Turtlebot3 with rox-foxy on Ubuntu20.04.3 LTS
 ```
 https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/. #follow the video here.
 https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#gazebo-simulation
@@ -61,7 +62,15 @@ export TURTLEBOT3_MODEL=burger
 ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:True
 ```
 
-### Downloading Turtlebot3 with rox-noetic on Ubuntu20.04.2.iso
+### Downloading Turtlebot3 with rox-noetic on Ubuntu20.04.2 LTS
 ```
+Ros Noetic Guide: http://wiki.ros.org/noetic/Installation/Ubuntu
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt install curl # if you haven't already installed curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+sudo apt update
+sudo apt install ros-noetic-desktop-full
 
+GPG ERROR: https://github.com/ros2/ros2/issues/742. : If you face any GPG Erros
+curl http://repo.ros2.org/repos.key | sudo apt-key add -
 ```
