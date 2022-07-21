@@ -79,4 +79,6 @@ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 sudo apt install vim # Just to observe the above has been included in bash rc
 vim ~/.bashrc. 
+
+roscore #To verify ros is installed
 ```
