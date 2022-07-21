@@ -61,3 +61,7 @@ export TURTLEBOT3_MODEL=burger
 ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:True
 ```
 
+### Downloading Turtlebot3 with rox-noetic on Ubuntu20.04.2.iso
+```
+
+```
