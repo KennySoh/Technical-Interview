@@ -63,6 +63,9 @@ ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:True
 ```
 
 ### Downloading Turtlebot3 with rox-noetic on Ubuntu20.04.2 LTS
+1. Download VmwareFusion on Mac
+https://www.youtube.com/watch?v=OH64IQNReCs
+
 ```
 Ros Noetic Guide: http://wiki.ros.org/noetic/Installation/Ubuntu
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
