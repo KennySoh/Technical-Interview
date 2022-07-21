@@ -73,4 +73,10 @@ sudo apt install ros-noetic-desktop-full
 
 GPG ERROR: https://github.com/ros2/ros2/issues/742. : If you face any GPG Erros
 curl http://repo.ros2.org/repos.key | sudo apt-key add -
+
+source /opt/ros/noetic/setup.bash
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+sudo apt install vim # Just to observe the above has been included in bash rc
+vim ~/.bashrc. 
 ```
