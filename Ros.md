@@ -66,6 +66,7 @@ ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:True
 1. Download VmwareFusion on Mac
 https://www.youtube.com/watch?v=OH64IQNReCs
 
+2. Getting Ros installed 
 ```
 Ros Noetic Guide: http://wiki.ros.org/noetic/Installation/Ubuntu
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -84,4 +85,9 @@ sudo apt install vim # Just to observe the above has been included in bash rc
 vim ~/.bashrc. 
 
 roscore #To verify ros is installed
+```
+3. Creating your ros workspace
+```
+Ros Create your own workspace: http://wiki.ros.org/catkin/Tutorials/create_a_workspace
+
 ```
