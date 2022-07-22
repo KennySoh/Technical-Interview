@@ -101,4 +101,12 @@ http://wiki.ros.org/turtlesim
 ```
 5. Connecting MACBOOK to VirtualMachine Network
 ```
+https://www.youtube.com/watch?v=0RXxubgQQqc
+by default, network should be in NAT. So your network MAC Network should be able to ping your Ubuntu Network
+```
+
+6. Setting up rosbridge & start the 
+```
+ssl: https://devopscube.com/create-self-signed-certificates-openssl/
+rosbridge with ssl : https://github.com/UbiquityRobotics/Robot_Commander/blob/master/README.md
 ```
