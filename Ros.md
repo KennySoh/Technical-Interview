@@ -89,5 +89,9 @@ roscore #To verify ros is installed
 3. Creating your ros workspace
 ```
 Ros Create your own workspace: http://wiki.ros.org/catkin/Tutorials/create_a_workspace
+source /opt/ros/noetic/setup.bash
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/
+catkin_make
 
 ```
