@@ -107,7 +107,9 @@ by default, network should be in NAT. So your network MAC Network should be able
 
 6. Setting up rosbridge & start the 
 ```
-ssl: https://devopscube.com/create-self-signed-certificates-openssl/
-adding ssl cert on chrome (linux): https://www.youtube.com/watch?v=byFN8vH2SaM
+ssl: https://devopscube.com/create-self-signed-certificates-openssl/ ( You can use snakeoil instead of generating a cert yourself, check below link)
 rosbridge with ssl : https://github.com/UbiquityRobotics/Robot_Commander/blob/master/README.md
+
+adding ssl cert on chrome (linux): https://www.youtube.com/watch?v=byFN8vH2SaM
+adding ssl cert on chrome (mac): https://www.youtube.com/watch?v=_PJc7RcMnw8
 ```
