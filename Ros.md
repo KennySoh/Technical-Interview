@@ -99,3 +99,6 @@ catkin_make
 http://wiki.ros.org/turtlesim
 
 ```
+5. Connecting MACBOOK to VirtualMachine Network
+```
+```
