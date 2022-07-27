@@ -1,6 +1,17 @@
 # Ros Notes
 This follow the course: https://www.udemy.com/course/ros-essentials/learn/lecture/22078052#overview
 
+## Ros CheatSheet
+```
+rosservice list   # Print information about active services.
+rosservice node   # Print the name of the node providing aservice.
+rosservice call   # Call the service with the given args.
+rosservice args   # List the arguments of a service.
+rosservice type   # Print the service type.
+rosservice uri    # Print the service ROSRPC uri.
+rosservice find   # Find services by service type.
+```
+
 ## Ros
 ```
 Sense <-> Think<-> Act
@@ -115,3 +126,4 @@ adding ssl cert on chrome (mac): https://www.youtube.com/watch?v=_PJc7RcMnw8
 
 - try to go to https://<ip>:9090 & trust certificate as well, so you can access wss://<ip>:9090
 ```
+
