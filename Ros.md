@@ -3,6 +3,7 @@ This follow the course: https://www.udemy.com/course/ros-essentials/learn/lectur
 
 ## Ros CheatSheet
 ```
+## Dealing with ros services
 rosservice list   # Print information about active services.
 rosservice node   # Print the name of the node providing aservice.
 rosservice call   # Call the service with the given args.
