@@ -4,9 +4,9 @@ This follow the course: https://www.udemy.com/course/ros-essentials/learn/lectur
 ## Ros CheatSheet
 ```
 ## Dealing with ros services
-rosservice list   # Print information about active services.
+rosservice list | grep turtle  # Print information about active services.
 rosservice node   # Print the name of the node providing aservice.
-rosservice call   # Call the service with the given args.
+rosservice call /turtle1/teleport_relative "linear: 0.0 angular: 0.0"  # Double tab to find available services/ args
 rosservice args   # List the arguments of a service.
 rosservice type   # Print the service type.
 rosservice uri    # Print the service ROSRPC uri.
