@@ -5,7 +5,8 @@ This follow the course: https://www.udemy.com/course/ros-essentials/learn/lectur
 ```
 ## Dealing with ros services
 rosservice list | grep turtle  # Print information about active services.
-rosservice call /turtle1/teleport_relative "linear: 0.0 angular: 0.0"  # Double tab to find available services/ args
+rosservice call /turtle1/teleport_relative "linear: 0.0 angular: 0.0"  #Double tab to find available services/ args
+rosservice type /turtle1/teleport_relative  #turtlesim/TeleportRelative
 
 rosservice node   # Print the name of the node providing aservice.
 rosservice args   # List the arguments of a service.
