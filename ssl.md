@@ -22,7 +22,7 @@ What you end up with
 >> ca.srl
 >> cer-key.pem   *
 >> cert.csr
->> cert.pem      *
+>> cert.pem      **<< Self-signed cert generated
 >> extfile.cnf 
 
 3. Join the pem files together to form a chain.
