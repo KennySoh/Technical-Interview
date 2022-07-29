@@ -32,3 +32,8 @@ cat ca.pem >> .\fullchain.pem
 4. Import your CA cert into your browsers
 
 ```
+
+# How to generate self-signed cert
+https://www.youtube.com/watch?v=AwR2IkBPiRo&t
+```
+```
