@@ -22,7 +22,7 @@ docker rm <container_id>
 
 
 // Docker Compose
-docker-compose up                    // will build container , if doesnt exist and run containers
+docker-compose up --build                   // will build container , if doesnt exist and run containers
 docker-compose down                  // stop containers from running 
 docker-compose build                 // build the images
 docker-compose run web bash          // access container via docker-compose
