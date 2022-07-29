@@ -128,5 +128,7 @@ adding ssl cert on chrome (linux): https://www.youtube.com/watch?v=byFN8vH2SaM
 adding ssl cert on chrome (mac): https://www.youtube.com/watch?v=_PJc7RcMnw8
 
 - try to go to https://<ip>:9090 & trust certificate as well, so you can access wss://<ip>:9090
+
+https://www.youtube.com/watch?v=VH4gXcvkmOY
 ```
 
