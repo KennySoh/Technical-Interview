@@ -36,4 +36,13 @@ cat ca.pem >> .\fullchain.pem
 # How to generate self-signed cert
 https://www.youtube.com/watch?v=AwR2IkBPiRo&t
 ```
+Check how to add CA.pem into browser!
+```
+
+# How to add CA into macos Browser
+<img width="1083" alt="Screenshot 2022-07-29 at 4 39 37 PM" src="https://user-images.githubusercontent.com/32699647/181720224-d2beabbb-1f65-445c-8d88-b16dedea5095.png">
+```
+1. open keychain access , copy and paste <your-ca eg.ca.pem> into certificates , reference image above
+2. trust this cert, double click on the your-cert & "Always trust" . ( your cert should change from red-cross to blue-plus-icon 
+3. access https://172.10.10.109:9090 and allow access.
 ```
