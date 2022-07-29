@@ -12,7 +12,7 @@ openssl x509 -in ca.pem -text                                               # Yo
 openssl genrsa -out  cert-key.pem 4096                                      # Generate Cert privatekey , (no encryption to be uploaded on Client)
 openssl req -new -sha256 -subj "/CN=otsaw" -key cert-key.pem -out cert.csr  # Generate a Cert of SignedRequest, ( cert need to be signed by CA)
 echo "subjectAltName=DNS:local.rmcs,IP:172.10.10.109" >> extfile.cnf        # Set your dns name/ ip to resolve to your desired service. 
-cat .\extfile.cnf                                                           # Just to make sure its written properly
+cat extfile.cnf                                                           # Just to make sure its written properly
 openssl x509 -req -sha256 -days 3650 -in cert.csr -CA ca.pem -out cert.pem -extfile extfile.cnf -CAcreateserial   # Generate Cert 
 >> passphrase
 
