@@ -26,3 +26,7 @@ function PortfolioPage () {
   console.log(router.query);             # {projectId: "something"}, in nested routes there will be more key,values pairs
 }
 ```
+## Page pre-rendering & Data fetching
+```
+
+```
