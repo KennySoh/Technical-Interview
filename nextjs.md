@@ -11,9 +11,10 @@ https://nlbsg.udemy.com/course/nextjs-react-the-complete-guide/learn/lecture/251
 > pages
 >> index.tsx
 >> about.tsx - static routes
->> [projectId].tsx  - dynamic routes
 >> blog 
->>>>[blogId].tsx
+>>>>[blogId].tsx - dynamic routes
+>> [id].tsx
+>>>> [projectId].tsx  - nested dynamic routes
 ```
 
 ```
@@ -22,6 +23,6 @@ import {useRouter} from "next/router"
 function PortfolioPage () {
   const router = useRouter();
   console.log(router.pathname);   #/portfolio/something 
-  console.log(router.             # {projectId: "something"}
+  console.log(router.query);             # {projectId: "something"}, in nested routes there will be more key,values pairs
 }
 ```
