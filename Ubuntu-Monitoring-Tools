@@ -1,0 +1,33 @@
+# Status check: ( Cpu, Ram, Hard-disk , Gpu )
+
+```
+---Cpu--- 
+lscpu  //( checking your processor Cores & Threads & Model Type)
+cat /proc/cpuinfo 
+
+---Ram--- 
+free -h // Ram Memory Size (Free/Used)
+sudo dmidecode --type memory | less  // Different kinds of type/ speed
+
+[ https://www.atpinc.com/blog/computer-memory-types-dram-ram-module ]
+
+---Harddisk --- 
+sudo apt install glances // Use glances u can check ssd/hdd speed. 
+
+---Gpu ---
+sudo lshw -C video
+```
+
+# Monitoring tools (Htop, Glances) 
+
+sudo apt install -y htop glances lm-sensors
+
+//As part of the va setup install the nvidia-driver, this comes with nvidia-smi
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update && sudo apt-get install -y nvidia-driver-470
+nvidia-smi // test thats its working
+
+htop // CPU & cpuload, Ram 
+glances // ssd, hdd speed
+watch sensors // Cpu Temperatures
+watch nvidia-smi // GPU 
