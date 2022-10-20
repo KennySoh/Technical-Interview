@@ -10,3 +10,5 @@ Cmake can be used to generate a solution
 ```cmake -G "Visual Studio 10"```
 
 
+Building a Project 
+- <Project>_ALL >>> Left click ( Build) , choose the correct architecture to build in Win32 vs X64 vs ARM
