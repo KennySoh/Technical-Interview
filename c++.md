@@ -7,4 +7,6 @@ https://www.oreilly.com/library/view/mastering-visual-studio/0596003609/ch01.htm
 
 
 Cmake can be used to generate a solution
-`cmake -G "Visual Studio 10"```
+```cmake -G "Visual Studio 10"```
+
+
