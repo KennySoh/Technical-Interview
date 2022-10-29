@@ -14,8 +14,8 @@ npx create-next-app@latest --typescript
 https://tailwindcss.com/docs/guides/nextjs
 
 
-
-
+# Example Folder structure
+<img width="250" alt="Screenshot 2022-10-29 at 1 59 46 PM" src="https://user-images.githubusercontent.com/32699647/198816430-32c62f19-fa90-4208-bb47-5520dd7accba.png">
 
 
 
