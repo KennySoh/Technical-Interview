@@ -19,30 +19,30 @@ https://tailwindcss.com/docs/guides/nextjs
 /public
     favicon.ico
 /src
-    /components
-        /elements
-            /auth
+    /common
+        /components
+            /elements
+                /[Name]
+                    [Name].tsx
+                    [Name].test.ts
+        /hooks
+        /types
+        /utils
+    /modules
+        /auth
+            /api
+                AuthAPI.js
+                AuthAPI.test.js
+            /components
                 AuthForm.tsx
                 AuthForm.test.ts
-            /[Name]
-                [Name].tsx
-                [Name].test.ts
-    /hooks
-    /types
-    /utils
-    /test
-        /api
-            authAPI.test.js
-            [name]API.test.js
-        /pages
-            index.test.js
-
+            auth.js
     /pages
         /api
           /authAPI
               authAPI.js
-          /[name]API
-              [name]API.js
+          /[Name]API
+              [Name]API.js
         _app.tsx
         _document.tsx
         index.tsx
