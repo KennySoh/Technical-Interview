@@ -1,3 +1,26 @@
+# Install NVM & Use Node lts
+```
+nvm install --lts
+nvm use --lts
+node --version ##Check node lts
+```
+# Start  nextjs & typescript project
+https://nextjs.org/docs/getting-started
+```
+npx create-next-app@latest --typescript
+```
+
+# Add tailwind css
+https://tailwindcss.com/docs/guides/nextjs
+
+
+
+
+
+
+
+
+
 # Nextsj notes
 https://nlbsg.udemy.com/course/nextjs-react-the-complete-guide/learn/lecture/25145296#overview
 
